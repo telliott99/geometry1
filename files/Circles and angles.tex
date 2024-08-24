@@ -1,0 +1,211 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Circles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{diameters}
+
+\label{sec:diameter_of_a_circle}
+
+Pick some point to be the \emph{center} of a circle.  Then a circle contains all the points a specified distance away from the center.  That distance is called the \emph{radius}.  
+
+A circle is drawn with a compass, as we mentioned previously.
+\begin{center} 
+\includegraphics [scale=0.25] {compass.png} 
+\end{center}
+
+Euclid says:
+
+$\bullet$   Given any straight line segment, a circle can be drawn having the segment as radius and one endpoint as center.
+
+Suppose we start with the line segment $OP$ in the figure below, and choose $O$ as the center.  Place the needle point of the compass on $O$ and the pencil on $P$ and then draw the circle containing all the points the same distance from $O$ as $P$ is.
+
+\begin{center} \includegraphics [scale=0.3] {circle1.png} \end{center}
+
+Next, extend the radius $PO$ to meet the circle on the other side at $Q$.  This whole line segment $PQ$ is called a \emph{diameter} of the circle.
+
+
+$\bullet$   Any diameter divides the circle into two equal parts.  
+
+(Recall that we allow a mirror image of something to be called equal to itself).  So then, if we take the bottom half and flip it vertically, we claim the two halves are exactly equal.
+
+\begin{center} \includegraphics [scale=0.3] {circle2.png} \end{center}
+
+\emph{Proof}.
+
+The proof is by contradiction.  Lay the two pieces on top of one another so that the diameters lie exactly on top of one another as well.
+
+The diameters of the half-circle are duplicates of the original.  Thus, they are equal to each other and each half is equal to one radius.
+
+However, we suppose that, somewhere, the two half-circles are not identical.  
+
+Then there will be some radial line we can draw from $O$ through the two half circles, where the line meets the two curves at different distances from the center, because they are supposed to be different.  This will identify points on the same radius of each half-circle that lie at a different distance from the center.
+
+But then, the original figure could not be a circle, because all radii of a circle are equal.
+
+This is a contradiction.  Hence any diameter divides the circle into two equal parts, called semi-circles.
+
+$\square$
+
+\subsection*{circle containing three points}
+
+\label{sec:circumcenter}
+
+\begin{center} \includegraphics [scale=0.15] {3pts_circle.png} \end{center}
+
+Suppose we have three arbitrary points in the plane:  $A$, $B$ and $C$.  
+
+The claim is we can draw a circle that contains all three points on its circumference.
+  
+\emph{Proof}.
+
+Pick two pairs of points and draw, say, $AB$ and $BC$.
+
+Find the perpendicular bisector of each.  We know that every point on the perpendicular bisector of $AB$ is equidistant from both $A$ and $B$, while for the latter case $AC$ every point is equidistant from $B$ and $C$.
+
+If $O$ is the point where the bisectors meet, that point is such that $OA = OB = OC$.
+
+So if we draw the circle on center $O$ with radius $OA$ it contains all three points.
+
+\begin{center} \includegraphics [scale=0.15] {3pts_circle.png} \end{center}
+
+$\square$
+
+The question arises whether there is a general rule about $\triangle ABC$ and it turns out there is:  if the origin of the circle lies on one of the sides of $\triangle ABC$ then it is a right triangle.  This is Thales' circle theorem.
+
+If $\triangle ABC$ contains an angle greater than a right angle, then the center of the circumcircle is not inside the triangle, while if it is acute, the center lies inside the triangle.
+
+We will not prove this now.  Euclid's proof for all three cases is III.31.
+
+\subsection*{Euclid III.1}
+
+\label{sec:find_circle_center}
+
+This is a simple method from Euclid to find the center of a circle.
+
+\begin{center} \includegraphics [scale=0.25] {perp_6.png} \end{center}
+
+\emph{Proof}.
+
+To find the center of any circle, take two points on the circle and draw the chord connecting them, then erect the perpendicular bisector of the chord.  In the diagram above, $CE \perp AB$ and bisects it.
+
+We showed previously that there does not exist any point which is equidistant from $A$ and $B$ and is \emph{not} on this perpendicular bisector.  Since the center of the circle $F$ has the property $AF = BF$, it must lie somewhere on $CE$.  
+
+Thus, $CE$ is a diameter of the circle.  Bisect it to find $F$, the center.
+
+$\square$
+
+\subsection*{internal and external points}
+As a preliminary to the next section, we claim that 
+
+$\bullet$ \ A line through any internal point of a circle can be extended to intersect the circle at two and only two different points.
+
+\emph{Proof}.
+
+Assume there is a straight line segment that intersects a circle at more than two points, say at three points.  By the definition of a circle, those three points are equidistant from the center.
+
+Of the three points, one lies between the other two (going the shortest way around the circle).  Use the middle point and (one at a time) the other two points to construct two perpendicular bisectors of the two segments.  This is the classic way to find the center of a circle from points on the periphery.
+
+But then, we would have two bisectors that both run through the center.  Yet they are parallel to each other, because they have been constructed perpendicular to the same line.
+
+This is a contradiction.  There cannot be more than two points on intersection of a line with a circle.
+
+$\square$
+
+If there is no specification of an internal point, then it is possible for a line to intersect with the circle at only one point, namely a tangent line.  We deal with tangents separately in another chapter.
+
+\subsection*{radian measure}
+
+\begin{center} \includegraphics [scale=0.3] {arcs11.png} \end{center}
+
+In the figure above, the angle $s$ is \emph{defined} as the length of arc $a$ that it sweeps out in a unit circle.
+
+We talked briefly early in the book about the \emph{measure} of an angle.  It seems intuitively obvious that, in this figure, $\theta < \phi$.
+\begin{center} \includegraphics [scale=0.4] {lines_angles_0.png} \end{center}
+The question is how to quantify this notion.
+
+Effectively what we'll do is imagine that we draw a circle with radius $1$, a \emph{unit} circle, which contains the angle as a central angle.
+
+\begin{center} \includegraphics [scale=0.3] {Simmons_1b.png} \end{center}
+
+Then, the measure of the angle is the distance traveled around the circle counter-clockwise from the horizontal on the right.
+
+Although this drawing shows angles in degrees, in calculus and analytical geometry angles are defined in terms of radians of arc.  For a unit circle with radius = $1$, the total circumference is $2\pi$.
+
+If $s$ is the measure in radians and $D^{\circ}$ the measure in degrees, then
+\[ \frac{s}{2 \pi} = \frac{D}{360} \]
+
+It seems natural then to adopt the arc length as a measure of the angle, where $360^\circ$ is equal to $2 \pi$ \emph{radians}, and an angle of $90^\circ$, a right angle, is equal to $\pi/2$ radians.
+
+\begin{center} \includegraphics [scale=0.30] {radian.png} \end{center}
+
+Divide $360$ by $2 \pi$ to find that one radian is approximately $57^\circ$.
+  
+To convert some more measures of angles in degrees to radians:
+\[ 180^\circ = \pi, \ 90^\circ = \frac{\pi}{2} \]
+\[ 60^\circ = \frac{\pi}{3}, \ 45^\circ = \frac{\pi}{4}, \ 30^\circ = \frac{\pi}{6} \]
+
+Central angle and the arc that subtends that angle are numerically equal, but remember that they are dimensionally different.  An arc is a length, an angle is just an angle and not a length.
+
+\subsection*{two problems}
+
+Here are two problems from \emph{the Art of Problem Solving}.
+\begin{center} \includegraphics [scale=0.40] {circle_probs1.png} \end{center}
+
+For the first (left panel), we are given that $A$, $B$ and $C$ are the centers of the respective circles, that the points which appear tangent are actually so, and also that $AB=6$, $AC=5$ and $BC=9$.  
+
+What is $AX$, the radius of the large circle?
+
+For the right panel, we are asked to express the radius of circle $A$ in terms of the sides of $\triangle ABC$.
+
+\emph{Hint}.  Both problems ask you to exercise your skills in solving simultaneous equations by adding them together.
+
+\subsection*{problem}
+
+Here is a problem from Paul Yiu.  It is really more about the Pythagorean theorem with an equilateral triangle thrown in but I put it here.
+\begin{center} \includegraphics [scale=0.25] {circles4.png} \end{center}
+We have two larger circles of equal size drawn with $AB = a$, the radius, plus another smaller circle drawn tangent to both and to their diameter as shown.
+
+The line through both centers of tangent circles goes through the point of tangency, so $KB = r + a$.  Since $A$ is the center of one circle, $AX$ is equal to $a$, so $KA = a - r$.  For the two right triangles we have
+
+\[ (a + x)^2 + r^2 = (a + r)^2 \]
+\[ x^2 + r^2 = (a - r)^2 \]
+After cancelations, these (separately) give 
+\[ 2ax + x^2 = 2ar \]
+\[ x^2 = a^2 - 2ar \]
+Adding
+\[ x^2 + ax - \frac{a^2}{2} = 0 \]
+\[ x = \frac{-a \pm \sqrt{a^2 + 2a^2}}{2} \]
+We take the positive branch for a length
+\[ x + \frac{a}{2} = \frac{\sqrt{3}}{2} a \]
+
+Now, if $M$ is the midpoint of $AB$, then $MT = x + a/2 = \sqrt{3}a/2$.
+\begin{center} \includegraphics [scale=0.35] {circles5.png} \end{center}
+The classic \hyperref[sec:Euclid_I_1]{\textbf{construction}} of an equilateral triangle on $AB$ would put its top vertex at the intersection of the two circles, with side length $a$ and \hyperref[sec:equilateral_triangles]{\textbf{altitude}} $\sqrt{3}a/2$, forming a square.
+
+It is also claimed that $2r = x + a/2$, which means that the other vertex of the square is also the top of the small circle.  This may not be obvious but recall that we added our two equations above.  Subtract!
+\[ 2ax = 4ar - a^2 \]
+\[ x = 2r - \frac{a}{2}  \]
+\[ x + \frac{a}{2} = 2r \]
+
+$\square$
+
+\end{document}

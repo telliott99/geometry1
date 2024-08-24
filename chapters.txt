@@ -1,0 +1,69 @@
+# First
+
+Lines and angles
+Introduction
+Angles
+Parallel lines
+
+Triangles
+Congruent triangles
+Isosceles triangles
+Right triangles
+Introduction to Euclid
+Bisection
+
+Area
+Quadrilaterals
+Rectangles
+Parallelograms
+Altitudes
+Right triangle similarity
+Similar triangles
+
+Pythagorean theorem
+Simple proofs
+Euclid's proof
+Pappus's proof
+Brief review
+
+Circles
+Circles and angles
+Inscribed angles
+Tangents
+Arcs of a circle
+Chords in a circle
+Ptolemy
+
+Practice with proofs
+Elements
+Secant tangent theorem
+Power of a point
+Broken Chord
+More isosceles
+Angle bisectors
+Excircles and Heron
+Equilateral triangles
+
+Trigonometry
+Basic trigonometry
+Double angle
+Sum of angles by scaling
+Sum of angles by Ptolemy
+Law of Cosines
+
+Applications of similarity
+Ptolemy revisited
+Menelaus's theorem
+Ceva's Theorem
+Pythagoras by area
+Ratio Boxes
+
+Addendum
+Author's notes
+Angular measure
+Additional constructions
+Additional proofs
+Two final proofs
+Resources
+List of theorems
+References

@@ -1,0 +1,362 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+
+\title{Fundamental similarity}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+
+Triangles that are alike, but not congruent, because they are scaled differently, are called similar.  We write $\triangle ABC \sim \triangle PQR$.
+
+\begin{center} \includegraphics [scale=0.35] {Jacobs10b.png} \end{center}
+
+\rightline{--- Figure from Jacobs, chapter 10}
+
+Statements about two similar triangles.
+
+$\bullet$ \ They have at least two (thus, three) angles known to be equal.
+
+$\bullet$ \ When superimposed using a shared angle, the third pair of sides, that do not coincide with each other, are nevertheless parallel (you may need the mirror image for one triangle).
+
+\begin{center} \includegraphics [scale=0.15] {similar27.png} \end{center}
+
+$\bullet$ \ They have corresponding pairs of sides in the same proportions, but scaled by a constant factor.
+
+If any one of these properties hold, they all do.
+
+\begin{center} \includegraphics [scale=0.4] {similar2.png} \end{center}
+
+From the above diagram of two similar triangles, similarity implies that (for example)
+\[ \frac{A}{a} = \frac{B}{b} \]
+
+For any pair of similar triangles, there is a constant $k$ such that
+
+\[ k = \frac{A}{a} = \frac{B}{b} = \frac{C}{c} \]
+
+A slight rearrangement gives:
+
+\[ \frac{a}{b} = \frac{A}{B} \]
+
+These ratios are obviously different.
+
+As with congruent triangles, our definitions allow one triangle to be flipped before the comparison is made (comparing two triangles, originally the angles were in opposite order, one clockwise and the other counter-clockwise).
+
+In the figures below, the vertical black lines are parallel.  Any two lines connecting them that cross, form two similar triangles.  The angles marked with dots of the same color are equal by alternate interior angles.  We also have vertical angles.
+
+\begin{center} \includegraphics [scale=0.16] {similar2a.png} \end{center}
+
+Set up the ratios carefully, by finding sides that lie opposite equal angles.
+
+\[
+\begin{matrix}
+a & b & c \\
+A & B & C
+\end{matrix}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\begin{matrix}
+\triangle OPQ = & OP & PQ & QO  \\
+\triangle ORS = & OR & RS & SO
+\end{matrix}
+\]
+For triangles with labeled vertices, I like to do this by naming the triangles in the corresponding order.  We start $\triangle OPQ$ with $OP$ opposite the red dot, moving counter-clockwise.  Do the same with $\triangle ORS$.
+
+Later we will have a theorem about similar triangles formed by crossed chords in a circle.  In the figure below, the angles marked with a red dot are equal, as are the vertical angles, so the two triangles are similar.  In this case we follow equal angles (and sides) around in opposite directions, comparing the two triangles.
+
+\begin{center} \includegraphics [scale=0.3] {crossed_chords.png} \end{center}
+
+AAA is probably the most common way to establish that two triangles are similar.  
+
+\subsection*{similarity and ratios}
+
+\label{sec:similarity_and_ratios}
+
+Similar triangles are defined to have three angles equal (equiangular), but they are scaled differently and so, not congruent.
+
+If two equiangular triangles are superimposed at one vertex ($\angle A$), so the adjacent sides coincide, and angles lie in the same order (left panel), then the sides opposite $\angle A$ are parallel ($DE \parallel BC$).  In the right panel, the angles are in opposite order and this doesn't work.
+
+\begin{center} \includegraphics [scale=0.15] {similar27.png} \end{center}
+
+This can be demonstrated by employing the parallel postulate, or as Euclid does in VI.2, by an argument based on area and the properties of two parallel lines.  Actually, Euclid says to take a triangle and draw the line segment $DE$ either parallel to the base or with the given angles, but the result is the same.
+
+All angles equal and the third side parallel are closely related and easily proven in both directions.
+
+Equal angles $\iff$ parallel sides.  
+
+We will call this property similarity:  all angles equal and the third side parallel.
+
+Another property is that similar triangles have their sides in the same proportion.  This comes in two flavors:  either two sides in equal proportion flanking an equal angle, often called SAS similarity, or all three sides in the same proportion with no prior knowledge about angles.
+
+We now explore all of these situations:
+
+$\bullet$ \ $\parallel$ sides and equal $\angle \iff$ equal ratios
+
+We will call these the \emph{forward} ratio theorem, and the \emph{converse} ratio theorem, even though there are two cases, either SAS or ratios only.
+ 
+\subsection*{parallel third side implies equal ratios}
+
+As background, we recall two fundamental ideas about triangles.  
+
+The first is that if two triangles have their bases on the same line, and they also share the same vertex opposite, then they have the same altitude.  
+
+It follows that the areas are in the same proportion as the lengths of the bases.  This is the \hyperref[sec:area_ratio_theorem]{\textbf{area-ratio theorem}}.  
+\begin{center} \includegraphics [scale=0.14] {area12.png} \end{center}
+
+\[ 2 \mathcal{A}_{\triangle BAC} = h \cdot AC  \]
+\[ 2 \mathcal{A}_{\triangle BCD} = h \cdot CD  \]
+\[ \frac{\mathcal{A}_{\triangle BAC} }{\mathcal{A}_{\triangle BCD}} = \frac{AC}{CD} \]
+
+There is only one line that can be drawn from a point vertically to a straight line.  So there is only one altitude that can be drawn from a point to a base.  Since the triangles share the vertex point, they have the same altitude.
+
+The second idea is that if two triangles share the same base, and the two opposing vertices both lie along a lie that is parallel to the base, then the triangles have the same area.
+
+\subsection*{Euclid VI.2}
+
+$\bullet$ \ $\parallel$ sides and equal $\angle \rightarrow$ equal ratios
+
+\label{sec:similarity_equal_ratios}
+
+\label{sec:Euclid_VI_2}
+
+\begin{center} \includegraphics [scale=0.14] {EVI_2.png} \end{center}
+
+\emph{Proof}.
+
+Start with $\triangle ADE$ and then draw $BC \parallel DE$.
+
+We will show that $AB:BD = AC:CE$.
+
+The key to Euclid's proof of this theorem is to observe that the two triangles shaded blue, $\triangle DBC$ and $\triangle ECB$, have the same area.
+
+The reason is that they lie on the same base, and their vertex (either $D$ or $E$) lies along the same line parallel to that base.  Hence the result follows.
+
+But by the area-ratio theorem
+\[ \frac{\mathcal{A}_{\triangle ABC}}{\mathcal{A}_{\triangle DBC}} = \frac{AB}{BD}  \]
+and 
+\[ \frac{\mathcal{A}_{\triangle ABC}}{\mathcal{A}_{\triangle ECB}} = \frac{AC}{CE}  \]
+
+Since the left-hand sides of the two expressions are equal, so are the right-hand sides.  Namely
+\[ \frac{AB}{BD} = \frac{AC}{CE} \]
+
+$\square$
+
+Here is a different pictorial view of the argument.
+\begin{center} \includegraphics [scale=0.3] {Euclid_VI_3d.png} \end{center}
+
+Therefore
+\[ \frac{a}{A} = \frac{b}{B} \]
+
+Equal angles (parallel third side) implies equal ratios.
+
+$\square$
+
+This result applies to any vertex of the two similar triangles and its adjacent sides, hence it applies to all three sides of the two triangles.
+
+\subsection*{converse theorem}
+
+Euclid proves the converse theorem by using the same steps in reverse.  Start with equal areas, form equal ratios of them, and then use the equal altitude to show that $DE \parallel BC$.
+
+A somewhat different proof of the converse theorem, that equal ratios implies equal angles, is given by Kiselev.
+
+\emph{Proof}.
+
+Let there be two triangles $\triangle ABC \sim \triangle A'B'C'$ with three pairs of sides in the same ratio.  Let $\triangle ABC$ be the larger one.
+
+\begin{center} \includegraphics [scale=0.15] {similar26.png} \end{center}
+
+Mark off inside $\triangle ABC$, for example, $AD = A'B'$ and then draw $DE \parallel BC$.  By the forward theorem, $\triangle ABC \sim \triangle ADE$.
+
+We can form the dual equality:
+\[ \frac{A'B'}{B'C'} = \frac{AB}{BC} = \frac{AD}{DE} \]
+since we are given the first (equal ratios), and have the second from similar triangles, $\triangle ABC \sim \triangle ADE$.
+
+Equating the first and third terms:
+\[ \frac{A'B'}{B'C'} = \frac{AD}{DE} \]
+
+But we also have $A'B' = AD$, by construction.  Cancel to obtain $B'C' = DE$.
+
+The same can also be done for the third side.  Thus, $\triangle ADE \cong \triangle A'B'C'$ by SSS.  
+
+It follows that $\triangle A'B'C'$ is equiangular with $\triangle ADE$ and thus with $\triangle ABC$.
+
+$\square$
+
+\subsection*{SAS for similar triangles}
+
+\label{sec:SAS_similar}
+
+Now, we mix and match the conditions, taking two sides in proportion and one angle shared.  This is often called SAS similarity.
+
+We will prove that this mix of conditions is enough for two triangles to be similar.
+
+\begin{center} \includegraphics [scale=0.5] {mod_midpoint.png} \end{center}
+
+\emph{Proof}.
+
+Given two triangles with the same vertex angle at $A$ and two of three sides known to be in the same proportion ($BD/AB = CE/AC = k$).
+
+Draw $EF$ parallel to $ABD$ and extend $BC$ to meet it at $F$.  
+
+$\triangle ABC \sim \triangle CEF$ by vertical angles plus alternate interior angles (red dots).  The corresponding sides opposite the vertical angles are $EF$ and $AB$.
+
+By the forward theorem
+\[ \frac{EF}{AB} = k = \frac{CE}{AC} \]
+but
+\[ \frac{CE}{AC}  = \frac{BD}{AB} \]
+
+Therefore, $BD = EF$.  We are given $BD \parallel EF$.  $BDEF$ has one pair of opposing sides equal and parallel, so it is a parallelogram.  
+
+It follows that $BC \parallel DE$ and $BF = DE$.
+
+It also follows that $\angle D = \angle ABC$ by alternate interior angles, so we have two angles equal which means that $\triangle ABC \sim \triangle ADE$.  
+
+The forward theorem then gives $(DE-BC)/BC = BD/AB = k$
+
+$\square$
+
+Each of the standard congruence theorems (yes, even SSA) has a similarity version.  We won't prove the others.
+
+\subsection*{problem}
+
+The figure below is from Acheson's wonderful book aptly titled \emph{The Wonder Book of Geometry}.  He shows this problem, which he says "[goes] back to at least AD 850, when it appeared in a textbook by the Indian mathematician Mahavira."
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_ladders.png} \end{center}
+
+Looking down an alleyway, you see two ladders arranged as shown and wonder about the point where they cross, at height $h$ and distances $c_1$ and $c_2$ from the edges of the alley, where the width of the alley is $c = c_1 + c_2$.
+
+By similar triangles
+\[ \frac{c_1}{h} = \frac{c}{b} \]
+
+Can you see why?
+
+Going the opposite direction
+\[ \frac{c_2}{h} = \frac{c}{a} \]
+
+Adding the two equations and substituting for $c_1 + c_2$:
+\[ \frac{c}{h} = \frac{c}{a} + \frac{c}{b} \]
+
+Thus
+\[ \frac{1}{h} = \frac{1}{a} + \frac{1}{b} \]
+
+That's a simple and interesting result.  $h$ depends only on $a$ and $b$ and not on $c, c_1$, or $c_2$.
+
+If you think about it, you should see that in the previous problem we never used the information that the sides and the height were vertical, only parallel.
+
+\begin{center} \includegraphics [scale=0.4] {similar25.png} \end{center}
+Work through the same proof for the figure above to show that $1/x + 1/y = 1/z$.
+
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.5] {similar23.png} \end{center}
+
+The problem states that the bases are parallel ($XY \parallel BC$) and also that the subdivision produces \emph{equal areas}.  We are asked to find the ratio $AX:XB$.
+
+\emph{Solution}.
+
+Recall from a previous chapter that for two similar triangles, the altitudes to corresponding sides are in the same ratio as any of the three pairs of sides themselves.  
+
+The altitudes $h$ and $H$ to $BC$ (not drawn) are also in the same ratio as the sides, so let $H = kh$ --- $H$ lies on $BC$.
+
+Then twice the area of the top triangle is $AX \cdot h$ and twice the area of the whole is $AB \cdot H = k AB \cdot h$
+
+We have that the whole is twice the smaller area so the ratio is equal to $2$:
+\[ \frac{k AB \cdot h}{AX \cdot h} = 2 \]
+But $AB/AX$ is also equal to $k$ so we have that $k^2 = 2$ and $k = \sqrt{2}$.
+
+However, we are not asked for $k$.  Instead, we want the ratio of $AX$ to the smaller piece along the bottom. Let $AX = a$.  Then the whole is $A = ka$.  The difference is the small piece, $XB = A - a = a(k - 1)$.  We need
+\[ \frac{a}{a(k - 1)} = \frac{1}{k - 1}  = \frac{1}{\sqrt{2} - 1} \]
+
+\subsection*{problem}
+
+Here's a problem from the web.  Given that $AC \parallel EF$ and $AB \parallel DF$.
+
+We are to prove that the sum of the altitudes of the small triangles is equal to the altitude of the large one.
+
+\begin{center} \includegraphics [scale=0.4] {prob_similar_tri2.png} \end{center}
+
+Informal solution:  The smaller triangles are all similar to $\triangle ABC$ by the alternate interior angles and vertical angle theorems.
+
+For similar triangles, not only are the sides in the same ratio to each other, but so are other measures like the altitudes to a particular side.  So if we label the bases $b_1$ etc., collectively $b_i$ , then we have that
+\[ \frac{b_i}{h_i} = \frac{b}{h} \]
+\[ b_i = b \cdot h_i/h \]
+for each of the $b_i$.
+
+But the sum of the $b_i$ is simply equal to $b$ so
+\[ b_1 + b_2 + b_3 = b \cdot (h_1/h + h_2/h + h_3/h) \]
+\[ b = b \cdot (h_1/h + h_2/h + h_3/h) \]
+\[ 1 = h_1/h + h_2/h + h_3/h \]
+\[ h = h_1 + h_2 + h_3 \]
+
+\subsection*{problem}
+
+Given two triangles that are not similar, where the ratio $AD/AB = r$ and $AE/AC = s$.  We are asked to show that 
+
+\[ \frac{\triangle_{ADE}}{\triangle_{ABC}} = rs \] 
+
+\begin{center} \includegraphics [scale=0.4] {similarity_by_area2.png} \end{center}
+
+\emph{Solution}.
+
+Draw $DF \parallel BC$.  Now $\triangle ADF \sim \triangle ABC$ so $AF/AC = r$.
+
+By our previous result
+\[ \frac{\triangle_{ADF}}{\triangle_{ABC}} = r^2 \] 
+
+Since $AE/AC = s$ and $AF/AC = r$, $AE/AF = s/r$.  As triangles with a common vertex and bases in that proportion, these areas are in the same proportion:
+
+\[ \frac{\triangle_{ADE}}{\triangle_{ADF}} = \frac{s}{r} \] 
+
+Multiply the two ratios together to obtain
+
+\[ \frac{\triangle_{ADE}}{\triangle_{ABC}} = sr \] 
+
+$\square$
+
+\emph{Solution}.  (alternate).
+
+\begin{center} \includegraphics [scale=0.4] {similarity_by_area2.png} \end{center}
+
+Looking ahead to trigonometry, in any triangle, twice the area can be computed as the product of two sides flanking an angle times the \emph{sine} of the angle.  (The reason is that the altitude to one side, divided by the length of the second side, is defined to be the sine of the angle.)
+
+\[ 2 (ADE) = AD \cdot AE \cdot \sin \angle DAE \]
+\[ 2 (ABC) = AB \cdot AC \cdot \sin \angle BAC \]
+
+But $\angle DAE = \angle BAC$, so they have the same sine, and the ratio of areas is just
+\[ \frac{AD \cdot AE}{AB \cdot AC} = rs \]
+
+$\square$
+
+To rework this proof in terms of familiar concepts, draw the altitude from $D$ to $AE$, and also the one from $B$ to $AC$
+
+They form similar right triangles including the angle at $A$.  The altitudes scale like $AD/AB = r$.  But the bases scale like $AE/AC = s$.  
+
+And area scales like the product of the two, namely, $rs$.
+
+\subsection*{pyramid height}
+
+As we said earlier, Thales was from Miletus and he lived around 600 BC.  Thales is believed to have traveled extensively and was likely of Phoenician heritage.  As you probably know, the Phoenicians were famous sailors who founded many settlements around the Mediterranean.  
+
+They competed with the mainland Greeks and later with the Romans for colonies, and their major city, Carthage, was destroyed much later by the Romans, in the third Punic War.  Hannibal rode his famous elephants over the Alps in the second Punic war.
+
+During his travels, Thales went to Egypt, home to the great pyramids at Giza, which were already ancient then.  They had been built about 2560 BC (dated by reference to Egyptian kings) and were already 2000 years old at that time!
+
+The story is that Thales asked the Egyptian priests about the height of the Great Pyramid of Cheops, and they would not tell him.  So he set about measuring it himself.  He used similar triangles.  I'm sure he wrote down his answer, but I'm not aware that it survives.  The current height is 480 feet.
+
+\begin{center} \includegraphics [scale=0.25] {Thales_theorem_6.png} \end{center}
+
+\end{document}

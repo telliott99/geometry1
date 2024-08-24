@@ -1,0 +1,144 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Power of a point}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+We're going to look at how Euclid was able to establish the 
+
+$\hyperref[sec:chord_segments]{\textbf{crossed chord theorem}}$ 
+
+and $\hyperref[sec:secant_tangent_theorem]{\textbf{secant tangent theorem}}$.
+
+The main purpose is to appreciate how much he was able to do (up to Book III of \emph{Elements}) without a theory of similar figures, using only the Pythagorean theorem.
+
+But we start with two propositions from Book II, which deal with what might be termed geometric algebra.
+
+\subsection*{Euclid II.5}
+
+\label{sec:Euclid_II_5}
+
+\begin{center} \includegraphics [scale=0.25] {gnomon1.png} \end{center}
+
+In this figure, the line $AB$ is bisected at $M$ and then the point $P$ placed somewhere within $MB$.  The first proposition, II.5, says that
+\[ AP \cdot PB + MP^2 = MB^2 \]
+
+where $AP \cdot PB$ is the area of rectangle $AD$, $PE$ is the square on $PB$, with $PB = BE$, and $CF$ is the square on $CD$, with $CD = MP = EG$.
+
+The construction contains two sets of equal rectangles.  The first is $AC = ME = BF$.  And the second is $MD = DG$.  This is by I.43.
+
+In the figure below, the two white parallelograms are equal.
+\begin{center} \includegraphics [scale=0.15] {EI_43.png} \end{center}
+
+We saw an example very early for rectangles as the \hyperref[sec:area_ratio_theorem]{\textbf{area-atio theorem}}.
+\begin{center} \includegraphics [scale=0.6] {Acheson_G42.png} \end{center}
+\[ ad = bc \]
+
+Returning to the present theorem
+\begin{center} \includegraphics [scale=0.25] {gnomon1.png} \end{center}
+
+As  noted, the construction contains two sets of equal rectangles.  The first is $AC = ME = PG$, while the second is $MD = DG$.
+
+Here's the neat idea: $AC + MD + PE = AE$.
+
+But this is equal to $MD + PE + DG$, since $AC = DG$.  The latter area is an L-shaped piece called a \emph{gnomon}.  
+
+So then if we add $CF$ (equal to $MP^2$) we have $MG$ (equal to $MB^2$).
+
+\[ AP \cdot PB + MP^2 = MB^2 \]
+
+I find this more difficult to remember than I would like.  But it is easy to check using algebra.  Let $x = AM$ and $y = MP$ so $AP = x + y$ and $PB = x - y$ and then
+\[ AP \cdot PB = x^2 - y^2 = MB^2 - MP^2 \]
+
+\subsection*{Euclid II.6}
+
+\label{sec:Euclid_II_6}
+
+The second theorem is very similar but has the point $P$ located on an extension of $AB$:
+\begin{center} \includegraphics [scale=0.20] {gnomon2.png} \end{center}
+
+Again we have a gnomon and a difference of squares.  The gnomon is equal to the whole rectangle $AP \cdot PB$ and when added to $MB^2$ we get the whole large square $MP^2$
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+In the final formula, we have just switched $MB$ and $MP$, although $AP$ is not what it used to be.
+
+In algebraic terms we let $AM = x$ and now $PB = y$ so
+\[ (2x + y) y + x^2 = 2xy + y^2 + x^2 = (x + y)^2 \]
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+\subsection*{application to chords}
+We have a chord of a circle on center $O$, $AB$.  $AB$ is bisected at $M$ and $P$ is placed somewhere within $MB$.
+\begin{center} \includegraphics [scale=0.16] {EIII_35b.png} \end{center}
+
+By II.5
+\[ AP \cdot PB + MP^2 = MB^2 \]
+\[ AP \cdot PB = MB^2 - MP^2 \]
+
+We notice both terms on the right are part of right triangles.
+\[ AP \cdot PB = (MB^2 + OM^2) - (MP^2 + OM^2) \]
+\[ = r^2 - OP^2 \]
+
+Let $d$ be the distance from $P$ to the center, and this becomes
+\[ AP \cdot PB = r^2 - d^2 \]
+This result is \emph{independent} of the particulars of $AB$ and depends only on the placement of $P$ (and the requirement that $AB$ pass through $P$).  So any other chord that also passes through $P$, say $CD$, has the same result.
+
+\begin{center} \includegraphics [scale=0.15] {EIII_35c.png} \end{center}
+\[ AP \cdot PB = CP \cdot PD \]
+This, III.35, is just the crossed chord theorem in disguise.
+
+\subsection*{tangent}
+
+The next theorem concerns the tangent.
+\begin{center} \includegraphics [scale=0.18] {EIII_36.png} \end{center}
+
+Here we have $AB$ bisected at $M$, the center of the circle, and then $P$ placed on the extension of $AB$.
+
+By II.6
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+$MB$ and $MT$ are radii so
+\[ AP \cdot PB = MP^2  - MT^2 = PT^2 \]
+
+The length of the tangent from point $P$ is equal $AP \cdot PB$.
+
+The two results can be unified by considering $PA$ and $PB$ as directed line segments.  In the crossed-chords example, they point in opposite directions so their product is negative, while for tangent and secant they point in the same direction.
+
+We can view the result for chords $r^2 - d^2$ as the same as the result for the tangent, $d^2 - r^2$, provided we take account of the sign of $AP \cdot PB$.
+
+\subsection*{secant}
+
+\begin{center} \includegraphics [scale=0.20] {EIII_36b.png} \end{center}
+
+As with the tangent, by II.6 we have
+\[ AP \cdot PB + MB^2 = MP^2 \]
+and again, we have right triangles so
+\[ AP \cdot PB + (MB^2 + OM^2) = (MP^2 + OM^2) \]
+\[ AP \cdot PB + OB^2 = OP^2 \]
+
+so again
+\[ AP \cdot PB = d^2 - r^2 \]
+
+By using the previous two results together, we have that for any secant drawn from $P$, $PA \cdot PB$ is equal to the square of the tangent from the same point $PT^2$.
+
+This is the $\hyperref[sec:secant_tangent_theorem]{\textbf{secant tangent theorem}}$.
+
+
+
+\end{document}

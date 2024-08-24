@@ -1,0 +1,188 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Menelaus's theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we establish a simple but very valuable result called \hyperref[sec:Menelaus_theorem]{\textbf{Menelaus's theorem}}, due to Menelaus of Alexandria (the geometer, not the mythological figure).  He lived about 100 CE.  It is supposed that Menelaus grew up in Alexandria but is known to have lived in Rome.
+
+\subsection*{Menelaus's theorem}
+
+\label{sec:Menelaus_theorem}
+
+Consider $\triangle ABC$ and a line that goes through the triangle (not through a vertex and not through a side), called a transversal.  There is one side, which when it is extended, meets the transversal.  Here the transversal $PQR$ meets $BC$ at $R$.
+\begin{center} \includegraphics [scale=0.2] {menelaus7.png} \end{center}
+
+\emph{Proof}.
+
+Draw a line parallel to the transversal, $CK$.  We have two pairs of similar triangles.  The first is $\triangle APQ \sim \triangle AKC$, and the second is $\triangle KBC \sim \triangle PBR$.  I will write the ratios as shown in the figure.  I call these ratio boxes.
+
+\begin{center} \includegraphics [scale=0.2] {menelaus6.png} \end{center}
+
+From the first set:
+\[ \frac {AP}{AQ} = \frac{PK}{QC} \]
+
+And from the second set:
+\[ \frac{PB}{BR} = \frac{PK}{RC} \]
+
+Isolate $PK$ and equate:
+\[ \frac {AP}{AQ} \cdot QC = \frac{PB}{BR} \cdot RC \]
+\[ \frac {AP}{PB} \cdot \frac{BR}{RC} \cdot \frac {QC}{AQ} = 1 \]
+
+$\square$
+
+We will show several different proofs, for practice.
+
+In the figure below, subscripts indicate the parts of a side, for example, $a_1$ and $a_2$ are the components of side $a$.  
+
+$c + c'$ is the length of the whole side \emph{plus the extension}.
+
+We will show that the product of three ratios is equal to $1$:
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c + c'}{c'} = 1 \]
+
+\begin{center} \includegraphics [scale=0.2] {menelaus8.png} \end{center}
+
+\emph{Proof}.
+
+Draw the dotted line segment parallel to $b$ and label it $d$.  We have two pairs of similar triangles.  The first pair has side ratios
+\[ \frac{d}{a_1} = \frac{b_1}{a_2} \]
+while the second has
+\[ \frac{d}{c'} = \frac{b_2}{c + c'} \]
+
+Combining the two results:
+\[ d = \frac{a_1 b_1}{a_2} = \frac{b_2 c' }{c + c'} \]
+So
+\[ \frac{a_1 \cdot b_1\cdot c + c'}{a_2 \cdot b_2\cdot c'} = 1 \]
+
+$\square$
+
+\subsection*{Einstein's proof of Menelaus}
+
+There is a story that Einstein disliked the proofs of Menelaus's theorem based on similar triangles.
+
+He said they were ugly, and didn't involve the vertices symmetrically.  I read that Einstein's proof starts by dropping altitudes to the transversal, and then uses similar triangles.  Here's what I came up with.
+
+\begin{center} \includegraphics [scale=0.2] {menelaus9.png} \end{center}
+
+\emph{Proof}.
+
+The right triangle with $c + c'$ as hypotenuse is similar to the one with $c'$ as hypotenuse.  This gives
+\[ \frac{q}{r} = \frac{c+c'}{c'} \]
+
+The right triangles with $a_1$ and $a_2$ as hypotenuse are similar.  We form the ratio of altitudes:
+
+\[ \frac{r}{p} = \frac{a_1}{a_2} \]
+
+Finally, the right triangles with $b_1$ and $b_2$ as hypotenuse are similar.  We form the ratio of altitudes again:
+
+\[ \frac{p}{q} = \frac{b_1}{b_2} \]
+
+Multiply the left-hand sides all together to obtain $1$.
+\[ \frac{q}{r} \cdot \frac{r}{p} \cdot \frac{p}{q} = 1 \]
+
+Therefore, the product of the right-hand sides is also $1$:
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c+c'}{c'} = 1 \]
+
+$\square$
+
+According to
+
+\url{https://www.cut-the-knot.org/Generalization/MenelausByEinstein.shtml}
+
+\begin{quote}
+... [in] correspondence between Albert Einstein and a friend of his, Max Wertheimer. In the first letter, Einstein apparently continues a discussion on elegance of mathematical proofs. A proof may require introduction of additional elements, like line AP in the first of the cited proofs. In Einstein's opinion, "... we are completely satisfied only if we feel of each intermediate concept that it has to do with the proposition to be proved."
+
+As an illustration of his viewpoint, Einstein gives two proofs of the same proposition - one ugly, the other elegant. Curiously, the proposition he proves is that of the Menelaus theorem, and the proof ugly in his view is the first of the cited proofs. He writes, "Although the first proof is somewhat simpler, it is not satisfying. For it uses an auxiliary line which has nothing to do with the content of the proposition to be proved, and the proof favors, for no reason, the vertex A, although the proposition is symmetrical in relation to A, B, and C. The second proof, however, is symmetrical, and can be read off directly from the figure."
+\end{quote}
+
+\subsection*{converse}
+
+We've drawn $\triangle ABC$ as an acute triangle, with the transversal crossing through points on two sides and on the extension of the third. There are other possibilities.  However, if we restrict ourselves to this case, then the converse can be stated as
+
+Given that the product of ratios is equal to $1$, the three points are collinear.
+
+\begin{center} \includegraphics [scale=0.2] {menelaus8.png} \end{center}
+
+\emph{Proof}.
+
+An easy proof draws on the forward theorem.  Assume that the product of ratios is $1$.
+
+Suppose the points are not colinear, so the case with product $1$ has $c''$ and the case with colinear points has $c'$.  We are given that
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c + c''}{c''} = 1 \]
+
+But, by the forward theorem
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c + c'}{c'} = 1 \]
+
+We have
+\[  \frac{c + c''}{c''} =  \frac{c + c'}{c'}  \]
+\[  \frac{c}{c''} =  \frac{c}{c'}  \]
+\[  \frac{1}{c''} =  \frac{1}{c'}  \]
+
+We conclude that $c' = c''$  Hence, if the product is equal to $1$, the points lie on the same line.
+
+$\square$
+
+\subsection*{more about Menelaus}
+
+\begin{center} \includegraphics [scale=0.2] {menelaus8.png} \end{center}
+
+We showed that the product of three ratios is equal to $1$:
+\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot \frac{c + c'}{c'} = 1 \]
+
+One way to remember the terms is that, going around in any direction, we take the first length we run into and put it into the numerator.  It doesn't matter which direction you go, as long as you take $c'$ first when going clockwise and $c+c'$ first when going counter-clockwise.
+
+Take the extension first if you run into it first.
+
+We also need to prove the theorem for an alternative setup.  Even though the black line in the figure below does not go through the triangle, it is technically a transversal.
+
+\begin{center} \includegraphics [scale=0.4] {menelaus3.png} \end{center}
+Notice that we are re-defining $a$, $b$ and $c$.
+
+\[ \frac{r}{p} \cdot \frac{p}{q} \cdot \frac{q}{r} = \frac{a'}{a} \cdot \frac{b}{b'} \cdot \frac{c}{c'} \]
+
+Once again, we can remember this as, take the first length we run into, and put it on top.
+
+Menelaus is a preliminary lemma to an easy proof of Ceva's theorem, which becomes important in thinking about the concurrency of lines in a triangle, like those which bisect the opposing sides and meet at the centroid.  Ceva's theorem gives a condition under which three lines like this are concurrent, or meet at a point.
+
+Menelaus's theorem can be seen as in some sense as similar to Ceva, because it provides conditions under which three points can be proved collinear, or on one line.
+
+It will come in handy in another problem, called Pappus's Theorem.
+
+\subsection*{alternative definition}
+There is a somewhat more sophisticated version of Menelaus's Theorem which views the path around a triangle as consisting of \emph{directed} (that is, \emph{signed}) line segments.
+
+\begin{center} \includegraphics [scale=0.15] {menelaus4.png} \end{center}
+The transversal is $XZY$, which meets the extension of $BC$ at $Y$.  Since $Y$ does not lie between $B$ and $C$, the line segments $BY$ and $YC$ point in opposite directions.  The ratio $BY:YC$ thereby acquires a minus sign.
+
+Every transversal has this property.  Here (on the right) is a transversal that does not go through the triangle at all.
+\begin{center} \includegraphics [scale=0.15] {menelaus5.png} \end{center}
+
+The path around the triangle has three parts:
+
+$A$ to $X$ to $B$ $\Rightarrow$  $AX:XB$
+
+$B$ to $Y$ to $C$  $\Rightarrow$    $BY:YC$
+
+$C$ to $Z$ to $A$  $\Rightarrow$   $CZ:ZA$
+
+Each ratio has a minus sign so the total product also has a minus sign.  Menelaus's Theorem says:
+\[ \frac{AX}{XB} \cdot \frac{BY}{YC} \cdot \frac{CZ}{ZA} = - 1 \]
+
+\end{document}

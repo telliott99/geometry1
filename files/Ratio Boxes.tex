@@ -1,0 +1,246 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Ratio boxes}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this short chapter, we will look at a device which, at least for now, I'm going to call \emph{ratio boxes}.  Here's the idea:
+\begin{center} \includegraphics [scale=0.18] {ratios1.png} \end{center}
+
+We start with two similar triangles, $\triangle abc$ nested inside $\triangle ABC$.
+
+One part of the definition is that the sides have equal ratios.  For example, $a : A = b : B$, also written as
+\[ \frac a A = \frac b B \]
+Now, you can look at the figure and take away that result, easily enough.  But sometimes you need more than one relationship, and if the vertices have the labels, then it's more complicated. 
+
+You may notice that there are two similar triangles but nine entries in the box.  The reason is the following:
+\[ \frac a b = \frac A B  = \frac{a + a'} {b + b'} \] 
+\[ \frac {a + a'}  a  = \frac{b + b'} b \] 
+\[ \frac {a'}  a  = \frac{b'} b \] 
+\[ \frac {a'}  {b'}  = \frac a b = \frac A B \] 
+
+I like to write the sides that are in proportion as shown in the rectangular grid.  
+\begin{center} \includegraphics [scale=0.15] {ratios8.png} \end{center}
+
+Orient it as you like.  I usually proceed from the shortest side to the longest side.  Sometimes that is hard to see so we start matching sides with the angle opposite.  
+
+But however, you do it, there are nine sides or differences of sides.  Here the ratios \emph{within} triangles go across, and the ones \emph{between} triangles go down.
+
+The next example uses the traditional Greek notation (well, with Roman letters).
+
+\begin{center} \includegraphics [scale=0.18] {ratios2.png} \end{center}
+This is exactly the same as before, except the sides are labeled by the flanking vertices.  It is fairly easy to go through a figure and make such a box.
+
+The value is this:  any four entries that are in the shape of a rectangle form a valid ratio.  For example:  $PQ : PS = QR : SU$.  You can also see immediately that $PQ \cdot SU = PS \cdot QR$. 
+\begin{center} \includegraphics [scale=0.15] {ratios9.png} \end{center}
+If you have three picked you know the fourth.  If you have two picked, and they are not related horizontally or vertically (like $PQ$ and $SU$), then you obtain the other two partners immediately.
+
+\subsection*{right triangles}
+\begin{center} \includegraphics [scale=0.15] {ratios3.png} \end{center}
+As you know, if you draw the (one) altitude in a right triangle, it forms two smaller similar triangles.  The reason is complementary angles, as shown by the red dots marking equal angles.
+
+Say we want a proof of Pythagoras's Theorem.  We need $a^2$ and $b^2$.  They jump right out of the box:
+\[ a^2 = xc \]
+\[ b^2 = yc \]
+\[ a^2 + b^2 = xc + yc = c^2 \]
+$\square$
+
+We also see, without ever referring back to the figure, that $h^2 = xy$.  $h$ is the \emph{geometric mean} of $x$ and $y$.
+
+\subsection*{secants}
+\begin{center} \includegraphics [scale=0.15] {ratios4.png} \end{center}
+$PAB$ and $PCD$ are secants of this circle.  The red dots show equal angles.  The reason is that $\angle B$ and $\angle ACD$ are supplementary, because they are opposite angles of a \emph{cyclic quadrilateral}.  Together they correspond to a complete arc of the circle.
+
+But $\angle PCA$ and $\angle ACD$ are supplementary too.  So the marked angles are equal.  And since two pairs of angles are equal, we have similar triangles:  $\triangle PCA \sim \triangle PBD$.  I try to remember to write the vertices in the order of similarity, so for example:  $PC : CA = PB : BD$.
+
+Go through each triangle and write the sides that have equal angles opposite.  The famous result is:  $PA \cdot PB = PC \cdot PD$.
+
+I have left out the entry in the starred box, because it looks funny.  It is $BD-AC$.
+
+\subsection*{tangent-secant}
+\begin{center} \includegraphics [scale=0.15] {ratios5.png} \end{center}
+Here we have a secant $PQR$ and a tangent, $PT$.  The angle that the tangent makes with a chord is easily shown to be equal to any inscribed angle subtended by that chord.  That accounts for the red dots.
+
+Again we have similar triangles, this time, one is nested inside another, so there are only six terms in the box.  Here I followed the angles, first red then $\angle P$.
+
+The famous result is the Secant Tangent Theorem (or Tangent Secant Theorem):  $PQ \cdot PR = PT^2$.
+
+It writes itself.
+
+\subsection*{Angle Bisector Theorem}
+
+We revisit this theorem, from \hyperref[sec:generalized_angle_bisector_theorem]{\textbf{here}}.  We are given that the angle at $A$ ($\angle BAC$), is bisected.
+
+So we draw a line segment $BE$ parallel to side $AC$ and extend the bisector to meet it.
+\begin{center} \includegraphics [scale=0.15] {ratios16.png} \end{center}
+Because of the parallel lines, $\angle BED$ gets a red dot as well.  And that means $\triangle BED \sim \triangle DAC$, which gives the ratio box in the figure.  Here we want to be careful to match the sides with equal angles opposite.
+
+Highlight the segments we think might be interesting.  Finally, notice that $\triangle ABE$ is isosceles, so $AB = BE$.  We obtain:
+\[ \frac{AC}{DC} = \frac{BE}{BD} = \frac{AB}{BD} \]
+
+$\square$
+
+The sides and divisions of the base are in equal proportion.  This can also be written as
+\[ \frac{AB}{AC} = \frac{BD}{DC} \]
+
+This one can also be done by areas (next figure).  $\triangle ABD$ and $\triangle ACD$ have the same altitude $h$.  So the areas are in the ratio $AB:AC$.
+
+\begin{center} \includegraphics [scale=0.15] {ratios17.png} \end{center}
+
+But looked at another way, they have bases $BD$ and $DC$ on the same parallel, so they have the same height drawn to vertex $A$.  Hence, the areas are in the ratio $BD:DC$.  Thus
+\[ \frac{AB}{AC} = \frac{BD}{DC} \]
+
+\subsection*{Menelaus's Theorem}
+\begin{center} \includegraphics [scale=0.18] {ratios15b.png} \end{center}
+
+The next example is one where the method really proves its worth.  We prove Menelaus's theorem (we will look at it in more detail later \hyperref[sec:Menelaus_theorem]{\textbf{here}}).
+
+In $\triangle ABC$ we have the transversal $RQP$.  Draw an internal line segment $BK$ parallel to the transversal.
+
+Here, it is usual to label vertices rather than sides. 
+
+For the moment, each vertex is listed in order it is encountered going around a triangle, starting at the same vertex each time (since we have parallel bases). 
+
+The values in the right-hand columns of the two ratio boxes are all subtractions, but for one there is no labeled segment to equate to the result.  
+
+The segments needed for the proof are shown in red.
+\begin{center} \includegraphics [scale=0.18] {ratios15b.png} \end{center}
+It writes itself!  Since
+\[ \frac{PK}{BR} = \frac{PA}{AR} \]
+\[ PK = BR \cdot \frac{PA}{AR} \]
+
+Similarly
+\[ \frac{PK}{CP} = \frac{BQ}{QC} \]
+\[ PK = CP \cdot \frac{BQ}{QC} \]
+
+Combining the two results:
+\[ CP \cdot \frac{BQ}{QC} = PK = BR \cdot \frac{PA}{AR} \]
+\[\frac{BQ}{QC}  \cdot  \frac{CP}{PA} \cdot \frac{AR}{BR} = 1 \]
+
+$\square$
+
+Finally, it is usual to view each segment as having a direction or sign.  Namely
+\[ BQ \Rightarrow QC \Rightarrow CP \Rightarrow PA \Rightarrow AR \Rightarrow RB \]
+
+Since $RB$ and $BR$ are in opposite directions, $RB = - BR$.  Substitute $RB$ for $BR$ and adjust the sign of the result accordingly.
+\[\frac{BQ}{QC}  \cdot  \frac{CP}{PA} \cdot \frac{AR}{RB} = -1 \]
+
+\subsection*{inversion}
+Some good examples involve a topic called \emph{Inversive Geometry}.  Given a circle of radius $r$, any point (except the origin), like $A$, can be transformed into its \emph{image under an inverse transformation}, resulting in A'.  Draw the line from $O$ through $A$ and calculate the length of $OA'$ by this rule:
+\[ OA \cdot OA' = r^2 \]
+
+Since $P$ and $P'$ are related by the same transformation, we have $OA \cdot OA' = OP \cdot OP'$.  Since $\angle O$ is shared, we again have similar triangles:  $\triangle OAP \sim \triangle OP'A'$.
+\begin{center} \includegraphics [scale=0.15] {ratios6.png} \end{center}
+
+You can read the rule right off the box.
+
+And if $OAA' \perp A'P'$ then the small $\triangle OAP$ is a right triangle.  By the converse of Thales' Theorem, we can draw a circle with diameter $OA$ and $P$ will lie on the circle.
+
+This is true for \emph{any} point on $A'P'$.  Say $Q'$ is on $A'P'$, then if $Q$ is the image of $Q'$, $Q$ lies on the same circle, the one with radius $OA$.
+
+As a result, the \emph{image} of any point on the line $A'P'$ lies on the circle with radius $OA$.  We say that the image of the line is the circle (and it goes through $O$).
+
+The transformation is an \emph{involution}, so the converse is also true:  the image of a circle through $O$ is a line not through $O$.
+
+A second example from inversion is more general.
+\begin{center} \includegraphics [scale=0.15] {ratios7.png} \end{center}
+You can read the rule right off the box, again.  What this means is that if we take any two points $A$ and $B$ and their images $A'$ and $B'$, we get similar triangles.
+
+\subsection*{Ptolemy's theorem}
+
+\label{sec:Ptolemy_inversion}
+
+\begin{center} \includegraphics [scale=0.15] {ratios10.png} \end{center}
+We will prove a famous theorem.  All we need are some boxes and the previous result.
+\begin{center} \includegraphics [scale=0.18] {ratios11.png} \end{center}
+I didn't even have to think about it.  I just copied the box from before, and substituted $C$ for $B$ in the middle, then $B$ for $A$ on the right.
+
+We see that that the tranformed circle is a line with $A'B' + B'C' = A'C'$.  We can find expressions for those lengths in our boxes.  We know that eventually we will want things like $AB$, $BC$ and $AC$, as well as $OB$, etc.
+
+I get
+\[ A'B' = \frac { AB \cdot OA' } { OB} \ \ \ \ \ \ A'C' = \frac{ AC \cdot OA' } { OC} \ \ \ \ \ B'C' = \frac { BC \cdot OB' } { OC} \]
+Again, these may be obtained mechanically, by straight substitution.  The one for $A'C'$ first, by substituting $C'$ for $B'$ in the one on the left.  Wash, rinse, repeat.
+
+Substitute and then clear the denominator:
+\[ AB \cdot OA' \cdot OC + BC \cdot OB' \cdot OB = AC \cdot OA' \cdot OB \]
+Divide by $OA'$:
+\[ AB \cdot OC + BC \cdot \frac{OB'}{OA'} \cdot OB = AC \cdot OB \]
+
+Can you find the four entries we need in the first box on the left and complete the proof?
+\begin{center} \includegraphics [scale=0.18] {ratios11.png} \end{center}
+
+The final result is
+\[ AB \cdot OC + BC \cdot OA = AC \cdot OB \]
+\begin{center} \includegraphics [scale=0.15] {ratios10.png} \end{center}
+
+We have four vertices on a circle, another cyclic quadrilateral.  Take the product of opposing sides, add them, and obtain the product of the two diagonals.
+
+This is Ptolemy's Theorem.
+\[ AB \cdot OC + BC \cdot OA = AC \cdot OB \]
+
+$\square$
+
+\subsection*{Ceva's Theorem by parallel lines}
+
+\label{sec:ceva_parallel_lines}
+
+Here is another proof of \ \hyperref[sec:Ceva_theorem]{\textbf{Ceva's theorem}}.
+
+\emph{Proof}.
+
+Consider $\triangle ABC$.  Draw $AD$, $BE$ and $CF$ concurrent at $P$.  Draw a line through $B$ parallel to $AEC$ and extend $APDA'$ and $CPFC'$.  
+
+We have five pairs of similar triangles.
+\begin{center} \includegraphics [scale=0.15] {ceva9.png} \end{center}
+
+Three with vertical angles at $P$:
+\[ (1) \ \triangle APC \sim \triangle A'PC' \Rightarrow \frac{AP}{A'P} = \frac{PC}{PC'} = \frac{CA}{C'A'} \]
+\[ (2) \ \triangle APE \sim \triangle A'PB \Rightarrow \frac{AP}{A'P} = \frac{PE}{PB} = \frac{EA}{BA'} \]
+\[ (3) \ \triangle CPE \sim \triangle C'PB \Rightarrow \frac{CP}{C'P} = \frac{PE}{PB} = \frac{EC}{BC'} \]
+And two more with vertical angles at $D$ and $F$:
+\[ (4) \ \triangle ADC \sim \triangle A'DB \Rightarrow \frac{AD}{A'D} = \frac{DC}{DB} = \frac{CA}{BA'} \]
+\[ (5) \ \triangle AFC \sim \triangle BFC' \Rightarrow \frac{AF}{BF} = \frac{FC}{FC'} = \frac{CA}{C'B} \]
+
+It is helpful to remember that when similar triangles are formed by an ``X'' containing vertical angles lying between two parallel lines, corresponding vertices go in mirror image order, and the point at the ``X'' is a corresponding point in each triangle.
+
+We label the triangles so that corresponding vertices match.  Also, do not worry yet about the order in each line segment so for example, $AB = BA$.
+
+\begin{center} \includegraphics [scale=0.15] {ceva9.png} \end{center}
+
+If the triangles are labeled carefully it is easy to make the ratio boxes:
+\begin{center} \includegraphics [scale=0.25] {ceva_ratio_box.png} \end{center}
+
+Now look for the ratios we need namely:
+\[ \frac{CD}{DB} = \frac{CA}{BA'} \ \ \ \ \ \ \ \ \frac{BF}{FA} = \frac{C'B}{CA} \]
+
+We are encouraged by the fact that $CA$ cancels in the product.
+\[ \frac{CD}{DB} \cdot \frac{BF}{FA} = \frac{C'B}{BA'}  \]
+
+The third ratio is $AE/EC$.  $AE$ and $EC$ do not occur in the same box (they do not lie in similar triangles), but in $(2)$ and $(3)$ we find:
+\[ AE = A'B \cdot \frac{PE}{PB} \ \ \ \ \ \ \ \ EC = BC' \cdot \frac{PE}{PB} \]
+so the ratio is just
+\[ \frac{AE}{EC} = \frac{A'B}{BC'} \]
+which is exactly what we need to cancel!
+\[ \frac{CD}{DB} \cdot \frac{BF}{FA} \cdot \frac{AE}{EC} = \frac{C'B}{BA'} \cdot \frac{A'B}{BC'}  = 1 \]
+
+$\square$
+
+
+\end{document}

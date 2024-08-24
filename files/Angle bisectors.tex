@@ -1,0 +1,255 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Angle bisectors}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:angle_bisector}
+
+We consider a classic problem:  the ratio of sides when there is an angle bisector.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector_r1.png} \end{center}
+
+Suppose the large triangle is a right triangle.  We draw a line joining the vertex on the left with the side opposite. 
+
+This line could in general be drawn anywhere, however two interesting cases are when  the side opposite is bisected (left panel), or when the angle at the left is bisected (right panel).  These two cases are not the same.  In the first $\phi \ne \theta$ and in the second, $c \ne d$.
+
+Let's investigate the second possibility, equal angles.  We are in a position to prove an important theorem.
+
+\subsection*{angle bisector theorem}
+
+\label{sec:angle_bisector_theorem}
+
+With reference to the right-hand figure above, we are to prove that
+\[ \frac{d}{b} = \frac{c}{a} \]
+
+$\bullet$ \ The sides and bases are in proportion for a right triangle with bisected angle.
+
+\emph{Proof}.
+
+Draw an altitude for the upper of the two small triangles, meeting the side of length $b$.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector_r2.png} \end{center}
+
+The red triangle and the one directly above it are congruent (right panel).  They share a side (the hypotenuse of each), and they are right triangles with the same smaller angle $\theta$.  Therefore, the altitude we just drew has length $c$.
+
+The small triangle with sides $c$ and $d$ (at the top) is similar to the original large triangle.  The reason is that they are both right triangles containing the smaller angle $\gamma$.
+
+By similar triangles, we form equal ratios of the side opposite $\gamma$ to the hypotenuse:
+
+\[ \frac{a}{b} = \frac{c}{d} \]
+
+This is rearranged simply to give
+\[ \frac{d}{b} = \frac{c}{a} \]
+which is what we were asked to prove.
+
+The result can be pushed a little further:
+\[ \frac{a}{b} = \frac{c}{d} \]
+Add $1$ to both sides:
+\[ \frac{a + b}{b} = \frac{c + d}{d} \]
+\[ \frac{a + b}{c + d} = \frac{b}{d} = \frac{a}{c} \]
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector_r5.png} \end{center}
+
+which is a surprising result and becomes important later in looking at Archimedes method for approximating the value of $\pi$. 
+
+In the proof just completed, we took advantage of the fact that the large triangle was a right triangle.  However, if you think about it for a minute, you should be able to see that the same result holds for an isosceles triangle.  There, the two sides are equal, and if the top angle is bisected, so is the base.  So the ratio of each side to its part of the base is also equal.
+
+This might lead you to wonder about whether the proof holds for a general triangle.  Indeed, we will show later on that the sides and bases are in proportion for any triangle, if the angle is bisected.
+
+In the formula from above
+\[ \frac{a + b}{c + d} = \frac{b}{d} = \frac{a}{c} \]
+\[ = \frac{a}{c+d} + \frac{b}{c + d}  \]
+we have a relationship between sides of the right triangle with angle $2 \theta$ and the right triangle with angle $\theta$.  Archimedes uses this in his method to determine the value of $\pi$.
+
+\subsection*{midpoint theorem}
+
+\label{sec:right_triangle_midpoint_theorem}
+
+The line which bisects the hypotenuse in a right triangle is called the median, but this is commonly called the midpoint theorem.  It is a specific case of the theorem for a right triangle.
+
+\begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
+
+In a right triangle, draw the line segment from the vertex that contains a right angle to the midpoint of the hypotenuse, separating it into two equal lengths $a$.  We will show that the length of the bisector is also $a$.
+
+This repeats a proof we gave earlier.  Following is a simpler proof based on Thales' circle theorem.
+
+\emph{Proof}.
+
+In the right panel, draw the perpendicular from the midpoint $S$ to the base $PR$.  The triangle $SQR$ is similar to the original right triangle by AAA.
+
+Hence the two parts of the base are equal (labeled $b$), because $a/2a = b/2b = 1/2$.  
+
+Therefore we have two congruent triangles:  $SQR$ and $PQS$ (by SAS).  So the bisector $PS$ is equal in length to $SR$.
+
+Both of the new isosceles triangles formed by the original dashed line have equal base angles.
+
+$\square$
+
+The length $a$ is the radius of the circle, centered at $S$, that contains the three vertices of the original right triangle.
+
+A clever alternative proof of the midpoint theorem is to start with the right triangle and draw a circle centered on the midpoint and size the radius so that the hypotenuse is the diameter.  
+
+Then, because the vertex at $P$ is a right angle, by the converse of Thales' circle theorem, $P$ is on the circle.  Thus, $PS$ is also a radius.
+
+The converse of this theorem is to start with the right triangle and draw a line from the vertex $P$ to the hypotenuse, such that the upper segment from the division is equal in length the line just drawn.  
+
+We know that this can be done because at the extremes the length of the upper segment is either zero, or it corresponds to the entire hypotenuse.  In that case, the new line segment is the existing side, which must be shorter than the hypotenuse.  
+
+By this construction, the upper small triangle is isosceles.  By the reverse of the isosceles triangle theorem, the upper of the two new angles at $P$ is $\phi$. 
+
+But the total angle at $P$ is a right angle, so the right angle is now divided into $\phi + \theta$, which means in turn that the second small triangle is also isosceles.  With equal base angles, the opposing sides are also equal.  Thus the point where the new line meets the hypotenuse is the midpoint.
+
+This essentially recapitulates Thales' circle theorem.
+
+$\square$
+
+\subsection*{isosceles angle bisector theorem}
+
+\label{sec:isosceles_bisector}
+
+The next theorem involves angle bisectors in an isosceles triangle.  It is easy in the forward direction, but the converse is very challenging, at least until you draw the right diagram.  Then, as usual, it's not so bad.
+
+\begin{center} \includegraphics [scale=0.3] {bisector4.png} \end{center}
+
+We are given that $\triangle ABC$ is isosceles ($AC = BC$), and also that the angles at the base are both bisected.
+
+We claim that the angle bisectors are equal in length:  $AF = BD$.
+
+\emph{Proof}.
+
+By the forward version of the isosceles triangle theorem, the entire $\angle A = \angle B$, so it follows that all four angles dotted blue and magenta are equal.
+
+Then $\triangle ABD \cong \triangle ABF$ by ASA.
+
+As a result, $AF = BD$ and $AD = BF$.  
+
+Furthermore, since the original triangle is isosceles and $AD = BF$, the smaller triangle $\triangle CDF$ is also isosceles, by subtraction.  Alternatively, $\angle C$ is shared, and the long sides are equal so $\triangle CDB \cong \triangle CFA$ by AAS.
+
+It follows that $CD = CF$ and $\triangle CDF$ is isosceles, and therefore, $\triangle CDF \sim \triangle ABC$ by AAA.
+
+By alternate interior angles, $DF \parallel AB$.
+
+$\square$
+
+That's the easy part.
+
+The converse theorem says that if we have angle bisectors and they are equal in length, then the triangle is isosceles.  This is called the Steiner-Lehmus Theorem.
+
+\url{https://en.wikipedia.org/wiki/Steiner–Lehmus_theorem}
+
+We defer discussion of the \hyperref[sec:Steiner_Lehmus_Theorem]{\textbf{Steiner-Lehmus Theorem}} to its own chapter.
+
+\subsection*{angle bisector theorem revisited}
+
+\label{sec:generalized_angle_bisector_theorem}
+
+It turns out that although we used right triangles in our first proof of the angle bisector theorem, that wasn't strictly necessary.  We can say something about the general case.
+
+We use the notion of area.
+\begin{center} \includegraphics [scale=0.4] {angle_bisector_r6.png} \end{center}
+
+Let's redraw the figure.  Below, we have $\triangle ABC$ with sides $a,b,c$ and the angle $C$ is bisected so the two angles marked with red dots are equal.
+
+\begin{center} \includegraphics [scale=0.15] {angle_bisector_r7f.png} \end{center}
+
+Start from the point where the bisector meets the side opposite $\angle C$, cutting $c$ into $x$ and $y$.  Drop the perpendiculars to the sides $a$ and $b$.  By our previous work with bisectors we know these have the same length, marked as $h$.
+
+We can compute the ratio of the areas of the left and right-hand sub-triangles in two ways.  
+
+The first way uses the area-ratio theorem.
+\[ \frac{A_L}{A_R} = \frac{x}{y} \]
+
+The two triangles share a common altitude and the area is one-half the base times the altitude.  Since the altitude is shared, it cancels, together with the factor of one-half.
+
+The second approach is to use the sides $a$ and $b$ as the two bases.  We have that the heights $h$ are equal.  Hence
+
+\[ \frac{A_L}{A_R} = \frac{b}{a} \]
+
+Equating the two results we have that
+\[ \frac{x}{y} = \frac{b}{a} \]
+which can be manipulated in various ways but I will just leave it as it is.
+
+The result we obtained previously is a special case where angle $A$ is a right angle, but the theorem is true generally.
+
+\subsection*{similar triangles}
+
+Generally speaking, any proof by comparing areas can also be done by similar triangles.  Here are two proofs of the general angle bisector theorem by similar triangles.
+\begin{center} \includegraphics [scale=0.18] {angle_bisector_r7d.png} \end{center}
+
+Both depend on extending a parallel line.  The first uses a line parallel to one of the sides.
+
+Given that the angle at $C$ is bisected.  
+
+The claim is that $a/y=b/x$.
+
+\emph{Proof}.
+
+Draw $AE$ parallel to $BC$ and extend the angle bisector to meet it at $E$.   Then the angle at $E$ is equal to the half-angle, by alternate interior angles, 
+
+\begin{center} \includegraphics [scale=0.18] {angle_bisector_r7e.png} \end{center}
+
+We have that $\triangle ACE$ is isosceles, so $b = b'$.
+
+We also have two similar triangles with $\triangle AED \sim \triangle BCD$, since the angles at $D$ are equal by vertical angles.
+
+Form the ratios of the sides opposite vertical angles to the sides opposite the angles marked with red dots:
+\[ \frac{a}{y} = \frac{b'}{x} \]
+
+But since $b = b'$:
+\[ \frac{a}{y} = \frac{b}{x} \]
+
+$\square$
+
+\subsection*{third proof}
+Here is still another proof, from Paul Yiu, together with a problem.  It includes the bisector of the external angle as well.
+
+The proof uses an extended line parallel to the bisector.
+\begin{center} \includegraphics [scale=0.4] {angle_bisector4a.png} \end{center}
+$\angle A$ in $\triangle ABC$ is bisected internally and externally.  
+
+Extend $BA$ and draw $CZ$ parallel to the bisector $AX$.  This gives a new $\triangle AZC$ which is isosceles by two applications of alternate interior angles, so $AZ = b$.
+
+By similar triangles, we have that $AZ/c = CX/BX$.  Substitute from above to obtain $CX/BX = b/c$.  
+
+Now for the external angle theorem.  We draw $CZ'$ parallel to the angle bisector $AX'$.  Again, there is an isosceles triangle formed,  $\triangle ACZ'$.
+
+We express the theorem as the ratio of the entire base $BX'$ to the external part $CX'$.  By similar triangles, this ratio is equal to the ratio of $c$ to $AZ'$, but analogous to what we had before, $AZ' = b$.  So $BX'/CX' = c/b$.
+
+(There is a minus sign on $b$ if you're using signed lengths, which we do not worry about here).
+
+Then to the problem:  find the ratio $AP/PB$.  
+\begin{center} \includegraphics [scale=0.4] {angle_bisector4b.png} \end{center}
+Pythagoras gives $DC = \sqrt{5}$ and this theorem says that $PC$ and $AP$ are in the same ratio as the flanking sides.
+
+Scale the problem so that $AD = 1$, $AC = 2$ and $AP = x$ and
+\[ \frac{PC}{AP} = \frac{2 - x}{x} = \sqrt{5} \]
+\[ \frac{1}{x} = \frac{1 + \sqrt{5}}{2}  \]
+Do not solve for $x$ yet.  $PB = 1-x$ so the inverse of the desired ratio is
+\[ \frac{PB}{AP} = \frac{1-x}{x} = \frac{1}{x} - 1  \]
+\[ = \frac{1+\sqrt{5}}{2} - 1 = \phi - 1 \]
+\[ = \frac{\sqrt{5}-1}{2} \]
+The inverse is
+\[ \frac{AP}{PB} = \frac{2}{\sqrt{5}-1} \]
+
+
+\end{document}

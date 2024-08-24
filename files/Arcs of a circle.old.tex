@@ -1,0 +1,237 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Arcs of a circle}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+By the radian definition of angular measure, a \emph{central angle} is equal numerically to the arc it includes on a unit circle.  It follows that the sum of four right angles has a measure of $2 \pi$ radians, since the circumference of a circle of radius $1$ is equal to $2 \pi$.
+
+It is natural to think about angles formed from a vertex lying on the periphery of a circle and ask about their relation to the arcs they cut off.
+
+The inscribed angle theorem says that a vertex placed at any point on the periphery of a circle, forming an angle that corresponds to the same arc as a central angle, is equal to \emph{one-half} the central angle.
+
+A corollary is that whenever two peripheral angles correspond to the same arc, they are equal.
+
+We have seen a special case already, in the proof of Thales' circle theorem, and we also developed a proof for the general case.  However, it has a limitation in that the construction we used does not include the center of the circle.  Here we remedy that deficiency.
+
+\subsection*{proof based on external angle theorem}
+
+\label{sec:equal_angles_same_arc}
+
+There is a general proof in Acheson's geometry book, which invokes the external angle theorem. 
+
+\emph{Proof}.
+
+Draw a circle and pick any point $P$ on the circle and draw two chords to any points $A$ and $B$.  Then draw the line segment from $P$ through the center $O$ and continuing to point $Q$.
+
+\begin{center} \includegraphics [scale=0.45] {arcs2b.png} \end{center}
+
+Now draw the radii $OA$ and $OB$.  The resulting $\triangle AOP$ and $\triangle BOP$ are isosceles.  Therefore the two angles marked $a$ are equal, as are the two angles marked $b$.
+
+By the external angle theorem, the angles at the center are equal to $2a$ and $2b$, respectively.  This result holds for \emph{any} three points $A$, $P$ and $B$.
+
+A slight modification is needed for the case where the arc does not include the center of the circle. Then we would have $PA$ and $PB$ on the same side of the diagonal, and the relevant arc would be that corresponding to by $a - b$ on the periphery, or $2(a-b)$ at the center.  (And as we noted, the previous proof covered exactly this case).
+
+The result here does not depend on where $P$ is placed.  Therefore all peripheral angles corresponding to the same arc are equal.
+
+$\square$
+
+The converse of Thales theorem is also true.  If the third point of a triangle contains a right angle, then it must lie on the circle where the other two points form the diameter.
+
+\subsection*{Thales circle theorem converse}
+A nice direct proof of this is given in Acheson.
+
+\label{sec:Thales_circle_theorem_converse}
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.4] {Acheson_G59.png} \end{center}
+
+We are given that $\angle APB$ is a right angle.  
+
+Draw $OD$ parallel to $PB$.  $\triangle AOD$ is similar to $\triangle ABP$ because they are both right triangles with a shared vertex at $A$.  
+
+Since $AO$ is one-half $AB$, the scale factor is $1/2$.  In particular, $AD = DP$.
+
+Now draw $OP$.  The two smaller triangles $\triangle AOD$ and $\triangle DOP$ are congruent by SAS.  Therefore, $OP = OA$.  
+
+But $OA$ is a radius of the circle.  Therefore, $OP$ is also a radius.
+
+Therefore $P$ must lie on the circle.
+
+$\square$
+
+\subsection*{crossed chords}
+
+As we've said, then, any two angles with vertices on the circle that cut off the same arc are equal.  In the figure below, $s = s'$ (left panel)
+\begin{center} \includegraphics [scale=0.4] {arcs3.png} \end{center}
+
+and $t = t'$ (right panel).  So $u = u'$ by both the vertical angle theorem and by the triangle sum theorem.  Therefore, the two triangles are similar. 
+
+$\square$
+
+The similar triangles in the figure above leads to a further theorem, which we postpone for a bit.
+
+The next few proofs are alternatives to the proofs of the inscribed angle theorem given above.  Basically we make the construction with one arm as the diameter and then use addition or subtraction.
+
+\subsection*{arcs encompassing diameter}
+\label{sec:generalized_arc}
+
+Consider the arc swept out by the angle $s$ in this figure (left panel).
+
+\begin{center} \includegraphics [scale=0.4] {arcs1.png} \end{center}
+
+The measure of the angle $s$ is equal to one-half the arc swept out between P and Q.
+
+\emph{Proof}.
+
+Draw the diameter (right panel).  By our previous work:
+
+\[ 2t = a, \ \ \ \ \ \ 2u = b \]
+
+and
+\[ s = t + u \]
+\[ 2s = 2t + 2u = a + b \]
+\[ s = \frac{1}{2} \ (a + b) \]
+
+$\square$
+
+The theorem is true even if the angle does not include the diameter.
+
+\emph{Proof}.
+
+We use subtraction.
+
+\begin{center} \includegraphics [scale=0.4] {arcs2.png} \end{center}
+
+On the right, draw the diameter.  There are two arcs which include the diameter:  one with angle $t$ and one with angle $s+t$.  We obtain the generalized arc with angle $s$ by subtracting the result for $t$ from that for $s + t$.
+
+\[ 2t = b \]
+\[ 2(s+t) = a + b \]
+Subtract:
+\[ 2s = a \]
+\[ s = \frac{1}{2} \ a \]
+
+$\bullet$ \ Any angle on the perimeter of a circle corresponds to half the arc that it cuts out of the circle.
+
+\subsection*{Intersecting chords}
+\begin{center} \includegraphics [scale=0.4] {arcs4.png} \end{center}
+
+Given two chords
+\[ s = \frac{1}{2} (a + b) \]
+
+angle $s$ is the average of the two arc lengths.
+
+\emph{Proof}.
+
+Draw a triangle (right panel, above).
+\[ 2v = b \]
+\[ 2u = a \]
+The external angle is the sum of the two opposing interior angles.
+\[ s = u + v = \frac{1}{2} \ (a + b) \]
+
+\subsection*{external vertex}
+
+Rather than having the vertex on the circle, it now lies outside (left panel, below).  There is a new small piece of arc length $b$.
+
+\begin{center} \includegraphics [scale=0.35] {arcs4b.png} \end{center}
+
+Draw the triangle and do some arithmetic.  By the usual theorem we have
+
+\[ 2t = b + d \]
+\[ 2u = b + c \]
+
+The sum of the arcs in a circle is twice the sum of the angles in a triangle:
+
+\[ 2s + 2t + 2u = a + b + c + d \]
+By subtraction:
+\[ 2s = a - b \]
+\[ s = \frac{1}{2} (a - b) \]
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.35] {arcs4c.png} \end{center}
+
+Alternatively, in the figure above $2 \theta = a$ and $2 \phi = b$, but also $\theta = s + \phi$.
+\[ s = \theta - \phi = \frac{a - b}{2} \]
+
+\subsection*{tangent and secant}
+
+Rather than two secants, we now have a secant and a tangent.  The result is the same as previously.
+
+\begin{center} \includegraphics [scale=0.4] {arcs5.png} \end{center}
+
+\[ s = \frac{1}{2} (a - b) \]
+
+\emph{Proof}.
+
+Draw the triangle on the right.  We have that:
+\[ 2t = a \]
+
+Also, we showed that for an angle where one part is the tangent, the expected result holds.  So the vertical angle to $u$ cuts off the arc $b$
+
+\[ 2u = b \]
+
+Alternatively, we could argue that the supplementary angle to $u$ cuts off everything except $b$.
+
+By the exterior angle theorem
+\[ t = s + u \]
+\[ s = t - u = \frac{1}{2} \ (a - b) \]
+
+\subsection*{two tangents}
+
+We showed previously that when two tangents are drawn from an exterior point, one can draw two right triangles that share the hypotenuse and have another side equal to the radius, so they are congruent by hypotenuse-leg in a right triangle (HL).
+
+\begin{center} \includegraphics [scale=0.5] {tangent_arcs.png} \end{center}
+
+Let the whole arc between the two right angles be $s$ the short way and $t$ the long way around the circle, and let $\phi$ be the external angle.  By analogy with the results above, we expect that 
+\[ \phi = \frac{1}{2} (t - s) \]
+
+\emph{Proof}.
+
+We could use congruent triangles, but instead just note that the sum of angles in any quadrilateral is $2 \pi$.  Hence
+\[ \phi + \theta = \pi \]
+
+In terms of arc $\theta = s$ and $s + t = 2 \pi$. Substituting into the last equation
+\[ \phi + s = \frac{s + t}{2} \]
+\[ \phi = \frac{t - s}{2} \]
+
+$\square$
+
+\subsection*{problem}
+
+Relate the angle at $P$ to the one at $X$.
+
+\begin{center} \includegraphics [scale=0.5] {tangent_arcs2.png} \end{center}
+
+By the previous example, $\theta + \phi = \pi$.  But $\angle X = \theta/2$.  Hence
+\[ P = \pi - \theta = \pi - 2 \angle X \]
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.35] {broken_chord17.png} \end{center}
+
+Given that $AB$ is a diameter of the circle, and that $\triangle AMB$ is isosceles.  Draw $MP \perp AC$.
+
+Show that $\triangle MPC$ is isosceles.
+
+We'll leave this one as an exercise and solve it \hyperref[sec:isosceles_vertical]{\textbf{later}}.
+
+\end{document}

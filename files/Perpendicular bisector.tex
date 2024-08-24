@@ -1,0 +1,150 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+
+\title{Perpendicular bisector and SSS}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Previously, we looked at the construction that bisects an angle, cutting it in half.  We also looked at the problem of constructing the perpendicular bisector of any line ending at two points, or passing through any particular point on a line, or through a point not on the line segment.  
+
+We also showed that every point on the perpendicular bisector is equidistant from the two points used to construct it.
+
+Here we look at some related ideas.  We will prove the converse theorem, that \emph{every} point which is equidistant lies on the bisector.
+
+We also extend our methods by showing that SSS leads to SAS, providing a second method of proof for triangle congruence.
+
+But let us start with the next theorem after the two on isosceles triangles, namely, Euclid I.7.
+
+\subsection*{Euclid I.7}
+
+\label{sec:Euclid_I_7}
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7c.png} \end{center}
+
+$\bullet$  \ Let $\triangle ABC$ be drawn and a point $D$ be chosen on the same side of $AB$ as $C$ lies.  It cannot be true that both $AC = AD$ and $BC = BD$. 
+
+\emph{Proof}.
+
+Suppose that both statements are true: $AC = AD$ and $BC = BD$.
+
+Then $\triangle ACD$ is isosceles so $\angle ACD = \angle ADC$.
+
+We notice that 
+\[ \angle BCD < \angle ACD = \angle ADC < \angle BDC \]
+
+But since $\triangle BCD$ is also isosceles, $\angle BCD = \angle BDC$.
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7c.png} \end{center}
+
+This is a contradiction.  Therefore it cannot be that both $AC = AD$ and $BC = BD$.
+
+$\square$
+
+\subsection*{revisit Euclid I.7}
+
+\label{sec:Euclid_I_7_alt}
+
+There is a small problem (really, an assumption) with our proof.  Recall that $AC = AD$ and it is supposed that $BC = BD$.
+
+\begin{center} \includegraphics [scale=0.13] {Euclid_I_7c.png} \end{center}
+$D$ is drawn so that it is not contained within $\triangle ABC$.  But suppose it were?  
+
+The problem is that the proof given before makes no sense if $D$ lies inside $\triangle ABC$ (for example, we do not know $\angle BCD < \angle ACD$).
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7d.png} \end{center}
+
+\emph{Proof} (Alternate).
+
+We can find a different proof for this case in several ways.  Suppose $AC = AD$ and $BC = BD$.  Then $\triangle ABC \cong \triangle ABD$ by SSS, since $AB$ is shared.
+
+But this is absurd.  $\triangle ABC$ is contained within and is less than $\triangle ABC$.
+
+This is a contradiction.
+
+$\square$
+
+All of this leads to a second difficulty:  SSS is Euclid I.8, and Euclid actually proves I.8 by relying on I.7 !
+
+Luckily, we have a proof of SSS (given above) that does not depend on I.7, so this could still work.
+
+Perhaps a better solution is something like what we did before:  
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7d.png} \end{center}
+
+\emph{Proof}.
+
+Suppose that both $AC = AD$ and $BC = BD$.
+
+Then $\triangle ACD$ is isosceles so $\angle ACD = \angle ADC$.  Euclid I.5 also says that the supplementary angles are equal.  $\angle ECD = \angle FDC$.
+
+We notice that 
+\[ \angle BCD < \angle ECD = \angle FDC < \angle BDC \]
+
+But since $\triangle BCD$ is also isosceles, $\angle BCD = \angle BDC$. 
+This is a contradiction.  Therefore it cannot be that both $AC = AD$ and $BC = BD$.
+
+$\square$
+
+[ Another idea might be to use Euclid I.21, which says that if $D$ lies inside $\triangle ABC$, then $AD + BD < AC + BC$,  but that proposition turns out to be dependent through several steps, on I.8. ]
+
+\subsection*{SSS $\rightarrow$ SAS}
+
+\label{sec:SSS_implies_SAS}
+
+We will prove that the SSS criterion implies SAS.
+
+\emph{Proof}.
+
+Let all the sides of $\triangle ABC$ be equal to $\triangle DEF$.  Choose the longest side of $\triangle ABC$ and align it with $\triangle DEF$ as shown.  Since $AB$ is coincident with $DE$ we suppress the latter labels.  $\triangle DEF$ is drawn as the mirror image of $\triangle ABC$.  That is allowed for congruency, and if $\triangle DEF$ were directly superimposable, we could just flip it.
+
+\begin{center} \includegraphics [scale=0.4] {SSS.png} \end{center}
+
+$D$ is placed so that two sets of sides are equal, and equal sides are adjacent in the quadrilateral.  $AC = AD$ and $BC = BD$.  The third side $AB$ is shared.  So we have SSS.
+
+By the forward version of the isosceles triangle theorem, the angles marked with black dots are equal, as are the angles marked with red dots.  Therefore the total angles at the vertices are equal:  $\angle D = \angle C$.  
+
+We have SAS, so $\triangle ABC \cong \triangle ABD$.
+
+$\square$
+
+There is also a problem with this proof that may not be obvious.
+
+We have acute angles on the base ($\angle CAB$ and $\angle ABC$).  If we allow other possibilities, then this version of the proof isn't valid.  Luckily, we can extend the proof in the following way.
+
+\begin{center} \includegraphics [scale=0.20] {SSSc.png} \end{center}
+
+\emph{Proof}.
+
+We have $\triangle ABC$ and $\triangle DEF$ with all three sides equal and superimposed along any one of the sides, say, $BC = EF$.  We suppress the labels $E$ and $F$.
+
+Now, one of the angles along the base $BC$ may be right or obtuse, or neither may be (the case already treated).
+
+Then, if $\angle ABC$ and $\angle DBC$ are both right, we have SAS immediately.
+
+Alternatively, if $\angle ABC$ and $\angle DBC$ are both obtuse (right panel), then draw $AD$.  We have that both $\triangle ABD$ and $\triangle ACD$ are isosceles.  By subtraction, we find that $\angle BAC = \angle BDC$.  
+
+Both pairs of flanking sides are equal, so we have SAS and thus $\triangle ABC \cong \triangle DEF$ (labeled as $\triangle DBC$ in the figure).
+
+$\square$
+
+SSS $\rightarrow$ SAS, and since SAS is sufficient to show congruence, so is SSS.
+
+This illustrates a problem with drawing diagrams, we may introduce unrecognized assumptions into the proof.  The most common is to draw an acute triangle and presume it stands for all triangles
+
+
+\end{document}

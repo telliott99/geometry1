@@ -1,0 +1,269 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Secant-tangent theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Chord segments}
+
+\label{sec:chord_segments}
+
+There is a simple algebraic relationship between the line segments formed when any two chords cross in a circle.
+
+Draw two chords of a circle and then draw additional line segments to form two triangles (left panel).  
+
+$\circ$  These two triangles are similar.
+
+\begin{center} \includegraphics [scale=0.4] {arcs6.png} \end{center}
+
+\emph{Proof}.
+
+The angles $s$ is equal to its primed counterpart $s'$, because they both are subtended by the same arc.  $u = u'$ by the vertical angle theorem.  We have AAA similarity.
+
+$\square$
+
+$\circ$  For any two chords that cross in a circle, the products of the two components of each chord are equal. 
+
+In the right panel, the letters refer to sides of the similar triangles.  Corresponding sides are indicated by color or style.
+
+\[ \frac{a}{d} = \frac{c}{b} \]
+\[ ab = cd  \]
+
+$\square$
+
+Another theorem applies to chords extended from a circle.
+
+\begin{center} \includegraphics [scale=0.4] {arcs9.png} \end{center}
+
+\[ PQ \cdot PR = PS \cdot PT \]
+
+\emph{Hint}:  When thinking about such problems, or asked to establish a proof yourself, it is always helpful to consider the form with the ratios:
+
+\[ \frac{PQ}{PS} = \frac{PT}{PR} \]
+
+This strongly suggests we look at similar triangles.
+
+\emph{Proof}.
+
+Draw the two triangles.
+
+\begin{center} \includegraphics [scale=0.4] {arcs10.png} \end{center}
+
+We showed previously that for any quadrilateral whose four vertices all lie on one circle (a cyclic quadrilateral), the opposing vertices have supplementary angles.  Opposing vertices add to $180^{\circ}$ because their arc segments add up to one whole circle.
+
+In the figure above, the angle at vertex $R$ is supplementary to $\angle QST$.  But $\angle QST$ is also supplementary to $\angle QSP$. 
+
+Therefore $\angle QSP$ is equal to the angle at $R$, and $\triangle PQS$ is similar to $\triangle PRT$.  The similarity is such that
+
+\[ \frac{PS}{PR} = \frac{PQ}{PT} \]
+\[ PS \cdot PT = PQ \cdot PR \]
+
+Given a point $P$ outside the circle, the external part of any secant times the entire secant is a constant.
+
+One curious thing about this theorem is that these triangles are similar, and nested, but flipped.
+
+\[ \frac{PS}{PQ} = \frac{PR}{PT} \]
+
+$\square$
+
+We can do a bit more.
+
+\subsection*{Secant-tangent theorem}
+
+\label{sec:secant_tangent_theorem}
+
+\begin{center} \includegraphics [scale=0.4] {arcs9b.png} \end{center}
+
+Let the points $S$ and $T$ approach each other to become one point.  Then $PT$ will become a tangent of the circle.  Previously we had
+\[ PS \cdot PT = PR \cdot PQ \]
+
+Now we modify it slightly:
+
+\[ PT \cdot PT = PR \cdot PQ \]
+\[ PT^2 = PR \cdot PQ \]
+
+This is the tangent-secant theorem.  We can reason our way backward to a sketch of a more formal proof.
+
+\begin{center} \includegraphics [scale=0.4] {arcs9c.png} \end{center}
+
+\[ PT \cdot PT = PR \cdot PQ \]
+\[ \frac{PT}{PQ} = \frac{PR}{PT} \]
+
+We must have two similar triangles, $\triangle PQT$ and $\triangle PRT$.  The angle at vertex $R$ must correspond to the same arc as $\angle PTQ$.
+
+Now run the logic backward and write the proof.
+
+Note:  we've seen this sort of reverse logic a few times already.  The method has a name!  It was called the method of "analysis" by Pappus (320 A.D.), see Posamentier (Introduction).
+
+\emph{Proof}.
+
+The angle $\angle PTQ$ formed by the tangent $PT$ and the chord $QT$ cut off the same arc of the circle as the angle formed at vertex $R$ (see the last example of the previous chapter), so the two angles marked with black dots are equal.
+
+Here is a proof using similar right triangles.
+\begin{center} \includegraphics [scale=0.15] {tangent angle.png} \end{center}
+\[ \triangle TPA \sim \triangle TBA \sim \triangle PBT \]
+so
+\[ \angle BAT = \angle BTP \]
+
+Therefore, in this figure
+\begin{center} \includegraphics [scale=0.4] {arcs9c.png} \end{center}
+
+$\triangle PQT$ is similar to $\triangle PRT$ by AAA, since they also share the angle at $P$.  This gives
+
+\[ \frac{PT}{PQ} = \frac{PR}{PT} \]
+
+which can be rearranged easily to the statement of the theorem.
+
+$\square$
+
+We can simplify this proof even more by drawing a diagonal to the tangent point.
+\begin{center} \includegraphics [scale=0.4] {arcs9d.png} \end{center}
+
+Now it is clear that $\angle S = \angle R$ because they both sweep out the arc $QT$.  $\angle QTS$ marked in magenta is complementary to the angle at $S$, marked with a black dot because $\angle SQT$ is a right angle,  by Thales' theorem.
+
+The same angle marked in magenta is also complementary to $\angle PTQ$.  Therefore $\angle PTQ = \angle S = \angle R$.  We continue the proof with analysis of similar triangles, as before.
+
+One application of this theorem is to a determination of the size of the earth.  We'll see that later in the book.
+
+\subsection*{power of a point}
+
+The previous results regarding secants and tangents are sometimes united in a definition called the "power" of a point, which unifies the treatment of points inside and outside the circle.
+\begin{center} \includegraphics [scale=0.5] {ppoint1.png} \end{center}
+
+\url{https://artofproblemsolving.com/wiki/index.php/Power_of_a_Point_Theorem}
+
+Let's start with a point outside.
+\begin{center} \includegraphics [scale=0.20] {power1.png} \end{center}
+The length of the tangent and the radius are simply related to the distance from any point $P$ to the center of the circle, $d$:
+\[ d^2 = t^2 + r^2 \]
+\[ t^2 = d^2 - r^2 \]
+$d^2 - r^2$ is defined as the \emph{power} $p$ of the point $P$.
+
+From our previous work, we know that 
+\[ p = t^2 = PT^2 = PA \cdot PA' \]
+
+The definition also works for a point inside the circle.
+\begin{center} \includegraphics [scale=0.20] {power2.png} \end{center}
+
+By the crossed chords theorem:
+\[ PA \cdot PA' = (r+d)(r-d) \]
+\[ = r^2 - d^2 = -p \]
+That is, it works if we use \emph{directed line segments}, so that the product $PA \cdot PA'$ for $P$ inside the circle has its two components pointing in opposite directions, and thus acquires a minus sign.
+
+If the point is \emph{on} the circle, it's a bit strange, but we are at the boundary between $p < 0$ and $p > 0$, so it seems reasonable that $p = 0$ for points on the circle.  And there, of course
+\[ p = d^2 - r^2 = 0 \]
+
+\subsection*{Looking at Euclid}
+
+I learned the secant-tangent theorem from Acheson, and continue in the same vein by appropriating an entire example from his book.  
+
+Here's the problem.  We're looking up at a statue of Euclid on a column.
+
+\begin{center} \includegraphics [scale=0.4] {euclid.png} \end{center}
+
+We resist the temptation to make a dumb joke.
+
+\begin{center} \includegraphics [scale=0.25] {bogie.png} \end{center}
+
+In any event, we'd like to get the widest angle view, giving the largest apparent size of the statue.  If you get too close, the statue is greatly foreshortened and the angle small, and naturally, it is small at a distance.  There must be a best view, in the middle.
+
+Here is Acheson's solution:
+
+\begin{center} \includegraphics [scale=0.6] {euclid2.png} \end{center}
+
+Let the foot and head of Euclid be at $P$ and $Q$ and draw the circle containing those two points which is also tangent to your eye-level.  Then the tangent point provides the best view.
+
+The reason is that a circle through any other horizontal position crosses the eye-level at two points.  Such a circle will necessarily be bigger.
+
+Consequently the arc $PQ$, which is fixed in size, will be a smaller fraction of the circle.  
+
+As a smaller fraction, both the central angle $\angle POQ$ will be smaller as well as the angle subtended at $A$ or $B$ (one-half of that).
+
+The secant-tangent theorem even gives a quantitative answer.  
+
+If $R$ is the point where the extension of $QP$ meets eye-level (the ground), then suppose the point $Q$ is $h$ units above the ground and $P$ is $g$ units.  The tangent-secant formula is 
+
+\[ RT \cdot RT = PR \cdot QR \]
+
+which says that the square of the optimum viewing distance is $h\cdot g$.  The optimal distance $d$ is
+
+\[ d = \sqrt{hg} \]
+
+I knew I'd seen this problem before, and I find that I wrote it up for my Calculus book.  It turns out to be from Acheson's book on Calculus, and is originally about Lord Nelson's statue in Trafalgar Square.
+
+The calculus treatment is not nearly as pretty as reasoning about the tangent;  fortunately we came to the same answer.
+
+\subsection*{Problem}
+
+\subsection*{problem}
+
+We continue with a problem that we solved in part \hyperref[sec:sec_tan_problem]{\textbf{previously}}.
+
+We showed that there are three similar triangles in the figure below
+\begin{center} \includegraphics [scale=0.3] {prob_A_level2.png} \end{center}
+
+We showed that $\triangle XYZ \sim \triangle XQP$ and also $\triangle XYZ \sim \triangle XRS$.
+
+The last part of the problem says that given $QS = XR$, prove that $PS^2 = XS \cdot YR$.  It is also given that $TPS$ is tangent to the small circle at $P$.
+
+In this chapter, we developed the secant-tangent theorem, which says that the part of the secant outside the circle, multiplied by the whole thing, is equal to the tangent squared:
+\[ QS \cdot ZS = PS^2 \]
+
+\emph{Proof}.
+
+By similar triangles, we have that 
+\[ \frac{XZ}{XY} = \frac{XS}{XR} = \frac{ZS}{YR}  \]
+That last equality requires some algebra.  We use this figure again:
+\begin{center} \includegraphics [scale=0.3] {prob_A_level3.png} \end{center}
+We have that
+\[ \frac{a}{b} = \frac{a + a'}{b + b'} \]
+\[ \frac{a}{a + a'} = \frac{b}{b + b'} \]
+\[ \frac{a + a'}{a} = \frac{b + b'}{b} \]
+\[ \frac{a'}{a} = \frac{b'}{b} \]
+\[ \frac{a}{b} = \frac{a'}{b'} \]
+The partial sides are in the same ratio as the whole.
+
+Back to our problem.  Multiplying by the denominators:
+\[ XS \cdot YR = XR \cdot ZS \]
+
+\begin{center} \includegraphics [scale=0.3] {prob_A_level2.png} \end{center}
+We're given that $XR = QS$
+\[ XS \cdot YR = QS \cdot ZS \]
+but by the secant-tangent theorem
+\[ QS \cdot ZS = PS^2 \]
+so we have
+\[ XS \cdot YR = PS^2 \]
+
+$\square$
+
+I really dislike doing algebra with $XS$ and the rest, so I substituted single letters for the sides and fiddled with the algebra while working backward (analysis) until I could see the answer.
+\begin{center} \includegraphics [scale=0.4] {prob_A_level4.png} \end{center}
+
+The secant-tangent theorem says that $f^2 = d \cdot (c + d + e)$.  We're given that $(c + d + e) = (a + b)$.  
+
+So $f^2 = d \cdot (a + b)$.  We are asked to prove that this is equal to $(c + d) \cdot b$.
+
+Forming ratios we have
+\[ \frac{b}{d} = \frac{a + b}{c + d} \]
+But this is just the result that the partial sides are in the same ratio as the whole.
+
+Reverse (and substitute $XS$ etc.) to write the proof.  
+
+\end{document}

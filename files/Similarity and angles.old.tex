@@ -1,0 +1,188 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+
+\title{Similarity and angles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{similar triangles}
+
+Similar triangles are triangles that are alike, but not congruent, because they are scaled differently.
+
+\begin{center} \includegraphics [scale=0.35] {Jacobs10b.png} \end{center}
+
+Figure from Jacobs, chapter 10.  
+
+Statements about two similar triangles.
+
+$\bullet$ \ They have two (thus, three) angles equal.
+
+$\bullet$ \ When superimposed using a shared angle, the third pair of sides, that do not coincide with each other, are nevertheless parallel (you may need the mirror image for one triangle).
+
+$\bullet$ \ They have corresponding pairs of sides in the same proportions, but scaled by a constant factor.
+
+If any one of these properties hold, they all do.
+
+\begin{center} \includegraphics [scale=0.4] {similar2.png} \end{center}
+
+From the above diagram of two similar triangles, similarity implies that (for example)
+\[ \frac{A}{a} = \frac{B}{b} \]
+
+For any pair of similar triangles, there is a constant $k$ such that
+
+\[ k = \frac{A}{a} = \frac{B}{b} = \frac{C}{c} \]
+
+A slight rearrangement gives:
+
+\[ \frac{a}{b} = \frac{A}{B} \]
+
+These ratios are different.
+
+As with congruent triangles, our definitions allow one triangle to be flipped before the comparison is made (comparing two triangles, originally the angles were in opposite order, one clockwise and the other counter-clockwise).
+
+In the figure below, the two vertical black lines are parallel.  Any two lines connecting them that cross, form two similar triangles.  The angles marked with with black dots are vertical angles, the ones marked with red dots are equal by alternate interior angles.  Since two pairs of angles are equal, so is the third pair.
+
+\begin{center} \includegraphics [scale=0.4] {similar2b.png} \end{center}
+
+The angles (and sides) are in opposite order.  This always happens when we establish similarity through vertical angles and the two triangles are not both isosceles. 
+
+The triangles are still similar.  Check carefully to make sure that similar sides are identified properly.  Check to see if they lie opposite equal angles.
+
+AAA is probably the most common way to establish that two triangles are similar.  
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.4] {similar2c.png} \end{center}
+
+Given that ABCD is a parallelogram.  Prove that $AB \cdot FB = CF \cdot BE$.
+
+\emph{Proof}. (sketch).
+
+There are three similar triangles in the figure.
+
+Not only is $\triangle ABE \sim \triangle DEF$, but $\triangle DEF \sim \triangle BCF$.  
+
+Use the fact that similarity is transitive, so $\triangle ABE \sim \triangle BCF$.
+
+It can be helpful to turn the product into a ratio, then it's clear which triangles must be similar.
+
+\[ \frac{AB}{BE} = \frac{CF}{FB} \]
+
+We see how to use $\triangle ABE \sim \triangle BCF$.  Mark the equal angles to make sure you have the right sides.  
+
+\subsection*{midpoint theorem}
+
+\label{sec:midpoint_theorem}
+
+$\bullet$  The line segment $BC$ connecting the midpoints of two sides of a triangle is parallel to the third side, and has one-half the length.
+
+In the figure below (left), given that $AB = BD$ and $AC = CE$.
+
+We are to show that $BC \parallel DE$, $BC = \frac{1}{2} DE$.
+
+\begin{center} \includegraphics [scale=0.4] {midpoint_thm.png} \end{center}
+
+\emph{Lemma}.
+
+We restate a theorem about parallelograms.  If a quadrilateral has one pair of opposing sides equal in length and parallel to each other, it is a parallelogram.
+
+The figure below has slightly different notation than the one above.
+
+Given $AB = CD$ and $AB \parallel CD$.  The angles marked with red dots are equal, by alternate interior angles.
+
+\begin{center} \includegraphics [scale=0.4] {pgram3.png} \end{center}
+
+Then, $\triangle ABC \cong \triangle ACD$, by SAS.  
+
+Since the diagonal forms congruent triangles, $ABCD$ is a parallelogram.
+
+$\square$
+
+\emph{Proof}.
+
+Extend $BC$ to $F$ such that $BC = CF$.  Draw $EF$.  
+
+The new $\triangle CEF$ is congruent to $\triangle ABC$ by SAS ($AC = CE$, $BC = CF$ and vertical angles).
+
+\begin{center} \includegraphics [scale=0.4] {similar16.png} \end{center}
+
+But then $AD \parallel EF$ by the converse of the alternate interior angles theorem.
+
+And since $EF = AB$, while $AB = BD$, so that $BD = EF$, we have a quadrilateral $BFED$ with a pair of opposite sides parallel and equal, so it is a parallelogram.
+
+By the properties of the parallelogram, $BC \parallel DE$, and $BF = DE$.  Since $BC$ is one-half of $BF$, $BC$ is also one-half of $DE$.
+
+$\square$
+
+And now, since $BC$ is parallel to $DE$, then by the alternate interior angles theorem, we can show that $\triangle ABC$ and $\triangle ADE$ have three angles the same.
+
+\begin{center} \includegraphics [scale=0.4] {similar6.png} \end{center}
+
+On the other hand, if we were given the red-dotted angles equal, then the two bases would be parallel by alternate interior angles.
+
+In the previous chapter, we extended this by adding two new congruent triangles to a parallelogram (below, left panel), by using the alternate interior angles theorem (and optionally, the sum of angles theorem).
+
+\begin{center} \includegraphics [scale=0.4] {similar9.png} \end{center}
+
+On the left is the easy case where $AB = BD$.  
+
+Later, we will show that the sides are in proportion even when that proportion is not $1:2$, as on the right.
+
+\subsection*{Varignon's theorem}
+
+\label{sec:Varignon_theorem}
+
+This famous theorem concerns any quadrilateral.  Let's start with the four points lying flat in the same plane.  
+
+If we draw the lines connecting the midpoints of each side, the result must be a parallelogram.  Here is Acheson's figure:
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_G50.png} \end{center}
+
+To visualize this, imagine the quadrilateral drawn as two triangles connected at the diagonal.
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_G51.png} \end{center}
+
+This idea about the diagonal contains the germ of the answer.  In the second figure, above, by the midpoint theorem, $EF \parallel BD$, but also $BD \parallel GH$.  Thus $EF \parallel GH$.  We have opposite sides parallel.  Repeat with $FG$ and $EH$ to obtain the result.
+
+Now, if we imagine the quadrilateral folding on a hinge at $DB$, we see that the midlines $EF$ and $GH$ will remain parallel even if $C$ is no longer co-planar with $A$, $D$ and $B$.
+
+\subsection*{parallel sides}
+
+$\circ$  Two triangles are similar if their sides are parallel to one another (a preliminary rotation may be needed).
+
+Given any triangle, draw a line parallel to one side, which also joins the other two sides.  The new triangle with that side as its base is similar to the given triangle.
+
+\begin{center} \includegraphics [scale=0.25] {Thales_theorem_1.png} \end{center}
+
+\subsection*{summary}
+
+If two similar triangles are superimposed, the two sides that do not coincide with each other are parallel.
+
+In two similar triangles, all three angles are equal.
+
+It is easy to see why these two statements are equivalent.  Suppose we have two triangles with all three angles equal.
+
+\begin{center} \includegraphics [scale=0.35] {similar10.png} \end{center}
+
+Then the smaller triangle can be drawn inside the larger one.  Now use the converse of the alternate interior angles theorem.  Since $\angle ACB = \angle AED$, $BC \parallel DE$.
+
+On the other hand, if we are given that $BC \parallel DE$, then the forward version of the alternate interior angles theorem leads to the conclusion that all three angles are equal.
+
+The connection between equal angles/parallel sides and the equal ratio of sides will be explored further in the next chapter.
+
+\end{document}

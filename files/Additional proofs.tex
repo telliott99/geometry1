@@ -1,0 +1,364 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+
+\title{Midpoint theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{perpendicular bisector (converse)}
+
+\label{sec:perp_bi_converse}
+
+The argument in this section is a little complicated.
+
+\begin{center} \includegraphics [scale=0.4] {iso12.png} \end{center}
+
+Suppose a given point $P$ does not lie on the vertical bisector.  We claim that any such point cannot be equidistant from $B$ and $C$. 
+
+\emph{Proof}.
+
+We will use an argument by contradiction.  We assume the opposite of the statement we want to prove, and show that it leads to a contradiction and so cannot be correct.
+
+Now, suppose that $P$ \emph{is} equidistant, with $PB = PC$. By the forward theorem we have that $\angle PBC = \angle PCB$.
+
+Draw the perpendicular bisector and find point $P'$ on both $PB$ and the perpendicular bisector.  
+
+By the forward theorem we have that $\angle P'BC = \angle P'CB$.  But $\angle P'BC$ and $\angle PBC$ are the same angle.
+
+Therefore
+\[ \angle PBC = \angle P'CB = \angle PCB \]
+
+But clearly $\angle PCB > \angle P'CB$.
+
+This is a contradiction.  Therefore, $PB \ne PC$.
+
+$\square$
+
+If we raise the perpendicular bisector from a line segment, \emph{every} point on the bisector is equidistant from the ends of the line segment, and when the points are connected, forms an isosceles triangle.
+
+No other point not on the perpendicular bisector can be equidistant from the two endpoints.
+
+\emph{Proof}.  (Alternate).
+
+There is also a much easier proof that relies on \hyperref[sec:Euclid_I_7]{\textbf{Euclid I.7}}, which says there cannot be two points on the same side of $BC$ above which have the same distance to $B$ and $C$.
+
+Yet that is exactly what this situation calls for.  $P$ is claimed \emph{not} to be on the bisector, with $PB = PC$.  Yet by the forward theorem, there must be another point $Q$ \emph{on} the bisector with $QB = QC$.  By \hyperref[sec:Euclid_I_7]{\textbf{Euclid I.7}}, this is impossible.  $\square$.
+
+\subsection*{Euclid I.2:  transfer a length}
+
+\label{sec:Euclid_I_2}
+To construct a line segment on a point, equal to a given line segment.
+\begin{center} \includegraphics [scale=0.3] {Euclid_1_2a.png} \end{center}
+Since this immediately follows the first construction, it seems likely we will need an equilateral triangle.  The other thing we know how to do is to draw circles.
+
+We notice that we can construct a circle of radius $BC$ on center $B$.  Where that intersects the extension of $DB$ at $F$ we have a length equal to one side of the $\triangle$ plus $BC$.
+
+So then draw a circle on center $D$ of radius $DF$.
+
+\begin{center} \includegraphics [scale=0.3] {Euclid_1_2b.png} \end{center}
+The intersection of that circle with the extension of $DA$ marks off a length equal to one side of the $\triangle$ plus $BC$.
+
+So $AG = BF = BC$, as required.
+
+If it is desired to draw a line segment of length $BC$ in some other direction from $A$, we just need another circle, centered at $A$.  That is Proposition 3.
+
+In sum then, we can mark off any length from one line segment onto another, even with just a collapsing compass.
+
+\subsection*{Euclid I.6}
+
+We proved the converse of I.5 early in the book based on angle bisection.  Later, we gave another proof by contradiction.
+
+$\circ$ \ \ \hyperref[sec:Euclid_I_6]{\textbf{isosceles triangle theorem}} (Euclid $I.6$:  angles $\rightarrow$ sides)
+
+
+\subsection*{tangents of similar triangles}
+
+\label{sec:tangents_similar_triangles}
+
+Here is a mixed geometric/algebraic proof of the Pythagorean theorem.
+
+\emph{Proof}.
+
+Let $S$ be the midpoint of the hypotenuse in a right triangle, and draw $PS$ connecting the midpoint to the vertex at $P$.  If the hypotenuse has length $2a$, then the length of $PS$ is $a$, by the \hyperref[sec:right_triangle_midpoint_theorem]{\textbf{midpoint theorem}} that we talked about previously.
+
+[Quick proof:  inscribe the original triangle in a circle, with the hypotenuse of the right triangle as the diameter.  The length $a$ is the radius of the circle centered at $S$ that contains the three vertices of the original right triangle.]
+
+\begin{center} \includegraphics [scale=0.4] {pythagoras7.png} \end{center}
+
+Now, draw the altitude from the right angle at $P$ to the hypotenuse $PQ$.  Suppose $QS = x$, then the length $a$ is divided into $x$ and $a - x$ as shown.
+
+The angle $\phi$ and the angle at vertex $R$ labeled $\theta$ are complementary angles in a right triangle, they add up to one right angle.  Therefore both angles labeled $\theta$ are equal.  
+
+So we can form the equal ratios of sides:
+
+\[ \frac{a-x}{y} = \frac{y}{a + x} \]
+\[ (a - x)(a + x) = y^2 \]
+\[ x^2 + y^2 = a^2 \]
+
+$\square$
+
+The second line from the last:
+\[ (a - x)(a + x) = y^2 \]
+
+is a statement of our theorem that the altitude of a right triangle is the geometric mean of the two sections of the base.
+
+\subsection*{similar right triangles}
+
+\subsection*{altitudes in proportion}
+
+Note that, as well as the sides, the altitudes are also in proportion with the same ratio.
+
+One way to see this is to drop an altitude and then consider the two similar right triangles on one side of it.  The altitudes are sides of this triangle.
+
+For similar triangles, where the sides are in proportion $k$, the areas are in proportion $k^2$.  The reason is that the altitudes are in the same proportion, namely $k$.
+
+\begin{center} \includegraphics [scale=0.4] {similarity_by_area3.png} \end{center}
+
+Given that $DF \parallel BC$, so $\triangle ADF \sim \triangle ABC$.
+
+Drop the altitude $AGH$.
+
+Now we see that $\triangle ADG \sim \triangle ABH$ and $\triangle AGF \sim \triangle AHC$, with the same proportionality constant, \emph{since they share the sides} $AG$ and $AH$.
+
+Suppose that $AD/AB = DF/BC = k$.  Then $AG/AH$ also is equal to $k$.
+
+The ratio of areas is then
+\[ \frac{\Delta_{ADF}}{\Delta_{ABC}} =  \frac{\frac{1}{2} DF \cdot AG}{\frac{1}{2} BC \cdot AH} = k^2 \]
+
+\subsection*{all triangles}
+
+\label{sec:similarity_right_to_all_triangles}
+
+Any triangle can be decomposed into two right triangles.  
+
+We previously proved the equal angles for two similar right triangles implies equal ratios of sides.  Now we combine the results for the two sub-triangles, both right triangles, and we will have the result for the general case.  
+
+We use a flipped and rotated copy of the smaller triangle.  Start with two triangles similar because the angles are the same (left panel).  
+
+\begin{center} \includegraphics [scale=0.35] {similar13.png} \end{center}
+
+Make a copy of the smaller triangle and rotate it and then attach at the top (forming a parallelogram).  The original small triangle and the flipped version are congruent by our construction.
+
+From congruent triangles we get the angle equalities in the right panel.
+
+We also have two pairs of parallel sides, either by alternate interior angles or because $s + t + u$ is equal to two right angles.
+
+Now, draw the two altitudes, label the sides, and suppress the labels for the angles but just mark them with colored circles.
+
+The angles marked with filled dots are equal (black and black, and red and red) by parallel sides as we just said, and the open dots with the same colors are equal because they are complementary angles in a right triangle.
+
+\begin{center} \includegraphics [scale=0.35] {similar14.png} \end{center}
+Thus, we have two different pairs of similar right triangles.  
+\[ \frac{a}{h} = \frac{a'}{h'} \]
+\[ \frac{b}{h} = \frac{b'}{h'} \]
+
+So then
+\[ \frac{h}{h'} = \frac{a}{a'} =  \frac{b}{b'} \]
+Corresponding sides of the two original triangles have equal ratios of sides. (It is important that we extended the equal ratios result to the hypotenuse for this to work).
+
+But there is nothing special about this pair of sides, we could have chosen any other pair, either $a$ and $c$ or $b$ and $c$, and have the same result.
+
+Therefore if any two triangles have three angles the same, the side lengths are all in the same proportion.
+
+$\square$
+
+\subsection*{similar triangles}
+
+Euclid VI.2 gives us all we need.  However, let's take a moment to look at a different proof.
+
+We showed previously that all the statements about similarity that we made in this chapter apply to similar right triangles.
+
+But we can cut any triangle into two right triangles.
+
+\begin{center} \includegraphics [scale=0.5] {similar19.png} \end{center}
+
+If these are right triangles, then the two on the right are similar as well as the two on the left, using complementary angles.
+
+We have
+\[ \frac{a}{c} = \frac{b}{d} \]
+
+but also
+\[ \frac{b}{d} = \frac{a'}{c'} \]
+
+So then
+\[ \frac{a}{c} = \frac{a'}{c'} \]
+
+and then
+\[ \frac{a}{a'} = \frac{c}{c'} \]
+\[ \frac{a + a'}{a'} = \frac{c + c'}{c'} \]
+\[ \frac{a + a'}{c + c'} = \frac{a'}{c'} = \frac{a}{c} = \frac{b}{d} \]
+
+$\square$
+
+\subsection*{AAA similarity theorem}
+
+\label{sec:similarity_theorem}
+
+
+\begin{center} \includegraphics [scale=0.4] {similar9.png} \end{center}
+
+On the left is the easy case where $AB = BD$.  
+
+We will show that the sides are in proportion even when that proportion is not $1:2$, as on the right.
+
+Note:  we proved this theorem for right triangles already, based on an idea I found in Acheson's book, and combined it with an extension to all triangles.
+
+If the horizontal bisector is parallel to the base, then the triangles are similar.  We will have AAA.  This is true regardless of which side of the large triangle we choose to be the base.
+
+\begin{center} \includegraphics [scale=0.25] {Kiselev166.png} \end{center}
+
+His notation is different than what we used above, drawing $\triangle BDE$ smaller than $\triangle BAC$.  We follow Kiselev for this section.
+
+There are two cases.  The first is when the lengths of $BA$ and $BD$ are commensurable.  
+
+Two lengths are commensurable when there is some small length $\ell$ that we can define as one unit, such that for integers $m$ and $n$, $BD = m\ell = m$ and $BA = n\ell = n$.
+
+Divide the side as shown.  Draw lines parallel to $AC$ and also those parallel to $BC$.  
+
+Then $BE$ and $BC$ will be divided into congruent parts, numbering $m$ and $n$ for each, respectively.  The same thing happens on the bottom.  It is clear that 
+\[ \frac{m}{n} = \frac{BD}{BA} = \frac{DE}{AC} = \frac{BE}{BC} \]
+
+The second, harder, case is shown in the right panel above.  
+
+$BD$ and $BA$ are not commensurate and there is some small remainder when dividing the first into the second.  Put another way, if $BA = n\ell$, then there are two integers $m$ and $m+1$ such that
+\[ m\ell < BD < (m+1)\ell \]
+
+But if $\ell$ is small, with $n$ and $m$  large,
+\[ \frac{m}{n} \approx \frac{BD}{BA}, \ \ \ \ \ \ \frac{m}{n} \approx \frac{DE}{AC}, \ \ \ \ \ \ \frac{m}{n} \approx  \frac{BE}{BC} \]
+
+Crucially, by choosing the unit length $\ell$ smaller and smaller, and thus $n$ being larger and larger, we can make the remainder $BD - m\ell$ \textbf{as small as we like}.  
+
+As $n$ gets very large we approach equality:
+\[ \frac{m}{n} = \frac{BD}{BA} = \frac{DE}{AC} = \frac{BE}{BC} \]
+for the second case as well.
+
+In calculus we say that, in the limit, as $n \rightarrow \infty$, they become equal.  If this seems strange, wait for the discussion of the limit concept, in calculus.
+
+\subsection*{Ptolemy's by similar triangles}
+
+\label{sec:Ptolemy_alt}
+
+\begin{center} \includegraphics [scale=0.4] {Ptolemy3.png} \end{center}
+
+Above is a graphic from wikipedia that shows where we're going in the first proof.  We will form two sets of similar triangles and use our knowledge about corresponding ratios.
+
+\url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
+
+\emph{Proof}.
+
+It is often easier to adopt a modern notation, designating side lengths by single letters.  In this problem, we have sides $a,b,c,d$ and diagonals $m$ and $n$.  
+
+The angles marked with magenta dots are equal as peripheral angles subtended by the same arc, and the same with the blue dots.
+
+The key insight is to draw the line segment marked $k$, separating $n$ into two parts, $n'$ and $n''$.  The line is drawn so that the angles marked with black dots are equal.  
+\begin{center} \includegraphics [scale=0.35] {Ptolemy2b.png} \end{center}
+Other pairs of angles are equal by the inscribed angle theorem (blue and magenta).
+
+The first pair of similar triangles has one vertex with the black dotted angles, and a second vertex with blue dots.  Taking the opposite sides in the same order, we have the ratios:
+\[ \frac{n'}{b} = \frac{k}{a} = \frac{d}{m}  \]
+
+The second pair of similar triangles contain a vertex consisting of the black dotted angle \emph{plus} the central angle between the two black dots.  Refer to the wikipedia figure if this sounds confusing.  There these angles are marked with red arcs. 
+
+This pair of triangles also has a second vertex with magenta dots.  Taking the opposite sides in the same order we have
+\[ \frac{n''}{c} = \frac{k}{d} = \frac{a}{m} \]
+
+The second trick is to pick the right relationships to manipulate.  We know we don't want $k$ in the answer, (and we do want all of $abcd$ plus $mn'$ and $n''$), so choose from the first:
+\[ \frac{n'}{b} = \frac{d}{m}  \ \ \ \Rightarrow \ \ \ bd = mn' \]
+and from the second:
+\[ \frac{n''}{c} = \frac{a}{m} \ \ \ \Rightarrow \ \ \ ac = mn'' \]
+Simply add the two equations
+\[ ac + bd = m(n' + n'') = mn \]
+
+$\square$
+
+
+\subsection*{difference of sines}
+
+The theorem of the broken chord can be used to derive the formula for the sine of the difference of two angles.
+
+We first recall fundamental result about chords.
+
+\emph{Lemma}.
+
+Consider any chord of a circle.  Place another point on the circle in the larger arc to form a triangle..  All such triangles have the same peripheral angle, by the inscribed angle theorem.
+
+Then choose the vertex for the peripheral angle such that it is bisected by a diameter of the circle and form the central angle corresponding to the same chord.
+
+One-half of that central angle, equal to the peripheral angle, has a sine that is equal to one-half the chord.
+
+In other words, the chord corresponding to any peripheral angle is twice the sine of that angle.
+
+\begin{center} \includegraphics [scale=0.35] {secant2.png} \end{center}
+
+We now derive the formula for the sine of a difference of angles.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord4.png} \end{center}
+
+Consider $\angle MBF$ at vertex $B$, let us call that angle $\beta$ for convenience.  
+
+Then the lemma says that
+\[ MC = 2 \sin \beta \]
+
+Similarly, let us label the angle at vertex $C$ as $\gamma$.  Then
+\[ BM = 2 \sin \gamma \]
+
+Now, we can also use the right triangle to find 
+\[ \cos \beta = \frac{BF}{BM} \]
+so 
+\[ BF = BM \cos \beta \]
+\[ = 2 \sin \gamma \cos \beta \]
+
+And
+\[ \cos \gamma = \frac{FC}{MC} \]
+so 
+\[ FC = MC \cos \gamma \]
+\[ = 2 \sin \beta \cos \gamma \]
+
+which starts to look familiar.
+
+By the theorem of the broken chord:
+\[ FC - BF = AB \]
+\[ AB = 2 \sin \beta \cos \gamma - 2 \sin \gamma \cos \beta \]
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord5.png} \end{center}
+
+What can we do with $AB$?  We also know the sum of arcs, namely 
+\[ \text{arc } AB + \text{arc } BM = \text{arc } MC \]
+
+which means that if $\alpha$ is any peripheral angle subtended by arc $AB$:
+\[ \alpha + \gamma = \beta \]
+\[ \alpha = \beta - \gamma \]
+
+and by the lemma
+\[ AB = 2 \sin \alpha = 2 \sin (\beta - \gamma) \]
+
+So finally,
+\[ 2 \sin (\beta - \gamma) = 2 \sin \beta \cos \gamma - 2 \sin \gamma \cos \beta \]
+\[ \sin (\beta - \gamma) = \sin \beta \cos \gamma - \sin \gamma \cos \beta \]
+
+$\square$
+
+Sine is an odd function ($f(x) = -f(-x)$), so $\sin -x = - \sin x$.
+
+Cosine is even so $\cos x = \cos - x$.  Thus,
+\[ \sin (\beta + \gamma) = \sin \beta \cos \gamma + \sin \gamma \cos \beta \]
+
+
+\end{document}

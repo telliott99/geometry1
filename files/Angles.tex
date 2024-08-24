@@ -1,0 +1,223 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Angles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{On motivation}
+Modern textbooks make a considerable effort to motivate the student, setting the stage for a problem and attempting to convince her or him that it's worth trying to understand what's being talked about.  I usually won't do that.
+
+I have tried to achieve simplicity and clarity in the presentation.  The subject itself gives us beauty.  To see that beauty clearly is my motivation and I hope, yours as well.
+
+In the next chapter, we will prove a beautiful \emph{theorem}:   the sum of the angles in a triangle is equal to the angle turned by going halfway around in a circle (like turning from north to south).  That's a really remarkable and elegant result, and the proof is simple.
+
+Here is a second beautiful theorem, about circles.
+
+$\bullet$  Any angle inscribed in a semicircle is a right angle.
+
+Think of three points on the circumference of a circle, forming a triangle. If two of the points are on a diameter of the circle (the line joining them passes through the center), then the angle formed at an arbitrary but distinct third point is always a right angle.
+
+\begin{center} \includegraphics [scale=0.4] {arcs12b.png} \end{center}
+In this figure, if $PQ$ is a diameter, then $\angle PRQ$ must be a right angle.
+
+\emph{Proof}.
+
+Draw the radius $OR$ (right panel). 
+
+The two smaller triangles produced ($\triangle OPR$ and $\triangle OQR$) are both isosceles (two sides equal), since two of their sides are radii of the circle.  Therefore their base angles are equal (we will see why later).
+
+We can use colored dots to identify angles that are equal.  We have for the whole triangle two green dots and two magenta ones, and for the angle at $R$ one of each.  Hence the angle at $R$ is one-half the total measure of the triangle, namely, one-quarter of a circle.  Like turning from north only as far as west.
+
+$\square$
+
+That's a beautiful, simple result.  It depends on an idea about isosceles triangles, and it should motivate us to find out more about them.
+
+The $\square$ symbol marks the end of the proof.
+
+\subsection*{Notation}
+In the above proof we've mixed together different kinds of notation.  The Greeks always named the points at the ends of line segments with letters of the alphabet, using those same points to describe triangles or figures with even more sides.  So we can talk about $PR$ as a line segment or $PQR$ as an angle ($\angle PQR$) or a triangle ($\triangle PQR$).
+
+However, often it is simpler to just put a label on the angle at the vertex of a triangle, such as $P$ or $R$, or $s$ or $t$ above, or use Greek letters such as $\theta$ and $\phi$; or even $\alpha$, $\beta$ and $\gamma$. 
+
+ A third kind of notation is to not even give the angles a lexicographical label, but just mark ones with equal measure by using a colored circle (or open and filled circles).
+
+We use whichever one feels more natural. The simpler the labels, the easier it is to think about what matters in the problem.  The right notation frees the mind to concentrate on what's important.
+
+\subsection*{Euclid and the postulates}
+
+Some topics in geometry are as old as civilization:  finding the area of a rectangular field or the volume of a cylindrical grain storage building.
+
+However, the Greeks were really the first to treat the subject as an intellectual pursuit, the first to view it systematically and to prove theorems.
+
+Euclid is probably the most famous of Greek geometers because of his book \emph{Elements}.  This book is believed to have been a compilation of the accomplishments of more than a dozen other mathematicians.  See Chapter 2 of Heath:
+
+\url{https://www.gutenberg.org/files/35550/35550-h/35550-h.htm}
+
+However, Greek geometry starts several hundred years before the time of Euclid, who was a contemporary of Alexander the Great (356-323 BC).  
+
+Some of these early mathematicians were Thales, Eudoxus, and Pythagoras.  One of the problems in understanding what happened is that, unfortunately, almost no books survive from this time.  We know that extensive histories were written around the time of Euclid, but these are all lost.
+
+As well, about the person Euclid, we also know actually very little.  He lived after Plato (died 347 BC), and before Archimedes (born c. 287 BC).  He worked in Alexandria, a city founded by Alexander near Cairo in Egypt, and except for that, all other details of his life and death are shrouded in mystery.
+
+After more than 2000 years, \emph{Elements} is still an excellent place to begin surveying the foundations of geometry.  It is a quite sophisticated textbook, an organized collection of everything that a well-educated student was expected to know about the subject at the time.
+
+We note in passing and with sadness that so much of what the Greeks wrote and thought has been lost through the vicissitudes of history but also by the deliberate destruction of libraries.  At Alexandria this occurred during war in the time of Julius Caesar, later during riots by Christian mobs, and then later again by Muslim invaders.  
+
+\emph{Elements} is known only through later works that reproduced the theorems and proofs with additional commentary.  The original source is lost.
+
+\subsection*{Elements}
+
+\begin{center} 
+\includegraphics [scale=0.2] {straightedge.png} 
+\includegraphics [scale=0.3] {compass.png} 
+\end{center}
+
+The \emph{Elements} consists of more than five hundred \emph{propositions}, some of which are constructions (geometric figures) drawn with a pencil on a piece of paper, using a straight-edge or a compass or both.  The others are logical proofs of the type we will study in detail.
+
+For constructions, there are restrictions on both compass and straight-edge.  The straight-edge is unmarked;  it cannot be used to measure distances.  Sometimes people will say ``compass and ruler", but the ruler involved must not be \emph{ruled}, it must not have divisions (or at least if it does, they are not consulted).
+
+Nearly all proofs of propositions build on previous items in the book.  
+
+Euclid does not prove everything.  Statements which are assumed to be true are divided into axioms, or common notions, and postulates.  Axioms are generally useful, while postulates are specific to the subject of geometry.
+
+Here are some of Euclid's postulates:
+
+$\circ$  A straight line segment can be drawn joining any two points.
+
+$\circ$  A line segment can be extended continuously in a straight line.
+
+\begin{center} \includegraphics [scale=0.4] {postulates.png} \end{center}
+
+$\circ$   Given any straight line segment, a circle can be drawn having the segment as the radius and one endpoint as the center.
+
+Let us assume these as well.  We will use them often.
+
+We finesse the difficulty in defining what is meant by \emph{straight} in the real world.  If you've ever done any fancy carpentry, you will realize that an unknown edge is checked by comparison with another edge which is known to be straight.  We use the known edge to ``true" the other.
+
+In geometry, we use an imaginary perfect straight-edge to draw an ideal straight line.
+
+There is another statement commonly claimed, that any straight line segment can be extended indefinitely in a straight line.
+
+According to Morris Kline, this statement does not exist in the \emph{Elements}, and in fact, except when dealing with the question of parallel lines, we never worry about lines to infinity.  We use line segments, with defined endpoints, and often refer to these simply as lines, as Euclid did.
+
+People may also talk about a straight line as ``the shortest distance between two points".  The closest you will find to that is the \hyperref[sec:triangle_inequality]{\textbf{triangle inequality}}, but that is in our future.
+
+\subsection*{supplementary angles}
+
+We begin geometry with a discussion of angles.
+
+\label{sec:supplementary_angle_theorem}
+
+In the diagram below, one line segment is drawn crossing a second one, forming their \emph{intersection} (the points at the ends have been omitted from the drawing).
+
+Four angles are formed at the intersection of two lines or line segments.  Two of the angles are labeled in the figure.  We can see that one, $\phi$, is obviously larger than the other one, $\theta$.  
+
+We call angles formed on the same side of a line, \emph{supplementary} angles. 
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_0.png} \end{center}
+
+So $\phi$ and $\theta$ are supplementary angles because they both lie above the horizontal black line.
+
+\subsection*{right angles}
+
+\label{sec:equal_supplementary_angles}
+
+You've probably seen a definition of a \emph{right angle} as one that contains, or whose measure is, $90$ degrees, usually written $90^{\circ}$.  But the Greeks would give a different definition:
+
+$\bullet$ \ Two supplementary angles that are equal to each other are both right angles.  In the figure below, if $\phi = \theta$, then they must both be right angles.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_2.png} \end{center}
+
+A right angle is frequently designated by drawing a small square, as seen in the right panel.  
+
+If one of the angles at the intersection of two lines is a right angle, then all four are right angles --- we'll see why later in the chapter.  The square is only drawn for one, but they are all equal.
+
+In a common system of angle measurement, a right angle is indeed $90^{\circ}$, and there are $360^{\circ}$ in a full circle.  Supplementary angles sum to $180^{\circ}$.  
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_G4.png} \end{center}
+
+One way to think about the \emph{measure} of an angle is to draw a unit circle (radius equal to $1$) and then ask what is the (curved) distance along the circle from one ray of the angle to the second one.  In the figure below, we can see angles with various measures drawn.
+
+\begin{center} \includegraphics [scale=0.4] {Simmons_1b.png} \end{center}
+
+Imagine drawing a circle (in red) whose center coincides with the origin of the angles and then measuring the distance along that circle starting with the positive horizontal axis on the right and going counter-clockwise.  We can take that distance as the measure of the angle.
+
+Another approach is to bisect (cut in half) a straight line.  Then, the original straight line is really an "angle" of $180^{\circ}$, and the bisected half-angles are each $90^{\circ}$.  Another bisection gives $45^{\circ}$.  We will see a method for doing bisection with compass and straight-edge later on.  We can also get  $60^{\circ}$ using a triangle with all sides equal (equilateral).  Bisection then gives $30^{\circ}$.
+
+However, the precise measure of an angle is rarely important, especially before trigonometry.  We simply use $= 180$ as a shorthand for \emph{is equal to two right angles}, and in fact, often drop the degree notation.
+
+\begin{center} \includegraphics [scale=0.5] {Acheson_G4.png} \end{center}
+
+What we most care about is whether one angle is equal to, larger than, or smaller than another one, or whether an angle or some combination of angles is exactly equal to one right angle or two right angles.  
+
+For more about angular measure, there's a short \hyperref[sec:angular_measure]{\textbf{chapter}} at the end of the book.
+
+Because of this, we can state the following theorem:
+
+\subsection*{supplementary angles}
+
+\label{sec:two_supplementary_equal_two_right}
+
+$\bullet$ \ the sum of two angles that are supplementary to each other is equal to two right angles.
+
+This constant sum is correct regardless whether $\theta$ is equal to $\phi$, or one is larger than the other.  Here the sum $\phi$ + $\theta$ is equal to two right angles.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_0.png} \end{center}
+
+Some textbooks emphasize the arithmetic relationship for supplementary angles:  any two angles whose sum is equal to two right angles are supplementary.  And then angles that are both adjacent (vertex at the same point) and supplementary are called a \emph{linear pair}.
+
+This distinction seems overly pedantic.  We will just use supplementary angles to describe both situations.
+
+\subsection*{vertical angles}
+
+\label{sec:vertical_angle_theorem}
+
+Now, consider the angles lying below the horizontal:
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_8.png} \end{center}
+
+We said that the sum of the two angles $\phi + \theta$ is equal to two right angles, because those two angles (and no others) lie above the black line.  But $\theta' + \phi$ and $\theta + \phi'$ are equal to two right angles, for the same reason:  they are the angles on one side or the other of the red line.  
+
+As a result
+
+\[ \phi + \theta = \text{ two right angles } = \theta + \phi' \]
+By subtracting $\theta$ from both sides, we conclude that 
+\[ \phi = \phi' \]
+
+A similar argument will show that
+\[ \theta = \theta' \]
+
+This is the \emph{vertical angle theorem}.
+
+$\bullet$ \ Vertical angles are equal.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_9.png} \end{center}
+
+The vertical angle theorem is obtained by two successive applications of the supplementary angle theorem.  It's powerful  because it doesn't matter how large or small the two angles are.  The vertical angles, that oppose one another, are always equal.
+
+On the left, one of the angles where two lines cross is a right angle.  If one angle at an intersection of two lines is a right angle, all four are right angles, by the supplementary and vertical angle theorems.
+
+\subsection*{problem}
+
+\emph{To prove}.  
+
+If two adjacent supplementary angles are bisected, the bisectors are perpendicular to each other, that is, the angle between them is a right angle.
+
+\end{document}

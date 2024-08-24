@@ -1,0 +1,82 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Constructions}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{collapsible compass}
+
+We note briefly that there is a restriction in Euclid's \emph{Elements} to a \emph{collapsible} compass, one which loses its setting when lifted from the page.  That means that generally, you wouldn't be able to draw two circles of the same radius on different centers.
+
+We get around that restriction by drawing the circles on $Q$ and $R$ with the same radius $QR$.  
+
+We will call a compass that is able to hold its setting, a \emph{standard} compass.  Within the first few pages of that book, it is shown how to use a collapsible compass to carry out the very construction we said we couldn't do, namely, construct two circles on $Q$ and $R$ with equal radius and that radius not equal to $QR$ or $QP$.
+
+Also, see the video at the url:
+
+\url{https://www.mathopenref.com/constperpextpoint.html}
+
+We have skipped that part here.
+
+\subsection*{Euclid I.31:  construct a line parallel to another line}
+
+\label{sec:Euclid_I_31}
+
+Suppose we are asked to construct a line parallel to a line or line segment, through a given point.  We remain true to the Greek ideal, that dividers should not come off the paper.  
+
+\emph{Proof}.
+
+First, pick some point on the line segment $P$, and draw a line segment through $OP$. 
+
+\begin{center} \includegraphics [scale=0.4] {parallel1.png} \end{center}
+
+Find $Q$ on the second line such that $QP > OQ$.
+
+\begin{center} \includegraphics [scale=0.4] {parallel2.png} \end{center}
+
+Now draw the circle with center $Q$ and radius $QP$ and, at the intersection with the first line, $R$.  Draw the line $QR$.  
+
+Finally, draw the circle with center $Q$ and radius $OQ$, and at the intersection of the circle with the last line, find $T$.
+
+We have that $OQ = QT$ and $QP = QR$.  Therefore the base angles of $\triangle QOT$ and $\triangle QPR$ are equal and therefore the triangles are similar by AAA.  
+
+Therefore the bases $PR$ and $OT$ are parallel, by the converse of the alternate interior angles theorem.
+
+$\square$
+
+\subsection*{Euclid VI.9:  division of a line segment into parts}
+
+\label{sec:Euclid_VI_9}
+
+We wish to divide a general segment (in red, below) into an even number of pieces.  Suppose that number is three.
+
+\begin{center} \includegraphics [scale=0.4] {division.png} \end{center}
+
+Using one end of the target segment, draw any other line, and mark off on that line segments of equal length, using a compass.  (Even with a collapsible compass, this can be done sequentially by moving the fixed point).
+
+Then, erect the perpendicular bisector of the black line at each point and extend the bisector to the target red line.
+
+We will have that $AB = BC = CD$.  Furthermore, since $AB = BC$, $AB = \frac{1}{2} (AB + BC)$ so $AC = 2 AB$.
+
+$\square$
+
+This construction uses properties of \emph{similar} triangles that we have not explained yet.  Since the angle at $A$ is shared and the angle with the black line is always the same, all the triangles have the same shape and their sides are in proportion.  We have fixed that proportion as an integer:  $1$, $2$ or $3$.
+
+\end{document}

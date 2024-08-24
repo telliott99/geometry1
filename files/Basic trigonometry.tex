@@ -1,0 +1,415 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Basic trigonometry}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Here we take a look at fundamental ideas from trigonometry and begin to show why they are useful.  Let's start by reviewing some previous work.
+
+\subsection*{similarity}
+
+A simple rectangular construction shows that right triangles with the same two complementary angles (\emph{similar} right triangles), have equal ratios of sides.
+\begin{center} \includegraphics [scale=0.6] {Acheson_G42.png} \end{center}
+
+The proof is to use three sets of congruent triangles to show that the white areas are equal to each other which means that
+\[ bc = ad \]
+Two simple rearrangements give different equalities
+\[ \frac{a}{b} = \frac{c}{d} , \ \ \ \ \ \ \  \frac{a}{c} = \frac{b}{d} \]
+
+I want to switch notation for a second, to try to make a point.  In the figure below, the two similar right triangles have sides $a,b$ and $h$, and then $A,B$ and $H$.
+\begin{center} \includegraphics [scale=0.4] {Acheson_G42d.png} \end{center}
+
+The equality is
+\[ Ab = aB \]
+which can be rearranged to
+\[ \frac{a}{b} = \frac{A}{B} , \ \ \ \ \ \ \  \frac{a}{A} = \frac{b}{B} \]
+
+The first one equates ratios of sides within a triangle, $a$ and $b$ from the first triangle, $A$ and $B$ from the second.  The other one equates ratios of \emph{corresponding} sides in different triangles.  The sides of a triangle can be ordered by length, where one triangle has sides $a < b < h$ and a similar triangle has sides $A < B < H$.
+
+Let $k$ be the constant of proportionality between triangles, with $A = ka$.  Then
+\[ \frac{a}{b} =  \frac{A}{B} = \frac{ka}{B} \]
+\[ B = \frac{ka}{a} \cdot b = kb \]
+
+So our ratios imply that
+\[ \frac{A}{a} = k = \frac{B}{b}  \]
+The factor $k$ is a scaling factor which says how much bigger the second triangle is than the first.
+
+This result is easily extended to the hypotenuse.  
+
+One way is to use the Pythagorean theorem.  Let
+\[ a^2 + b^2 = h^2 \] 
+and 
+\[ A^2 + B^2 = H^2 \]
+But $A = ka$ and $B = kb$ so
+\[ H^2 = A^2 + B^2 \]
+\[ = (ka)^2 + (kb)^2 \]
+\[ = k^2(a^2 + b^2) = k^2 h^2 \]
+\[ H = kh \]
+
+Hence
+\[ k = \frac{A}{a} = \frac{B}{b} = \frac{H}{h} \]
+
+Now change focus back to comparisons within each triangle, namely
+\[ \frac{a}{h} = \frac{A}{H} \]
+
+Consider the smaller angle, marked $\angle CAB$ in the original figure, and labeled by a magenta dot below
+\begin{center} \includegraphics [scale=0.4] {Acheson_G42d.png} \end{center}
+
+This angle is flanked by the hypotenuse $h$ and the side $b$.  We will call $a$ the side \emph{opposite} to $\angle CAB$ and $b$ the side \emph{adjacent}.
+
+Then the previous equation 
+\[ \frac{a}{h} = \frac{A}{H} \]
+
+says that the ratio of the opposite side to the hypotenuse is somehow independent of the scale of the triangle.  It is the same for both.
+
+A similar thing happens with the \emph{adjacent} sides $b$ and $B$.  Their ratios to the hypotenuse are also equal.
+\[ \frac{b}{h} = \frac{B}{H} \]
+a result which is easily obtained by manipulating what we had above.
+
+These ratios between sides in right triangles with the same angles are somehow characteristic of the angles and independent of the side lengths.
+
+We call the ratio opposite/hypotenuse the \emph{sine} of the angle and the ratio adjacent/hypotenuse the \emph{cosine} and write them like this
+\[ \sin \angle CAB = \frac{a}{h}, \ \ \ \ \ \ \cos \angle CAB = \frac{b}{h} \]
+
+Often, we are working with central angles drawn in a unit circle, with radius $1$.
+\begin{center} \includegraphics [scale=0.4] {trig2.png} \end{center}
+
+Then the length of the side opposite the central angle is exactly the sine of the angle (since the hypotenuse has length $1$), while the side adjacent is the cosine.  This is the easiest picture to remember.
+
+From a geometrical perspective, the importance of sine and cosine is that they incorporate the knowledge that these ratios are independent of the size of the triangle.  You can think of them as ratios of sides to the hypotenuse for a central angle in a unit circle.
+
+However, they are far more than that.  In analytic geometry, we will see sine and cosine as \emph{functions} of the angle $\theta$.  The curve traced is a periodic one, which repeats as $\theta$ goes all the way around the circle.  This becomes central in calculus, where we will deal often with periodic phenomena modeled using the sine and cosine functions.
+
+\begin{center} \includegraphics [scale=0.4] {sine_cosine_wikipedia.png} \end{center}
+That's getting ahead of ourselves.
+
+\subsection*{sine and cosine}
+
+\label{sec:sine_and_cosine}
+
+To repeat:
+
+\begin{center} \includegraphics [scale=0.4] {sine_cosine.png} \end{center}
+
+In a right triangle, for angle $\alpha$, the sine of the angle is defined as the ratio between the side opposite and the hypotenuse.  In the drawing
+
+\[ \sin \alpha = \frac{a}{h} \]
+
+while the cosine is 
+\[ \cos \alpha = \frac{b}{h} \]
+
+From our work earlier, we know that any similar right triangle (with the same angles) has its sides in the same ratios.  The sine and cosine are functions of the angle, but are independent of the size of the triangle.  
+
+Frequently, the hypotenuse is scaled to be equal to $1$, so then the opposite side is equal to the sine, and the adjacent side to the cosine.
+
+Switching our focus from $\alpha$ (the angle at $A$) to the angle at vertex $B$, swaps opposite to adjacent and vice-versa.  This means that the cosine of an angle is the sine of its complementary angle, and vice-versa.
+
+\subsection*{radian measure}
+
+In this book, we will make an effort not to use degrees for angular measure.  They aren't seen much after elementary school.  The Greeks thought in terms of one or two right angles, or four right angles for an entire circle.
+
+In more advanced mathematics we invariably use radians.  Angles are measured in terms of the arc of the unit circle that they are \emph{subtended by} or sweep out.  Since the circumference of an entire circle is equal to $2 \pi$, a right angle is one-quarter of that or $\pi/2$ radians.
+
+Some other common angles:  $\pi/6 = 30^{\circ}$, $\pi/4 = 45^{\circ}$, and $\pi/3 = 60^{\circ}$.
+
+\subsection*{particular values}
+We can easily determine the values for these functions in three special cases.  
+
+The first is the angle $45$ degrees or $\pi/4$.  Draw an isosceles right triangle with sides of length $1$ (left panel).
+
+\begin{center} \includegraphics [scale=0.4] {30_45_60.png} \end{center}
+
+Then the hypotenuse has length $\sqrt{2}$ (from Pythagoras) and the values are equal
+\[ \sin \frac{\pi}{4} = \frac{1}{\sqrt{2}} = \cos \frac{\pi}{4} \]
+
+If we start with an equilateral triangle (all angles equal to $60^{\circ}$ and drop the angle bisector, we get two 30-60-90 triangles.
+
+\begin{center} \includegraphics [scale=0.2] {equi.png} \end{center}
+From the figure, we can read off that the sine of $30^{\circ}$ is $1/2$ and the cosine is $\sqrt{3}/2$.  The values for $60^{\circ}$ are reversed since they are complementary angles.
+
+Hence 
+\[ \sin \pi/6 = \frac{1}{2} = \cos \pi/3 \]
+\[ \cos \pi/6 = \frac{\sqrt{3}}{2} = \sin \pi/3 \]
+\[ \sin \pi/4 = \frac{1}{\sqrt{2}} = \cos \pi/4 \]
+
+\subsection*{extreme values}
+If you draw a very small angle, it will have a very short length for the vertical, $y = \sin \theta$, while the adjacent side becomes nearly equal to the radius.  What happens when $\theta \rightarrow 0$?  It turns out that
+
+\[ \sin 0 = 0, \ \ \ \ \ \ \cos 0 = 1 \]
+\[ \sin \pi/2 = 1, \ \ \ \ \ \ \cos \pi/2 = 0 \]
+\[ \sin \pi = 0, \ \ \ \ \ \ \cos \pi = -1 \]
+
+We cannot prove any of this yet (we do not even have a \emph{coordinate system}), but just take it on faith for now, and you will see why when we get farther along.
+
+\subsection*{a favorite trigonometric identity}
+
+Now that we know about the sine and cosine, we can look at what Pythagoras tells us about them:
+
+\begin{center} \includegraphics [scale=0.4] {trig2.png} \end{center}
+
+As we said, in a unit circle, the sine and cosine of an angle are the sides of a right triangle with hypotenuse equal to $1$.  It follows from the Pythagorean theorem that for any angle $\theta$
+
+\[ \sin^2 \theta + \cos^2 \theta = 1 \]
+\[ \sin \theta = \sqrt{1 - \cos^2 \theta} \]
+\[ \cos \theta = \sqrt{1 - \sin^2 \theta} \]
+
+This identity is fundamental since it provides a way of converting from sine to cosine or vice-versa.
+
+It is traditional to write $\sin^2 \theta$ rather than $(\sin \theta)^2$, but they have the same meaning.
+
+\subsection*{inscribed angles}
+
+We also established previously the inscribed angle theorem.  We showed two proofs that if the same arc on a circle subtends both a central angle $\theta$ and by a peripheral or inscribed angle $\phi$, then $\theta = 2 \phi$.
+
+\begin{center} 
+\includegraphics [scale=0.4] {broken_chord1.png} 
+\includegraphics [scale=0.4] {arcs2b.png}
+\end{center}
+
+The first proof covers the case where the inscribed angle's arc does not include the center of the circle, while in the second case it does.  It follows that all inscribed angles with the same arc are equal.
+
+But that means we can study the arc or chord corresponding to any angle (in a given circle) by drawing the angle with one arm as the diagonal of a circle, since the chord is the same no matter where we place the angle.
+
+\subsection*{inscribed and central angles}
+
+\label{sec:sine_secant}
+
+\begin{center} \includegraphics [scale=0.4] {trig_beg_1.png} \end{center}.
+
+In the figure above, on the left we have drawn $\triangle PQR$ in a unit circle on center $O$ with $\angle \phi$ being the inscribed or peripheral angle and $\theta$ the corresponding central angle.  Since $\triangle POR$ is isosceles, and $\theta$ is the external angle to that triangle, this is yet another demonstration that $\theta = 2 \phi$.
+
+In both panels we have scaled things so that the radius of the circle has length $1$ and the diameter is twice that.  One right angle is at $R$.  Use our definitions of sine and cosine to see that 
+\[ \sin \phi = \frac{RQ}{PQ}  = \frac{RQ}{2}, \ \ \ \ \ \ \cos \phi = \frac{RP}{PQ} = \frac{RP}{2}  \]
+
+while 
+\[ \sin \theta = \frac{RS}{OR} = RS, \ \ \ \ \ \ \cos \theta = \frac{OS}{OR} = OS \]
+\begin{center} \includegraphics [scale=0.4] {trig_beg_2.png} \end{center}.
+
+To repeat, for such a right triangle drawn in a unit circle, the chord $L$ subtends any peripheral angle $\phi$ is equal to
+\[ L = 2 \sin \phi \]
+and in general, if the diameter has length $d = 2r$, then 
+\[ L = d \sin \phi = 2r \sin \phi \]
+
+\subsection*{history}
+
+The relationship between the chord $RQ$ as twice the sine of $\phi$ and $RS$ as the sine of $\theta$ and hence that of $2 \phi$, was of great interest in geometry for centuries, partly for practical reasons.  Chords were useful for astronomy, and astronomy was useful in turn for navigation.
+
+Ptolemy constructed a \emph{Table of Chords} containing values for arc lengths in $1$ degree increments.  The Greeks thought of values in terms of whole numbers or ratios of whole numbers, and since the smallest angle he dealt with was $1/360$ of a circle, this provides a rationale for why $360$ was chosen as the total number of degrees.
+
+It also helps that $360$ has so many integer factors:  
+
+$1,2,3,4,5,6,8,9,10,12,15,18 \dots$.
+
+so we can talk about the $30$ identical triangles that result from cutting a circle into $12$ equal parts.
+
+We will now spend some time looking at the "double angle" formula that connects the sine of an angle with that of twice the angle.
+
+\subsection*{area of any triangle}
+
+The altitude to any side of a triangle is equal to the length of the side of a triangle times the sine of the angle that side makes with the base.
+
+\begin{center} \includegraphics [scale=0.4] {triangle5.png} \end{center}
+
+\[ \frac{h}{b} = \sin A \]
+\[ h = b \sin A \]
+
+Therefore (if $\Delta$ is the area of the triangle):
+\[ 2 \Delta = hc = bc \sin A \]
+
+One can equally well write
+\[ h = a \sin B \]
+\[ 2 \Delta = hc = ac \sin B \]
+
+Twice the area of any triangle is the product of the two sides times the sine of the angle between them.
+
+\subsection*{problem}
+
+We usually compute the area of a parallelogram in terms of the sides.  However, another formula for (twice) the area is:
+\[ 2\Delta = d_1 d_2 \sin \theta \]
+where $d_1$ and $d_2$ are the two diagonals and $\theta$ is either one of the central angles.
+
+Derive this formula.
+
+\subsection*{law of sines}
+
+\label{sec:law_of_sines}
+
+Since the area must be the same no matter how we compute it, this also leads to the equality
+\[ h = b \sin A = a \sin B \]
+\[ \frac{a}{b} = \frac{\sin A}{\sin B} \]
+
+which by symmetry we extend to all three angles
+\[ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \]
+
+This simple formula is called the law of sines.  
+
+The constant ratio has an interesting value, which can be seen by going back to what we said above, namely
+\[ L = 2r \sin \phi \]
+which, applied to this case, gives 
+\[ \frac{a}{\sin A} = 2r \]
+
+\subsection*{other functions}
+
+We'll just mention a few other common trig (short for trigonometric) functions that are constructed from sine and cosine, although they aren't used much in this book.
+
+\begin{center} \includegraphics [scale=0.4] {trig2.png} \end{center}
+
+First, the tangent of the angle is defined as the opposite side divided by the adjacent side.  In other words, it is equal to the sine divided by the cosine.
+\[ \tan \theta = \frac{\sin \theta}{\cos \theta} \]
+
+We can see the tangent as a length.  Extend the hypotenuse to make a similar triangle, where the adjacent side has length equal to the radius.  Now, opposite over adjacent gives tangent, but adjacent is just $1$.
+
+\begin{center} \includegraphics [scale=0.5] {trig3.png} \end{center}
+
+There are also three inverse functions:  secant (inverse of the cosine), cosecant (inverse of the sine), and cotangent (inverse of the tangent).  From the drawing above, we can get that
+\[ \frac{1}{\sec \theta} = \cos \theta \]
+\[ \sec \theta = \frac{1}{\cos \theta} \]
+
+(We might also check by looking at the ratio $\tan \theta/\sec \theta = \sin \theta$).
+
+We include figures with the cotangent and cosecant as well, but put off discussion of them for now.
+
+\begin{center} \includegraphics [scale=0.5] {trig4.png} \end{center}
+
+There are several other common representations of the six functions.  We'll see more when we get to analytic geometry.  Here is a common one where the tangent to the circle, perpendicular to the ray with $\angle \theta$ is equal to $\tan \theta$.  See if you can work this out by using the complementary angle to $\theta$.
+
+\begin{center} \includegraphics [scale=0.4] {trig5.png} \end{center}
+
+\subsection*{signed angles}
+
+\label{sec:signed_angles}
+
+In analytic geometry we will introduce the idea of two axes in the plane, one for $x$-values and one for $y$-values.  The origin will become $(0,0)$, and values will have signs, i.e., $x$-values to the left of the origin will be minus some number, and $y$-values below the origin will be minus some number as well.
+
+\begin{center} \includegraphics [scale=0.5] {sine_cosine2.png} \end{center}
+
+Without getting into all the gory details, I hope you can see that when, as here, $s$ and $t$ are supplementary angles, then 
+\[ \sin s = \sin t \]
+\[ \cos s = - \cos t \]
+
+while for $s$ and $-s$
+\[ \sin s = - \sin -s \]
+\[ \cos s = \cos -s \]
+
+and as we said before, when $s$ and $t$ are complementary angles
+\[ \sin s = \cos t \]
+\[ \cos s = \sin t \]
+
+This leads to an elementary proof of the \hyperref[sec:area_ratio_theorem]{\textbf{area-ratio theorem}}.
+
+\emph{Proof}.
+
+Let the a triangle be divided by a line from the upper vertex to the base such that the base is divided into two parts, $x$ and $y$.  Call the dividing line $e$.
+
+The angles at the base on either side of the intersection point are supplementary, hence they have the same sine.  Let those angles be $\phi$ and $\phi'$.
+
+Then twice the area of the left-hand triangle is 
+\[ 2A_L = xe \sin \phi \]
+while twice the area of the other one is
+\[ 2A_R = ye \sin \phi' = ye \sin \phi \]
+and the ratio of the areas is simply $x/y$.
+
+$\square$
+
+\subsection*{problem}
+
+Here is a nice area problem I saw on Twitter.  (The attribution is "Paul Eigenmann, Stuttgart, 1967".  Web search finds what looks like a great text, but in German).
+
+\begin{center} \includegraphics [scale=0.4] {area_problem.png} \end{center}
+
+Given that the side is bisected and the unshaded areas are equal.  What is the area of the triangle shaded magenta?
+
+\emph{Solution}.
+
+Let's say this is a unit square and let the top vertex of the magenta triangle be a distance $x$ from the left-hand side of the box and a distance $1-x$ from the right-hand side.  Then the left-hand unshaded area is 
+\[ \frac{1}{2} \cdot x \cdot \frac{1}{2} \]
+and the right-hand shaded area is
+\[ \frac{1}{2} \cdot (1-x) \cdot 1 \]
+
+Set them equal:
+\[ \frac{x}{4} = \frac{1}{2} - \frac{x}{2} \]
+\[ x = 2 - 2x \]
+\[ x = \frac{2}{3} \]
+
+To find the height of the magenta triangle using pure geometry, notice that a line drawn vertically from the vertex forms two similar triangles, therefore $y$ is a distance $1/3 \cdot 1/2 = 1/6$ down vertically from the upper boundary.
+
+The height of the magenta triangle is therefore $5/6$ and its area is one-half that, or $5/12$ of the unit cube.
+
+Using analytic geometry, by inspection of the figure, write the equation for the side of the upper triangle as
+\[ y = \frac{1}{2} x + \frac{1}{2} \]
+\[ y = \frac{1}{3} + \frac{1}{2} = \frac{5}{6} \]
+
+\subsection*{double scoop problem}
+
+We have two lines tangent to two circles that just touch each other, the smaller one of radius $r$, and the larger of radius $R$.
+
+\begin{center} \includegraphics [scale=0.5] {double_scoop1.png} \end{center}
+
+There is a simple expression for the sine and cosine of $\theta$, the angle between the the two lines.  Recall our introduction to trigonometry \hyperref[sec:sine_and_cosine]{\textbf{here}}.
+
+The distance between the centers of the two circles is $r + R$.  Draw a horizontal line through the center of the smaller circle.
+
+\begin{center} \includegraphics [scale=0.5] {double_scoop2.png} \end{center}
+
+We have constructed a right triangle, which is similar to the original one.  It includes the angle $\theta$ and the hypotenuse is the distance between the two centers, $R + r$.  The opposite side has length $R - r$ and so
+
+\[ \sin \theta = \frac{R - r}{R + r} \]
+
+The adjacent side (the line segment colored black) has its squared length equal to 
+\[ (R + r)^2 - (R - r)^2 = 4Rr \]
+
+thus
+\[ \cos \theta = \frac{2 \sqrt{Rr}}{R + r} \]
+
+\subsection*{David Bowie problem}
+
+Here's a problem from the web:
+
+\begin{center} \includegraphics [scale=0.4] {bowie1.png} \end{center}
+
+One way to look at this is to imagine the octagon inscribed in a circle of diameter $d = 2r$ (below).  We reason that the two triangles are right triangles with a shared hypotenuse.  
+
+\begin{center} \includegraphics [scale=0.4] {bowie2.png} \end{center}
+
+We can apply trigonometry to find that the whole area required is simply
+\[ A_{\text{ region}} = d^2 \sin \phi \cos \phi \]
+
+But we aren't ready to do this kind of calculation yet.
+
+However, it will turn out that the part shaded red is simply one-half of the whole.  
+
+Therefore, the three lines divide the octagon into four equal parts.  That simple answer is a clue that something important makes the problem easy.
+
+\begin{center} \includegraphics [scale=0.4] {bowie3.png} \end{center}
+
+The triangle with small sides $a$ can be moved so one of the unshaded base parts becomes a rectangle with area
+\[ a(s + a) = sa + a^2 \]
+
+while the base of the triangle is $s + 2a$ so its area is
+\[ \frac{1}{2} s (s + 2a) = \frac{1}{2} s^2 + sa \]
+
+It's not obvious at first that these are equal, but working with it, they would be equal if we can show that $2a^2 = s^2$.  
+
+Of course we can do exactly that, because $a$ is the side of an isosceles right triangle with hypotenuse $s$.  By the Pythagorean theorem, we have
+\[ a^2 + a^2 = s^2 \]
+
+$\square$
+
+\end{document}

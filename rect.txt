@@ -1,0 +1,25 @@
+In a parallelogram 
+opposing sides are equal and parallel
+opposing angles are equal
+
+Def:  Pgram is a rectangle if
+it has at least one right angle
+
+-----
+
+1. If Pgram has at least one right angle,
+it has four right angles.
+
+Let A be a right angle.  
+Opposing angle C is a right angle.
+Sides are parallel, hence
+by alternate interior angles, B is a right angle
+and so is D.
+
+2. A = D.
+So ABD cong DCA by SAS. 
+Hence 2 diagonals equal,
+
+2c. If 2 diagonals equal, 
+ABD cong DCA by SSS.
+

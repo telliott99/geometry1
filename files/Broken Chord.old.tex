@@ -1,0 +1,414 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Broken Chord}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+The theorem of the "broken chord" is ascribed to Archimedes, although his original work --- the \emph{Book of Circles} --- has been lost.  It was analyzed in proofs collected by the Arabic mathematician Al Biruni in his \emph{Book on the Derivation of Chords in a Circle}.  The theorem was not simply of academic interest, but related to the construction of tables of chords (see the later chapter on the \hyperref[sec:xyz]{\textbf{Almagest}}).
+
+Here is the general setup:
+\begin{center} \includegraphics [scale=0.4] {broken_chord2.png} \end{center}
+
+Let $A$ and $C$ be any two points on a circle, and let $M$ be equidistant from both, so that arc $AM$ is equal to arc $MC$.  Let $B$ be another point on the circle, lying between $A$ and $M$, so $AB < BC$.
+
+Drop the perpendicular from $M$ to $F$ on $BC$.  The claim of the theorem is that $AB + BF = FC$.  
+
+In this chapter we will look at several proofs including those ascribed to Archimedes.  My original source for this problem was  
+
+\url{https://www.uni-miskolc.hu/~matsefi/HMTM_2020/papers/HMTM_2020_Drakaki_Broken_chord.pdf}
+
+There, it is said that the book contains 22 proofs of the theorem, including 3 different ones due to Archimedes.
+
+Later I found a link to Al Biruni's book, in Arabic:
+
+\url{https://tile.loc.gov/storage-services/service/gdc/gdcwdl/wd/l_/07/46/9/wdl_07469/wdl_07469.pdf}
+
+Using some of the diagrams in that book I worked out some more proofs.  Then, even more recently, I came across a translation, written in German by a historian named Heinrich Suter:
+
+\url{http://www.jphogendijk.nl/biruni/Suter-Chords.pdf}
+
+I have translated a part of that book into English.  The scanned text is copyable, and Google Translate does a decent job, but there are a lot of errors in the character recognition.  I'm not complaining --- I think it's amazing that it works at all.
+
+I count 23 examples (labeled $a$ through $x$, with no $j$), and four of those are Suter's own proofs, which gives a total of 19.  (Although some of these contain multiple approaches with the same diagram).  We'll return to Suter's book later.  
+
+This topic is a great one for ``elementary" geometry because the proofs are fairly easy and there are so many of them.
+
+Before starting, let's recall the important consequence (Euclid III.21) of the inscribed angle theorem (Euclid III.20).
+
+By definition, the central angle sweeping out a given arc is equal in measure to the length of the arc.  Any peripheral angle subtended by the same arc is one-half that central angle.  We will not repeat the proof here but just show the figure to remind us.
+
+\begin{center} \includegraphics [scale=0.15] {inscribed angles.png} \end{center}
+
+$\angle PRQ = \angle PSQ$.  Angles that lie on the same arc or are subtended by the same chord in the same circle, are equal.  
+
+We will also need the theorem that, in a given circle, equal arcs correspond to equal chords, and vice-versa, from \hyperref[sec:equal_arcs_equal_chords]{\textbf{here}}.
+
+And we will also use several times the theorem that any point on the perpendicular bisector of a segment forms an isosceles triangle when connected with the endpoints of the segment.
+
+\subsection*{First proof:  Suter (a)}
+
+The first and second proofs are ones actually attributed to Archimedes.
+
+\begin{center} \includegraphics [scale=0.18] {BC_a.png} \end{center}
+
+
+\newpage
+
+\emph{Proof}.
+
+Referring to the diagram below, we extend the chord $BC$ to $D$ so that $CF = DF$.
+\begin{center} \includegraphics [scale=0.4] {broken_chord13.png} \end{center}
+
+Since $CF = DF$ and $MF \perp DC$, we have that $\triangle CMF \cong \triangle DMF$.
+
+Thus, $CM = DM$ and the angles at $C$ and $D$ are equal.  Now connect a few more points.
+\begin{center} \includegraphics [scale=0.4] {broken_chord14.png} \end{center}
+$\angle BAM$ (third magenta dot) is equal to $\angle C$ by the \hyperref[sec:equal_angles_same_arc]{\textbf{inscribed angle theorem}}.
+
+We know that $AM = CM$ because the corresponding arcs are given as equal, and $CM = DM$, so $AM = DM$, which means that $\triangle ADM$ is isosceles.
+
+As the base angles of an isosceles triangle $\angle ADM = \angle DAM$.  The magenta parts are equal, so the difference of angles is equal as well.  Namely, $\angle BDA = \angle DAB$ and $BD = AB$ by the converse of the isosceles triangle theorem.
+
+But $BD + BF$ is given as equal to $CF$, so substituting, $AB + BF = CF$.
+
+$\square$
+
+\subsection*{second proof}
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord18a.png} \end{center}
+Given that $M$ is the midpoint of the arc $ABC$ and $MF \perp BC$.
+
+Find $E$ such that $BF = FE$ and also find point $D$ on the circle such that $BM = MD$.  
+
+We will show that $\triangle MEC \cong \triangle MDC$.
+
+From $BF = FE$ and $MF \perp BC$, we can show that $\triangle BFM \cong \triangle EFM$, so $\triangle MBE$ is isosceles and has the angles marked with black dots equal.
+
+Next, the angles marked with red dots are equal, because the arcs they are subtended by were given as equal, $BM = MD$.
+
+Now, $\angle FEM$ (black dot) is equal to $\angle EMC + \angle ECM$, red plus magenta, by applying the external angle theorem to $\triangle MEC$.
+
+It remains to show that $\angle DMC$, marked with blue, is actually equal to magenta.
+
+We obtain this by looking at the arcs.  arc $MDC$ subtends $\angle MBC$, black dot, but this is the sum of the arcs for $\angle DMC$ plus $\angle DCM$.  Since we already have that $\angle DCM$ is red, the result follows.
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord18b.png} \end{center}
+
+Therefore $\triangle MEC \cong \triangle MDC$ by ASA.  So $CD = EC$.
+
+$AB$ is equal to $CD$, because when added to equals ($BM = MD$), they combine to give equals:
+\[ AB + BM =  AM = MC = MD + CD \]
+
+It follows that $EC = CD = AB$.
+
+Since $BF = EF$, adding equals to equals gives
+\[ AB + BF = EC + FE = FC \]
+
+$\square$
+
+\subsection*{third proof}
+
+This elegant proof is ascribed to Gregg Patruno, a student at Stuyvesant High School in New York (1980).  I found it in
+
+\url{https://www.researchgate.net/publication/341579803_FROM_THE_THEOREM_OF_THE_BROKEN_CHORD_TO_THE_BEGINNING_OF_TRIGONOMETRY}
+
+[Note:  Drakaki attributes it to Patruno, but it is also in Al Biruni's book, according to Suter's translation.]
+
+\begin{center} \includegraphics [scale=0.45] {broken_chord3.png} \end{center}
+
+\emph{Proof}.
+
+Draw $E$ such that $EC = AB$.  We will prove that $BF = FE$ so $AB + BF = FC$.
+
+We have that $MA = MC$ as two chords cutting out equal arcs in a circle.  We also have that $\angle A$ and $\angle C$ both are subtended by the same arc $BM$, so they are equal.  $EC = AB$ was given.  
+
+Therefore, $\triangle ABM \cong \triangle CEM$ by SAS.
+
+As corresponding sides in congruent triangles, $MB = ME$.  Therefore $\triangle MBE$ is isosceles.
+
+The altitude $MF$ cuts isosceles $\triangle MBE$ into two congruent right triangles, which means that the bases are equal.  $BF = FE$.
+
+We drew $E$ such that 
+\[ AB = EC \]
+Adding equals to equals 
+\[ AB + BF = FE + EC = FC \] 
+
+$\square$
+
+\subsection*{fourth proof}
+
+Here is a another simple proof of the broken chord theorem.  This one is said to be in Al-Biruni's text and is attributed to El-Sidjzi (972), but may actually have been known to Apollonius.
+
+\url{https://www.researchgate.net/publication/341579803_FROM_THE_THEOREM_OF_THE_BROKEN_CHORD_TO_THE_BEGINNING_OF_TRIGONOMETRY}
+
+This figure from Al Biruni (below) suggests a neat line of attack.
+\begin{center}
+\includegraphics [scale=0.35] {Al_Biruni_5.png}
+\end{center}
+
+It is worthwhile to recall a figure from our work on parallel chords in a circle.  
+\begin{center} \includegraphics [scale=0.5] {parallel_chords.png} \end{center}
+
+Draw $AB \parallel PQ$.  Then draw $AQ$.  The angle at $Q$ is equal to the angle at $A$, by alternate interior angles.  Therefore arc $AP \cong $ arc $BQ$ by the inscribed angle theorem and then $AP = BQ$ as chords of equal arcs.
+
+If we drop perpendiculars from $A$ and $B$ to $PQ$, forming a rectangle, the two small triangles flanking the rectangle are congruent, by HL in a right triangle.
+
+In other words, for any rectangle whose vertices on one side are on a circle, the opposing side is centered in the circle.  The converse is also true.  If $BF = GC$ and $MF, HG \perp BC$, then $MHFG$ is a rectangle.
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord9.png} \end{center}
+
+\emph{Proof} (of the broken chord theorem).
+
+As before, $M$ is the midpoint, with arc $AM$ equal to arc $MC$.  $MF \perp BC$.
+
+This time we divide up $FC$ in a different way.  Either we have $BF = CG$, and then $MFGH$ is a rectangle, or we have the converse, and it follows that $BF = GC$.  
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord9.png} \end{center}
+
+From the rectangle, we also know that $MH = FG$  So then from the property of the median
+\[ AB + BM = MH + CH \]
+subtracting equals and using the rectangle
+\[ AB = MH = FG \]
+Finally, adding equals to equals
+\[ AB + BF = FG + GC = FC \]
+
+$\square$
+
+\subsection*{fifth proof}
+
+Here is another diagram from the book in Arabic that I can't read.  It suggests another proof and I couldn't resist working something out.
+
+\begin{center} \includegraphics [scale=0.35] {Al_Biruni_3.png} \end{center}
+
+Let's draw this using our standard notation.
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord19.png} \end{center}
+We find the point $E$ as before, by requiring that $BF = FE$.  Simply extend $ME$ to meet the circle at $G$ and connect $G$ to both $A$ and $C$.  It looks like $AG$ might be parallel to $BC$.
+
+The angles with black dots are equal for the following reasons:  (i) the top two are the base angles in an isosceles triangle, as before;  (ii) the other one at $E$ is a vertical angle, and (iii) the one at $G$ is an inscribed angle corresponding to the same arc as the black dotted angle at $B$.
+
+So we see that $\triangle CEG$ is also isosceles, which means that $EC = CG$.
+\begin{center} \includegraphics [scale=0.4] {broken_chord20.png} \end{center}
+The two triangles $\triangle MBE$ and $\triangle CEG$ are similar, which accounts for the magenta dots.  I have added a second black dot at $G$.  The justification is that it is subtended by the arc $AM$, given as equal to $MC$, which subtends its twin at $G$.
+
+But the sum of the three angles at $C$ and $G$ is equal to two right angles, from comparison to $\triangle MBE$, which means that $BC \parallel AG$.
+
+The final step is to show that parallel chords in a circle cut off equal arcs.  
+
+The figure from Al Biruni (below) reminds us that we just did this in the previous proof:
+
+\begin{center}
+\includegraphics [scale=0.35] {Al_Biruni_5.png}
+\end{center}
+
+In our standard diagram, draw one of the diagonals of the quadrilateral such as $AC$.  Because two sides $BC$ and $AG$, the alternate interior angles are equal.  But that means the intercepted arcs and corresponding chords are equal.
+
+$\square$
+
+\subsection*{sixth proof}
+
+We switch to Suter's notation --- this proof is Suter s(ii).
+\begin{center} \includegraphics [scale=0.3] {Suter14.png} \end{center}
+
+Suppose we have $AZ = GB$, and now we draw $AH = MG$.  We also have $\angle A = \angle G$.  It follows that $\triangle DZA \cong \triangle DBG$ by SAS and $\triangle AZH \cong \triangle BMG$, but the difference is also congruent, $\triangle DZH \cong \triangle DMB$.  This latter equality gives side $DZ = DB$, so $\triangle DBZ$ is isoceles.
+
+We are going to play with the areas of triangles and relate them to the products of base $\cdot$ height.  I made a new diagram showing what we know so far.
+\begin{center} \includegraphics [scale=0.3] {Suter14b.png} \end{center}
+Also, we know that $1 + 3 = 4$.  (I didn't plan that, but it's nice.  These are just labels).  So then, recall what we want to prove:
+\[ AE = BE + BG = BE + AZ \]
+Multiply both sides by the vertical, $DE$
+\[ DE \cdot AE = DE \cdot BE + DE \cdot AZ \]
+Recasting these as triangular areas, e.g. $\triangle DZA = (1,2)$, we can write
+\[ 2 \cdot (1,2,4) = 2 \cdot (1,3) + 2 \cdot (1,2) = 2 \cdot (4) + 2 \cdot (1,2) \]  
+$\square$
+
+\subsection*{seventh proof (Suter x)}
+
+Again, we use his notation.
+We are given the isosceles $\triangle DBH$, so $BE$ = $EH$ and $DB = DH$.
+
+\begin{center} \includegraphics [scale=0.3] {Suter19.png} \end{center}
+
+We will show that $\angle ZBD = \angle DHE$.  $\angle ZBD$ is external to $\triangle DBG$, so it stands on the arc $GBD$ as the sum of the interior angles' arcs.  $\angle DBE$ stands on the equal arc $AD$ and $\angle DHE$ is equal, so $\angle ZBD = \angle DHE$.  It follows that their supplementary angles are equal:  $\angle DBG = \angle DHA$.
+
+Therefore, we have $\triangle DBG \cong \triangle DHA$ by SAS which means that $BG = AH$, and the rest follows easily. 
+
+ $\square$
+ 
+\subsection*{eighth proof}
+
+Again from Suter's German translation of Al Biruni's work
+
+\url{http://www.jphogendijk.nl/biruni/Suter-Chords.pdf}
+
+(Suter, section $\gamma$ , Fig. 23, p. 28).
+
+\begin{center} \includegraphics [scale=0.25] {broken_chord_Suter.png} \end{center}
+
+From the drawing, I imagine that the construction in the text says to extend $BG$ to where the perpendicular from $D$ cuts it at $H$ and then go further to $Z$ such that $BH = HZ$.  
+
+First, let's redraw the figure.  At this point, I am going to switch to use Suter's notation.  (Perhaps someday I will redraw all the previous figures in the same fashion, but not yet).
+\begin{center} \includegraphics [scale=0.4] {broken_chord25.png} \end{center}
+
+So now we extend $GB$, drawn the perpendicular $DH$ and have $Z$ such that $ZH = HB$.
+
+The two parts of the ``broken" chord are $GB$ and $AB$, and the median point is $D$.  The perpendicular from $D$ down to $BC$ terminates at $E$.
+
+Suppose we can prove that $\triangle ABD \cong \triangle GZD$.  Then $GB + BH = AE$ and if we can also prove that $BE = BH$ we are done.
+
+To show congruence, we will prove that $\angle Z = \angle DBA$.  Then, since $\angle A = \angle G$ by the inscribed angle theorem, and $DG = DA$ by the property of the median, we will have ASA and thus congruence.
+
+\begin{center} \includegraphics [scale=0.4] {broken_chord25.png} \end{center}
+It is easy to show that $\triangle BDZ$ is isosceles, so $\angle Z = \angle DBH$.  The key point is that the supplementary angle $\angle DBG$ cuts out all of the circle \emph{except} $GD$.  Hence $\angle DBH$ and by extension, $\angle Z$, cuts out arc $GM$.  Therefore, $\angle Z$ is equal to $\angle DBM$, which cuts out arc $DA$, equal to arc $GD$. 
+
+We have ASA and thus congruence.  What about the last part, $BE$ and $BH$?  
+
+A simple approach is to say:  these are altitudes from the corresponding vertex in two congruent triangles.  They form two pairs of congruent small triangles, by hypotenuse-leg in a right triangle.  Therefore, the altitudes are equal.
+
+$\square$
+
+\subsection*{ninth proof}
+We'll do one last proof from Suter (section n, Fig 9, pp 18-19).
+\begin{center} \includegraphics [scale=0.4] {broken_chord26.png} \end{center}
+
+We start by extending the perpendicular $DE$ to $Z$ and draw $AG$, plus the diameter of the circle from $D$ through $HTK$.  The angle at $Z$ is a right angle, by Thales' circle theorem.  Finally, draw $MK$ parallel to $DEZ$.
+
+Now, the crucial step is that $DHTK$ is perpendicular to $AG$.  The reason is that the arc $GD$ is equal to arc $AD$, since $D$ is the median.  Therefore $\triangle ADG$ is isosceles, so its perpendicular bisector splits the base in half and is also a diameter of the circle containing the three points $A$,$G$ and $D$, i.e. $DHTK$ is the perpendicular bisector of $AG$.
+
+Clearly, because of the two right angles and parallel side opposite, $EMKZ$ is a rectangle, which means that $BE = MA$ and $EM = ZK$.
+
+We will prove that that $\angle A = \angle D$.  We have that $\angle DEH$ is right, and so is $\angle ATH$, by vertical angles.  Therefore $\triangle DEH \sim \triangle ATH$.  It follows that $\angle A = \angle D$.  Thus,  $ZK$ is equal to $GB$, so $ZK = GB = EM$, and the result follows easily.
+
+$\square$
+
+\subsection*{on the value of SSA}
+
+\label{sec:use_of_SSA}
+
+Something interesting happens with the third proof if you approach the premises slightly differently.
+\begin{center} \includegraphics [scale=0.4] {broken_chord4a.png} \end{center}
+We draw $AM$ as before, but we forget to set $CE = AB$ and instead put $BF = EF$, as in some other proofs.  Then what happens?
+
+We have $SAS$ in the small right triangles so $\triangle BFM \cong \triangle EFM$, which means $BM = ME$.  We have $MA = MC$ as before and $\angle A = \angle C$.
+
+We are tempted to compare $\triangle ABM$ with $\triangle CEM$.  What we have is SSA (or ASS), which --- it's been drilled into our heads --- is \emph{not enough}, unless there is a right angle, in which case we call it hypotenuse-leg in a right triangle (HL).
+
+But let's take a closer look.  In the figure below, the angle that we know is marked with a black dot, and the two sides that we know are $b$ and $a$.
+\begin{center} \includegraphics [scale=0.4] {broken_chord4d.png} \end{center}
+With SSA there are the following possibilities.  
+
+$\circ \ $ $a$ may be so short that it can't reach the base and there is no triangle.
+
+$\circ \ $ $a$ is just long enough that it forms a right angle with the base.
+
+$\circ \ $ $a$ is longer than the right angle case, in which case there are two possible triangles.
+
+$\circ \ $ $a$ is equal to $b$, in which case there is only one possible triangle, an isosceles one.
+
+$\circ \ $ $a > b$, in which case there is only one possible triangle.
+
+The usual example where we might want to get some information from SSA is the third one.
+\begin{center} \includegraphics [scale=0.4] {broken_chord4d.png} \end{center}
+We note that $a$ is the side opposite the angle we know, and we are concerned with the angle it forms with the side we don't know.
+
+In one, the angle $\phi$ with the undetermined base is acute, and in the other it is obtuse.  These angles are supplementary.
+
+We can see both of them in the figure!
+\begin{center} \includegraphics [scale=0.4] {broken_chord4a.png} \end{center}
+
+Clearly, and it is easy to prove, in $\triangle ABM$ and $\triangle CEM$ the angle is obtuse, from which we conclude that $\triangle ABM \cong \triangle CEM$.  Therefore, $CE = AB$ and adding equals to equals, we are done.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.45] {Al_Biruni_2.png} \end{center}
+
+This proof is also in Al Biruni's book on page 15.  
+
+From reading Suter, the way in which Archimedes handles the problem is stellar!
+
+\begin{center} \includegraphics [scale=0.75] {Suter2a.png} \end{center}
+He says (re-phrasing):  $GD = AD$ by the property of the median, $BD$ is shared, and $\angle G = \angle A$, so we have SSA.
+
+Now, $Z$ has been drawn such that $ZE = AE$ which means $ZD = AD$, so we have actually three triangles with SSA.
+
+Archimedes finds another angle.  He says that $\angle GBD$ corresponds to everything except arc $GD$, i.e. $DAHG$.  The angle supplementary to $\angle ZBD$ is subtended by arc $AD$, so $\angle ZBD$ itself is subtended by everything except arc $AD$, i.e. $AHGB$.  
+
+The missing parts are equal, so the angles are equal!  Since we know two angles, we know three.  Therefore, $\triangle ZBD \cong \triangle GBD$ by ASA.
+
+\subsection*{more}
+
+There is one more proof of the broken chord theorem that I know of.  (Remember the source claimed 22 proofs!)
+
+It is on the web attributed to someone named Bùi Quang Tuån.  There is another proof from the same source of the \hyperref[sec:Pthm_Tuan]{\textbf{Pythagorean theorem}} that I like even better. 
+
+\url{https://www.cut-the-knot.org/pythagoras/BrokenChordPythagoras.shtml}
+
+Google also turns up a blog, but no biographical info.
+
+\url{https://artofproblemsolving.com/community/c1598}  
+
+This proof is based on a rectangle, and I leave it to you to see how it relates to the fourth proof, above.  I've written about it elsewhere. 
+
+Note:  some additional material is here:
+
+\url{https://www.cut-the-knot.org/triangle/BrokenChordmpdlc.shtml}
+
+\subsection*{\emph{Star of David} proof of the Pythagorean theorem}
+
+\label{sec:star_of_david}
+
+\url{https://www.cut-the-knot.org/pythagoras/PythStarOfDavid.shtml}
+
+\begin{center} \includegraphics [scale=0.35] {pyth21.png} \end{center}
+Draw two congruent mirror-image right triangles in a circle, oriented so that $EF \perp AB$ (and $BC \perp DE$).  
+
+Note that $AB$ and $DE$ both pass through $O$, the center of the circle, because any right triangle inscribed in a circle has its hypotenuse as a diameter, by the converse of Thales' circle theorem.
+
+$OA$ and $OD$ are perpendicular by construction and diagonals, so they are perpendicular bisectors.  Thus
+\[ AE = AF = DC = DB \]
+
+Arc $EC$ plus arc $CD$ is equal to $180^{\circ}$.
+
+So it is equal to the arc $EB$, which added to arc $DB$ gives 180.
+
+Then $E$ is the median point between $B$ and $C$ and the perpendicular dropped from $E$ which meets $AB$ in a right angle, cuts $AB$ so
+\[ AP + AC = PB \]
+\[ AC = PB - AP \]
+by the theorem of the broken chord.  The two pieces of $AB$ are
+\[ AB = AP + PB \]
+
+Putting this together, we have:
+\[ AB + AC = 2PB \]
+and
+\[ AB - AC = 2AP \]
+Hence
+\[ PB = \frac{1}{2} (AB + AC), \ \ \ \ \ \ AP = \frac{1}{2} (AB - AC) \]
+
+\begin{center} \includegraphics [scale=0.35] {pyth21.png} \end{center}
+
+By the theorem of crossed chords
+\[  \frac{AB + AC}{2} \cdot \frac{AB - AC}{2} = ( \frac{EF}{2} )^2 \]
+\[  AB^2 - AC^2 = EF^2 = BC^2 \]
+
+The result follows.
+
+$\square$
+
+\end{document}

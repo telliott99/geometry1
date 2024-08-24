@@ -1,0 +1,274 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Parallel lines}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+The theorems from the previous chapter about supplementary and vertical angles seem rather obvious, once you get used to them.  Euclid's fifth and final postulate is more subtle.
+
+In the figure, line $1$ and line $2$ are parallel, \emph{if and only if}
+\[ B + D  = 2 \ \text{right angles} \ = 180^{\circ} \]
+
+\begin{center} \includegraphics [scale=0.5] {alternate_interior_angles.png} \end{center}
+
+The same statement holds for $A + C$, their sum also equals $180^{\circ}$.
+
+$\circ$   If two lines are drawn which intersect a third in such a way that the sum of the inner angles on one side is less than two right angles, then the two lines inevitably must intersect each other on that side if extended far enough.
+
+This postulate is equivalent to what is known as the parallel postulate.
+
+\url{http://mathworld.wolfram.com/EuclidsPostulates.html}
+
+\subsection*{alternate interior angles}
+
+\label{sec:alternate_interior_angle_theorem}
+
+In the figure 
+
+\begin{center} \includegraphics [scale=0.5] {alternate_interior_angles.png} \end{center}
+
+lines 1 and 2 are parallel.  Furthermore, the supplementary angles $A + B$ add up to $180^{\circ}$. So
+\[ A + C = 180 = A + B \]
+The first equality follows from the parallel postulate and the second is because they are supplementary angles.
+
+But then by subtraction,
+\[ B = C \]
+
+This is called the theorem on \emph{alternate interior angles} between two parallel lines.
+
+$\bullet$ \ for a transversal of two parallel lines, alternate interior angles are equal.
+
+The angles are called interior because they lie between the two parallel lines.
+
+\subsection*{Logic}
+
+We drew a third line traversing two other lines.  Given that background, we then said that if (P) those two lines never cross (they are \emph{parallel}), then (Q) the sum of the adjacent interior angles is equal to two right angles, which means that alternate interior angles are equal.
+
+In symbols, we write $P \Rightarrow Q$, by which we mean \emph{if} P is true, \emph{then} so is Q.
+
+However, you may have noticed that what we actually wrote was $P$ \emph{if and only if} $Q$.  In symbols, this is $P \iff Q$.
+
+The meaning of \emph{if and only if} is simply that both $P \Rightarrow Q$ \emph{and} $Q \Rightarrow P$.
+
+If the sum of the adjacent interior angles is equal to two right angles, then the two lines being traversed are parallel.
+
+\subsection*{extending the result}
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_4.png} \end{center}
+
+In the figure above (left panel), we're given that the two horizontal lines are parallel.
+
+The indicated angles are equal because they are alternate interior angles of two parallel lines (parallel postulate).  
+
+In the middle panel, two additional equalities are established by the vertical angle theorem.  Then on the right, we use the supplementary angle theorem.
+
+Note that the conclusions for the angles marked with a red dot are themselves consistent with the three postulates/theorems that we have so far:  supplementary and vertical angles and alternate interior angles.
+
+This postulate is also valid in reverse.  If we have a line that traverses two others so as to give interior angles summing to $180^{\circ}$, then the two lines must be parallel.
+
+\subsection*{symmetry}
+
+This is first of all a statement about the world, that we can have two lines that run alongside each other but don't touch.  Another way to talk about the situation is to say that if we sight down a pair of parallel lines from left to right, then turn the paper $180^{\circ}$ and look again, the picture will look the same.
+
+By rotational symmetry then, we have no reason to distinguish two parallel lines in the forward and reverse directions.  It follows that the intersection between two parallel lines and a third line that crosses them should look the same in both directions, the angles involved should have the same measures.  That is our theorem.  
+
+And this reasoning works, just so long as we are talking about lines on a flat piece of paper.
+
+\subsection*{flat geometry}
+
+Without getting too deep in the philosophical weeds, it's clear that mathematics is partly a construction.  We must choose rules that work, or at least do not conflict with each other, and adoption of the parallel postulate is a choice.  
+
+This choice of definition works for geometry in the flat plane, but not on a curved surface like the earth.  That's a familiar situation where our postulate is not appropriate.
+
+Two adjacent lines of longitude can be drawn so as to cross the equator at right angles, and the lines are parallel there, but they will meet (intersect) at the poles.  
+
+\begin{center} \includegraphics [scale=0.4] {lat_long.png} \end{center}
+
+The same thing happens if you imagine the earth at the center of the universe, looking out at the stars.  Or place yourself inside a globe, looking at  the thin skin of the object and thinking about the lines of latitude and longitude as seen from the inside.
+
+The parallel postulate only holds for geometry on a \emph{flat} surface.
+
+\subsection*{note on terminology}
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_4b.png} \end{center}
+Technically, it is only the angles in the figure above that are marked with black dots or red dots and lie \emph{between} the parallel lines, that are equal by the theorem of alternate interior angles.  The others in the panel below are equal by the vertical angles theorem.
+\begin{center} \includegraphics [scale=0.4] {lines_angles_4c.png} \end{center}
+
+We will not usually distinguish these cases, and just refer to all of them as "equal by alternate interior angles."
+
+\subsection*{axioms}
+
+Euclid also lists five axioms, things which are assumed.  Here are two examples:
+
+$\circ$   Things that are equal to the same thing are also equal to one another.
+
+$\circ$   If equals are added to equals, then the wholes are equal.
+
+These seem quite reasonable.
+
+We will see how to proceed from the postulates and axioms to various proofs.  Given these \emph{assumptions}, we can prove theorems that must be true.
+
+William Dunham has written a lot about the history of mathematics in Greece, starting with Thales (624-546 BC), who was from a Greek town called Miletus on the coast of Asia Minor (modern Turkey).  Thales lived long before Euclid (ca. 600 BC, about 300 years before Euclid).  Although none of his writing survives, it is believed that Thales proved several early theorems including the ones we saw above. 
+
+\subsection*{Triangle sum theorem}
+
+We come to our first truly novel theorem.  It relies on everything we've said so far.  It is attributed to Thales, one of three elementary but novel theorems for which he is thought to have developed proofs.
+
+\emph{Triangle sum theorem}
+
+\label{sec:triangle_sum_theorem}
+
+$\bullet$  The sum of the three angles in any triangle is equal to two right angles.
+
+\begin{center} \includegraphics [scale=0.3] {triangle_sum_angles.png} \end{center}
+
+This theorem depends on the ideas we developed above.  
+
+\emph{Proof}.
+
+Draw a line segment through $A$ parallel to $BC$.  Now, use alternate interior angles and follow the colors to the result.  By the theorem, the two angles marked in blue are equal, as are the two angles marked in red.  But the three angles at the point marked $A$ add up to two right angles.
+
+So the total measure of three angles in a triangle is equal to two right angles.
+
+$\square$
+
+A simple variation on this proof uses the angles above the line.
+
+\begin{center} \includegraphics [scale=0.6] {triangle_sum_angles2.png} \end{center}
+
+There are two more famous theorems ascribed to Thales, one in the next chapter, and one about circles that we mentioned in the beginning.
+
+Heath says that rather than Thales, Pythagoras is responsible for the triangle sum proof.  Since it's not clear that Pythagoras knew any geometry, I'm happy to stick with Thales.  No one knows, unfortunately.
+
+\subsection*{problem}
+
+Many geometry books will have you do some arithmetic at this point.  For example, in the triangle below, suppose that $\angle s = 70^{\circ}$ and $\angle t = 30^{\circ}$.  What is the measure of $\angle u$?  What is the measure of $\angle u'$?
+
+\begin{center} \includegraphics [scale=0.4] {PI_16d.png} \end{center}
+
+This is simply addition and subtraction, once you understand about supplementary angles and the sum of angles theorem.  Go ahead and do that if it amuses you.  
+
+We turn to the \textbf{external angle theorem}.  $\angle u'$ is the \emph{external angle} of this triangle.  It is related to $\angle s$ and $\angle t$.  
+
+Write two equations giving the relationships between the angles:  
+\[ u + u' = 180 \]
+\[ s + t + u = 180 \]
+We used supplementary angles and the sum of angles.
+
+It follows that $u' = s + t$.
+
+This figure makes a proof without words:
+
+\begin{center} \includegraphics [scale=0.6] {triangle_sum_angles3} \end{center}
+
+\subsection*{another proof}
+Here is a different proof of both of these theorems relating to the angles in a triangle.  This one is from Lara Alcock (\emph{Mathematics Rebooted}).
+
+It never hurts to re-prove important results by a different method.  This serves as a check on both the result and the methods.
+
+Imagine walking around the perimeter of a triangle in the counter-clockwise direction.  At each vertex we turn left by a certain angle, called the exterior angle.  After passing through all three vertices, we will end up facing in the same direction as we started.
+
+We have made one complete turn, the sum of the exterior angles is $4$ right angles.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_trisum.png} \end{center}
+
+\[ s' + t' + u' = 4 \ \text{right angles} \]
+
+In addition, for each vertex, the interior angle plus the exterior angle add up to $2$ right angles.  If we add up all three pairs, we obtain $6$ right angles.
+\[ (s + s') + (t + t') + (u + u') = 6 \ \text{right angles} \]
+
+Subtract the first equation from the second
+\[ s + t + u = 2 \ \text{right angles} \]
+
+$\square$
+
+\subsection*{problem}
+
+In the diagram below, $ABCD$ lie on one line, and it is parallel to $EFGH$.  We can write this as $AD \parallel EH$.
+
+Tell which angles are equal and why.
+
+\begin{center} \includegraphics [scale=0.4] {similar2d.png} \end{center}
+
+Which are supplementary, which are vertical?  (Refer to the angles in any way you wish, using the points, or with new labels).
+
+\subsection*{summary}
+
+Make sure you learn and understand each of these theorems.
+
+$\bullet$ \ the sum of two supplementary angles is equal to two right angles (\hyperref[sec:supplementary_angle_theorem]{\textbf{ref}}).
+
+$\circ$ \ by definition, if two angles are supplementary and also equal, they are both right angles
+
+$\bullet$ \ vertical angles are equal (\hyperref[sec:vertical_angle_theorem]{\textbf{ref}})
+
+$\bullet$ \ alternate interior angles of parallel lines are equal (\hyperref[sec:alternate_interior_angle_theorem]{\textbf{ref}})
+
+$\bullet$ \ the sum of angles in a triangle  is equal to two right angles  (\hyperref[sec:triangle_sum_theorem]{\textbf{ref}}).
+
+\subsection*{Eratosthenes}
+
+It is often supposed that the ancient world believed the earth to be flat, but this is just wrong.  People with any level of sophistication not only knew the earth is roughly spherical but also knew its size within a few percent of the true value.
+
+One likely basis is the false story that Columbus had trouble getting financing for his proposed trip to China because everyone thought he would fall off the edge of the earth.  This was a tall tale invented by Washington Irving, who also made up several remarkable fables about George Washington.
+
+The real reason the Italian and Portuguese bankers from whom Columbus sought financing thought he would fail is that they had a pretty good idea of the size of the spherical earth and thus of the distance to China, while the over-optimistic Columbus believed it was about half the true value.  The prospective financiers knew that he was not able to carry the supplies necessary for a trip of this length.
+
+Morris Kline (\emph{Mathematics and the Physical World}) says that the error is due to geographers after Eratosthenes, who reduced the estimated circumference from 24,000 to 17,000 miles.
+
+\subsection*{Eratosthenes}
+
+Views of the Greek philosophers on the earth and its sphericity are detailed here
+
+\url{https://www.iep.utm.edu/thales/#SH8d}
+
+Here is a partial quotation:
+
+\begin{quote}
+There are several good reasons to accept that Thales envisaged the earth as spherical. Aristotle used these arguments to support his own view [...] . First is the fact that during a solar eclipse, the shadow caused by the interposition of the earth between the sun and the moon is always convex; therefore the earth must be spherical. In other words, if the earth were a flat disk, the shadow cast during an eclipse would be elliptical. Second, Thales, who is acknowledged as an observer of the heavens, would have observed that stars which are visible in a certain locality may not be visible further to the north or south, a phenomen[on] which could be explained within the understanding of a spherical earth.
+\end{quote}
+
+\url{https://en.wikipedia.org/wiki/Eratosthenes}
+
+Eratosthenes (ca. 276 - 195 BCE) measured the circumference of the earth from this observation:  at high noon on the solstice on June 21st there was no shadow seen at Syene, allegedly from a stick placed vertically in the ground.  Some people say a deep well had the bottom illuminated at midday.  Acheson says Eratosthenes was born at Syene, so he would probably know!
+
+Syene is presently known as Aswan.  It is on the Nile about 150 miles upstream of Luxor, which includes the famous site called the Valley of the Kings, where many Egyptian Pharaohs were entombed.  At 24.1 degrees north latitude, Aswan or Syene has the sun almost directly overhead on June 21.  (The "Tropic of Cancer" is at 23 degrees, 26 minutes north).
+
+\begin{center} \includegraphics [scale=0.6] {aswan.png} \end{center}
+
+Alexandria was a famous center of learning of the ancient world, and Eratosthenes was hired by the pharaoh Ptolemy III to be the librarian there in 245 BCE.  Alexandria lies on the Mediterranean some 500 miles north of Syene, and anyone there who was looking could observe that at high noon on June 21st there \emph{was a shadow}.  This shadow Eratosthenes measured to be some 7 degrees and a bit (7 degrees and 10 minutes).
+
+\begin{center} \includegraphics [scale=0.4] {Acheson_G21.png} \end{center} 
+
+A full 360 degrees divided by 7 degrees and a bit is approximately 50.  So we can calculate on this basis that the circumference of the earth is about $50 \times 500 = 25000$ miles.  That's pretty close to the correct value.
+
+For this calculation, we assume that the sun's rays are effectively parallel (not a bad assumption given a distance of 93 million miles).  Then we just use an application of the alternate-interior-angles theorem.
+
+It is curious how the distance from Alexandria to Syene was calculated. 
+
+Kline:
+
+\begin{quote} Camel trains, which usually traveled 100 stadia a day, took 50 days to reach Syene.  Hence the distance was 5000 stadia...It is believed that a stadium was 157 meters.\end{quote}
+
+We obtain
+\[ 157 \times 5000 \times 50 = 39,250 \ \text{km} \]
+That's a much better estimate than a method that relies on camels really deserves.
+
+\end{document}

@@ -1,0 +1,271 @@
+   \documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pythagorean Theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:pythagorean_thm}
+
+The most famous theorem of Greek geometry is also without a doubt the most useful in calculus.  
+\begin{center} \includegraphics [scale=0.2] {pythagoras.png} \end{center}
+
+Like many Greek mathematicians, Pythagoras (c.570 - c.490 BCE)  was not from Greece ``proper'' (i.e. the territory of mainland Greece).  Instead, he was from one of the islands.  Pythagoras was born on the island of Samos, which lies off the coast of what was called Asia Minor (modern Turkey).
+
+Pythagoras was much younger than Thales but may have encountered him as a youth, since Thales lived on the mainland not too far from Samos, at Miletus.  Later, Pythagoras moved to a Greek colony in southern Italy, at Croton.
+
+During his lifetime, Pythagoras was known as a philosopher much more than as a mathematician.  For example, he was famous as an expert on the fate of the soul after death.
+
+\url{https://plato.stanford.edu/entries/pythagoras/}
+
+Wilczek cites Bertrand Russell on Pythagoras:
+
+\begin{quote}``A combination of Einstein and Mary Baker Eddy."\end{quote}
+
+which will be funny if you look up Mary Baker Eddy.
+
+Pythagoras founded a ``school" and it is not sure now which of the theorems developed by this school are due to Pythagoras, and which to his disciples.  It is not even clear whether the Pythagorean theorem, as we understand it today, was known to Pythagoras.  There is no contemporaneous account (say, Plato or Aristotle) connecting Pythagoras with the theorem.  Of course, nearly all of the histories that were written are lost.
+
+Regardless of whose idea it was, and who could prove it first, it's clear that they knew something.  The Pythagorean theorem says that if $c$ is the hypotenuse of any right triangle and $a$ and $b$ are the side lengths then
+\[ a^2 + b^2 = c^2 \]
+
+The simplest example in integers is
+\[ 3^2 + 4^2 = 9 + 16 = 25 = 5^2 \]
+but there are many triplets of integers with this property, for example
+\[ 5^2 + 12^2 = 25 + 144 = 169 = 13^2 \]
+
+Not just the classic 3-4-5 right triangle, but a number of other \emph{Pythagorean triples} had been known for a thousand years.
+
+The tablet ``Plimpton 322" contains (by extrapolation) the triplet 4601-4800-6649 and it dates to about 1800 BCE.  Maor analyzes this in his book on the theorem of Pythagoras.  
+
+\begin{center} \includegraphics [scale=0.4] {plimpton_trip.png} \end{center}
+
+Line 3 of the tablet contains the numbers $1,16,41$ and $1,50,49$ which are in base 60 notation.  Thus $1 \cdot 3600 + 16 \cdot 16 + 41 = 4601$ and $1 \cdot 3600 + 50 \cdot 60 + 49 = 6649$.  The third number of the triple is missing but it's obvious since $6649^2 - 4601^2 = 23040000$, which is $4800^2$.
+
+It seems highly unlikely that these were found by searching randomly among squares.  
+
+There is even a triple with 5 decimal digits on the next line of the Plimpton 322 tablet.
+
+One should not think that the theorem \emph{only} applies to triangles with integer side lengths.  For example, it applies to the isosceles right triangle with side length equal to $1$, whose hypotenuse is the real number $\sqrt{2}$.  Also, any integer solution can be modified.  For example
+
+\[ 0.5^2 + 1.2^2 = 0.25 + 1.44 = 1.69 = 1.3^2 \]
+
+\begin{center} \includegraphics [scale=0.5] {pyth8.png} \end{center}
+
+We're going to spend time with a few particular proofs of this theorem (there are literally hundreds of them), so as to examine the ideas from different perspectives.  This chapter is an introduction that shows some basic algebraic proofs.  
+
+The proof due to the Greeks presented in the next chapter is from Euclid.  It employs SAS for triangle congruence, and is probably his own contribution.  Later we'll explore how the concept of area is connected to the Pythagorean theorem.
+
+To begin, let's examine a special case, easily proved, for an isosceles right triangle.
+\begin{center} \includegraphics [scale=0.4] {pyth19.png} \end{center}
+We can obtain such a triangle by drawing the diagonal in a square.  The black dotted angles in any one triangle are equal, by the isosceles triangle theorem, and the others are equal by alternate interior angles.
+
+Our hypothesis is that when the lengths of the sides of the triangles are squared and then summed, they will be equal to the square of the diagonal.  That is to say, the square of the diagonal should be equal to two of the squares shown above.
+
+Here is a proof without words.
+\begin{center} \includegraphics [scale=0.3] {pyth7.png} \end{center}
+
+Adding some words:  the area of the square on the hypotenuse is equal to one-half of the area of four squares of the sides.  This is a proof for the special case where the sides are equal.
+
+The following general proof is sometimes called the ``Chinese proof."  I can easily imagine proceeding from the figure above to the left panel below by simply rotating the inner square and collapsing the surrounding one.
+
+\begin{center} \includegraphics [scale=0.35] {pythagoras1.png} \end{center}
+
+It really needs no explanation, but ..
+
+We have a large square box that contains within it a white square, whose side is also the hypotenuse of the four identical right triangles contained inside.  Altogether the four triangles plus the white area add up to the total.
+
+We simply rearrange the triangles.  Now we evidently have the same area left over from the four triangles, because they still have the same area and the surrounding box has not changed.  
+
+But clearly, now the white area is the sum of the squares on the second and third sides of the triangles.  Hence the two white squares on the right are equal in area to the large white square on the left.  
+
+$\square$
+
+This diagram is contained in the Chinese text Zhoubi Suanjing.
+
+\begin{center} \includegraphics [scale=0.25] {Chinese_pythagoras.jpg} \end{center}
+
+Eight right triangles are formed with sides of $3$ and $4$ units.  There are $7$ units on each side of the large square so the total area is $49$.  Each pair of triangles has area $12$ ($3 \cdot 4$), so the square in the center really is a unit square with area $49 - 4 \cdot 12 = 1$.
+
+So then, the central square consists of four triangles with total area $24$ plus the unit square for $25$.  This is the square of the long side, namely $5$.
+
+\url{https://en.wikipedia.org/wiki/Zhoubi_Suanjing}
+
+There is debate about whether this is really a proof, or if it simply presents the arithmetic for the example of a 3-4-5 right triangle.
+
+\subsection*{simple proofs}
+
+Many proofs of the theorem are algebraic.  Here are two:
+
+\begin{center} \includegraphics [scale=0.25] {pythagoras8.png} \end{center}
+
+\emph{Proof}.
+
+In the left panel, we have the same arrangement as before, with four identical right triangles.  The white square at the center has sides of length $c$ and angles that are right angles because when summed to two complementary angles, the result is two right angles.
+
+The algebra is
+\[ (a + b)^2 = 4 \cdot \frac{1}{2} \cdot ab + c^2 \]
+\[ a^2 + 2ab + b^2 = 2 ab + c^2 \]
+
+Subtract $2ab$ from both sides, and we're done.  
+
+$\square$
+
+I will leave the right panel to you.
+
+This is a proof from Gelfand and Saul's trigonometry book.  
+
+\begin{center} \includegraphics [scale=0.5] {Gelfand2.png} \end{center}
+
+I have added the labels for side length.
+
+If it's not obvious, note that we start with two adjacent squares of area $a^2 + b^2$.  Two triangles (shaded) are cut off and re-arranged to make a shape whose area is $c^2$.
+
+$\square$
+
+Here is a colored version of the same proof I found on the web.
+
+\begin{center} \includegraphics [scale=0.4] {pyth_dissection.png} \end{center}
+
+\url{https://t.co/xTnARHQNWw}
+
+\subsection*{similar triangles}
+
+\label{sec:Pythagoras_similar_triangles}
+
+\label{sec:geometric_mean_pyth}
+
+Here is a simple classic that depends on the ratios formed for similar right triangles:
+
+\begin{center} \includegraphics [scale=0.4] {triangle3.png} \end{center}
+
+\emph{Proof}
+
+We know that when an altitude is drawn in a right triangle, the two resulting right triangles are similar, by complementary angles.  Similarity means that we have equal ratios of sides.  Here are two sets:
+
+ratio of hypotenuse to short side
+\[ \frac{a}{x} = \frac{b}{h} = \frac{c}{a} \]
+ratio of hypotenuse to long side
+\[ \frac{a}{h} = \frac{b}{y} = \frac{c}{b} \]
+
+From the first
+\[ a^2 = cx \]
+And from the second
+\[ b^2 = cy \]
+
+Add them:
+
+\[ a^2 + b^2 = cx + cy \]
+\[ = c(x+y) = c^2 \]
+
+$\square$
+
+Another relationship from similar triangles is long side to short side:
+\[ \frac{h}{x} = \frac{y}{h} \]
+\[ h^2 = xy \]
+\[ h = \sqrt{xy} \]
+
+$h$ is the \emph{geometric mean} of $x$ and $y$.
+
+\subsection*{proof without words}
+
+This one is from Nelsen's \emph{Proof without words}.  It depends on Thales' theorem, and also on similarity in right triangles.
+\begin{center} \includegraphics [scale=0.45] {Nelsen_PWW.png} \end{center}
+
+The horizontal line is a diagonal of the circle, and the line labeled $y$ is vertical.
+
+\emph{Proof}.
+
+The two angles labeled $\phi$ are equal because they are complementary to the angle marked with a black dot.  $r$ is the radius.  The larger triangle has sides $y$ and $r + x$ , while the other has sides $r - x$ and $y$.  By similar triangles:
+\[ \frac{y}{r + x} = \frac{r - x}{y} \]
+\[ y^2 = r^2 - x^2 \]
+\[ x^2 + y^2 = r^2 \]
+
+$\square$
+
+\subsection*{converse of Pythagorean theorem}
+
+In reasoning deductively, we move from the premise or premises (collection of facts, data given, previous theorems that were proved), and use logic to reach a conclusion.  The question arises whether, if we know only that the conclusion is true, does it follow logically that the premises are true?  This is the problem of the \emph{converse} of a theorem.
+
+It may be so, or it may not.
+
+We can state the converse of the Pythagorean theorem as follows:  suppose we have triangle such that $a^2 + b^2 = c^2$.  Does it follow that the angle between $a$ and $b$ is a right angle?
+
+We profess to not know whether it is or is not a right angle.
+
+\emph{Proof}.
+
+So then, draw another triangle with sides $a$ and $b$ that \emph{is} a right triangle.  Then, by the forward theorem, $a^2 + b^2 = c^2$.  
+
+But the second triangle is congruent to the first one by SSS, each side is the same.  Since they are equivalent parts of congruent triangles, the angle between $a$ and $b$ is a right angle. 
+
+$\square$
+
+\subsection*{scaled triangle proof of Pythagoras}
+
+\label{sec:Pythagoras_scaled_triangles}
+
+\emph{Proof.}
+
+Draw a right triangle and label sides $a,b$ and $c$.
+
+\begin{center} \includegraphics [scale=0.5] {pyth1.png} \end{center}
+Now, flip and rotate the triangle.  Make a copy of that one and rotate the copy so that the shortest side is to the left.  Enlarge the copy until the two adjacent sides are equal in length.
+\begin{center} \includegraphics [scale=0.5] {pyth2.png} \end{center}
+
+These are similar triangles so the angles are all equal, but the sides are proportional, multiplied by a common factor, which here is $b$.
+
+The adjacent sides show that $ab = b$, so this choice of scaling defines $a = 1$.  And since $a = 1$, we can also view each side of the original triangle as being scaled by a factor of $a$.  
+
+We just tried scaling by a factor of $b$ and then by $a$, so that naturally suggests we try scaling by a factor of $c$.  
+
+\begin{center} \includegraphics [scale=0.5] {pyth2b.png} \end{center}
+All sides of the enlarged triangle have been multiplied by the same factor, namely, $c$.  Notice that $c = ac$, as required.
+
+We're nearly done.  Put the three triangles together.
+
+\begin{center} \includegraphics [scale=0.5] {pyth2c.png} \end{center}
+
+The lower left and right corners are places where two vertices come together.  By complementary angles, these sum to be right angles.  
+
+Since there are two other right angles at the vertices of the quadrilateral, it is a rectangle.  Therefore the place where three vertices come together is a straight line, which we can also verify because there are two complementary angles plus a right angle.
+
+Since the composite figure is a rectangle, opposing sides are equal, so $a^2 + b^2 = c^2$.
+
+$\square$
+
+\subsection*{problem}
+
+The Russian mathematician V.I. Arnold wrote a famous small book of ``problems for children from 5 to 15."  Here is no. 6:
+
+\begin{quote}
+The hypotenuse of a right-angled triangle (in a standard American examination) is 10 inches, the altitude dropped onto it is 6 inches. Find the area of the triangle.
+
+American school students had been coping successfully with this problem over a decade. But then Russian school students arrived from Moscow, and none of them was able to solve it as had their American peers (giving 30 square inches as the answer). Why?
+\end{quote}
+
+We leave this one as a challenge.  
+
+\emph{Hint 1}:  it's a joke.
+
+\emph{Hint 2}:  For two sides of a fixed total length, the isosceles right triangle has the largest area (why?).  Given the hypotenuse, what are the side lengths?
+
+Now use this fact to find the maximum area in terms of the sides, and compare that with the data we are given.
+  
+\end{document}

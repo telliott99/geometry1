@@ -1,0 +1,248 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Sum of angles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{sum of angles}
+
+\label{sec:sum_angles_similar_tri}
+
+In order to gain some practice thinking about sine and cosine, we will derive what are called the sum of angles formulas.  These are really for the sum and difference of two angles:
+
+\[ \sin (s \pm \ t), \ \ \ \ \ \ \cos (s \pm \ t) \]
+
+Previously we talked about formulas for the case where $s = t$, but now we want more general expressions.  Here is the first, for the difference of angles $s$ and $t$
+
+\[ \cos s - t = \cos s \cos t + \sin s \sin t \]
+
+By $\cos s - t$ we mean $\cos (s - t)$, but have left off the parentheses. 
+
+There are four formulas, and then some special examples.  These are used a lot in calculus, not only for solving problems, but most important, in finding an expression for the derivatives of the sine and cosine functions in calculus.
+
+I've memorized only the single equation given above.  Say "cos cos" and then recall the difference in sign, minus on the left, plus on the right.
+
+I like this version because it can be checked easily.  Just set $s = t$.  Then $s - t$ becomes $s - s$ and we have
+\[ \cos s - s = \cos 0 = 1 = \cos^2 s + \sin^2 s \]
+which is our favorite trigonometric identity and obviously correct.
+
+This diagram shows where we're headed:
+
+\begin{center} \includegraphics [scale=0.7] {sum8.png} \end{center}
+
+Since the figure is a rectangle, you can read the relevant equalities off the opposite sides.
+
+\[ \sin s + t = \sin s \cos t + \cos s \sin t \]
+\[ \cos s + t = \cos s \cos t - \sin s \sin t \]
+
+As so often, we begin with an inspired diagram.  Let's build it up in stages.
+
+On the left, below, we have stacked two right triangles.  The one containing angle $t$ is rotated so that its base is parallel to the hypotenuse of the triangle containing angle $s$.  
+
+\begin{center} \includegraphics [scale=0.5] {sum3.png} \end{center}
+
+The crucial step is to re-scale the triangle on the bottom so that the parallel line segments are also equal in length (right panel).
+
+By re-scaling, we change the length of the hypotenuse of the triangle containing angle $s$.  Its hypotenuse is now the length $\cos t$.  
+
+Recall that when the length of the hypotenuse was $h$, we divided the length of the adjacent side by the hypotenuse to get the cosine.  There we had $b/h = \cos s$.  Now we have 
+\[ \cos s = \frac{\text{adjacent}}{\text{hypotenuse}} = \frac{\text{adjacent}}{\cos t} \]
+
+What should be the length of the base of the triangle with angle $s$?  It must be $\cos s \cos t$, the product of cosines!  Just multiply both sides above by $\cos t$.
+
+Or recognize that after dividing $\cos s \cos t$ by the hypotenuse, which is $\cos t$, we will then have what we want, $\cos s$.
+
+\[ \frac{\cos s \cos t}{\cos t} = \cos s \]
+
+\begin{center} \includegraphics [scale=0.6] {sum4.png} \end{center}
+
+By the same reasoning, the opposite side in the triangle with angle $s$ is $\sin s \cos t$, so that after dividing by $\cos t$ we obtain the correct value, $\sin s$.
+
+\subsection*{a similar triangle}
+\begin{center} \includegraphics [scale=0.6] {sum5.png} \end{center}
+We add another right triangle to the figure
+
+We claim that the angles labeled with blue dots are equal.  
+
+The easiest way to do that is algebraic.  The angle that is complementary to $s$ in the bottom triangle is $s'$.  Complementarity means that $s + s'$ is equal to a right angle.  
+
+\begin{center}
+\includegraphics [scale=0.6] {sum5b.png}
+\includegraphics [scale=0.6] {sum5c.png}
+\end{center}
+
+But the second blue dotted angle plus $s'$ is also equal to a right angle.  The reason is that, when added to another right angle, it makes two right angles or a straight line.  Using the language of radian measure
+\[ s + s' = \frac{\pi}{2} \]
+\[ s' + \frac{\pi}{2} + \text{blue dot} = \pi \]
+\[ s' + \text{blue dot} = \frac{\pi}{2} \]
+\[ \text{blue dot} = s \]
+
+So we add the correct label, and then play the same trick as before.
+
+\begin{center} \includegraphics [scale=0.6] {sum6.png} \end{center}
+
+The difference is that now, the length of the hypotenuse of the upper triangle containing angle $s$ is $\sin t$.  The two similar triangles are scaled differently from one another.
+
+We obtain $\sin s \sin t$ and $\cos s \sin t$ for the sides of the upper triangle, so that after dividing by the hypotenuse, which is $\sin t$, we obtain the correct values for the sine and cosine of angle $s$.
+
+\subsection*{finale}
+Why have we gone to the trouble of doing all this?
+
+The two angles, $s$ and $t$, taken together, are equal to the angle at the top of the figure labeled, naturally, $s + t$.
+
+\begin{center} \includegraphics [scale=0.6] {sum8.png} \end{center}
+
+We fill in lengths for the dotted lines of the fourth right triangle in the figure below.
+
+This forms a rectangle (all four corners are right angles).  Therefore, opposite sides are equal.
+
+We just write down the formula by reading off the figure:
+\[ \sin s + t = \sin s \cos t + \cos s \sin t \]
+
+and
+\[ \cos s + t + \sin s \sin t = \cos s \cos t \]
+which can be rearranged to give
+\[ \cos s + t = \cos s \cos t - \sin s \sin t \]
+
+These are the sum of angles formulas.
+
+\subsection*{change signs}
+
+For $\cos s - t$, flip the sign on the second term.  
+\[ \cos s - t = \cos s \cos t + \sin s \sin t \]
+That's because
+\[ \cos -\theta = \cos \theta \]
+\[ \sin - \theta = - \sin \theta \]
+
+To show this we need to invoke analytic geometry (there's no such thing as a negative angle in classical geometry).
+
+\begin{center} \includegraphics [scale=0.4] {pm_theta.png} \end{center}
+
+The diagram shows the reason:
+\[ \cos \theta = x/r = \cos - \theta \]
+while
+\[ \sin \theta = y/r = -  (\sin - \theta ) = - (-y/r) \]
+
+Substitute $- \sin \theta$ for $\sin - \theta$ and $\cos \theta$ for $\cos - \theta$:
+\[ \cos s - t = \cos s \cos - t + \sin s \sin - t \]
+\[ = \cos s \cos t - \sin s \sin t \]
+and
+\[ \sin s - t = \sin s \cos t - \cos s \sin t \]
+
+It's kind of overkill, but still worth noting that a simple change to the figure we had above will give the difference formulas:
+
+\begin{center} \includegraphics [scale=0.5] {sum_angles_7.png} \end{center}
+We've changed symbols to $\theta$ and $\phi$ for the complementary angles.  
+
+We can justify the label $\phi - \theta$ for the angle at the lower left in various ways, for example, by adding up the three angles at that corner:
+\[ (\phi - \theta) + \theta + (90 - \phi) = 90 \]
+
+Switch the labels appropriately (it's easy since this $\phi$ is the complement of the old one).
+
+Read the result:
+\[ \sin \phi - \theta = \sin \phi \cos \theta - \cos \phi \sin \theta \]
+\[ \cos \phi - \theta = \cos \phi \cos \theta + \sin \phi \sin \theta \]
+
+\subsection*{alternative derivation}
+
+There are many derivations of the sum of angles formulas.  Here is an algebraic one based on the \hyperref[sec:law_of_sines]{\textbf{law of sines}}.
+\[ \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c} \]
+
+Start with this triangle
+\begin{center} \includegraphics [scale=0.35] {sum_angles_9.png} \end{center}
+
+\[ a = x + y = c \cos B + b \cos C \]
+From the law of sines:   $\sin A = (a/b) \sin B$.  Substituting for $a$:
+\[ \sin A = \frac{c \cos B + b \cos C}{b} \sin B \]
+\[ = \frac{c}{b} \sin B \cos B + \sin B \cos C \]
+
+Again from the law of sines:  $\sin B = (b/c) \sin C$, so
+\[ \sin A = \sin C \cos B + \sin B \cos C \]
+
+But since $A$ and $B + C$ are supplementary, their sines are equal, thus
+\[ \sin B + C = \sin C \cos B + \sin B \cos C \]
+
+$\square$
+
+The proof for an obtuse angle is left as an exercise.
+
+\subsection*{general formula for sine}
+
+Here is a related, simple proof of the formula for sine.
+
+Consider the following triangle, where the angle at one vertex is divided by the altitude to the opposing side, forming angles $\theta$ and $\phi$.  We are interested in finding the sine of the two angles added together.
+
+\begin{center} \includegraphics [scale=0.4] {trig_beg_5.png} \end{center}
+
+But first we must introduce a standard formula for the area of a triangle, illustrating it by the angle $\alpha$.  From our previous work we know that twice the area of the triangle is $hc$, but $h$ is also part of a formula for sine, namely $h/a = \sin \alpha$, which can be rearranged to give $h = a \sin \alpha$.  In other words
+\[ 2A = hc = ac \sin \alpha \]
+
+In general, twice the area of any triangle is the product of two sides times the sine of the angle between.  So in this case, we also have that
+\[ 2A = ab \sin (\phi + \theta) \]
+
+Now we just calculate the area of the two smaller triangles and add them together.  We have
+\[ 2A = ha \sin \phi + hb \sin \theta \]
+I'm going to rearrange this slightly
+\[ 2A = a \sin \phi  \cdot h + b \sin \theta \cdot h \]
+
+For these angles, $h$ is connected to a trig function, but this time it's the cosine.
+\[ h = a \cos \phi = b \cos \theta \]
+Substituting two times into the previous equation, we obtain
+\[ 2A = a \sin \phi  \cdot b \cos \theta + b \sin \theta \cdot a \cos \phi \]
+and equate it to the first result
+\[ ab \sin (\phi + \theta) = a \sin \phi  \cdot b \cos \theta + b \sin \theta \cdot a \cos \phi \]
+
+We can cancel $ab$ from all three terms:
+\[ \sin (\phi + \theta) =  \sin \phi \cos \theta + \sin \theta \cos \phi \]
+
+This is the general form for the sine of the sum of two angles.  It is apparent that it reduces to the previous double angle formula in the case where $\theta = \phi$.
+
+\subsection*{alternate version}
+Just to be complete, here is an alternative version  I found that may be even simpler.
+
+\begin{center} \includegraphics [scale=0.3] {sum10.png} \end{center}
+
+\subsection*{yet another proof of Pythagoras's Theorem}
+
+\label{sec:pthm_sum_angles}
+
+Consider the right triangle in a unit circle with opposite side $\sin \theta$ and adjacent side $\cos \theta$.  We will prove that 
+\[ 1 = \cos^2 \theta + \sin^2 \theta \]
+
+\emph{Proof.}
+
+We have the formula above:
+\[ \cos A + B = \cos A \cos B - \sin A \sin B \]
+Let $A = \theta$ and $B = - \theta$.
+
+\[ \cos \theta + - \theta = \cos \theta \cos - \theta - \sin \theta  \sin - \theta \]
+
+For the left-hand side, we have 
+\[  \cos \theta + - \theta = \cos 0 = 1 \]
+And for the right-hand side we use the fact that cosine is an odd function ($\cos -s = \cos s$).  Sine is an even function ($\sin s = - \sin -s$) so that gives
+\[ \cos \theta \cos \theta - \sin \theta (- \sin \theta) \]
+\[ = \cos^2 \theta + \sin^2 \theta \]
+
+Bringing back the left-hand side
+\[ 1 = \cos^2 \theta + \sin^2 \theta \]
+
+$\square$
+
+\end{document}

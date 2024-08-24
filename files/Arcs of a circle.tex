@@ -1,0 +1,142 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Arcs of a circle}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+It is natural to think about angles formed from a vertex lying on the periphery of a circle and ask about their relation to the arcs they cut off.
+
+The inscribed angle theorem says that a vertex placed at any point on the periphery of a circle, forming an angle that corresponds to the same arc as a central angle, is equal to \emph{one-half} the central angle.
+
+A corollary is that whenever two peripheral angles correspond to the same arc, they are equal.
+
+In the figure below, $s = s'$ (left panel)
+\begin{center} \includegraphics [scale=0.3] {arcs3.png} \end{center}
+
+and $t = t'$ (right panel).  So $u = u'$ by both the vertical angle theorem and by the triangle sum theorem.  All three angles in each triangle are equal, so the two triangles are similar.
+
+Later, we will develop this result into the  \hyperref[sec:chord_segments]{\textbf{crossed chord theorem}} (product of lengths).
+
+\subsection*{Intersecting chords}
+\begin{center} \includegraphics [scale=0.3] {arcs4.png} \end{center}
+
+Given two crossed chords, consider the opposing arcs $a$ and $b$
+\[ s = \frac{1}{2} (a + b) \]
+
+angle $s$ is the average of the two arc lengths.
+
+\emph{Proof}.
+
+Draw a triangle (right panel, above).
+\[ u = \frac{a}{2} \ \ \ \ \ \  v = \frac{b}{2} \]
+
+The external angle is the sum of the two opposing interior angles.
+\[ s = u + v = \frac{1}{2} \ (a + b) \]
+
+\subsection*{external vertex}
+
+Rather than having the vertex on the circle, it now lies outside (left panel, below).  There is a new small piece of arc length $b$.
+
+\begin{center} \includegraphics [scale=0.3] {arcs4b.png} \end{center}
+
+Draw the triangle and do some arithmetic.  By the usual theorem we have
+
+\[ t = \frac{b + d}{2} \ \ \ \ \ \ \ \ u = \frac{b + c}{2} \]
+
+The sum of the arcs in a circle is twice the sum of the angles in a triangle:
+
+\[ s + t + u = \frac{a + b + c + d}{2} \]
+By subtraction:
+\[ s = \frac{a-b}{2} \]
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.3] {arcs4c.png} \end{center}
+
+\emph{Proof}. (Alternative).
+
+Alternatively, in the figure above $2 \theta = a$ and $2 \phi = b$, but also $\theta = s + \phi$.
+\[ s = \theta - \phi = \frac{a - b}{2} \]
+
+$\square$
+
+\subsection*{tangent and secant}
+
+Rather than two secants, we now have a secant and a tangent.  The result is the same as previously.
+
+\begin{center} \includegraphics [scale=0.3] {arcs5.png} \end{center}
+
+\[ s = \frac{a - b}{2} \]
+
+\emph{Proof}.
+
+Draw the triangle on the right.  We have that:
+\[ t = \frac{a}{2} \]
+
+Also, we showed that for an angle where one part is the tangent, the expected result holds.  So the vertical angle to $u$ cuts off the arc $b$
+
+\[ u = \frac{b}{2} \]
+
+Alternatively, we could argue that the supplementary angle to $u$ cuts off everything except $b$.
+
+By the exterior angle theorem
+\[ t = s + u \]
+\[ s = t - u = \frac{a - b}{2} \]
+
+\subsection*{two tangents}
+
+We showed previously that when two tangents are drawn from an exterior point, one can draw two right triangles that share the hypotenuse and have another side equal to the radius, so they are congruent by hypotenuse-leg in a right triangle (HL).
+
+\begin{center} \includegraphics [scale=0.35] {tangent_arcs.png} \end{center}
+
+Let the whole arc between the two right angles be $s$ the short way and $t$ the long way around the circle, and let $\phi$ be the external angle.  By analogy with the results above, we expect that 
+\[ \phi = \frac{t - s}{2} \]
+
+\emph{Proof}.
+
+We could use congruent triangles, but instead just note that the sum of angles in any quadrilateral is $2 \pi$.  Hence
+\[ \phi + \theta = \pi \]
+
+In terms of arc $\theta = s$ and $s + t = 2 \pi$. Substituting into the last equation
+\[ \phi + s = \frac{s + t}{2} \]
+\[ \phi = \frac{t - s}{2} \]
+
+$\square$
+
+\subsection*{problem}
+
+Relate the angle at $P$ to the one at $X$.
+
+\begin{center} \includegraphics [scale=0.35] {tangent_arcs2.png} \end{center}
+
+By the previous example, $\theta + \phi = \pi$.  But $\angle X = \theta/2$.  Hence
+\[ P = \pi - \theta = \pi - 2 \angle X \]
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.3] {broken_chord17.png} \end{center}
+
+Given that $AB$ is a diameter of the circle, and that $\triangle AMB$ is isosceles.  Draw $MP \perp AC$.
+
+Show that $\triangle MPC$ is isosceles.
+
+We'll leave this one as an exercise and solve it \hyperref[sec:isosceles_vertical]{\textbf{later}}.
+
+\end{document}

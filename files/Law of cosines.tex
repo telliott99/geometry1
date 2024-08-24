@@ -1,0 +1,173 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Law of Cosines}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:law_of_cosines}
+
+This theorem is used extensively in geometry.  It relates the side lengths of any triangle to the cosine of an angle.  For example, if the side opposite $\angle A$ is $a$, then $a^2 = b^2 + c^2 - 2bc \cos A$.
+
+Rewritten appropriately, it can give any side in terms of the other two.
+
+Consider $\triangle ABC$ in two versions.  In one (left panel), $\angle A$ is acute, and in the other (right panel) $\angle A$ is obtuse.  Note that the supplementary $\angle BAD$ on the right is equal to $\angle A$ from the acute case.  In particular, it has the same cosine, $x/h$.
+
+Let the sides opposite be $a,b,c$, as usual. 
+\begin{center} \includegraphics [scale=0.20] {law_of_cosines5.png} \end{center}
+For the acute case, we have
+\[ a^2 = h^2 + (b-x)^2 \]
+\[ c^2 = h^2 + x^2 \]
+Subtracting:
+\[ a^2 - c^2 = (b - x)^2 - x^2 = b^2 - 2xb \]
+Rearranging
+\[ a^2 = b^2 + c^2 - 2xb \]
+
+$x/c$ is the cosine of $\angle A$ so $x = c \cos A$ so then finally
+\[ a^2 = b^2 + c^2 - 2bc \cos A \]
+
+\begin{center} \includegraphics [scale=0.20] {law_of_cosines5.png} \end{center}
+
+For the obtuse case the initial arithmetic has a change of sign.  ($a$ is still the side opposite $\angle A$, but it is obviously bigger now).
+\[ a^2 = h^2 + (b+x)^2 \]
+\[ c^2 = h^2 + x^2 \]
+Subtracting as before:
+\[ a^2 - c^2 = (b + x)^2 - x^2 = b^2 + 2xb \]
+Rearranging
+\[ a^2 = b^2 + c^2 + 2xb \]
+There is a change of sign for the last term.
+
+However, there is another difference for the obtuse case.  Now the angle \emph{inside} the triangle is supplementary to the angle whose cosine is $x/c$.
+
+Recall the sum of angles formula for cosine.  Let $\theta$ and $\phi$ be supplementary so $\theta + \phi = \pi$.  Then
+\[ \cos \theta = \cos \pi - \phi \]
+\[ = \cos \pi \cos \phi  + \sin \pi \sin \phi = - \cos \phi \]
+
+Thus, when we think about $\angle A$ as the angle at vertex $A$ \emph{inside} the triangle
+\begin{center} \includegraphics [scale=0.20] {law_of_cosines5.png} \end{center}
+for the obtuse case we have
+\[ \cos A = -\frac{x}{c} \ \ \ \ \ \ \ \ - c \cos A = x \]
+
+giving the same ormula for both cases:
+\[ a^2 = b^2 + c^2 - 2bc \cos A \]
+
+where $\angle A$ is $\angle BAC$ for the acute case and $\angle B'AC$ for the obtuse case.
+
+This is the law of cosines.  We compute the length of one side $a$ in terms of the two other sides $b$ and $c$ and the angle between them, $\angle A$.  This proof is identical to Euclid Book II.12 and II.13, except for the last step.
+
+Using the cosine in the formula is just a form of shorthand for the ratio $x/c$ and gets rid of that pesky term $x$.
+
+This is Pythagorean theorem with an added correction factor, $-2bc \cos A$, that depends on the angle opposite the hypotenuse and which disappears when that angle is a right angle, since the cosine is zero.  
+
+The factor is negative for an acute angle, which makes sense, since the smaller angle squeezes the hypotenuse to be smaller as well, while it is positive for an obtuse angle, giving a longer side opposite the greater angle.
+
+\subsection*{alternative proof}
+Here is an alternative derivation based on the products of parts of two secants, for the special case of a right triangle.
+
+Draw a right triangle on one diameter in a circle of radius $a$.  Draw a second diameter such that it crosses the base of the right triangle at a right angle, forming a smaller, similar right triangle.
+\begin{center} \includegraphics [scale=0.35] {law_of_cosines2.png} \end{center}
+
+The smaller triangle has sides $a,b$ and $c$.  The lengths of the other parts are easy to compute.  Now multiply
+\[ (a + c)(a - c) = b (2a \cos \theta - b) \]
+\[ a^2 - c^2 = 2ab \cos \theta - b^2 \]
+The result follows immediately.
+\[ a^2 - c^2 = 2ab \cos \theta - b^2 \]
+\[ c^2 = a^2 + b^2 - 2ab \cos \theta \]
+
+$\square$
+
+\subsection*{algebraic proof}
+
+\label{sec:law_of_cosines_algebraic}
+
+In $\triangle ABC$ drop the altitude from vertex $A$ to side $a$ opposite
+then
+\[ a = b \cos C + c \cos B \]
+
+In the same way:
+\[ b = a \cos C + c \cos A \]
+\[ c = a \cos B + b \cos A \]
+
+Multiply  the first by $a$
+\[ a^2 = ab \cos C + ac \cos B \]
+
+In the same way
+\[ b^2 = ab \cos C + bc \cos A \]
+\[ c^2 = ac \cos B + bc \cos A \]
+
+Subtract the first and second from the third:
+\[ c^2 - a^2 - b^2 = - 2 ab \cos C \]
+\[ c^2 = a^2 + b^2 - 2ab \cos C \]
+
+\subsection*{parallelogram sides}
+
+The law of cosines leads to an interesting relationship between the sides and diagonals of a parallelogram.  Recall that the diagonals divide the figure into two congruent triangles.  They also bisect one another.
+
+\begin{center} \includegraphics [scale=0.16] {pgram_squares2.png} \end{center}
+
+\emph{Proof}.
+
+For convenience we label the half-diagonals as $m$ and $n$.  Applying the theorem twice we have
+\[ a^2 = m^2 + n^2 - 2mn \cos \theta \]
+\[ b^2 = m^2 + n^2 + 2mn \cos \theta \]
+
+The sign change on the last term arises because the angles at the center are supplementary, so their cosines are negatives.  By addition:
+\[ a^2 + b^2 = 2(m^2 + n^2) \]
+
+But if $e$ and $f$ are the diagonals then $m^2 = e^2/4$ and $n^2 = f^2/4$ so
+\[ 2(a^2 + b^2) = e^2 + f^2 \]
+The sum of the squares of all four sides is equal to the sum of the squares of the diagonals.
+
+Of course this is correct for a rectangle (by Pythagoras's theorem), but it remains true when the shape leans to one side.
+
+$\square$
+
+Al alternative proof (Byer) is to apply Pythagoras directly
+\begin{center} \includegraphics [scale=0.16] {pgram_squares.png} \end{center}
+
+\emph{Proof}.
+
+\[ a^2 = h^2 + k^2 \]
+\[ e^2 = h^2 + (b - k)^2 \]
+\[ f^2 = h^2 + (b + k)^2 \]
+\[ e^2 + f^2 = 2h^2 + 2b^2 + 2k^2 \]
+\[ = 2(a^2 + b^2) \]
+
+$\square$
+
+\subsection*{philosophy}
+
+Trigonometry is not just about problems like finding the measure of the angle complementary to $23^{\circ}$ as $67^{\circ}$.
+
+Instead, trigonometry uses formulas like the sum of angles, and especially, the law of cosines, to solve problems in calculus.
+
+One of the most famous applications came when Newton derived Kepler's laws about the orbits of the planets.  Originally, to do that he made the approximation that the mass of the earth acts \emph{as if} it were concentrated at a single point corresponding to the center of the earth, and likewise for the sun.
+
+However, for a rigorous demonstration he needed to prove that this approximation is correct.  We do not have the tools yet to see how he did that, but here are two equations from my write-up:
+\[ \rho^2 = D^2 + s^2 - 2Ds \cos \gamma \]
+\[ \cos \gamma = \frac{D^2 + s^2 - \rho^2}{2Ds} \]
+
+and the relevant diagram:
+\begin{center} \includegraphics [scale=0.35] {newton_volume.png} \end{center}
+
+You can probably recognize the law of cosines at work.
+
+Trigonometry is hugely important in math and science.  Although it has (simple) applications for activities like surveying that is not at all what it is about.
+
+\end{document}

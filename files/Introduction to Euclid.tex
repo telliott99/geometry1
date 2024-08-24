@@ -1,0 +1,240 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Euclid's Elements}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we will look at some Propositions from Book I of Euclid's \emph{Elements}.
+
+His book was put together as a compendium of geometry for students.  One thing we will see is how the propositions build on one another to make a dependent chain.  This includes a more sophisticated proof of the isosceles triangle theorem that depends only on SAS.
+
+\subsection*{Euclid. I.4}
+
+\label{sec:Euclid_I_4}
+
+\begin{quote}If two triangles have two sides equal to two sides respectively, and have the angles contained by the equal straight lines equal, then they also have the base equal to the base, the triangle equals the triangle, and the remaining angles equal the remaining angles respectively, namely those opposite the equal sides.\end{quote}
+
+\begin{center} \includegraphics [scale=0.15] {EI_4.png} \end{center}
+
+This is a method for proving congruence (equality) of two triangles 
+\[ \triangle ABC \cong \triangle DEF \]
+
+In modern usage, we call the method SAS or \emph{side angle side}.  Given that $AB = DE$ and $AC = DF$ and that the angles between them at the vertices $A$ and $D$ are also equal, the two triangles are congruent:  all three angles and all three sides are equal.
+
+Euclid I.4 is a proof that SAS is correct.
+
+\emph{Proof}.
+
+The proof is by superposition.  The facts establish the positions of the points $B$ and $C$, which determines $BC$ and so the angles at vertices $B$ and $C$.
+
+Euclid says that if we lift up $\triangle ABC$ and lay it on top of $\triangle DEF$ then $B$ coincides with $E$ and $C$ coincides with $F$ so $BC = EF$.
+
+$\square$
+
+This seems perhaps a little shaky logically, and it's not a method of proof that Euclid uses much.
+
+But one might instead have taken this proposition as a postulate.  One source says that David Hilbert claims that under the hypotheses of the proposition it is true that the two base angles are equal, and then proves that the sides are equal.
+
+\subsection*{Euclid I.5}
+
+\label{sec:Euclid_I_5}
+
+The forward isosceles triangle theorem is that if two sides in a triangle are equal, then so are the opposing angles.  It's difficult precisely because Euclid proves it \emph{before} we know how to bisect an angle.
+
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5d.png} \end{center}
+
+Given $AB = AC$.  We will prove that the base angles are equal:  $\angle ABC = \angle ACB$.
+
+The image shows two copies of the triangle.  This is so that we may compare congruent triangles formed within the \emph{same} figure.
+
+\emph{Proof}.
+
+Extend $AB$ and $AC$ so that $AD = AE$.  
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5a.png} \end{center}
+
+Then $BD = CE$ by subtraction.  Connect $CD$ and $BE$.  
+
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5b.png} \end{center}
+
+$\triangle ACD \cong \triangle ABE$ by SAS ($AB = AC$, $AD = AE$, and they share the angle at vertex $A$).
+
+As a result, we have two more pairs of angles equal:  $\angle ADC = \angle AEB$ and $\angle ACD = \angle ABE$.  Also, $CD = BE$.
+
+\begin{center} \includegraphics [scale=0.18] {Euclid_I_5c.png} \end{center}
+
+Since $\angle ADC = \angle AEB$ and the flanking sides are equal, namely, $BD = CE$ and $CD = BE$, we have $\triangle BCD \cong \triangle CBE$ by SAS.
+
+It follows that $\angle DBC = \angle ECB$.  By supplementary angles, $\angle ABC = \angle ACB$.
+
+$\square$
+
+Notice how the original figure is extended to provide auxiliary shapes helpful in the proof.  This is a common theme.
+
+We will use both results ($\angle ABC = \angle ACB$ and $\angle DBC = \angle ECB$), going forward.
+
+To summarize:  in a triangle with two equal sides, the angles opposite those sides are also equal, as well as their supplementary angles.
+
+\subsection*{Euclid I.6}
+
+We proved the converse of I.5 previously based on angle bisection.  Now that we have proved Euclid I.5, which provides the basis for bisection, this is logically solid.  Nevertheless, for completeness, here is Euclid's proof of I.6.
+
+\begin{center} \includegraphics [scale=0.16] {Euclid_I_6.png} \end{center}
+
+\emph{Proof}.
+
+Given $\angle ABC = \angle ACB$.  Suppose $AB \ne AC$.  Then let one be less, say $AC$.  So cut off from $AB$ the length $BD = AC$.
+
+Compare $\triangle DBC$ with $\triangle ABC$.  We have the sides equal, namely $DB = AC$ and  $BC = BC$.  As well, $\angle DBC = \angle ACB$.  Therefore $\triangle ABC \cong \triangle DBC$ by Euclid I.4 (SAS).
+
+But this is absurd.  The part cannot be equal to the whole.
+
+Therefore, $AB = AC$.
+
+$\square$
+
+\subsection*{$\iff$}
+
+The theorem together with its converse says that, in an isosceles triangle, the base angles are equal $\iff$ the two sides sides are equal (not the base).  
+
+The symbol $\iff$ means \emph{if and only if}, so both base angles equal $\rightarrow$ two sides equal  \emph{and} two sides equal $\rightarrow$ base angles equal.
+
+We now extend our methods by showing that SSS leads to SAS, providing a second method of proof for triangle congruence.
+
+But first, look at the next theorem after the two on isosceles triangles, namely, Euclid I.7.
+
+\subsection*{Euclid I.7}
+
+\label{sec:Euclid_I_7}
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7c.png} \end{center}
+
+$\bullet$  \ Let $\triangle ABC$ be drawn and a point $D$ be chosen on the same side of $AB$ as $C$ lies.  It cannot be true that both $AC = AD$ and $BC = BD$. 
+
+\emph{Proof}.
+
+Suppose that both statements are true: $AC = AD$ and $BC = BD$.
+
+Then $\triangle ACD$ is isosceles so $\angle ACD = \angle ADC$.
+
+We notice that 
+\[ \angle BCD < \angle ACD = \angle ADC < \angle BDC \]
+
+But since $\triangle BCD$ is also isosceles, $\angle BCD = \angle BDC$.
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7c.png} \end{center}
+
+This is a contradiction.  Therefore it cannot be that both $AC = AD$ and $BC = BD$.
+
+$\square$
+
+\subsection*{revisit Euclid I.7}
+
+\label{sec:Euclid_I_7_alt}
+
+There is a small problem (really, an assumption) with our proof.  Recall that $AC = AD$ and it is supposed that $BC = BD$.
+
+\begin{center} \includegraphics [scale=0.13] {Euclid_I_7c.png} \end{center}
+$D$ is drawn so that it is not contained within $\triangle ABC$.  But suppose it were?  
+
+The problem is that the proof given before makes no sense if $D$ lies inside $\triangle ABC$ (for example, we do not know $\angle BCD < \angle ACD$).
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7d.png} \end{center}
+
+\emph{Proof} (Alternate).
+
+We can find a different proof for this case in several ways.  Suppose $AC = AD$ and $BC = BD$.  Then $\triangle ABC \cong \triangle ABD$ by SSS, since $AB$ is shared.
+
+But this is absurd.  $\triangle ABC$ is contained within and is less than $\triangle ABC$.
+
+This is a contradiction.
+
+$\square$
+
+All of this leads to a second difficulty:  SSS is Euclid I.8, and Euclid actually proves I.8 by relying on I.7 !
+
+However, we have a proof of SSS (below) that does not depend on I.7, so this could still work.
+
+Perhaps a better solution is something like what we did before:  
+
+\begin{center} \includegraphics [scale=0.15] {Euclid_I_7d.png} \end{center}
+
+\emph{Proof}.
+
+Suppose that both $AC = AD$ and $BC = BD$.
+
+Then $\triangle ACD$ is isosceles so $\angle ACD = \angle ADC$.  Euclid I.5 also says that the supplementary angles are equal.  $\angle ECD = \angle FDC$.
+
+We notice that 
+\[ \angle BCD < \angle ECD = \angle FDC < \angle BDC \]
+
+But since $\triangle BCD$ is also isosceles, $\angle BCD = \angle BDC$. 
+This is a contradiction.  Therefore it cannot be that both $AC = AD$ and $BC = BD$.
+
+$\square$
+
+[ Another idea might be to use Euclid I.21, which says that if $D$ lies inside $\triangle ABC$, then $AD + BD < AC + BC$,  but that proposition turns out to be dependent through several steps, on I.8. ]
+
+\subsection*{Euclid I.8:  SSS $\rightarrow$ SAS}
+
+\label{sec:SSS_implies_SAS}
+
+We will prove that the SSS criterion implies SAS.
+
+\emph{Proof}.
+
+Let all the sides of $\triangle ABC$ be equal to $\triangle ADC$ and align the triangles as shown.  $\triangle DEF$ is the mirror image of $\triangle ABC$ (if not, reflect $\triangle ADC$ through one of its sides and reposition it.
+
+A mirror image is allowed to be congruent.
+
+\begin{center} \includegraphics [scale=0.2] {SSSd.png} \end{center}
+
+$D$ is placed so that two sets of sides are equal, and equal sides are adjacent in the quadrilateral.  $AB = BD$ and $AC = CD$.  The third side $BC$ is shared.  So we have SSS.
+
+By the forward version of the isosceles triangle theorem, $\angle BAD = \angle BDA$ and $\angle CAD = \angle CDA$.  Therefore the total angles at the vertices are equal:  $\angle A = \angle D$.  
+
+We have SAS, so $\triangle ABC \cong \triangle ABD$.
+
+$\square$
+
+There is also a problem with this proof that may not be obvious.
+
+We have acute angles on the base ($\angle ABC$ and $\angle ACB$).  If we allow other possibilities, then this version of the proof isn't valid.  Luckily, we can extend the proof in the following way.
+
+\begin{center} \includegraphics [scale=0.20] {SSSc.png} \end{center}
+
+\emph{Proof}.
+
+We have $\triangle ABC$ and $\triangle DEF$ with all three sides equal and superimposed along any one of the sides, say, $BC = EF$.  We suppress the labels $E$ and $F$.
+
+Now, one of the angles along the base $BC$ may be right or obtuse, or neither may be (the case already treated).
+
+Then, if $\angle ABC$ and $\angle DBC$ are both right, we have SAS immediately.
+
+Alternatively, if $\angle ABC$ and $\angle DBC$ are both obtuse (right panel), then draw $AD$.  We have that both $\triangle ABD$ and $\triangle ACD$ are isosceles.  By subtraction, we find that $\angle BAC = \angle BDC$.  
+
+Both pairs of flanking sides are equal, so we have SAS and thus $\triangle ABC \cong \triangle DEF$ (labeled as $\triangle DBC$ in the figure).
+
+$\square$
+
+SSS $\rightarrow$ SAS, and since SAS is sufficient to show congruence, so is SSS.
+
+This illustrates a problem with drawing diagrams, we may introduce unrecognized assumptions into the proof.  The most common is to draw an acute triangle and presume it stands for all triangles
+
+\end{document}

@@ -1,0 +1,287 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Altitudes}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{easy theorems}
+
+$\bullet$ \ If a quadrilateral has two adjacent right angles and equal diagonals, it is a rectangle.
+
+\begin{center} \includegraphics [scale=0.15] {rect9.png} \end{center}
+
+\emph{Proof}.
+
+Let $ABCD$ be a quadrilateral with $\angle A = \angle B$ and both are right angles.
+
+Let $AC = BD$ be the two diagonals.
+
+Compare mirror image right triangles $\triangle ABC$ and $\triangle BAD$.
+
+They have an equal hypotenuse and they share the side $AB$.
+
+Hence they are congruent by HL, so $AD = BC$.
+
+Then $\triangle ADC \cong \triangle BCD$ by SSS.
+
+Thus $\angle C = \angle D$ and by sum of angles both are right angles.
+
+So $ABCD$ has four right angles and thus is a rectangle.
+
+$\square$
+
+$\bullet$ \ perpendiculars between parallel lines are equal
+
+\begin{center} \includegraphics [scale=0.12] {plines.png} \end{center}
+
+\emph{Proof}.
+
+Let $AB$ and $CD$ be parallel lines.
+
+Let $AE \perp AB$, then $AE \perp CD$ by alternate interior angles.
+
+Draw $DF \perp AB$.
+
+$DF$ is also $\perp CD$ for the same reason.
+
+Thus $AEDF$ has four right angles so it is a rectangle.
+
+It follows that $AE = DF$.
+
+$\square$
+
+Any perpendicular is the shortest line segment with one end point on $AB$ and the other on $CD$.
+
+\emph{Proof}. 
+
+\begin{center} \includegraphics [scale=0.12] {plines.png} \end{center}
+
+Aiming for a contradiction, suppose $BD$ is shorter, but $BD$ is not $\perp AB$.
+
+Draw the line $AC \parallel BD$ through $A$.
+
+Then $ACDB$ is a parallelogram, so $AC = BD$.
+
+Let $\triangle ACE$ be a right triangle.
+
+The hypotenuse is the longest side in a right triangle, so $BD = AC > AE$.
+
+This is a contradiction.
+
+A perpendicular is the shortest line segment connecting two parallel lines, and every perpendicular is equal to every other one.
+
+$\square$
+
+\subsection*{area only depends on base and altitude}
+
+An important consequence is that:
+
+$\bullet$ \ all triangles with the same base and height have the same area.
+
+In the figure below, we have two parallel lines.  Mark off $CD = EF$.
+
+Now pick any point on the top and draw the triangle with two equidistant points on the bottom.  Any other triangle drawn with an equal base has the same area.
+
+\begin{center} \includegraphics [scale=0.16] {area2b.png} \end{center}
+The areas of $\triangle ACD$, $\triangle AEF$, and $BEF$ are equal, because they have equal bases and equal heights.
+
+There are several different conventions for referring to the area of a triangle.  One is just to use the capital letter $A$ (for area).  To make it stand out, we might use a special font:
+\[ \mathcal{A}_{\triangle_{ACD}} = \mathcal{A}_{\triangle_{AEF}} \]
+
+That helps but can still become awkward when $\mathcal{A}$ has another meaning in the problem.  Some people switch to using $K$, but a second approach is to use the $\triangle$ symbol, as in
+\[ \triangle_{ACD} = \triangle_{AEF} = \triangle_{BEF} \]
+
+Euclid always refers to angles as $\angle ABC$ etc., so when he says $ABC = DEF$, he means the \emph{area} of those triangles.
+
+And yet another is to use parentheses.  This is a good solution when there are other shapes like rectangles in the problem.
+\[ (\triangle ACD) = (\triangle AEF) \]
+
+A right triangle has the largest area for a given pair of side lengths.  If we imagine a side of length $a$ tilting right or left, then the resulting triangle will have a smaller area, because the altitude $h$ will be less than $a$.
+
+\begin{center} \includegraphics [scale=0.4] {area9.png} \end{center}
+
+\subsection*{area-ratio theorem}
+
+\label{sec:area_ratio_theorem}
+
+If in a triangle we draw the line connecting the upper vertex to any point on the bottom side, then the areas of the two smaller triangles are in the same ratio as the lengths of their bases.
+
+\begin{center} \includegraphics [scale=0.5] {area11.png} \end{center}
+
+\emph{Proof.}
+
+The area of $\triangle A$ is $ah/2$, while that of $\triangle B$ is $bh/2$, so the ratio of areas is 
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_B} = \frac{ah/2}{bh/2} = \frac{a}{b} \]
+
+$\square$
+
+It is also the case that the ratio of the area of any sub-triangle to the whole is the same as the proportion of its base length to that of the whole base.
+
+\[ \frac{\mathcal{A}_A}{\mathcal{A}_A + \mathcal{A}_B} = \frac{a}{a+b} \]
+
+\emph{Proof}.  
+
+Simple algebra:  invert, add one to both sides, and invert again.  We show only the right-hand side.  Start with the fraction $b/a$ and add $1$ to it:
+
+\[ \frac{b}{a} + 1 = \frac{b}{a} + \frac{a}{a} = \frac{a + b}{a} \]
+
+Inverted:
+\[ \frac{a}{a + b} \]
+
+Do the same to both sides and the result follows.
+
+
+\subsection*{altitudes and the orthocenter}
+
+Each of the three sides of a triangle has a corresponding \emph{altitude}, which is the perpendicular line drawn from a vertex to the side opposite, or its extension.
+
+The three altitudes meet at a point (they are said to be concurrent).  We will prove this later.  The point is called the \emph{orthocenter}.
+
+For an acute triangle, the orthocenter lies inside the triangle.
+\begin{center} \includegraphics [scale=0.4] {tr1.png} \end{center}
+For a right triangle, the orthocenter is just the vertex containing the right angle.  
+
+For an obtuse triangle, the orthocenter is external to the triangle, as are two of the altitudes and part of the third.
+
+In the latter case, it may take some thought to determine which altitude goes with which side.  The rule is that the altitude forming a right angle with any side originates at the vertex opposite that side.  If necessary, the side is extended to meet the altitude at a right angle.
+
+\begin{center} \includegraphics [scale=0.4] {tr2.png} \end{center}
+
+In the figure above, we have one obtuse angle in the triangle.  The altitudes to sides $a$, $b$ and $c$ are indicated, in turn, by arrows.
+
+\subsection*{computing triangular area}
+
+\begin{center} \includegraphics [scale=0.4] {area3.png} \end{center}
+
+Again the simple formula:  one-half base times height.  In the figure above, twice the area is 
+
+\[ 2A = af = bg = ch \]
+
+We can choose any side of the triangle to be the base and then multiply by the height to get twice the area.  
+
+We must always get the same answer!  The area of the triangle is surely the same no matter how you calculate it.
+
+Here's a proof by counting up the area of smaller triangles.  A simpler proof follows, but this gives practice in defining altitudes.
+
+\emph{Proof}.
+
+In $\triangle ABC$ with sides $a,b,c$, drop the three altitudes from the vertices to form right angles on the opposing sides.  We label two of them:  $f$ for side $a$ and $h$ for side $c$.
+
+These altitudes cross at a single point.  We look at Newton's proof of this in just a bit (\hyperref[sec:Newton_altitude]{\textbf{here}}).  
+
+Each altitude and side is then divided into two parts as shown.
+
+This gives six small triangles.  To make it easier to keep track of them, they are labeled with colors.
+\begin{center} \includegraphics [scale=0.5] {area8d.png} \end{center}
+
+So then twice the area of the whole triangle is $2A = af = ch$.  Start with $ch$
+\[ ch = (c_1 + c_2)(h_1 + h_2) \]
+\[ = c_1 h_1 + c_1 h_2 + c_2 h_1 + c_2 h_2 \]
+
+The single right triangles are easy to see:  $c_1 h_2$ and $c_2 h_2$.  The other two are composed of two right triangles.  For both, the base is $h_1$, and then, for green and blue, the height is $c_1$, or for red and magenta, the height is $c_2$.   For these obtuse triangles, the height must be extended to the base to form the right angle.
+
+But the same six triangles can be arranged in a different way so that twice the area of the whole triangle is
+\[ af = a_1 f_1 + a_1 f_2 + a_2 f_1 + a_2 f_2 \]
+\begin{center} \includegraphics [scale=0.5] {area8c.png} \end{center}
+$f1$ is the base and $a_1$ or $a_2$ the height, for the compound cases.
+
+A similar calculation can be carried out for side $b$ and altitude $g$.  The area is the same regardless of which side is chosen as the base.
+
+$\square$
+
+\subsection*{altitude proof}
+
+In $\triangle ABC$ draw $BM \perp AC$ and $CN \perp AB$.
+
+Then $AB \cdot CN = AC \cdot BM$.
+
+\emph{Proof}.
+
+$\triangle AMB$ and $\triangle ANC$ are both right triangles.
+
+\begin{center} \includegraphics [scale=0.18] {altitudes.png} \end{center}
+
+They also share $\angle A$, so they are similar.
+
+As similar triangles, corresponding sides are in the same ratio:
+\[ \frac{AB}{AC} = \frac{BM}{CN} \]
+
+Then $AB \cdot CN = AC \cdot BM$
+
+We can show that side $BC$ times its altitude is equal to $AB \cdot CN$, in exactly the same way.
+
+So any altitude times the base has the same value, which is twice the area of the triangle.
+
+$\square$
+
+A straightforward corollary of this result is that any triangle with two equal altitudes is isosceles.
+
+\emph{Proof}.
+
+If $BM = CN$ then 
+\[ \frac{AB}{AC} = 1 \]
+so $AB = AC$.
+
+$\square$
+
+\subsection*{orthocenter:  Newton's proof}
+
+\label{sec:Newton_altitude}
+
+As we've said, the orthocenter is the point where all three altitudes cross.
+
+\begin{center} \includegraphics [scale=0.6] {orthocenter2.png} \end{center}
+
+An altitude is a line drawn from any vertex to the opposing side, forming a right angle with the base, thereby dividing the triangle into two right triangles.
+
+\begin{center} \includegraphics [scale=0.4] {newton2.png} \end{center}
+
+In the left panel, we draw the altitude from the vertex $C$ down in $\triangle ABC$ to meet the base at a right angle.
+
+The altitude divides the base into lengths $a$ and $b$.  Now draw a second altitude from vertex $A$ to the side opposite (left panel).  
+
+What is the height $h$ above the base where the two lines cross?
+
+The small triangle with sides $a$ and $h$ and the large triangle $\triangle BCD$ are similar, because they are both right triangles that are joined by vertical angles.
+
+This means that the angles marked with magenta dots are equal.
+
+Similar triangles have equal ratios for the corresponding sides.  This is a very important theorem which we haven't proved yet, but will soon.
+
+In the small triangle the side opposite the marked angle ($\angle BAC$) has length $h$, while the entire length of the altitude is $L$.  By similar triangles
+
+\[ \frac{h}{a} = \frac{b}{L} \]
+
+(the side opposing the marked angle is in the numerator on both sides).  So the height $h$ is
+
+\[ h = \frac{ab}{L} \]
+
+The formula is noteworthy because it is symmetrical in $a$ and $b$ and does not contain any term related to side $AC$, opposite vertex $B$.
+
+Therefore, if we draw the third altitude to side $BC$, opposite vertex $A$, we can calculate that it crosses the vertical altitude at the same height $h = ab/L$ (right panel).
+
+This means that the three altitudes cross at a single point, at height $h$.
+
+\begin{center} \includegraphics [scale=0.5] {newton3.png} \end{center}
+
+Newton published this proof about 1680.
+
+
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Angular measure}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:angular_measure}
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_7.png} \end{center}
+
+We can see that obviously
+
+\[ \phi > \theta \]
+
+Writing the statement $\phi > \theta$ is easy, but for this to make sense (what if they are almost equal?), we must have some way of taking the measure of an angle.  We can't just rely on a picture.
+
+Our answer is to construct a circle around the central point.  
+
+$\circ$  The measure of the angle is the distance along the circumference between the points where the lines cross the circle.
+
+If that distance along the edge is larger for $\phi$ than for $\theta$, then $\phi > \theta$.  In the left panel, the arc between $Q$ and $R$ (call it arc $QR$) is larger than arc $PQ$.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_00.png} \end{center}
+
+If we lay off the arcs starting from the same point $P$, the arc $PS$ is longer than the arc $PQ$ (right panel).
+
+We don't need to actually measure the arc itself to do this.  Measuring curved lengths is a bit tricky to do.
+
+Instead we can use a standard compass to lay off the linear distance from $P$ to $S$ and compare that with the distance from $P$ to $Q$.  Since the distance from $P$ to $S$ is more than from $P$ to $Q$, $\phi > \theta$.
+
+This doesn't work very well as $S$ approaches the diameter through $O$ and $P$, but we could lay off the distance in two (or more than two) parts and that would be fine.  For example, take a unit circle, draw a diameter and the perpendicular bisector to form four right angles.  Then bisect each right angle and bisect again.  That would divide the circle into 16 arcs of equal length.
+
+No matter how the measurement is to be performed, we \emph{define} the measure of an angle $s$ to be equal to the arc $a$ it sweeps out, or is subtended by, in a circle of radius $1$, a \emph{unit} circle.  Angles are not lengths, but numerically, the measure of the angle is the measure of the arc.
+
+\begin{center} \includegraphics [scale=0.3] {arcs11.png} \end{center}
+
+\subsection*{right angles}
+
+$\bullet$ \ the sum of all the angles on one side of a line (at a given point), is equal to two right angles.
+
+\begin{center} \includegraphics [scale=0.35] {lines_angles_5.png} \end{center}
+
+This is simply a matter of symmetry and subtraction.  If the sum of all the angles at a point is equal to four right angles, then the sum of the angles on each side of a line through that point is equal to two right angles.
+
+The convention that there are $360^{\circ}$ total in a circle dates to the time of the Babylonians (c. 2400 B.C.).
+
+In degrees, a right angle is $90^{\circ}$ and two supplementary angles measure $180^{\circ}$.  
+
+There is nothing particularly special about using $90^{\circ}$ as the measure of a right angle, or $360^{\circ}$ for one whole turn.  Well, here is one thing:  there are \emph{approximately} 360 days in a year, which marks the sun's track across the sky.  Another idea is that $360$ is special because it has so many factors, which makes it possible to divide up a circle evenly in $2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20 \dots 180, 360$ parts.
+
+Euclid just talks about angle measurements in terms of right angles.  For example, that the sum of two supplementary angles is equal to two right angles.
+
+In his book, \emph{Measurement}, Lockhart adopts the convention that a whole turn is equal to $1$.  
+
+\subsection*{radians}
+
+We'll just mention here that one whole turn can be defined using a different unit of measure as $2 \pi$ \emph{radians}, and that convention turns out to be quite important for calculus.
+
+It is based on two ideas:  the first, from above, that angular measure is numerically equal to arc length, and second, that in a unit circle, the circumference or total of the arc length is equal to $2 \pi$.
+
+In calculus, all angles will be in radians.  One big reason for that comes in working out the \emph{derivative} of sine and cosine.  There, it will be important to consider the following expression:
+
+\[ \lim_{\theta \rightarrow 0} \frac{\sin \theta}{\theta} = 1 \]
+
+The notation on the left asks us to consider what happens as $\theta$ gets close to the value $0$, and the rest of it states that the ratio $\sin \theta/\theta$ is equal to $1$.  As a result, the derivative of $\sin \theta$ is simply $\cos \theta$.
+
+Well, if you're working in degrees \emph{that's not true}.  There's an awkward constant of proportionality.  So we work in radians.  
+
+It also makes plots prettier, since the sine of $x$ goes from $0$ to $1$ as $x$ goes from $0$ to $\pi/2 \approx 1.57$.  The sine of $1$ degree is effectively zero, so that wouldn't look so nice.
+
+\end{document}

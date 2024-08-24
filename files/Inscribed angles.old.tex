@@ -1,0 +1,411 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Circles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Thales' circle theorem}
+
+\label{sec:Thales_theorem}
+
+In this chapter, we introduce the inscribed angle theorem.  Let's start by revisiting Thales' circle theorem:
+
+$\bullet$  Any angle inscribed in a semicircle is a right angle.
+
+Take any diameter of the circle and any third, distinct point.  The three points on the circumference of the circle form a triangle, and the angle at the third vertex is always a right angle.
+
+In the figure below, $\angle PRQ$ is a right angle.
+\begin{center} \includegraphics [scale=0.4] {arcs12.png} \end{center}
+
+\emph{Proof}.
+
+Draw the radius $OR$ (right panel). 
+
+The two smaller triangles produced --- $\triangle OPR$ and $\triangle OQR$ --- are both isosceles, since two of their sides are radii of the circle.
+
+Therefore, in each triangle the two base angles marked with dots of the same color are equal, by the (\hyperref[sec:isosceles_triangle_theorem]{\textbf{isosceles triangle theorem}}).
+
+Since $\angle PRQ$ contains one angle of each type, it is equal to one-half the angle sum for the triangle, so $\angle PRQ$ is a right angle.
+
+To restate this in more conventional notation:  in the figure below, $\angle PRQ = \phi + \theta$.  
+
+\begin{center} \includegraphics [scale=0.4] {arcs13.png} \end{center}
+
+Since the full measure of the triangle is $180^\circ = \pi$ radians, and
+\[ \phi + \phi + \theta + \theta = \pi \]
+it follows that
+\[ \phi + \theta = \pi/2 \]
+
+$\square$
+
+This theorem is Euclid III.31.  Rather than use the angle sum theorem and arithmetic, he uses the external angle theorem to reach the result.  (The central angle $\angle ROQ$ is equal to 2 $\phi$).
+
+According to Boyer, this result was known to the Egyptians 1000 years before Thales.  But it is yet another example of knowing a result before proving that it is so.  Archimedes had something to say about the importance of having discovered a fact, before finding a way to prove it.
+
+\subsection*{angles on the perimeter}
+
+\label{sec:peripheral_angle}
+
+The right angle on the perimeter of the circle which corresponds to one-half of the circle is
+\[ \angle PRQ = \pi/2 \]
+
+One-half the arc of the circle is $\pi$ but the angle subtended by it is $\pi/2$.  What's going on?
+
+To clarify, let us label the angles at the center of the circle, as well as three segments of arc.
+
+\begin{center} \includegraphics [scale=0.4] {arcs8.png} \end{center}
+
+$a$ is the arc swept out by angle $s$.  We say that $a$ and $s$ have the same measure.  By definition, the length of arc that subtends a central angle (in a unit circle) is the measure of that angle.  
+
+\[ s = a \]
+
+\subsection*{inscribed angle theorem}
+
+\label{sec:inscribed_angle_theorem}
+
+By the (\hyperref[sec:external_angle_theorem]{\textbf{external angle theorem}}), we know that
+\[ s = 2 \phi \]
+and so conclude that
+\[ \phi = \frac{s}{2} \]
+
+The angle $\phi$ lying on the perimeter sweeps out the same arc as $s$, even though $\phi$ is one-half of $s$.
+
+This is clear in the special case where one arm of the inscribed angle is a diameter of the circle, but it turns out to be generally true, as we'll see.
+
+$\square$
+
+A related approach is to simply count up the angles in two triangles.  For the large right triangle we have
+
+\[ \pi = \phi + \phi + \theta + \theta \]
+
+and for the smaller triangle with central angle $s$
+
+\[ \pi = s + \theta + \theta \]
+
+Clearly, then, $s = 2 \phi$ so
+
+\[ \phi = \frac{s}{2} \]
+
+$\square$
+
+$\phi$ is farther away from the arc, so we get a bigger arc for the same angular measure.  Another way to say the same thing:  for an angle on the periphery, we get a smaller angle than for a central angle for the same arc.
+
+An angle on the perimeter of a circle is generally called an \emph{inscribed} angle.  One can view an inscribed angle as part of a triangle whose vertices are all on the circle.  The following is called the \emph{inscribed angle theorem} (Euclid III.20).
+
+$\bullet$  An inscribed angle is one-half the central angle corresponding to the same arc.
+
+Here is a proof of the inscribed angle theorem for the case where the peripheral angle does not include a diameter of the circle.  It uses various isosceles triangles and the sum of angles theorem.
+
+\begin{center} \includegraphics [scale=0.5] {broken_chord1.png} \end{center}
+
+\emph{Proof}.
+
+The figure has two isosceles triangles, where the equal sides are all radii of the circle.  By the isosceles triangle theorem and the triangle sum theorem:
+
+\[ 2(A + \phi) + C = \pi \]
+\[ 2A + \theta + C = \pi \]
+
+Equating the two results and canceling we get
+\[ 2A + 2\phi = 2A + \theta \]
+\[ \theta = 2 \phi \]
+
+$\square$
+
+A proof using this approach for the case where the peripheral angle includes the center of the circle is left as an exercise.
+
+A different method is to start with the result for an angle where one adjacent side is a diameter of the circle.  Any other peripheral angle can be constructed as either the sum or the difference of two such constructs.  We'll show that later.
+
+\subsection*{angles on the same arc}
+
+\label{sec:angles_on_same_arc}
+
+\begin{center} \includegraphics [scale=0.15] {inscribed angles.png} \end{center}
+
+Angles that lie on the same arc or are subtended by the same chord in the same circle, are equal.  
+
+\emph{Proof}.
+
+This is an immediate consequence of the previous theorem, since two such angles are equal to one-half of the \emph{same} central angle. $\angle POQ$ is the central angle for arc $PQ$ and hence is twice both $\angle PRQ$ and $\angle PSQ$.  Thus, $\angle PRQ = \angle PSQ$.
+
+$\square$
+
+This theorem is Euclid III.21.  It is not the \textbf{inscribed angles theorem}, although I once thought of it as if it were so, and possibly I have mis-spoken elsewhere in the book on this point.  This theorem will appear \emph{many} times in the pages to come.
+
+\subsection*{theorem on cyclic quadrilaterals}
+
+\label{sec:quadrilateral_supplementary}
+
+All this leads to a wonderful simple theorem about quadrilaterals (Euclid III.22).  A cyclic quadrilateral is a four-sided polygon whose four vertices all lie on one circle.
+
+\begin{center} \includegraphics [scale=0.4] {circles_4.png} \end{center}
+
+$\bullet$ \ For \emph{any} cyclic quadrilateral, the opposing angles are supplementary (they sum to $180^\circ$ or two right angles).
+
+\emph{Proof}.
+
+Together, opposing angles in a cyclic quadrilateral exactly correspond to the whole arc of the circle.
+
+Since the central angle for that arc is $2 \pi$, the sum of opposing inscribed angles is just $\pi$.
+
+$\square$
+
+\subsection*{tangent-chord theorem}
+
+\label{sec:tangent_chord_theorem}
+
+A tangent is a line that just touches the circle (or another curve, like a parabola).  By definition it touches the circle at a single point, and is perpendicular to the radius which extends to that point.
+
+$\bullet$  The arc swept out between a tangent and a chord is equal to the arc lying between the point of tangency and the point where the chord meets the circle.
+
+\begin{center} \includegraphics [scale=0.4] {arcs14.png} \end{center}
+
+\emph{Proof}.
+
+The arc $a$ is equal to twice the arc swept out by angle $\theta$ on the far right of the diameter.  But the angle between the tangent and the chord is also equal to $\theta$, because $\phi$ is complementary to $\theta$.
+
+Therefore the arc swept out between the tangent and the chord is equal to $a$.
+
+$\square$
+
+This is Euclid III.32, the tangent-chord theorem.  Acheson calls this the alternate segment theorem.  
+
+\subsection*{geometric mean}
+
+We showed in the chapter on the \hyperref[sec:pythagorean_thm]{\textbf{Pythagorean theorem}} that the altitude of a right triangle is the geometric mean of the two components of the base.
+
+\[ h^2 = pq \]
+\[ h = \sqrt{pq} \]
+
+According to wikipedia:
+
+\url{https://en.wikipedia.org/wiki/Geometric_mean}
+
+The fundamental property of the geometric mean is that (letting $m$ be the \emph{geometric mean} here):
+\[ m \ [ \ \frac{x_i}{y_i} \ ] \ = \frac{m(x_i)}{m(y_i)} \]
+
+and one consequence is that
+
+\begin{quote}This makes the geometric mean the only correct mean when averaging normalized results; that is, results that are presented as ratios to reference values.\end{quote}
+
+A number of examples are given in the article.
+
+We discuss this here because originally, there was a proof-without-words that the geometric mean is always less than or equal to the arithmetic mean.  I decided to add some words.
+
+\begin{center} \includegraphics [scale=0.4] {arcs15.png} \end{center}
+A right triangle is inscribed in a semicircle.  
+
+Let the length of the long dotted line be $c$.  Then
+\[ a^2 + h^2 = c^2 \]
+Let the length of the short dotted line be $d$.  Then
+\[ b^2 + h^2 = d^2 \]
+
+Adding together
+\[ a^2 + b^2 + 2 h^2 = c^2 + d^2 \]
+
+But a third application of the Pythagorean theorem shows that the right-hand side is just $(a + b)^2$ so
+\[ a^2 + b^2 + 2 h^2 = (a + b)^2 \]
+\[ 2 h^2 = 2 ab \]
+\[ h^2 = ab \]
+
+$\square$
+
+An even simpler proof is to recognize that the two smaller triangles are similar with equal ratios of sides including:
+\[ \frac{h}{a} = \frac{b}{h} \]
+and the result follows immediately.
+
+This says that the square of the altitude $h$ is equal to the product of chord segments (we will prove this geometrically in the next chapter as well).
+
+\[ h = \sqrt{ab} \]
+
+But we also have that $a + b = 2r$ and hence
+\[ r = \frac{a + b}{2} \]
+Do you recognize these?  The second expression is the arithmetic mean of $a$ and $b$, while the first is the geometric mean.
+
+The geometry shows that $h \le r$ so:
+\[ \sqrt{ab} \le \frac{a + b}{2} \]
+
+The geometric mean is always less than the arithmetic mean, except when $a = b$, where they are equal (or all of $n$ values are equal).
+
+\subsection*{converse proof}
+
+\label{sec:inscribed_angles_converse}
+
+\label{sec:equal_angle_on_circle_contradiction}
+
+There are several different setups which are essentially converses of the inscribed angles theorem.  Here is one:
+
+Let $\triangle ABC$ lie on a circle.  
+
+Let point $D$ be such that $\angle BDC = \angle BAC$.  
+
+\begin{center} \includegraphics [scale=0.16] {Coxeter_1_9_3_c.png} \end{center}
+
+Then $D$ is also on the same circle.
+
+\emph{Proof}.
+
+Suppose otherwise, for example, let $D$ be external.
+
+Then let $D'$ be on the circle so that $\angle BD'C$ is subtended by $BC$.
+
+By the forward version of the inscribed angle theorem:  
+$\angle BD'C = \angle BAC$.
+
+But that means $\angle BDC = \angle BD'C$.
+
+Since $\angle BCD > \angle BCD'$, we have that $\angle BD'C > \angle BDC$.
+
+But this is absurd.  So there is a contradiction.
+
+A similar argument will show that $D$ cannot be internal to the circle.
+
+Therefore, it must be that $D$ \emph{is on the circle}.
+
+$\square$
+
+\subsection*{anothr converse proof}
+
+\label{sec:inscribed_angles_converse2}
+
+Let $\triangle ABD$ lie on a circle.  
+
+Let point $C$ be such that $\angle BCD$ is supplementary to $\angle BAD$ by the theorem on cyclic quadrilaterals.
+
+Then $C$ lies on the same circle.
+\begin{center} \includegraphics [scale=0.16] {inscribed_angles_converse2} \end{center}
+
+\emph{Proof}.
+
+Suppose $C$ does not lie on the circle.
+
+Let $C$ be external and $C'$ lie on the point where $DC$ cuts the circle (right panel).  By the forward theorem, $\angle BC'D$ is supplementary to $\angle BAD$ and so equal to $\angle BCD$.
+
+But by the external angle theorem $\angle BC'D = \angle BCD + \angle CBC' > \angle BCD$.  
+
+This is a contradiction.  Therefore $C$ is not external.  
+
+A similar argument will show that $C$ is not internal.  
+
+Therefore $C$ lies on the circle and $C$ and $C'$ are the same point.
+
+$\square$
+
+\subsection*{problem}
+
+\label{sec:sec_tan_problem}
+
+Here is a problem I found on the web as a Youtube video:
+
+\url{https://youtu.be/2Jt8lynddQ8}
+
+It is described as a GCE O-Level A-Maths Plane Geometry Question.  
+
+The relationships that seem obvious from the diagram are given.  Namely, $PXYR$ and $QXZS$ are each lie on a straight line (colinear), and the two circles each have the four points lying on them as shown.  $TPS$ is tangent to the smaller circle at $P$.
+\begin{center} \includegraphics [scale=0.3] {prob_A_level1.png} \end{center}
+
+The problem asks us to show that $SR$ is parallel to $ZY$ and hence, \emph{deduce} that $YX/ZX = YR/SZ$.
+
+The approach that occurred to me was to use the similar triangles that arise from crossed chords.  However, the problem asks us to first show that the given line segments are parallel.  This is a hint to a much easier proof.
+
+The result comes from the theorem which is the basis of this chapter: the inscribed angle theorem.
+\begin{center} \includegraphics [scale=0.3] {prob_A_level2.png} \end{center}
+
+The marked angles are all equal.  The first two are equal because they correspond to the same arc in the small circle, and the third (at $S$) is equal to the first because they both correspond to the same arc in the large circle.  
+
+Therefore, the two line segments are parallel by the converse of the alternate interior angles theorem.  That gives us similar triangles $\triangle XYZ \sim \triangle XRS$ from which the equal ratios follow immediately.
+
+The last part of the problem says that given $SQ = XR$, prove that $PS^2 = XS \cdot YR$  We're not ready to do that yet.  It uses the information about the tangent and the \hyperref[sec:secant_tangent_theorem]{\textbf{secant-tangent theorem}}.
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.3] {circles1.png} \end{center}
+
+Two circles meet at $Q$ and $S$.  $QR$ and $QT$ are diameters of the two circles.  Prove that $RST$ are colinear.
+
+\begin{center} \includegraphics [scale=0.3] {circles2.png} \end{center}
+
+Since $QR$ is a diameter of the circle centered at $O$, $\angle QSR$ is a right angle.  
+
+But so is $\angle QST$, since $QT$ is a diameter of the second circle.  
+
+Hence the total angle at $S$ is two right angles or a straight line.  Therefore $RS$ and $ST$ togethere form a straight line segment.
+
+\subsection*{double arc problem}
+
+This problem is taken from an online collection by David Surowski.
+
+\url{https://www.math.ksu.edu/~dbski/writings/further.pdf}
+
+\begin{center} \includegraphics [scale=0.6] {further1.png} \end{center}
+
+Given that $AB$ and $AC$ are tangents to the circle meeting at $A$.  Given a second tangent $DE$, meeting the circle at $P$.  Prove that the arc that subtends $\angle BOC$ is twice that which subtends $\angle DOE$.
+
+\emph{Proof}.
+
+Notice that $DB$ and $DP$ are tangents to the circle meeting at $D$.  Therefore $DB = DP$ and then $\triangle BOD \cong \triangle DOP$, so $\angle BOD = \angle DOP$.
+
+The same argument applies to $EC$ and $EP$.  Therefore the inner arc is composed of two angles, while the outer arc has two copies of each of those angles.
+
+$\square$
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.4] {Posamentier1_4.png} \end{center}
+
+Posamentier gives this problem.  I is the center of the circle (the circumcircle of $\triangle ABC$).  $AE$ is the altitude of $\triangle ABC$.  
+
+\emph{To prove}.
+
+If the angle at vertex $A$ is bisected (by $AD$), then $AD$ also bisects $\angle EAI$.
+
+First of all, I would restate the problem:  prove that $\angle BAE = \angle CAI$.  Then, the bisector of $A$ must bisect $\angle EAI$.
+
+Hint:  draw $IC$ and use the relationships from this chapter as well as complementary angles in a right triangle.
+
+\subsection*{Queen Dido}
+
+The mighty city of Carthage was the capital city of the Phoenicians.  As Rome grew strong, there was a titanic struggle between the two peoples, which Carthage eventually lost.  The ruins of Carthage lie near present-day Tunis.
+
+Queen Dido was the legendary founder of the the city of Carthage.  She was supposedly 
+
+\begin{quote}granted as much land as she could encompass with an oxhide.  She promptly cut the ox-hide into very thin strips.\end{quote}
+
+The problem then is to maximize the area enclosed by a curve of fixed length.
+
+\begin{center} \includegraphics [scale=0.5] {Dido.png} \end{center}
+
+In calculus there are a number of problems like this.  What's nice is that this problem has a wonderful solution that uses only the tools we have so far.  In particular, we need the \hyperref[sec:Thales_circle_theorem_converse]{\textbf{converse of Thales circle theorem}}.
+
+The argument goes as follows.  Suppose we have a particular outline for the city limits and we're pretty happy with it.  We suppose it is a maximum (left panel).
+
+\begin{center} \includegraphics [scale=0.5] {Dido2.png} \end{center}
+
+Then we notice that by rearranging $AD$ and $BD$ so they meet at a right angle, the crescent-shaped areas are unchanged, but the area of $\triangle ABD$ is a maximum.  That's because a right triangle, having the two sides at right angles, has area equal to the product of the two sides (divided by $2$).  No other triangle with the same two sides has as much area.
+
+So the arrangement on the right has a bigger area.
+
+But then, with $AB$ as the diameter of a circle, if $\angle ADB$ is a right angle, it must lie on the circumference of that circle, by the converse of Thales' theorem.
+
+And this is true regardless of the relative lengths of $AD$ and $BD$.  Therefore the maximum area is obtained when $D$ traces out a semi-circle.
+
+This example is in Acheson's Geometry.
+
+
+\end{document}
