@@ -1,0 +1,207 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Arcs of a circle}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:quadrilateral_supplementary}
+
+There is a wonderfully simple theorem about quadrilaterals (Euclid III.22).  A cyclic quadrilateral is a four-sided polygon whose four vertices all lie on one circle.
+
+\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
+
+$\bullet$ \ For \emph{any} cyclic quadrilateral, the opposing angles are supplementary (they sum to two right angles).
+
+\emph{Proof}.
+
+Together, opposing angles in a cyclic quadrilateral exactly correspond to the whole arc of the circle.
+
+Since the central angle for that arc is four right angles, the sum of opposing inscribed angles is just one-half that or two right angles.
+
+$\square$
+
+Euclid's proof uses sum of angles:
+
+\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
+
+\emph{Proof}.
+
+$\angle ADC = \angle ADB + \angle BDC$, subtended by arcs $AB$ and $BC$.
+
+As angles on equal arcs (III.21) the latter two angles are equal to $\angle ACB$ and $\angle BAC$.
+
+But by I.32, the same two angles plus the total angle at vertex $B$ are equal to two right angles.
+
+$\square$
+
+\subsection*{converse of cyclic quadrilateral theorem}
+
+This one uses Euclid III.22 rather than III.21.  
+
+\label{sec:inscribed_angles_converse2}
+
+Let $\triangle ABC$ lie on a circle.  
+
+Let point $D$ be such that $\angle ADC$ is supplementary to $\angle ABC$.
+
+Then $D$ lies on the same circle.
+\begin{center} \includegraphics [scale=0.22] {cyclic_quad_converse_b} \end{center}
+
+\emph{Proof}.
+
+Aiming for a contradiction, suppose $D$ does not lie on the circle.
+
+Let $D$ be external and $D'$ lie on the point where $BD$ cuts the circle (right panel).  
+
+By the forward theorem, $\angle AD'C$ is supplementary to $\angle ABC$ and so equal to $\angle ADC$.
+
+But by Euclid I.21,  $\angle ADC < \angle AD'C$.  
+
+This is a contradiction.  Therefore $D$ is not external.  
+
+A similar argument will show that $D$ is not internal.  
+
+Therefore $D$ lies on the circle and $D$ and $D'$ are the same point.
+
+$\square$
+
+
+\subsection*{Brahmagupta's theorem}
+
+This is a theorem credited to Brahmagupta.
+
+\url{https://en.wikipedia.org/wiki/Brahmagupta_theorem}
+
+\begin{center} \includegraphics [scale=0.15] {bg4.png} \end{center}
+
+Given $ABCD$ is a cyclic quadrilateral with diagonals that cross at right angles.
+
+Given $EF \perp DC$.
+
+Show that $AF = BF$.
+
+\emph{Proof}.
+
+We redraw the figure from Wikipedia slightly
+
+\begin{center} \includegraphics [scale=0.15] {bg5.png} \end{center}
+
+We are given that $\triangle AMB$ is right.
+
+If $AF = BF$, then $MF = AF = BF$ by the right triangle midpoint theorem.
+
+This suggests we try to show that $\triangle AFM$ and $\triangle MFB$ are isosceles.
+
+Start with $\triangle AFM$.
+
+We see that $\angle MAF$ is subtended by chord $BC$, but so is $\angle MDE$, so they are equal.
+
+We're given the $\triangle MDC$ is right and that $ME$ is the altitude.
+
+It follows that $\angle CME = \angle MDC$ by similar triangles.
+
+Then $\angle AMF = \angle CME$ by vertical angles.
+
+We have then, $\angle AMF = \angle MAF$.
+
+$\triangle AFM$ is isosceles and so $AF = MF$.
+
+\begin{center} \includegraphics [scale=0.15] {bg5.png} \end{center}
+
+For the other one, we need $\angle FMB = \angle FBM$.
+
+$\angle MBF = \angle MCD$, as inscribed angles on the same arc.
+
+And $\angle MCD = \angle DME$ by similar triangles.
+
+$\angle DME = \angle FMB$ by vertical angles.
+
+It follows that $\angle FMB = \angle MBF$.
+
+$\triangle MFB$ is isosceles and so $MF = BF$ by I.6.
+
+Equating equals:  $AF = BF$.
+
+$\square$
+
+\subsection*{problem}
+
+Arcs of a circle often simplify problems.  Draw the altitudes and orthocenter of a triangle and draw its circumcircle.
+
+\begin{center} \includegraphics [scale=0.35] {Posamentier1_7.png} \end{center}
+
+Posamentier gives this relationship.  We claim that $HD = DG$.
+
+\emph{Proof}.
+
+It seems clear that this must be a consequence of a congruence:  it looks like $\triangle BCH \cong \triangle BCG$.  How to prove that?
+
+By looking at arcs subtended, we can get relationships for the new angles in $\triangle BCG$, and by similar triangles we can get the others shown:
+\begin{center} \includegraphics [scale=0.35] {Posamentier1_7a.png} \end{center}
+
+We have congruent triangles by ASA, the component right triangles are congruent for the same reason.  Or just say that the altitudes of congruent triangles are also equal.
+
+$\square$
+
+\subsection*{Van Schooten's theorem}
+
+\begin{center} \includegraphics [scale=0.18] {Van_Schooten1.png} \end{center}
+
+This is given as a problem by Surowski (1.3.6).
+
+Given an equilateral triangle $ABC$ draw its circumcircle.
+
+Draw an arbitrary line segment from vertex $A$ through side $BC$ to meet the circle at $M$.  Prove that $AM = BM + MC$.
+
+This is easy to prove as a special case of Ptolemy's theorem.
+
+Nevertheless, we do it as suggested.
+
+\emph{Proof}.
+
+Draw lines from $M$ to each vertex and extend one to give $AM = MD$.
+
+By inscribed angles both angles at $M$ are equal to two-thirds of a right angle.
+
+$\triangle AMD$ is isosceles with the vertex equal to two-thirds of a right angle.
+
+Thus $\triangle AMD$ is equilateral.
+
+Subtract the central $\angle MAC$ from two equal angles to yield $\angle BAM = \angle DAC$.
+
+\begin{center} \includegraphics [scale=0.18] {Van_Schooten2.png} \end{center}
+
+$\triangle BAM \sim \triangle CAD$.
+
+But $BA = CA$ so $\triangle BAM \cong \triangle CAD$ by ASA.
+
+It follows that $BM = CD$.
+
+Thus $MC + CD = MC + BM = MD = AM$.
+
+$\square$
+
+I saw this question on the internet:  ``is a parallelogram a cyclic quadrilateral?''
+
+In a parallelogram, opposing angles are equal.  In a cyclic quadrilateral, opposing angles are supplementary.  The only supplementary, equal angles are two right angles.  So a rectangle is the only parallelogram that is a cyclic quadrilateral.
+
+
+
+\end{document}

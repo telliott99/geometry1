@@ -29,7 +29,7 @@ In this chapter, we will introduce the inscribed angle theorem.  Let's start by 
 
 $\bullet$  Any angle inscribed in a semicircle is a right angle.
 
-Take any diameter of the circle and any third, distinct point.  The three points on the circumference of the circle form a triangle, and the angle at the third vertex is always a right angle.
+Take a diameter of the circle and any third, distinct point.  The three points on the circumference of the circle form a triangle, and the angle at the third vertex is always a right angle.
 
 In the figure below, $\angle ABC$ is a right angle.
 
@@ -51,7 +51,33 @@ $\square$
 
 According to Boyer, this result was known to the Egyptians 1000 years before Thales.  But it is yet another example of knowing a result before proving that it is so.  Archimedes had something to say about the importance of having discovered a fact, before finding a way to prove it.
 
-We can use the same diagram to introduce the inscribed angle theorem.
+The converse of Thales' theorem is also true.  If the third point of a triangle contains a right angle, then it must lie on the circle where the other two points form the diameter.
+
+\subsection*{Thales' circle theorem converse}
+A nice direct proof of this is given in Acheson.
+
+\label{sec:Thales_circle_theorem_converse}
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.4] {Acheson_G59.png} \end{center}
+
+We are given that $\angle APB$ is a right angle.  
+
+Draw $OD$ parallel to $PB$.  $\triangle AOD$ is similar to $\triangle ABP$ because they are both right triangles with a shared vertex at $A$.  
+
+Since $AO$ is one-half $AB$, the scale factor is $1/2$.  In particular, $AD = DP$.
+
+Now draw $OP$.  The two smaller triangles $\triangle AOD$ and $\triangle DOP$ are congruent by SAS.  Therefore, $OP = OA$.  
+
+But $OA$ is a radius of the circle.  Therefore, $OP$ is also a radius.
+
+It follows that $P$ must lie on the circle.
+
+$\square$
+
+
+We can use Thales' theorem to introduce the inscribed angle theorem.
 
 \begin{center} \includegraphics [scale=0.14] {EIII_20a.png} \end{center}
 
@@ -65,7 +91,13 @@ $\bullet$  An inscribed angle is one-half the corresponding central angle lying 
 
 \emph{Proof}.
 
-Euclid's proof uses the external angle theorem.   $\angle BOC$ is the external angle to $\triangle OAB$, so it is equal to the sum of $\angle OAB + \angle OBA$.  The triangle is isosceles, so these two angles are equal.  It follows that $\angle BOC = 2 \angle BAC$.
+Euclid's proof uses the external angle theorem.   $\angle BOC$ is the external angle to $\triangle OAB$.
+
+Thus, it is equal to the sum of $\angle OAB + \angle OBA$.  
+
+The triangle is isosceles, so these two angles are equal. 
+
+It follows that $\angle BOC = 2 \angle BAC$.
 
 $\square$
 
@@ -97,7 +129,7 @@ By the first proof, $\angle BOD = 2 \angle BAD$ and $\angle COD = 2 \angle CAD$.
 
 $\square$
 
-A slightly more elegant proof of the second case is as follows.
+A somewhat more elegant proof of the second case is as follows.
 
 \begin{center} \includegraphics [scale=0.14] {EIII_20d.png} \end{center}
 
@@ -125,7 +157,7 @@ $\square$
 
 \begin{center} \includegraphics [scale=0.15] {inscribed angles.png} \end{center}
 
-Angles that lie on the same arc or are subtended by the same chord in the same circle, are equal.  
+$\bullet$  Angles that lie on the same arc or are subtended by the same chord in the same circle, are equal.  
 
 \emph{Proof}.
 
@@ -135,64 +167,51 @@ $\square$
 
 This theorem is Euclid III.21.  It is such an immediate consequence of the \textbf{inscribed angles theorem} (Euclid III.20) that they are sometimes thought the same.
 
-Possibly I have mis-spoken elsewhere in the book on this point.  Theorem III.21 will appear \emph{many} times in the pages to come.
+Possibly I have mis-stated this elsewhere in the book.  Theorem III.21 will appear often in the pages to come.
 
-The converse of Thales theorem is also true.  If the third point of a triangle contains a right angle, then it must lie on the circle where the other two points form the diameter.
+\subsection*{converse}
 
-\subsection*{Thales circle theorem converse}
-A nice direct proof of this is given in Acheson.
+\label{sec:inscribed_angles_converse}
 
-\label{sec:Thales_circle_theorem_converse}
+\label{sec:equal_angle_on_circle_contradiction}
 
-\emph{Proof}.
+There are several variant arguments from similar setups which are converses of the inscribed angles theorem.  Here is one:
 
-\begin{center} \includegraphics [scale=0.4] {Acheson_G59.png} \end{center}
+Let $\triangle ABC$ lie on a circle.  
 
-We are given that $\angle APB$ is a right angle.  
+Let point $D$ be such that $\angle BDC = \angle BAC$.  
 
-Draw $OD$ parallel to $PB$.  $\triangle AOD$ is similar to $\triangle ABP$ because they are both right triangles with a shared vertex at $A$.  
+\begin{center} \includegraphics [scale=0.16] {Coxeter_1_9_3_c.png} \end{center}
 
-Since $AO$ is one-half $AB$, the scale factor is $1/2$.  In particular, $AD = DP$.
-
-Now draw $OP$.  The two smaller triangles $\triangle AOD$ and $\triangle DOP$ are congruent by SAS.  Therefore, $OP = OA$.  
-
-But $OA$ is a radius of the circle.  Therefore, $OP$ is also a radius.
-
-Therefore $P$ must lie on the circle.
-
-$\square$
-
-\subsection*{theorem on cyclic quadrilaterals}
-
-\label{sec:quadrilateral_supplementary}
-
-All this leads to a wonderful simple theorem about quadrilaterals (Euclid III.22).  A cyclic quadrilateral is a four-sided polygon whose four vertices all lie on one circle.
-
-\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
-
-$\bullet$ \ For \emph{any} cyclic quadrilateral, the opposing angles are supplementary (they sum to $180^\circ$ or two right angles).
+Then $D$ is also on the same circle.
 
 \emph{Proof}.
 
-Together, opposing angles in a cyclic quadrilateral exactly correspond to the whole arc of the circle.
+Aiming for a contradiction, suppose otherwise.
 
-Since the central angle for that arc is $360^{\circ}$ or $2 \pi$, the sum of opposing inscribed angles is just $\pi$.
+Let $D$ be external and also let $\angle BDC = \angle BAC$.
+
+Find where $BD$ cuts the circle at $D'$.
+
+So $D'$ is on the circle and $\angle BD'C$ is subtended by $BC$.
+
+By the forward version of the inscribed angle theorem:  
+$\angle BD'C = \angle BAC$.
+
+It follows that $\angle BDC = \angle BD'C$.
+
+But $\angle BD'C$ is external to $\triangle CDD'$.
+
+So $\angle BD'C > \angle BDC$.
+
+This is a contradiction.
+
+A similar argument will show that $D$ cannot be internal to the circle.
+
+Therefore, it must be that $D$ \emph{is on the circle}.
 
 $\square$
 
-Euclid's proof uses sum of angles:
-
-\begin{center} \includegraphics [scale=0.12] {EIII_22.png} \end{center}
-
-\emph{Proof}.
-
-$\angle ADC = \angle ADB + \angle BDC$, subtended by arcs $AB$ and $BC$.
-
-As angles on equal arcs (III.21) the latter two angles are equal to $\angle ACB$ and $\angle BAC$.
-
-But by I.32, the same two angles plus the total angle at vertex $B$ are equal to two right angles.
-
-$\square$
 
 \subsection*{geometric mean}
 
@@ -214,7 +233,9 @@ and one consequence is that
 
 A number of examples are given in the article.
 
-We discuss this here because originally, there was a proof-without-words that the geometric mean is always less than or equal to the arithmetic mean.  I decided to add some words.
+We discuss this here because originally, there was a proof-without-words that the geometric mean is always less than or equal to the arithmetic mean.
+
+I decided to add some words.
 
 \begin{center} \includegraphics [scale=0.4] {arcs15.png} \end{center}
 A right triangle is inscribed in a semicircle.  
@@ -251,78 +272,6 @@ The geometry shows that $h \le r$ so:
 
 The geometric mean is always less than the arithmetic mean, except when $a = b$, where they are equal (or all of $n$ values are equal).
 
-\subsection*{converse proof}
-
-\label{sec:inscribed_angles_converse}
-
-\label{sec:equal_angle_on_circle_contradiction}
-
-There are several variant arguments from similar setups which are converses of the inscribed angles theorem.  Here is one:
-
-Let $\triangle ABC$ lie on a circle.  
-
-Let point $D$ be such that $\angle BDC = \angle BAC$.  
-
-\begin{center} \includegraphics [scale=0.16] {Coxeter_1_9_3_c.png} \end{center}
-
-Then $D$ is also on the same circle.
-
-\emph{Proof}.
-
-Aiming for a contradiction, suppose otherwise.  Let $D$ be external and also let $\angle BDC = \angle BAC$.
-
-Find where $BD$ cuts the circle at $D'$.
-
-So $D'$ is on the circle and $\angle BD'C$ is subtended by $BC$.
-
-By the forward version of the inscribed angle theorem:  
-$\angle BD'C = \angle BAC$.
-
-It follows that $\angle BDC = \angle BD'C$.
-
-But $\angle BD'C$ is external to $\triangle CDD'$.
-
-So $\angle BD'C > \angle BDC$
-
-This is a contradiction.
-
-A similar argument will show that $D$ cannot be internal to the circle.
-
-Therefore, it must be that $D$ \emph{is on the circle}.
-
-$\square$
-
-\subsection*{another converse proof}
-
-This one uses Euclid III.22 rather than III.21.  
-
-\label{sec:inscribed_angles_converse2}
-
-Let $\triangle ABC$ lie on a circle.  
-
-Let point $D$ be such that $\angle ADC$ is supplementary to $\angle ABC$.
-
-Then $D$ lies on the same circle.
-\begin{center} \includegraphics [scale=0.22] {cyclic_quad_converse_b} \end{center}
-
-\emph{Proof}.
-
-Aiming for a contradiction, suppose $D$ does not lie on the circle.
-
-Let $D$ be external and $D'$ lie on the point where $BD$ cuts the circle (right panel).  
-
-By the forward theorem, $\angle AD'C$ is supplementary to $\angle ABC$ and so equal to $\angle ADC$.
-
-But by Euclid I.21,  $\angle ADC < \angle AD'C$.  
-
-This is a contradiction.  Therefore $D$ is not external.  
-
-A similar argument will show that $D$ is not internal.  
-
-Therefore $D$ lies on the circle and $D$ and $D'$ are the same point.
-
-$\square$
-
 \subsection*{problem}
 
 \label{sec:sec_tan_problem}
@@ -333,21 +282,57 @@ Here is a problem I found on the web as a Youtube video:
 
 It is described as a GCE O-Level A-Maths Plane Geometry Question.  
 
-The relationships that seem obvious from the diagram are given.  Namely, $PXYR$ and $QXZS$ are each lie on a straight line (colinear), and the two circles each have the four points lying on them as shown.  $TPS$ is tangent to the smaller circle at $P$.
+The relationships that seem obvious from the diagram are given.  Namely, $PXYR$ and $QXZS$ are each lie on a straight line (colinear).
+
+And the two circles each have the four points lying on them as shown.  
+
+$TPS$ is tangent to the smaller circle at $P$.
 \begin{center} \includegraphics [scale=0.3] {prob_A_level1.png} \end{center}
 
 The problem asks us to show that $SR$ is parallel to $ZY$ and hence, \emph{deduce} that $YX/ZX = YR/SZ$.
 
-The approach that occurred to me was to use the similar triangles that arise from crossed chords.  However, the problem asks us to first show that the given line segments are parallel.  This is a hint to a much easier proof.
+The approach that first occurred to me was to use the similar triangles that arise from crossed chords.  However, the problem asks us to start by showing that the given line segments are parallel.  This is a hint to a different proof.
 
 The result comes from the theorem which is the basis of this chapter: the inscribed angle theorem.
 \begin{center} \includegraphics [scale=0.3] {prob_A_level2.png} \end{center}
 
+\emph{Proof}.
+
 The marked angles are all equal.  The first two are equal because they correspond to the same arc in the small circle, and the third (at $S$) is equal to the first because they both correspond to the same arc in the large circle.  
 
-Therefore, the two line segments are parallel by the converse of the alternate interior angles theorem.  That gives us similar triangles $\triangle XYZ \sim \triangle XRS$ from which the equal ratios follow immediately.
+Therefore, the two line segments are parallel by the converse of the alternate interior angles theorem.
+
+That gives us similar triangles $\triangle XYZ \sim \triangle XRS$ from which the equal ratios follow almost immediately (see below).
+
+$\square$
 
 The last part of the problem says that given $SQ = XR$, prove that $PS^2 = XS \cdot YR$  We're not ready to do that yet.  It uses the information about the tangent and the \hyperref[sec:secant_tangent_theorem]{\textbf{secant-tangent theorem}}.
+
+\emph{Proof}.  (Alternate).
+
+Here's the first part of the proof by the crossed chord theorem:
+\[ PX \cdot XY = QX \cdot XZ \]
+\[ PX \cdot XR = QX \cdot XS \]
+
+It follows that
+\[ \frac{XZ}{XY} = \frac{XS}{XR} \]
+
+We need some algebra to get to $YX/ZX = YR/SZ$.  This is a standard parts and the whole manipulation for similar triangles, made complex by the cumbersome notation.
+
+Let $a = XY$, $A = XR$, $b = XZ$, and $B = XS$.  We have
+\[ \frac{b}{a} = \frac{B}{A} \]
+and we want
+\[ \frac{a}{b} = \frac{A-a}{B-b} \]
+
+The way to get there is:
+\[ \frac{A}{a} = \frac{B}{b} \]
+\[ \frac{A}{a} -1 = \frac{B}{b} - 1 \]
+
+then
+\[ \frac{A-a}{a} = \frac{B - b}{b} \]
+and the result follows easily in one more step.
+
+$\square$
 
 \subsection*{problem}
 
@@ -383,21 +368,39 @@ $\square$
 
 \subsection*{problem}
 
-\begin{center} \includegraphics [scale=0.4] {Posamentier1_4.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
 
-Posamentier gives this problem.  I is the center of the circle (the circumcircle of $\triangle ABC$).  $AE$ is the altitude of $\triangle ABC$.  
+Posamentier gives this problem.  
 
-\emph{To prove}.
+Let $O$ be the center of the circumcircle of $\triangle ABC$.
 
-If the angle at vertex $A$ is bisected (by $AD$), then $AD$ also bisects $\angle EAI$.
+Let $BE \perp AC$ and $BD$ bisect $\angle B$.
 
-First of all, I would restate the problem:  prove that $\angle BAE = \angle CAI$.  Then, the bisector of $A$ must bisect $\angle EAI$.
+Show that $BD$ also bisects $\angle OBE$.
 
-Hint:  draw $IC$ and use the relationships from this chapter as well as complementary angles in a right triangle.
+\emph{Proof}.
+
+Given $\angle ABD = \angle CBD$.
+
+Draw $OC$.
+
+The central $\angle BOC$ is 2 $\angle BAC$.
+
+But $\triangle BOC$ is isosceles with equal base angles.
+
+Thus $\angle BAC + \angle OBC = 90$.
+
+$\angle ABE$ is also complementary to $\angle BAE$, hence it is equal to $\angle OBC$.
+
+\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
+
+Subtracting equals:  $\angle EBD = \angle OBD$.
+
+$\square$
 
 \subsection*{Queen Dido}
 
-The mighty city of Carthage was the capital city of the Phoenicians.  As Rome grew strong, there was a titanic struggle between the two peoples, which Carthage eventually lost.  The ruins of Carthage lie near present-day Tunis.
+The mighty city of Carthage was the capital city of a major Phoenician colony.  As Rome grew strong, there was a titanic struggle between the two peoples, which Carthage eventually lost.  The ruins of Carthage lie near present-day Tunis.
 
 Queen Dido was the legendary founder of the the city of Carthage.  She was supposedly 
 
@@ -407,7 +410,7 @@ The problem then is to maximize the area enclosed by a curve of fixed length.
 
 \begin{center} \includegraphics [scale=0.5] {Dido.png} \end{center}
 
-In calculus there are a number of problems like this.  What's nice is that this problem has a wonderful solution that uses only the tools we have so far.  In particular, we need the \hyperref[sec:Thales_circle_theorem_converse]{\textbf{converse of Thales circle theorem}}.
+In calculus there are a number of problems like this.  What's nice is that this problem has a wonderful solution that uses only the tools we have so far.  In particular, we need the converse of Thales' circle theorem.
 
 The argument goes as follows.  Suppose we have a particular outline for the city limits and we're pretty happy with it.  We suppose it is a maximum (left panel).
 

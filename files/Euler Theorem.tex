@@ -1,0 +1,76 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Introduction}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we talk about the famous Euler Theorem (the one in geometry, there are others).
+
+Consider $\triangle ABC$ with its circumcircle on center $O$ with radius $R$, and its incircle on center $I$ with radius $r$.
+
+Let the distance between $O$ and $I$ be $d$. 
+
+Then the distance from I to the outer circle is $R+d$ in one direction and $R-d$ in the other direction.  The product of parts of the chord is
+\[ (R+d)(R-d) = R^2 - d^2 \]
+
+\begin{center} \includegraphics [scale=0.16] {EulerThm.png} \end{center}
+
+We consider another chord drawn through $I$, namely the bisector of $\angle B$, extended to meet the circumcircle at $P$.
+
+Let the bisected angles be $2 \beta = \angle B$ and $2 \gamma = \angle C$, as usual.
+
+Draw the diameter $POQ$.  By Thales' theorem, $\triangle PQC$ is right.
+
+Let $IZ \perp BZA$, so $\triangle IBZ$ is right.
+
+By inscribed angles, $\angle PQC = \angle PBC = \beta$.
+
+Thus, the two right triangles are similar, since they both contain $\beta$.
+
+Form the ratios:
+\[ \frac{IZ}{IB} = \frac{PC}{PQ} \]
+Substituting
+\[ \frac{r}{IB} = \frac{PC}{2R} \]
+\[ 2rR = PC \cdot IB \]
+
+If we can show that $PC = PI$, we will have that the right-hand side of the previous equation is equal to $PI \cdot IB = R^2 - d^2$, by crossed chords.
+
+We consider $\triangle PCI$.
+
+\begin{center} \includegraphics [scale=0.16] {EulerThm.png} \end{center}
+
+$\angle PCI$ is equal to $\gamma + \beta$ by inscribed angles.
+
+$\angle CPI$ is equal to $\angle A$.
+
+By sum of angles, $\angle PIC$ is also equal to $\gamma + \beta$.
+
+With equal base angles, by I.6 $\triangle PCI$ is isosceles.
+
+Thus $PI = PC$, and the main result follows:
+\[ 2rR = R^2 - d^2 \]
+\[ = (R+d)(R-d) \]
+
+\[ \frac{1}{r} = \frac{2R}{(R+d)(R-d)} \]
+\[ = \frac{1}{R+d} + \frac{1}{R-d} \]
+
+
+
+\end{document}

@@ -1,0 +1,258 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Steiner-Lehmus Theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+This chapter discusses a theorem about angle bisectors in an isosceles triangle.  We called the forward version the \hyperref[sec:isosceles_bisector]{\textbf{isosceles bisector}} theorem.
+
+It is easy in the forward direction, but the converse is very challenging, at least until you draw the right diagram.  Then, as usual, it's not so bad.
+
+\begin{center} \includegraphics [scale=0.25] {bisector4.png} \end{center}
+
+\emph{Proof}.  We are given that $\triangle ABC$ is isosceles ($AC = BC$), and also that the angles at the base are both bisected.  It follows that the half-angles are also equal, and thus $\triangle CDB \cong \triangle CFA$ by ASA.  So the angle bisectors are equal in length:  $AF = BD$.  
+
+$\square$
+
+That's the easy part.
+
+\subsection*{Steiner-Lehmus Theorem}
+
+\label{sec:Steiner_Lehmus_Theorem}
+
+The converse theorem says that if we have angle bisectors and they are equal in length, then the triangle is isosceles.
+
+\url{https://en.wikipedia.org/wiki/Steiner–Lehmus_theorem}
+
+The problem is that, even though we can draw triangles with two sides equal, we don't know anything about the angles except for some vertical angles, which don't help.
+
+Here is an approach which I found on the web.  It's a proof by contradiction.
+
+\url{https://www.algebra.com/algebra/homework/word/geometry/Angle-bisectors-in-an-isosceles-triangle.lesson}
+
+\begin{center} \includegraphics [scale=0.18] {SL.png} \end{center}
+
+We claim that if $AM = CN$ and the angles are bisected, then $\alpha = \gamma$.
+
+We rely on Euclid's propositions I.18 and I.19.  In any triangle if one side is larger than another, then the angle opposite the longer side is greater (I.18) and conversely, if one angle is larger than another, then the side opposite is greater (I.19). 
+
+\begin{center} \includegraphics [scale=0.4] {PI_18a.png} \end{center}
+
+In the diagram above
+\[ s > t \Rightarrow b > a \]
+\[ b > a \Rightarrow s > t \]
+
+We proved both these theorems \hyperref[sec:Euclid_I_18]{\textbf{here}}.  
+
+The problem is that these are \emph{within-triangle} results.  We also need the following result.
+
+If two triangles $\triangle ABC$ and $\triangle DEF$ have two pairs of sides equal, and the included angle is greater in one ($\phi > \theta$), then the side opposite $\phi$ also greater.
+\begin{center} \includegraphics [scale=0.16] {SAS_gt} \end{center}
+\emph{Proof}.
+
+Let $d$ be opposite $\phi$ and $c$ be opposite $\theta$.  Use the law of cosines:
+\[ c^2 = a^2 + b^2 - 2ab \cos \theta \]
+\[ d^2 = a^2 + b^2 - 2ab \cos \phi \]
+
+Then if $d > c$, so $d^2 > c^2$, and
+\[ a^2 + b^2 - 2ab \cos \phi  > a^2 + b^2 - 2ab \cos \theta \]
+\[ - 2ab \cos \phi  > - 2ab \cos \theta \]
+\[ \cos \phi  < \cos \theta \]
+\[ \phi > \theta \]
+
+This chain of reasoning works just as well in reverse.  So, $\phi > \theta \Rightarrow d^2 > c^2$, and then $d > c$.   $\square$
+
+This is known as the \hyperref[sec:hinge_theorem]{\textbf{hinge theorem}}.  We showed a different proof earlier.  It is Euclid I.24.
+
+$\square$
+
+Back to our problem.  We claim that $\alpha = \gamma$ and the triangle is isosceles.
+We argue by contradiction.  
+
+\begin{center} \includegraphics [scale=0.18] {SL.png} \end{center}
+
+\emph{Proof}.
+
+In $\triangle ABC$, let the base angles be bisected as shown.
+
+Let the bisectors be equal:  $AM = CN$.
+
+Draw $ND \parallel AM$ and $MD \parallel ANB$.
+
+So $ANDM$ is a parallelogram.
+
+Thus $\angle NDM = \alpha$.
+
+Aiming for a contradiction, suppose $\gamma > \alpha$.
+
+By I.24, $AN > CM$.
+
+So $DM > CM$.
+
+By I.18 $\phi > \theta$.
+
+By addition of inequalities:
+
+\[ \gamma + \phi > \alpha + \theta \]
+
+By I.19, $ND > CN$.
+
+But $AM = ND$ so $AM > CN$.
+
+\begin{center} \includegraphics [scale=0.18] {SL.png} \end{center}
+
+This is a contradiction, we were given that $AM = CN$.
+
+$\square$
+
+Therefore, it cannot be that $\gamma > \alpha$.
+
+The reverse supposition, that $\alpha < \gamma$, also leads to a contradiction by a symmetrical argument, substituting $<$ for $>$.
+
+(Or draw the parallelogram on the other side of $\triangle ABC$ and use the same argument as previously).
+
+Since $\alpha$ is neither greater than nor less than $\gamma$, we conclude that $\alpha = \gamma$.  $\triangle ABC$ is therefore isosceles by I.6.
+
+$\square$.
+
+According to the internet, the Steiner-Lehmus theorem is famous for being difficult, for having many different proofs, and for some controversy over whether even one of the proofs is \emph{direct} or not.  By direct we mean, not using the technique of proof by contradiction or \emph{reductio ad absurdum}.
+
+I was lucky to find a (non-paywalled) review published on its centenary in 1942.
+
+\url{https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7B625B08567935CAE06A0AC9430477C0/S0950184300000021a.pdf}
+
+It includes this proof.
+
+\subsection*{Hesse (1842)}
+
+\begin{center} \includegraphics [scale=0.15] {hesse.png} \end{center}
+
+The construction is to draw $YD = BC$ and $BD = BZ$.  Later we will find that $CD$ divides $BDYC$ into two congruent triangles.  Then it easily follows that $\beta = \gamma$.
+
+\begin{center} \includegraphics [scale=0.18] {hesse2.png} \end{center}
+
+\emph{Proof}.
+
+The equalities of the construction are $YD = BC$ and $BD = BZ$, and $BY = CZ$ is given.
+
+(1) $\triangle DYB \cong \triangle BCZ$ by SSS.
+
+Thus the corresponding angles of $\triangle DBY$ and $\triangle BZC$ are equal, namely:
+\[ \angle DYB = \angle BCZ = \gamma \]
+\[ \angle BDY = \angle ZBC = 2 \beta \]
+\[ \angle DBY = \angle BZC = \angle A + \gamma \]
+the last by sum of angles.
+
+At this point I had some trouble with the details of the proof, so we may diverge from the source.
+
+(2) $\angle BDY = 2 \beta$
+
+so by sum of angles in $\triangle DBY$ we have:
+\[ \angle ZBD = A - \beta + \gamma \]
+Then
+\[ \angle CBD = A + \beta + \gamma = 90 + \alpha \]
+
+\begin{center} \includegraphics [scale=0.15] {hesse2.png} \end{center}
+
+Now all we need is to get the measure of $\angle CYD$
+
+(3) By sum of angles $\angle BJC = \angle A + \beta + \gamma$ so by the external angle theorem:
+\[ \angle BYC = \angle A + \beta \]
+Then
+\[ \angle CYD = \angle A + \beta + \gamma \]
+
+We have established that
+\[ \angle CYD = \angle CBD \]
+
+Crucially, they are not only equal but obtuse.
+\begin{center} \includegraphics [scale=0.18] {hesse3.png} \end{center}
+
+We don't necessarily have a parallelogram yet because we have only otne pair of sides equal and one pair of opposing angles equal.
+
+But we can draw $CD$.
+
+ \begin{center} \includegraphics [scale=0.18] {hesse4.png} \end{center}
+
+(4) Comparing $\triangle CBD$ and $\triangle DYC$, we have that $CD$ is shared, and $DY = BC$ by construction.  $\angle CYD = \angle CBD$.  
+
+We have SSA and in addition, the angles that we know in each, $\angle CYD$ and $\angle CBD$, are obtuse.  It follows that $\triangle CBD \cong \triangle DYC$.
+
+At this point we could just invoke the converse of the diagonal theorem for quadrilaterals.  
+
+(5) Instead Hesse says:
+\[ YC = BD = BZ \]
+SSS then gives:
+\[ \triangle ZCB \cong \triangle YBC \]
+\[ \angle CBZ = \angle BCY \]
+With base angles equal, all we need is I.6.
+
+$\square$
+
+For more about SSA see \hyperref[sec:use_of_SSA]{\textbf{here}}.
+
+With the same diagram, I cooked up a proof by careful bookkeeping with the angles.
+
+\emph{Proof}.  (Alternate).
+
+\begin{center} \includegraphics [scale=0.18] {hesse2.png} \end{center}
+
+Given $\angle B$ and $\angle C$ bisected into $2 \beta$ and $2 \gamma$.
+
+Given $BY = CZ$.
+
+Draw $BD = BZ$ and $DY = BC$.  (Again, we do not claim $DZY$ collinear).
+
+$\triangle BYD \cong \triangle ZCB$ by SSS.
+
+So $\angle BDY = \angle ZBC = 2 \beta$ and $\angle BYD = \angle ZCB = \gamma$.
+
+At $J$, one vertical angle ($\angle BJC$) is $\angle A + \beta + \gamma$ by sum of angles.
+
+$\angle BJC$ is external to $\triangle JCY$, hence  $\angle CYJ = \angle A + \beta$.
+
+Up to now, nothing has changed.  Let $\angle DBZ = \theta$.  
+
+Summing angles in the quadrilateral  $BDYC$:
+\[ \theta + 2 \beta + 2 \gamma + \angle A + \beta + \gamma + 2 \beta = 360 \]
+\[ \theta + \angle A + 5 \beta + 3 \gamma = 360 \]
+
+Since $\angle A + 2 \beta + 2 \gamma = 180$, subtracting
+\[ \theta + 3 \beta + 1 \gamma = 180 \]
+
+We also have that $\triangle BDZ$ is isosceles:
+\[ \theta + 4 \beta = 180 \]
+
+Subtract again:
+\[ - \beta + \gamma = 0 \]
+\[ \beta = \gamma \]
+
+By I.6, $\triangle ABC$ is isosceles.
+
+$\square$
+
+\subsection*{afterward}
+
+There is some interesting discussion in Coxeter as well.  According to what I can find on the web, most of the literature concerns the question of whether it is possible to provide a direct proof of the theorem.  The algebraic proof, postponed for now to book II, has been cited as such.
+
+However, that proof depends on Stewart's Theorem, which as we derive it there depends on the Law of Cosines, which depends in turn on the theorem of Pythagoras.  And although there are several hundred proofs of Pythagoras most (all?) of them depend on the sum of angles and also on the parallel postulate, which explicitly depends on a proof by contradiction.  
+
+The question of a direct proof for Steiner-Lehmus is hard to answer conclusively.  I have a write-up from John Conway claiming that it is impossible, but I don't really understand his argument.  Unfortunately, nearly all the writing in mathematics journals is paywalled and very expensive.
+
+\end{document}

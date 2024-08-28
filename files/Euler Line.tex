@@ -1,0 +1,84 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Introduction}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we talk about the famous Euler Line of a given triangle:
+
+\url{https://en.wikipedia.org/wiki/Euler_line}
+
+\begin{center} \includegraphics [scale=0.16] {EulerLine.png} \end{center}
+
+The proof is quite easy (once you know how).  
+
+Recall that the circumcenter is the center of the circle that contains all three vertices, and it can be found by erecting the perpendicular bisectors of the sides.  Side $a$ opposite $\angle A$ is bisected at $X$, while side $c$ opposite $\angle C$ is bisected at $Z$.  The perpendicular bisectors $OX$ and $OZ$ meet at $O$.
+
+The orthocenter $H$ is the point where altitudes drawn from the three vertices of a triangle cross.  Here $AD$ meets $CF$ at $H$.
+
+The centroid $G$ is the point where the medians cross, before they bisect the opposite sides.  $CZ$ is one of the medians of $\triangle ABC$.
+
+We will assume that these points actually exist (that the three altitudes or three medians are concurrent).  That proof is coming later.
+
+\begin{center} \includegraphics [scale=0.16] {EulerLine.png} \end{center}
+
+Suppose we find $O$ as described above, draw the median $CZ$, find $G$ arithmetically, and then extend $OG$ to find $H$ such that $HG = 2 OG$.
+
+We will show that $H$ is the orthocenter of $\triangle ABC$, that it actually lies on $CF$.
+
+We also need a couple of preliminary results.  We will prove that the centroid divides the medians by the $2/3-1/3$ rule:  $CG = 2 ZG$.  Let's do this below as a lemma.
+
+The second is SAS similarity.  In the discussion of similarity for a general or arbitrary triangle, we showed that if two triangles have two pairs of sides in the same proportion, and the angle between is also equal, then they are similar triangles.
+
+\emph{Lemma}
+
+We depend on the area-ratio theorem.  If two triangles have one vertex shared and the bases lie on the same line, then their areas are in proportion as the lengths of the bases.  The reason is that they have the same altitude, since only one line can be drawn from any point perpendicular to a line.
+
+\begin{center} \includegraphics [scale=0.5] {area11.png} \end{center}
+
+So now we consider an arbitrary triangle, divided by its three medians.  We will show that each of the small triangles is equal in area.
+
+\begin{center} \includegraphics [scale=0.16] {centroid4.png} \end{center}
+
+Compare $\triangle GBX$ and $\triangle GCX$ to find that they are equal in area, since $GX = CX$.  Thus area $x =$ area $x'$.  and so on.  Similarly, compare $\triangle ABX$ and $\triangle ACX$ to find that they are equal in area.  It follows that:
+\[ x + z + z' = x' + y + y' \]
+which reduces to $z = y$.  The same argument will give $x = y$ and $x = z$.
+
+Finally, we use what is technically the converse of the area-ratio theorem.  We have that the area of $\triangle ABG$ is twice that of $\triangle AYG$.  Since they have the same altitude, it follows that the bases are in proportion:  $BG = 2 YG$.  Again, this can be extended to any median by the same argument.
+
+$\square$
+
+\emph{Proof}.
+
+Returning to the main problem, we justify the placement of $G$ by noting that $CG = 2 ZG$.   We found $H$ by $HG = 2 OG$.  Finally, we have vertical angles at $G$.  It follows that $\triangle CGH \sim \triangle ZGO$ with sides in proportion $2:1$.
+
+\begin{center} \includegraphics [scale=0.16] {EulerLine.png} \end{center}
+
+It follows that $\angle CHG = \angle ZOG$.
+
+Thus, by alternate interior angles, we find that $OZ \parallel CHF$, which means that since $OZ \perp AFZB$, so is $CHF \perp AFZB$.  Thus, $CF$ \emph{is} the altitude to the vertex $C$ in $\triangle ABC$.
+
+$\square$
+
+Two more quick points.  First, in an equilateral triangle, the three points $O$, $G$ and $H$ coincide --- they are the same point.  Second, there is much more to the Euler line, including the center of the \emph{nine point circle}, which we discuss in the other volume.
+
+
+
+\end{document}

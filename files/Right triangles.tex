@@ -167,15 +167,21 @@ The fact that the hypotenuse is the longest side in a right triangle will come i
 
 $\bullet$ \ The distance from a fixed point to a line is least when the new line segment makes a right angle with the line.
 
+The claim is that if $QS \perp PS$, then $QS$ is the shortest line connecting $Q$ with $PS$.
+
+\begin{center} \includegraphics [scale=0.18] {angle_bisector2d.png} \end{center}
+
 \emph{Proof}.
 
-Draw the perpendicular $QR$.  We showed that only one such perpendicular can be drawn.
+Aiming for a contradiction, suppose that $QU$ is not perpendicular, but it is shorter than $QS$.
 
-\begin{center} \includegraphics [scale=0.4] {angle_bisector2a.png} \end{center}
+$\triangle QUS$ is a right triangle, with the right angle at $S$, so $QU$ is the hypotenuse of $\triangle QUS$.
 
-Any other line segment  (for example, the dotted line) from $R$ to the upper edge (the extension of $PQ$), forms a right triangle also containing $QR$, where the dotted line is the hypotenuse.
+Since the hypotenuse is the longest side of a right triangle, by the previous theorem,
 
-Since the hypotenuse is the longest side of a right triangle, by the previous theorem, $QR$ must be shorter than the dotted line.
+So $QS$ must be shorter than $QU$.
+
+This is a contradiction.  Therefore $QU$ is not shorter than or even equal to $QS$.
 
 \subsection*{hypotenuse midpoint theorem}
 

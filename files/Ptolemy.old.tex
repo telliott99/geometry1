@@ -1,0 +1,112 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Ptolemy's theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\label{sec:Ptolemy}
+
+Ptolemy was a Greek astronomer and geographer who probably lived at Alexandria in the 2nd century AD (died c.168 AD).  That is nearly 500 years after Euclid.  (Ptolemy was a popular name for Egyptian pharaohs in earlier centuries).
+
+Our Ptolemy is known for many works including his book the \emph{Almagest}, and important to us here, for a theorem in plane geometry concerning cyclic quadrilaterals.  These are 4-sided polygons with all four vertices on the same circle.  
+
+Recall that any triangle lies on a circle, so this is a restriction on the fourth vertex of the polygon.
+\begin{center} \includegraphics [scale=0.35] {circles_4.png} \end{center}
+
+Recall \hyperref[sec:quadrilateral_supplementary]{\textbf{quadrilateral supplementary theorem}} (Euclid III.22):
+
+$\bullet$ \ For \emph{any} quadrilateral whose four vertices lie on a circle, the opposing angles are supplementary (they sum to $180^\circ$).
+
+Now, draw the diagonals $AC$ and $BD$.  Ptolemy's theorem says that if we take the products of the two pairs of opposing sides and add them, the result is equal to the product of the diagonals.
+\begin{center} \includegraphics [scale=0.6] {pt1.png} \end{center}
+
+Notice that in the special case of a rectangle, the two diagonals are equal.  Given the proof here, Ptolemy's result furnishes a trivial proof of the Pythagorean theorem (see later).
+
+\subsection*{parallelogram proof}
+
+As we said, Ptolemy's theorem concerns a general four-sided figure (quadrilateral), inscribed in a circle --- all four vertices lie on the circle.  Form the products of the lengths of opposing sides, and add them.  The result will be equal to the product of the diagonals.
+\begin{center} \includegraphics [scale=0.5] {ptpar1.png} \end{center}
+ 
+In this figure, if the length of the green side is multiplied by that of the magenta one, and the red by the black, and then the results are summed, that sum will be equal to the product of the dotted lines.
+ 
+\emph{Proof}.
+ 
+The proof begins by noting the angles in the figure.  By an important consequence (or \emph{porism}) of the inscribed angle theorem, equal angles lying on the circle sweep out equal arcs and also chords.  This gives four pairs of equal angles, as marked by the colored dots.
+ 
+We will stop drawing the circle, for clarity.  The two diagonals are labeled $x$ and $y$.  Rotate the figure to make one of them vertical, let us choose $y$.
+\begin{center} \includegraphics [scale=0.5] {ptpar2.png} \end{center}
+
+Now cut vertically down along the diagonal to make two pieces.  What we will show is that those two pieces can be arranged to form three sides of a parallelogram, after appropriate re-scaling.  
+
+The reason is that opposing corners of the original figure together contain a complete complement of angles (by Euclid III.22).  The opposing vertices in a cyclic quadrilateral must correspond to the whole arc of the circle.  
+
+Here, we add more detail, with red and magenta on the left plus black and green on the right.
+\begin{center} \includegraphics [scale=0.5] {ptpar3.png} \end{center}
+
+Let us choose the black and magenta lines for the base of the figure.  One could pick red and green instead, or make other choices if we had cut along the diagonal labeled $x$.
+\begin{center} \includegraphics [scale=0.5] {ptpar4.png} \end{center}
+
+So as noted, the angles between side $g$ and the base, plus those between the base and $r$ add up to be one complete set.  That is one-half the total of the quadrilateral, namely, two right angles.
+
+Therefore, when aligned with $b$ and $m$ colinear, the green and red sides are parallel, by alternate interior angles.
+
+In the general case, the green and red sides will not be the same length, but they can be made so by rescaling.  A simple way to do that is to scale the left-hand triangle by $r$ and the right-hand one by $g$, so that the opposing sides each have length $rg = gr$.
+
+Draw the long line across the top.  We claim that the overall figure is a parallelogram, because it has one pair of opposing sides shown to be parallel and also equal in length.
+\begin{center} \includegraphics [scale=0.4] {ptpar7.png} \end{center}
+
+We can fill in the missing angles at the top by alternate interior angles, forming a triangle with two dotted blue sides plus the top line.  It contains angles red and green. The third angle is supplementary (the order of black and magenta doesn't really matter for the argument, but it is flipped from the original figure).  
+
+Can we find a similar triangle in the original figure?
+\begin{center} \includegraphics [scale=0.4] {ptpar11.png} \end{center}
+To emphasize what we're looking for here, I have colored the sides opposite the angles labeled in red and green and also made the top line dotted blue.  
+
+\begin{center} \includegraphics [scale=0.5] {ptpar10.png} \end{center}
+Yes!  We find the similar triangle in the original figure as the part above the dotted blue diagonal labeled $x$.
+
+To scale properly, the top side in our parallelogram must be multiplied by the same factor as the other two sides, that is, by a factor of $y$.
+\begin{center} \includegraphics [scale=0.4] {ptpar8.png} \end{center}
+In a parallelogram, \emph{both} pairs of opposing sides are equal in length.  We conclude  that
+\[ xy = rb + gm \]
+
+But this is just Ptolemy's theorem.
+\begin{center} \includegraphics [scale=0.5] {ptpar9.png} \end{center}
+
+$\square$
+
+\subsection*{Pythagorean theorem from Ptolemy}
+
+\label{sec:PProof_Ptolemy}
+
+\begin{center} \includegraphics [scale=0.5] {Pyth_Ptolemy.png} \end{center}
+
+\emph{Proof}.
+
+Above is a rectangle inscribed in a circle.  The diagonals are also diameters, by the reverse of Thales' circle theorem.  All the vertices are right angles.  The diagonals are equal, because they are diameters, and by congruent triangles (SSS or SAS).
+
+Ptolemy gives
+\[ AB \cdot CD + BC \cdot AD = AC \cdot BD \]
+but by equal sides in a rectangle and diameters in a circle:
+\[ AB^2 + BC^2 = AC^2 \]
+
+$\square$
+
+
+\end{document}

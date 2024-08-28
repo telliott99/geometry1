@@ -60,7 +60,7 @@ It helps that we have an idea about what we want.
 We need to say a bit more before we start.  Each diagram contains a diameter of the circle, scaled so its length is $1$.  
 
 In two cases that length is also a diagonal of the quadrilateral, and in the other two it is a side.  In the first case, the product with the other diagonal of the quadrilateral is just equal to whatever value that second diagonal has.  Here is the first figure:
-\begin{center} \includegraphics [scale=0.5] {pt19.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {sumang0.png} \end{center}
 
 There are two right angles on the circle with sides extending to the ends of the diameter.  This makes the setup a natural for sine and cosine formulas.
 
@@ -68,7 +68,7 @@ Second, a peripheral or inscribed angle $\theta$ is related to its chord length 
 
 We start with the sum of sines.  The idea is that $\sin s + t$ should be the second diagonal.
 
-\begin{center} \includegraphics [scale=0.5] {pt19.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {sumang1.png} \end{center}
 From there the formula basically writes itself.
 \[ \sin s + t = \sin s \cos t + \sin t \cos s \]
 
@@ -82,15 +82,15 @@ Thus, substituting $-t$ for $t$ changes the "sign" of the second term but not th
 \[ \sin s + (- t) = \sin s \cos (- t) + \sin (- t) \cos s \]
 \[ = \sin s \cos t - \sin t \cos s \]
 
-However, we can use a diagram like the one above to do this formula too.  See:
+However, we can use a diagram (kind of) like the one above to do this formula too.  See:
 
 \url{https://www.cut-the-knot.org/proofs/sine_cosine.shtml}
 
 The trick is that, because of the minus sign on the right-hand side in the final formula, we want $\sin s - t$ to be one of the sides.  So the diagonal of the circle must be opposite, and also be a side of the quadrilateral.  
 
-Now, $s$ is the whole angle in the red triangle.
+Now, $s$ is the whole angle, i.e. s - t + t = s.  So one diagonal is $\sin s$ and the other is $\cos t$.
 
-\begin{center} \includegraphics [scale=0.5] {pt20.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {sumang3.png} \end{center}
 And again, the formula writes itself:
 \[ \sin (s - t) + \sin t \cos s = \sin s \cos t \]
 which rearranges to give
@@ -106,7 +106,7 @@ then
 So for the first cosine formula we add an additional angle $u$, and use the fact that $s+t$ is complementary to $u$.
 
 We make $\sin u = \cos s + t$ one of the sides, because we know the formula has a minus sign in it.
-\begin{center} \includegraphics [scale=0.5] {pt21.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {sumang2.png} \end{center}
 \[ \sin s \sin t + \cos (s + t)  = \cos s \cos t \]
 \[ \cos s + t = \cos s \cos t - \sin s \sin t \]
 
@@ -116,16 +116,16 @@ Last is the difference formula for cosine.  Again, we can derive this formula ea
 
 Knowing where we're headed, we want opposing sides to be both sine or both cosine, and we have them as sides, because they add in the final formula.
 
-So then, somehow, the dotted diagonal must be $\cos s - t$.
-\begin{center} \includegraphics [scale=0.5] {pt22b.png} \end{center}
+So then, somehow, the diagonal must be $\cos s - t$.
+\begin{center} \includegraphics [scale=0.2] {sumang4.png} \end{center}
 
-The complementary angle to $s$ is $90 - s$.  Adding it to the adjacent angle $t$ we have that the dotted diagonal is $\sin (90 - s) + t$.  But that is 
-\[ \cos 90 - \ [ \ (90 - s) + t \ ] \ = \cos s - t \]
-which is just what we needed!
+The complementary angle to $s$ is $90 - s$.  Adding it to the adjacent angle $t$ we have that the diagonal is $\sin (90 - s + t)$.  But that is 
+\[ \cos 90 - (90 - s + t ) = \cos s - t \]
+which is just what we need.
 
 \[ \cos s - t = \cos s \cos t + \sin s \sin t \]
 
-Perhaps you may object that, from the diagram it looks like $s > t$ so $t - s < 0$.  But we can also use the angle on the opposite side and write:
+Perhaps you may object that possibly it coulbe be that $s < t$ so $t - s < 0$.  But we can also use the angle on the opposite side and write:
 \[ \sin s + (90 - t) = \cos 90 - \ [ \ (90 - t) + s \ ]  \]
 \[ = \cos t - s \]
 

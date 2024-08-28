@@ -31,7 +31,7 @@ An equilateral triangle has all three sides the same length.  By symmetry, as th
 
 \emph{Proof}.  
 
-We have  \hyperref[sec:Euclid_I_5]{\textbf{isosceles triangle theorem}} (Euclid I.5:  equal sides $\rightarrow$ angles), which  can be applied twice to give the result.
+The  \hyperref[sec:Euclid_I_5]{\textbf{isosceles triangle theorem}} (Euclid I.5:  equal sides $\rightarrow$ angles), which  can be applied twice to give the result.
 
 We also have \hyperref[sec:Euclid_I_19]{\textbf{Euclid I.19}}, which says that if one angle is larger than another in a triangle, then the corresponding side is also longer.  So, assume the angles are not the same, then that implies the sides are not the same length either.  Hence the angles are the same.  
 
@@ -65,34 +65,119 @@ We can check that against a general trigonometric formula for the area of any tr
 
 It can be quicker to rely on the fact that the area goes like the square of the side.  For side length $2$ we had $A = \sqrt{3}$.  If we shrink the triangle to side length $1$, the area goes down by a factor of four, to $A = \sqrt{3}/4$.
 
+\newpage
+
 \subsection*{circumscribed equilateral triangle}
 
 Here is a fun construction based on an equilateral triangle.  
 
-Any triangle fits into a unique circle (see the discussion of circles and bisectors of the chords).
-\begin{center} \includegraphics [scale=0.4] {one_third.png} \end{center}
+Any triangle fits into a unique circle (see the discussion of circles and bisectors of the chords).  Draw the circumcircle for equilateral $\triangle ABC$.
 
-Draw the radius to a vertex of the triangle, and extend it as the diameter.  We will show that all three  marked angles are equal.
+Draw a radius to a vertex of the triangle, and extend it as the diameter $BD$.
 
-\emph{Proof}.  
+We can prove a number of properties.  One is that $DE = OE$.  
 
-The altitude of an isosceles (or equilateral) triangle is also a median (it bisects the base) and an angle bisector (it bisects the top angle), so it goes through the center of the circle containing all three vertices.
+It follows that $OE$ is one-half of $OB$ and one-third of $BE$.
 
-This accounts for the two angles labeled $\theta$.  Since the sum of angles in a triangle is equal to two right angles, each of the vertex angles in an equilateral triangle is equal to $2/3$ of a right angle.  $\theta$ is one-half that measure, or $1/3$ of a right angle.
+\emph{Proof}.
 
-Any triangle with the diagonal for one side and the opposing vertex anywhere else on the circle is a right triangle.  That's our fundamental theorems about circles.
+\begin{center} \includegraphics [scale=0.2] {equi_tri.png} \end{center}
 
-As a result,  $\phi$ measures one right angle minus $2/3$ of a right angle or $1/3$ of a right angle.  Therefore, $\phi = \theta$.
+(1) Given $AB = BC = AC$ and all three vertex angles ($\angle B$, $\angle BAC$, $\angle BCA$), are equal, so each is two-thirds of a right angle.
 
-\begin{center} \includegraphics [scale=0.4] {one_third.png} \end{center}
+(2) $B$ is equidistant from the ends of $AC$, so it lies on the perpendicular bisector of $AC$.
 
-So now we have one of the complementary angles of a right triangle, and a shared side.  The two triangles are congruent.  That accounts for the duplicated $a$ in the figure.
+(3) It follows that $AE = CE$
+
+(4) the angles at $E$ are right angles
+
+(5) and $\triangle BAE \cong \triangle BCE$ by SSS or SAS.
+
+(6) So $\angle B$ is bisected, with $\angle ABD = \angle CBD$.
+
+By (3), the ratio of any side of the original triangle to $AE$ is $2:1$.
+
+(7) By Thales' theorem, $\triangle BAD$ and $\triangle BCD$ are right triangles.  
+
+(8) By (4), all the smaller triangles are right triangles.
+
+(9) By the corollary of the inscribed angle theorem $\angle CAD = \angle CBD$ and both are one-third of a right angle.
+
+(10) For the same reason, $\angle BDA = \angle BCA$ and by (1) both are two-thirds of a right angle.
+
+(11) By (3) and (4) $\triangle DAE \cong \triangle DCE$ by SAS.
+
+(12) Thus $AD = DC$.
+
+(13) and $\angle DAE = \angle DCE$.
+
+\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
+
+(14) Draw $OA$.  $OA$ bisects $\angle BAC$ (just as $\angle B$ is bisected by $OB$, see above).
+
+(15) Hence $\angle OAC$ is one-third of a right angle.
+
+By (9) $\angle CAD$ is one-third of a right angle, so by (15) $\angle OAD$ is two thirds of a right angle.
+
+(16) $\triangle AOD$ is (at least) isosceles, with base angles equal. By sum of angles, it follows that $\triangle AOD$ is equilateral.
+
+[Possibly easier:  $\triangle AOD$ is isosceles, with two sides being radii of the same circle.  $\angle AOD$ is the central angle for one-half of $\angle B$, hence it equals $\angle B$.  By sum of angles, $\triangle AOD$ is equi-angular, and then by I.6 it is equilateral.]
+
+(17) By (16) $OA = AD$ (i.e. $AD$ is equal to the radius).
+
+(18) $AOCD$ has opposing angles equal, so it is a parallelogram.
+
+(19) $AOCD$ has adjacent sides equal, so it is a rhombus.
+
+$\square$
+
+\emph{Proof}. (Alternate)
+
+\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
+
+$\triangle ABD$ is a right triangle by Thales' theorem.
+
+$\angle B$ is bisected so $\triangle ABD$ is 30-60-90.  We know that for such a triangle $2 AD = BD$.
+
+Thus $AD = OA = OD$, $\triangle AOD$ is equilateral, and $AOCD$ has four equal sides, so it is a rhombus.
+
+It follows that the diagonal $OD$ is bisected by $AC$.
+
+$\square$
+
+\emph{Proof}. (Alternate)
+
+\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
+
+$\angle AOC$ is the central angle for $\angle ABC$, so it is twice $\angle ABC$.
+
+$\angle ADB = \angle BCA$ and $\angle CDB = \angle BAC$ so $\angle ADC$ is twice $\angle BCA$ or $\angle BAC$.
+
+It follows that $\angle ADC = \angle AOC$.
+
+But by Thales' theorem, $\angle BAD = \angle BCD$ and both are right angles.
+
+Since the opposing angles are equal, $AOCD$ is a parallelogram.
+
+It follows that $OA = CD$ and $OC = AD$, thus all four sides are equal and $AOCD$ is a rhombus.
+
+Therefore, the diagonals bisect one another.
+
+$\square$
+
+\emph{Proof}.  (Alternate).
+
+Let $AD = CD = d$ and $r$ be the radius of the circle.
+
+By Ptolemy's theorem:
+\[ sd + sd = 2 rs \]
+\[ d = r \]
+
+It follows that $AOCD$ is a parallelogram, etc.
 
 $\square$
 
 Thus, the altitude of the equilateral triangle is $3/4$ of the diameter of the circle that just encloses it.  And the point where the altitudes meet in an equilateral triangle is $1/3$ of the way up from the base, since $r = 2a$.  
-
-Another important result about circles is that if two angles with each vertex on the circle, are subtended by the same arc of the circle, then they are equal.  Since $\phi$ sweeps out the same arc as one-half of the top vertex of the triangle, this also shows that $\phi$ is equal to $\theta$.
 
 \subsection*{problem}
 
