@@ -110,54 +110,6 @@ which can be solved as a quadratic in $d$.
 \[ = r \pm \sqrt{r^2 - h^2} \]
 which is already fairly obvious since $OP = r$ and, it's the hypotenuse in a right triangle with $PS = h$, so $OS$ is exactly the square root, while $r$ minus that is just $d$.
 
-\subsection*{Euclid's proof of crossed-chords}
-
-This proof, III.35, uses only the Pythagorean theorem, the previous theorem about perpendicular bisectors, and some algebra from Book II.
-
-\begin{center} \includegraphics [scale=0.15] {crossed_chords2.png} \end{center}
-
-First we prove the following:
-
-\emph{Lemma}.
-
-Let $AB$ be a chord (not diagonal) in a circle on center $O$, with $OM \perp AB$ and bisecting $AB$ so $AM = BM$.
-
-Let $E$ be an arbitrary point on $AB$.
-
-I claim that 
-\[ AE \cdot EB + EM^2 = BM^2 \]
-
-This can be proved by geometry (Euclid II.5), but algebra is quicker:
-
-Let $x = AM = BM$, and $y = EM$.  
-
-Then $EB = x - y $ and $AE = x + y$.  We have
-\[ (x+y)((x-y) + y^2 = x^2 \]
-which is easily verified.
-
-Starting with
-\[ AE \cdot EB + EM^2 = BM^2 \]
-Add the square on $OM$ to both sides.
-\[ AE \cdot EB + EM^2 + OM^2 = BM^2 + OM^2 \]
-\[ AE \cdot EB + OE^2 = OB^2 \]
-\[ AE \cdot EB = OB^2 - OE^2 \]
-
-$\square$
-
-The product of the two parts of a chord cut at any point $E$ is equal to the difference of squares of the radius of the circle and the distance from the center to the point $E$.
-
-This leads to our proof of the crossed-chords theorem.
-
-\emph{Proof}.
-
-So then let some other chord $CD$ (not diagonal) cut $AB$ at $E$.  We will have the same right-hand side.
-
-\[ CE \cdot ED = OB^2 - OE^2 \]
-Thus
-\[ AE \cdot EB = CE \cdot ED \]
-
-$\square$
-
 \subsection*{Euclid II.14}
 
 \label{sec:Euclid_II_14}

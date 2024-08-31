@@ -21,36 +21,126 @@
 
 %[my-super-duper-separator]
 
-\subsection*{Chord segments}
+Let us start with two propositions from Book II of \emph{Elements}, which deal with what might be termed geometric algebra.
 
-\label{sec:chord_segments}
+\subsection*{Euclid II.5}
 
-There is a simple algebraic relationship between the line segments formed when any two chords cross in a circle.
+\label{sec:Euclid_II_5}
 
-Draw two chords of a circle and then draw additional line segments to form two triangles (left panel).  
+\begin{center} \includegraphics [scale=0.2] {gnomon1.png} \end{center}
 
-$\circ$  These two triangles are similar.
+In this figure, the line $AB$ is bisected at $M$ and then the point $P$ placed somewhere within $MB$.  The first proposition, II.5, says that
+\[ AP \cdot PB + MP^2 = MB^2 \]
 
-\begin{center} \includegraphics [scale=0.4] {arcs6.png} \end{center}
+It may make more sense if we try algebra first.  Let $x = AM$ and $y = MP$ so $AP = x + y$ and $PB = x - y$ and then
 
-\emph{Proof}.
+\[ AP \cdot PB = x^2 - y^2 = MB^2 - MP^2 \]
+Quite straightforward.
 
-The angles $s$ is equal to its primed counterpart $s'$, because they both are subtended by the same arc.  $u = u'$ by the vertical angle theorem.  We have AAA similarity.
+$AP \cdot PB$ is the area of rectangle $AD$, $PE$ is the square on $PB$, with $PB = BE$, and $CF$ is the square on $CD$, with $CD = MP = EG$.
 
-$\square$
+The construction contains two sets of equal rectangles.  The first is $AC = ME = BF$.  And the second is $MD = DG$.  This is by I.43.
 
-$\circ$  For any two chords that cross in a circle, the products of the two components of each chord are equal. 
+In the figure below, the two white parallelograms are equal.
+\begin{center} \includegraphics [scale=0.12] {EI_43.png} \end{center}
 
-In the right panel, the letters refer to sides of the similar triangles.  Corresponding sides are indicated by color or style.
+We saw an example very early for rectangles as the \hyperref[sec:area_ratio_theorem]{\textbf{area-atio theorem}}.
+\begin{center} \includegraphics [scale=0.4] {Acheson_G42.png} \end{center}
+\[ ad = bc \]
 
-\[ \frac{a}{d} = \frac{c}{b} \]
-\[ ab = cd  \]
+Returning to the present theorem
+\begin{center} \includegraphics [scale=0.2] {gnomon1.png} \end{center}
 
-$\square$
+As  noted, the construction contains two sets of equal rectangles.  The first is $AC = ME = PG$, while the second is $MD = DG$.
 
-Another theorem applies to chords extended from a circle.
+Here's the neat idea: the rectangle $PG$ contains the blue rectangle plus $DG$.  But since $MD = DG$ this is also $ME$ and $ME = AC$.
 
-\begin{center} \includegraphics [scale=0.4] {arcs9.png} \end{center}
+So then finally $AD$ is equal in area to the L-shaped piece called a \emph{gnomon}.  
+
+And if we add $CF$ (equal to $MP^2$) to that we have $MG$ (equal to $MB^2$).
+
+\[ AP \cdot PB + MP^2 = MB^2 \]
+
+\subsection*{Euclid II.6}
+
+\label{sec:Euclid_II_6}
+
+The second theorem is very similar but has the point $P$ located on an extension of $AB$:
+\begin{center} \includegraphics [scale=0.15] {gnomon2.png} \end{center}
+
+Again we have a gnomon and a difference of squares.  The gnomon is equal to the whole rectangle $AP \cdot PB$ and when added to $MB^2$ we get the whole large square $MP^2$
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+In the final formula, we have just switched $MB$ and $MP$, although $AP$ is not what it used to be.
+
+In algebraic terms we let $AM = x$ and now $PB = y$ so
+\[ (2x + y) y + x^2 = 2xy + y^2 + x^2 = (x + y)^2 \]
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+\subsection*{application to chords}
+
+We have a chord $AB$ of a circle on center $O$.  $AB$ is bisected at $M$ and $P$ is placed somewhere within $MB$.
+\begin{center} \includegraphics [scale=0.16] {EIII_35b.png} \end{center}
+
+By II.5
+\[ AP \cdot PB + MP^2 = MB^2 \]
+\[ AP \cdot PB = MB^2 - MP^2 \]
+
+We notice both terms on the right are part of right triangles.
+\[ AP \cdot PB = (MB^2 + OM^2) - (MP^2 + OM^2) \]
+\[ = r^2 - OP^2 \]
+
+Let $d$ be the distance from $P$ to the center, and this becomes
+\[ AP \cdot PB = r^2 - d^2 \]
+This result is \emph{independent} of the particulars of $AB$ and depends only on the placement of $P$ (and the requirement that $AB$ pass through $P$).  So any other chord that also passes through $P$, say $CD$, has the same result.
+
+\begin{center} \includegraphics [scale=0.15] {EIII_35c.png} \end{center}
+\[ AP \cdot PB = CP \cdot PD \]
+This, III.35, is just the crossed chord theorem in disguise.
+
+\subsection*{tangent}
+
+The next theorem concerns the tangent.
+\begin{center} \includegraphics [scale=0.18] {EIII_36.png} \end{center}
+
+Here we have $AB$ bisected at $M$, the center of the circle, and then $P$ placed on the extension of $AB$.
+
+By II.6
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+$MB$ and $MT$ are radii so
+\[ AP \cdot PB = MP^2  - MT^2 = PT^2 \]
+
+The length of the tangent from point $P$, squared, is equal $AP \cdot PB$.
+
+We can also generalize the result by letting $d$ be the distance of $P$ from the center of the circle, $MP$, and $t$ be the length of the tangent, $PT$.  Then
+\[ d^2 - r^2 = t^2 \]
+
+This is just the same result as for crossed chords, but with a minus sign.
+
+\subsection*{secant}
+
+\begin{center} \includegraphics [scale=0.20] {EIII_36b.png} \end{center}
+
+As with the tangent, by II.6 we have
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+and again, we have right triangles so
+\[ AP \cdot PB + (MB^2 + OM^2) = (MP^2 + OM^2) \]
+\[ AP \cdot PB + OB^2 = OP^2 \]
+
+so again
+\[ AP \cdot PB = d^2 - r^2 \]
+
+By using the previous two results together, we have that for any secant drawn from $P$, $PA \cdot PB$ is equal to the square of the tangent from the same point $PT^2$.
+
+This is the $\hyperref[sec:secant_tangent_theorem]{\textbf{secant tangent theorem}}$.
+
+\subsection*{proofs based on similar triangles}
+
+A modern proof would use similar triangles, but this requires a theory of proportions that Euclid doesn't have yet in book III.
+
+\begin{center} \includegraphics [scale=0.35] {arcs9.png} \end{center}
 
 \[ PQ \cdot PR = PS \cdot PT \]
 
@@ -64,13 +154,13 @@ This strongly suggests we look at similar triangles.
 
 Draw the two triangles.
 
-\begin{center} \includegraphics [scale=0.4] {arcs10.png} \end{center}
+\begin{center} \includegraphics [scale=0.35] {arcs10.png} \end{center}
 
 We showed previously that for any quadrilateral whose four vertices all lie on one circle (a cyclic quadrilateral), the opposing vertices have supplementary angles.  Opposing vertices add to $180^{\circ}$ because their arc segments add up to one whole circle.
 
 In the figure above, the angle at vertex $R$ is supplementary to $\angle QST$.  But $\angle QST$ is also supplementary to $\angle QSP$. 
 
-Therefore $\angle QSP$ is equal to the angle at $R$, and $\triangle PQS$ is similar to $\triangle PRT$.  The similarity is such that
+Therefore $\angle QSP$ is equal to the angle at $R$, $\angle P$ is shared, so the $\triangle PQS$ is similar to $\triangle PRT$.  The similarity is such that
 
 \[ \frac{PS}{PR} = \frac{PQ}{PT} \]
 \[ PS \cdot PT = PQ \cdot PR \]
@@ -89,7 +179,7 @@ We can do a bit more.
 
 \label{sec:secant_tangent_theorem}
 
-\begin{center} \includegraphics [scale=0.4] {arcs9b.png} \end{center}
+\begin{center} \includegraphics [scale=0.35] {arcs9b.png} \end{center}
 
 Let the points $S$ and $T$ approach each other to become one point.  Then $PT$ will become a tangent of the circle.  Previously we had
 \[ PS \cdot PT = PR \cdot PQ \]
@@ -114,7 +204,7 @@ Note:  we've seen this sort of reverse logic a few times already.  The method ha
 
 \emph{Proof}.
 
-The angle $\angle PTQ$ formed by the tangent $PT$ and the chord $QT$ cut off the same arc of the circle as the angle formed at vertex $R$ (see the last example of the previous chapter), so the two angles marked with black dots are equal.
+The angle $\angle PTQ$ formed by the tangent $PT$ and the chord $QT$ cut off the same arc of the circle as the angle formed at vertex $R$ so the two angles marked with black dots are equal.
 
 Here is a proof using similar right triangles.
 \begin{center} \includegraphics [scale=0.15] {tangent angle.png} \end{center}
@@ -140,41 +230,11 @@ Now it is clear that $\angle S = \angle R$ because they both sweep out the arc $
 
 The same angle marked in magenta is also complementary to $\angle PTQ$.  Therefore $\angle PTQ = \angle S = \angle R$.  We continue the proof with analysis of similar triangles, as before.
 
-One application of this theorem is to a determination of the size of the earth.  We'll see that later in the book.
-
-\subsection*{power of a point}
-
-The previous results regarding secants and tangents are sometimes united in a definition called the "power" of a point, which unifies the treatment of points inside and outside the circle.
-\begin{center} \includegraphics [scale=0.5] {ppoint1.png} \end{center}
-
-\url{https://artofproblemsolving.com/wiki/index.php/Power_of_a_Point_Theorem}
-
-Let's start with a point outside.
-\begin{center} \includegraphics [scale=0.20] {power1.png} \end{center}
-The length of the tangent and the radius are simply related to the distance from any point $P$ to the center of the circle, $d$:
-\[ d^2 = t^2 + r^2 \]
-\[ t^2 = d^2 - r^2 \]
-$d^2 - r^2$ is defined as the \emph{power} $p$ of the point $P$.
-
-From our previous work, we know that 
-\[ p = t^2 = PT^2 = PA \cdot PA' \]
-
-The definition also works for a point inside the circle.
-\begin{center} \includegraphics [scale=0.20] {power2.png} \end{center}
-
-By the crossed chords theorem:
-\[ PA \cdot PA' = (r+d)(r-d) \]
-\[ = r^2 - d^2 = -p \]
-That is, it works if we use \emph{directed line segments}, so that the product $PA \cdot PA'$ for $P$ inside the circle has its two components pointing in opposite directions, and thus acquires a minus sign.
-
-If the point is \emph{on} the circle, it's a bit strange, but we are at the boundary between $p < 0$ and $p > 0$, so it seems reasonable that $p = 0$ for points on the circle.  And there, of course
-\[ p = d^2 - r^2 = 0 \]
+One application of this theorem is to a determination of the size of the earth.
 
 \subsection*{Looking at Euclid}
 
-I learned the secant-tangent theorem from Acheson, and continue in the same vein by appropriating an entire example from his book.  
-
-Here's the problem.  We're looking up at a statue of Euclid on a column.
+We're looking up at a statue of Euclid on a column.
 
 \begin{center} \includegraphics [scale=0.4] {euclid.png} \end{center}
 

@@ -33,12 +33,12 @@ Tangents
 Arcs of a circle
 Chords in a circle
 Cyclic quadrilateral
+Secant tangent theorem
+Power of a point
 
 Practice with proofs
 Ptolemy
 Elements
-Secant tangent theorem
-Power of a point
 Broken Chord
 Euler Theorem
 Euler Line
