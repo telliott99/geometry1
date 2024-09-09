@@ -53,58 +53,43 @@ $\square$
 
 \label{sec:ceva_by_area}
 
-We will look at two more, very classic proofs of Ceva's theorem.  These again show the close relationship between similarity in triangles, and area.
+Draw $\triangle ABC$ and let $P$ be a point somewhere inside.  Extend lines from each vertex through $P$ to reach the opposite side.
 
-The second one depends on \hyperref[sec:area_ratio_theorem]{\textbf{area-ratio theorem}} we developed previously.
+\begin{center} \includegraphics [scale=0.22] {ceva_thm1.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.5] {area11.png} \end{center}
+Consider two of the smaller triangles, say, $\triangle APB$ and $\triangle APC$.
 
-This is simple algebra based on the area formula:  one-half the base times the height.  Since the two different shaded triangles have the same altitude, the ratio of their areas is the same as the ratio of the length of the bases.
+\begin{center} \includegraphics [scale=0.22] {ceva_thm2.png} \end{center}
 
-In the triangle shown below, draw a line from the vertex $A$ to the opposite side $BC$, dividing it into lengths $a_1$ and $a_2$.
+If we think of $AP$ as the base for both triangles, then $BE$ is the altitude of the first one and $CF$ is the altitude of the second.  Since they have the same base, the ratio of areas is in the proportion:
+\[ \frac{\mathcal{A}_{APB}}{\mathcal{A}_{APC}} = \frac{BE}{CF} \]
 
-\begin{center} \includegraphics [scale=0.5] {ceva_new1.png} \end{center}
+But now consider $\triangle BEX$ and $\triangle CFX$.  They are both right triangles with shared vertical angles.  Thus
+\[ \triangle BEX \sim \triangle CFX \]
+As similar triangles, the sides are in proportion
+\[ \frac{BX}{CX} = \frac{BE}{CF} = \frac{\mathcal{A}_{APB}}{\mathcal{A}_{APC}} \]
 
-Drop the altitudes from the other vertices to the line.  We have vertical angles as well as the corresponding right angles, hence the two triangles are similar with ratios:
-\[ \frac{a_1}{a_2} = \frac{h_1}{h_2} \]
+Reversing the order of the triangles and using a simpler notation for the parts of side $a$:
+\[ \frac{a}{a'} = \frac{\mathcal{A}_{APC}}{\mathcal{A}_{APB}} \]
 
-\begin{center} \includegraphics [scale=0.5] {ceva_new2.png} \end{center}
+\begin{center} \includegraphics [scale=0.22] {ceva_thm3.png} \end{center}
 
-Hence the altitudes are in the same ratio as the parts of the side $a_1/a_2$.
+This result is completely general.  $P$ could be anywhere, and we can compare any two of the three triangles.
+\[ \frac{b}{b'} = \frac{\mathcal{A}_{BPC}}{\mathcal{A}_{APC}}, \ \ \ \ \ \ \ \ \frac{c}{c'} = \frac{\mathcal{A}_{APB}}{\mathcal{A}_{BPC}} \]
 
-Now, pick a point \emph{anywhere} on that line.
-
-\begin{center} \includegraphics [scale=0.5] {ceva_new3.png} \end{center}
-
-We'll focus on $P$, but $Q$ would give the same result.  The triangle $\triangle APB$ can be visualized as having base $AP$ and altitude $h_1$, while $\triangle APC$ has the same base $AP$ and altitude $h_2$.
-
-Since they have the identical base, the areas are in same the ratio as the altitudes, but these are, in turn, in the same ratio as the parts of the side.
-\[ \frac{\Delta_{APB}}{\Delta_{APC}} = \frac{h_1}{h_2} = \frac{a_1}{a_2} \]
-
-Let us abbreviate those areas as $L = \Delta_{APC}$ and $M = \Delta_{APB}$.  We have
-
-\begin{center} \includegraphics [scale=0.5] {ceva_new4.png} \end{center}
-
-\[ \frac{M}{L} = \frac{a_1}{a_2} \]
-
-Now we just appeal to symmetry.
-
-\begin{center} \includegraphics [scale=0.5] {ceva_new5.png} \end{center}
-
-\[ \frac{K}{M} = \frac{b_1}{b_2} \]
-\[ \frac{L}{K} = \frac{c_1}{c_2} \]
-
-Multiply together to obtain a big cancelation:
-
-\[ \frac{M}{L} \cdot  \frac{K}{M} \cdot  \frac{L}{K} = \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot  \frac{c_1}{c_2} \]
-\[ 1 = \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot  \frac{c_1}{c_2} \]
-
-This is the forward version of Ceva's theorem.  If we draw the three lines to be concurrent, then the parts of the sides are in this ratio, which we can also write
-\[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} =  \frac{c_2}{c_1} \]
+ \begin{center} \includegraphics [scale=0.22] {ceva_thm4.png} \end{center}
+ Multiplying:
+ \[ \frac{\mathcal{A}_{APC}}{\mathcal{A}_{APB}} \cdot \frac{\mathcal{A}_{BPC}}{\mathcal{A}_{APC}} \cdot  \frac{\mathcal{A}_{APB}}{\mathcal{A}_{BPC}} =  \frac{a}{a'} \cdot  \frac{b}{b'} \cdot  \frac{c}{c'}  \]
+ 
+ Since the left-hand side cancels, we obtain:
+ \[ \frac{a}{a'} \cdot  \frac{b}{b'} \cdot  \frac{c}{c'} = 1 \]
 
 $\square$
 
-The proof also works in reverse,
+This is Ceva's theorem.
+
+The proof also works in reverse,  We change notation slightly, since we will use the prime symbol for another purpose.
+
 \[ \frac{a_1}{a_2} \cdot \frac{b_1}{b_2} \cdot  \frac{c_1}{c_2}  = 1 \iff \text{3 lines cross at point P} \]
 
 \emph{Proof}.
@@ -132,16 +117,10 @@ $\square$
 
 In the general case, the crossing lines are called cevians.  In the case of medians, they divide the sides opposite in half, and then the central point is called the centroid.  Recall that we had
 
-\[ \frac{M}{L} = \frac{a_1}{a_2} \]
-\[ \frac{K}{M} = \frac{b_1}{b_2} \]
+\[ \frac{a}{a'} = \frac{\mathcal{A}_{APC}}{\mathcal{A}_{APB}} \]
+\[ \frac{b}{b'} = \frac{\mathcal{A}_{BPC}}{\mathcal{A}_{APC}} \]
 
-But if $a_1 = a_2$ and $b_1 = b_2$, then $K = L = M$.  
-
-Furthermore, the two component triangles of region $K$ have equal area, because they share the vertex at $P$ and their bases are equal.  (Which also implies the previous result).
-
-Therefore, in the case of medians, all six small triangles are equal in area.
-
-\begin{center} \includegraphics [scale=0.5] {ceva_new4.png} \end{center}
+But if $a = a'$ and $b = b'$, then $\mathcal{A}_{APC} = \mathcal{A}_{APB} = \mathcal{A}_{BPC}$.  
 
 For a physical object, the point $P$ would be the \emph{center of mass}.
 
@@ -162,7 +141,7 @@ Therefore, $BGCH$ has two pairs of opposing sides parallel so it is a parallelog
 In addition, $GD = DH$.  Thus, $GD$ is one-half of $GH$, and $GH$ is equal to $AG$, so $GD$ is one-quarter of $AH$ and one-third of $AD$.  $G$ lies on all three medians, and is called the \emph{centroid} of the triangle.  For a physical triangle it would be the center of mass.
 
 \subsection*{Centroid alternate proof}
-\begin{center} \includegraphics [scale=0.20] {centroid4.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {centroid4.png} \end{center}
 
 The medians divide any triangle into six equal small triangles.
 
@@ -236,40 +215,32 @@ This occurs because the position of $P$ with respect to each altitude is the sam
 
 \label{sec:ceva_alternate_proof}
 
-I found an alternative approach to proving Ceva's theorem as an exercise in a geometry textbook by Jurgensen \emph{et al}.  It's a bit weird because this is the only mention of the theorem in the book.  I like the proof, which is only hinted at, because we enhance the original diagram, and it provides exercise using similar triangles.
+\begin{center} \includegraphics [scale=0.2] {ceva10.png} \end{center}
+I found an alternative approach in a geometry textbook by Jurgensen \emph{et al}.  It's a bit weird because this is the only mention of the theorem in the book.  I like the proof, which is only hinted at, because we enhance the original diagram, and it provides exercise using similar triangles.
 
-The problem says to extend line segments parallel to $CX$ from $A$ and $B$ and form triangles with the extensions of $BZ$ and $AY$.
+Draw $AX$ and $BY$ parallel to $CPZ$.
 
-\begin{center} \includegraphics [scale=0.35] {ceva6.png} \end{center}
+I found the algebra to be a little cleaner with different notation, using lowercase letters for the lengths.
+\begin{center} \includegraphics [scale=0.2] {ceva11.png} \end{center}
 
-The hint given is to consider similar triangles.  There are a number of them, due to the three parallel lines.  I found the algebra to be a little cleaner with different notation, using lowercase letters for most of the sides.
+\emph{Proof}.
 
-\begin{center} \includegraphics [scale=0.35] {ceva8.png} \end{center}
+Parallel lines give similar triangles with the ratios:
+\[ \frac{a}{a'} = \frac{q}{e'}, \ \ \ \ \ \ \ \ \frac{b'}{b} = \frac{p}{e'} \]
+which combine to give
+\[ \frac{q}{p} = \frac{a}{a'} \cdot \frac{b}{b'} \]
 
-We have that $\triangle CYP \sim \triangle MBY$ because $CX \parallel MB$.  So
-\[ \frac{x}{CP} = \frac{a}{a'} \]
+We also have
+\[ \frac{c + c'}{c} = \frac{q}{e}, \ \ \ \ \ \ \ \ \frac{c + c'}{c'} = \frac{p}{e} \]
+combined
+\[ \frac{c'}{c} = \frac{q}{p} \]
 
-With similar logic, we find that
-\[ \frac{y}{CP} = \frac{b'}{b} \]
+Equating the two results
+\[ \frac{c'}{c} = \frac{a}{a'} \cdot \frac{b}{b'} \]
+which rearranges to give
+\[ \frac{a}{a'} \cdot \frac{b}{b'} \cdot \frac{c}{c'} = 1 \]
 
-Hence 
-\[ \frac{x}{y} = \frac{a}{a'} \cdot \frac{b}{b'} \]
-
-We also have similar triangles that involve the base $AB$, such as the one with vertex $N$ compared to vertex $P$.  $\triangle ABN \sim \triangle XBP$ so that
-\[ \frac{y}{XP} = \frac{c + c'}{c'} \]
-
-With similar logic, we find that
-\[ \frac{x}{XP} = \frac{c + c'}{c} \]
-
-So that
-\[ \frac{x}{y} = \frac{c'}{c} \]
-
-Combined with the previous result:
-\[ \frac{x}{y} = \frac{a}{a'} \cdot \frac{b}{b'} = \frac{c'}{c} \]
-
-Thus
-
-\[ \frac{a}{a'} \cdot \frac{b}{b'} \cdot  \frac{c}{c'} = 1 \]
+$\square$
 
 \subsection*{Viviani}
 
@@ -277,42 +248,57 @@ Here's a problem from Acheson that looks challenging, but yields easily to the r
 
 \begin{center} \includegraphics [scale=0.4] {Viviani.png}  \end{center}
 
-Rather than letting $P$ be a special point, it can be anywhere inside the triangle.  $P$ is the opposite of a special point, it is completely general.
+Rather than letting $P$ be a special point, it can be anywhere inside the triangle.  $P$ is the opposite of a special point, it is completely general.  However, we are also given that the triangle is equilateral.
 
-However, we are also given that the triangle is equilateral.
+Let $\triangle ABC$ be equilateral, and let $P$ be an arbitrary point internal.
+\begin{center} \includegraphics [scale=0.20] {Viviani3.png}  \end{center}
 
-\begin{center} \includegraphics [scale=0.4] {Viviani2.png}  \end{center}
+Draw the lines perpendicular to each of the sides from $P$.  The sum of the three lengths is the same no matter where $P$ is chosen inside $\triangle ABC$.
 
-Note that $AP$ is not the continuation of the vertical down to side $a$.  If you look closely, there is a kink, a change of direction, at $P$.  None of the dotted lines is parallel to any other line.
+\emph{Proof}.
 
-The area of $\triangle APB = hc/2$, and so on for the sub-triangles, so the area of the whole triangle is
-\[ 2 \Delta = hc + fa + gb \]
+Draw the lines connecting the three vertices with $P$.
+\begin{center} \includegraphics [scale=0.20] {Viviani4.png}  \end{center}
 
-But since the triangle is equilateral, $a = b = c = s$.
-\[ 2 \Delta = s(f + g + h) \]
-\[ \frac{2 \Delta}{s} = f + g + h \]
+$\mathcal{A}_{ABC}$ is the sum of the areas of the three small triangles:
+\[ 2\mathcal{A}_{ABC} = af + bg + ch \]
+Let $a=b=c=s$
+\[ 2\mathcal{A}_{ABC} = s(f + g + h) \]
 
-From the properties of equilateral triangles, we also know that for a triangle with sides of unit length, the altitude has length $\sqrt{3}/2$, so twice the area $2 \Delta = \sqrt{3}/2$, 
+We also know that the altitude of an equilateral triangle is in the ratio to the side as $\sqrt{3}/2$ so twice the area is
+\[ 2\mathcal{A}_{ABC} = \frac{\sqrt{3}}{2} \ s \cdot s \]
 
-and then finally
-\[ \frac{\sqrt{3}}{2} = f + g + h \]
+It follows that 
+\[ f + g + h =  \frac{\sqrt{3}}{2} \ s  \]
 
-and that is true no matter where $P$ is placed inside this equilateral triangle.
+which is a constant for any given triangle, independent of the position of $P$ inside this equilateral triangle.
 
-\subsection*{problem}
+\subsection*{problem (Posamentier 1.18)}
 
-Draw $PQ$ parallel to $BC$, then draw $CP$ and $BQ$.  If $AM$ is the median of $\triangle ABC$, these lines are concurrent.
+In $\triangle ABC$, draw $DE \parallel AC$.
 
-\begin{center} \includegraphics [scale=0.4] {Posamentier1_18.png}  \end{center}
+Let $BM$ be the median to side $b$.
 
-By (parts of) similar triangles
+Draw $AE$ and $CD$.  
 
-\[ \frac{CQ}{QA} = \frac{PB}{AP} \]
-\[ \frac{CQ}{QA} \cdot \frac{AP}{PB} = 1 \]
+Then, the two lines $AE$ and $CD$ are concurrent with $BM$ at a point, $P$.
 
-since $BM = MC$
-\[ \frac{CQ}{QA} \cdot \frac{AP}{PB} \cdot \frac{BM}{MC} = 1 \]
+\begin{center} \includegraphics [scale=0.2] {Ceva_prob.png}  \end{center}
 
-By the converse of Ceva's theorem, these lines are concurrent.
+\emph{Proof}.
+
+By the converse of Ceva's theorem, the lines will be concurrent if
+\[ \frac{AM}{MC} \cdot \frac{CE}{EB} \cdot \frac{BD}{DA} = 1 \]
+
+Since $AM = MC$, the first term is just $1$.  Then, it remains to show that
+\[ \frac{CE}{EB} \cdot \frac{BD}{DA} = 1 \]
+
+We have $\triangle ABC \sim \triangle DBE$ so
+\[ \frac{BD}{AD} = \frac{BE}{CE} \]
+
+Substituting, we satisfy the condition for concurrence.
+\[ \frac{CE}{BE} \cdot \frac{BE}{CE} = 1 \]
+
+$\square$
 
 \end{document}

@@ -191,59 +191,60 @@ This is the same relationship we obtained by determining the total length of the
 
 \label{sec:Heron_formula_Heron}
 
-Lastly we go through Heron's proof of the eponymous theorem (as given by Paul Yiu).  I've stolen the diagram, but switched labels on a few of the points.  
+Lastly we go through Heron's proof of the eponymous theorem.  I obtained this from a web page written by Dr. Paul Yiu, which has disappeared.
 
-The triangle is $\triangle ABC$ with incircle radii $OD$, $OE$ and $OF$.
-\begin{center} \includegraphics [scale=0.3] {heron2.png} \end{center}
-$BT$ is drawn equal in length to $AD$, so that the whole length $CT = s$.
+The triangle is $\triangle ABC$ with incircle radii $ID$, $IE$ and $IF$.  The tangents are drawn as $x, y, $ and $z$.
 
-Two right triangles are drawn on the diameter of a circle $LC$, so $B$ and $O$ lie on the circle and $\angle LBC = \angle LQC $ are right angles.
+I find it easier to follow the proof using single letters for the lengths, so these have been labeled as shown.  $BT$ is drawn equal in length to $AD = x$, so that the whole length $CT$ is equal to the semi-perimeter, $s = x + y + z$.
 
-As usual, the whole triangle is the sum of three pairs of equal triangles whose total base is the semiperimeter and altitude is equal to the radius $EO$.  $CT$ is drawn to be equal to the semiperimeter, hence the area of the triangle is $CT \cdot OE$.
+\begin{center} \includegraphics [scale=0.2] {heron2b.png} \end{center}
 
-The total angle at $L$ is equal to $\angle AOD$.  
+\emph{Proof}.
 
-\emph{Proof}.  Because $\angle L$ and $\angle BOC$ are opposing angles in a quadrilateral inscribed into a circle, they are supplementary.  But the components of $\angle BOC$ ($\angle BOE$ and $\angle COE$) are, together with $\angle AOD$, one-half the total angle at $O$.  Thus $\angle BOC + \angle AOD$ are together equal to two right angles and $\angle BOC$ is supplementary also to $\angle AOD$.  Hence $\angle L = \angle AOD$.  $\square$
+$\triangle CBL$ and $\triangle CIK$ are drawn as right triangles with hypotenuse $CL$.
 
-As a result, we have two pairs of similar right triangles:  $\triangle CBL \sim \triangle AOD$ and $\triangle LBK \sim EKO$ (since $OE \parallel BL$).
+By the converse of Thales' theorem, $B$ and $I$ lie on a circle with diameter $CL$.
 
-\begin{center} \includegraphics [scale=0.3] {heron2.png} \end{center}
-Now we follow quite a chain of ratios.
+$BICL$ is then a cyclic quadrilateral with $\angle L$ supplementary to $\angle BIC$.  
 
-From the first pair of similar triangles ($\triangle CBL \sim \triangle AOD$), we have the ratio of bases as
-\[ \frac{BC}{BL} = \frac{AD}{DO} \]
-Rearranging:
-\[ \frac{BC}{AD} = \frac{BL}{DO} \]
-Substituting $BT = AD$ and $EO = DO$
-\[ \frac{BC}{BT} = \frac{BL}{EO} \]
+But the latter is supplementary to $\beta + \gamma$ in $\triangle BIC$ (using our standard notation for the half-angles).  
 
-From the second pair ($\triangle LBK \sim EKO$) we have
-\[ \frac{BL}{BK} = \frac{OE}{KE} \]
-\[ \frac{BL}{OE} = \frac{BK}{KE} \]
+Hence $\angle L = \beta + \gamma$.
+
+But $\angle AID$ is complementary to $\alpha$, so it is also equal to $\beta + \gamma$.
+
+It follows that $\angle L = \angle AID$, and then $\triangle CBL \sim \triangle AID$.
+
+It is somewhat easier to find $\triangle LBK \sim \triangle IEK$, since they are both right triangles with shared vertical angles.
+
+We form ratios for the similar triangles.  From $\triangle CBL \sim \triangle AID$:
+\[ \frac{u}{r} = \frac{y+z}{x} \]
+
+Note that $y = BE = BD$ so $BK = y - t$.  Then from $\triangle LBK \sim \triangle IEK$:
+\[ \frac{u}{r} = \frac{y-t}{t} \]
+\begin{center} \includegraphics [scale=0.2] {heron2b.png} \end{center}
+
 Hence
-\[ \frac{BC}{BT} = \frac{BK}{KE} \]
-The rest is relatively straightforward.
+\[ \frac{y+z}{x} = \frac{y-t}{t} \]
+Which looks simple enough to be encouraging.  Add $1$ to both sides and it gets even better:
+\[ \frac{x + y+z}{x} = \frac{y}{t} \]
 
-Adding $1$ to both sides
-\[ \frac{BC+BT}{BT} = \frac{BK+KE}{KE} \]
-\[ \frac{CT}{BT} = \frac{BE}{KE} \]
-\begin{center} \includegraphics [scale=0.3] {heron2.png} \end{center}
+Let $s$ be the semi-perimeter, as usual:
+\[ s = \frac{xy}{t} \]
 
-Rearranging
-\[ CT = BT \cdot \frac{BE}{KE} \]
-Multiply top and bottom by $CE$:
-\[ CT = BT \cdot \frac{BE}{KE} \cdot \frac{CE}{CE} \]
-\begin{center} \includegraphics [scale=0.3] {heron2.png} \end{center}
+Since $\triangle IKC$ is right, and $IE = r \perp CK$, we have $r^2 = tz$ and $1/t = z/r^2$ so, substituting:
+\[ s = \frac{xyz}{r^2} \]
+\[ r^2 s = xyz \]
+\[ r^2 s^2 = xyzs \]
 
-$\triangle COK$ is right, thus $OE^2 = CE \cdot KE$ (in conventional notation $h^2 = de$).
+since $\mathcal{A} = rs$
+\[ \mathcal{A}^2 = xyzs \]
 
-So then
-\[ OE^2 \cdot CT = BT \cdot BE \cdot CE \]
-\[ OE^2 \cdot CT = AD \cdot BE \cdot CE \]
-\[ OE^2 \cdot CT^2 = AD \cdot BE \cdot CE \cdot CT \]
 $\square$
 
 This is Heron's theorem.
+
+
 
 
 \end{document}

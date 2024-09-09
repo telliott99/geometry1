@@ -224,18 +224,70 @@ $\square$
 Here is still another proof, from Paul Yiu, together with a problem.  It includes the bisector of the external angle as well.
 
 The proof uses an extended line parallel to the bisector.
-\begin{center} \includegraphics [scale=0.4] {angle_bisector4a.png} \end{center}
-$\angle A$ in $\triangle ABC$ is bisected internally and externally.  
 
-Extend $BA$ and draw $CZ$ parallel to the bisector $AX$.  This gives a new $\triangle AZC$ which is isosceles by two applications of alternate interior angles, so $AZ = b$.
+In $\triangle ABC$ let $BD$ bisect $\angle ABC$.  Then
+\[ \frac{AB}{AD} = \frac{BC}{CD} \]
 
-By similar triangles, we have that $AZ/c = CX/BX$.  Substitute from above to obtain $CX/BX = b/c$.  
+\begin{center} \includegraphics [scale=0.20] {bisector_int.png} \end{center}
 
-Now for the external angle theorem.  We draw $CZ'$ parallel to the angle bisector $AX'$.  Again, there is an isosceles triangle formed,  $\triangle ACZ'$.
+\emph{Proof}.
 
-We express the theorem as the ratio of the entire base $BX'$ to the external part $CX'$.  By similar triangles, this ratio is equal to the ratio of $c$ to $AZ'$, but analogous to what we had before, $AZ' = b$.  So $BX'/CX' = c/b$.
+Draw $CE \parallel BD$ and extend $AB$ to meet it at $E$.
 
-(There is a minus sign on $b$ if you're using signed lengths, which we do not worry about here).
+$\angle BEC = \angle BCE = \angle ABD = \angle CBD$.  The last one is given and the others are by alternate interior angles.
+
+$\triangle ABD \sim \triangle AEC$, since $\angle A$ is shared.
+
+Thus
+\[ \frac{AB}{AD} = \frac{BE}{CD} \]
+
+But $\triangle BCE$ is isosceles, with $BE = BC$.
+
+It follows that
+\[ \frac{AB}{AD} = \frac{BC}{CD} \]
+
+$\square$
+
+\subsection*{converse}
+
+\emph{Proof}.  (Sketch).
+
+Extend $AB$ so that $BE = BC$.
+
+Follow the same steps as before, but in reverse order.
+
+It follows that $\angle ABC$ is bisected by $BD$.
+
+$\square$
+
+\subsection*{external angle proof}
+
+Let $\angle CBE$ be an external angle for $\triangle ABC$, and $BF$ bisect it.  Then
+
+\[ \frac{AB}{BC} = \frac{AF}{CF} \]
+
+\begin{center} \includegraphics [scale=0.20] {bisector_ext.png} \end{center}
+
+\emph{Proof}.
+
+Draw $GC \parallel BF$.
+
+$\angle BGC = \angle BCG = \angle CBF = \angle EBF$ by alternate interior angles.
+
+$\triangle ABF \sim \triangle AGC$.
+
+Thus
+\[ \frac{AB}{AF} = \frac{BG}{CF} \]
+
+But $\triangle BGC$ is isosceles, with $BG = BC$.
+
+It follows that 
+\[ \frac{AB}{AF} = \frac{BC}{CF} \]
+
+Rearranging
+\[ \frac{AB}{BC} = \frac{AF}{CF} \]
+
+$\square$
 
 Then to the problem:  find the ratio $AP/PB$.  
 \begin{center} \includegraphics [scale=0.4] {angle_bisector4b.png} \end{center}

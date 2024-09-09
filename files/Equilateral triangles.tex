@@ -65,107 +65,94 @@ We can check that against a general trigonometric formula for the area of any tr
 
 It can be quicker to rely on the fact that the area goes like the square of the side.  For side length $2$ we had $A = \sqrt{3}$.  If we shrink the triangle to side length $1$, the area goes down by a factor of four, to $A = \sqrt{3}/4$.
 
-\newpage
-
 \subsection*{circumscribed equilateral triangle}
 
 Here is a fun construction based on an equilateral triangle.  
 
+\begin{center} \includegraphics [scale=0.2] {equi_tri.png} \end{center}
+
 Any triangle fits into a unique circle (see the discussion of circles and bisectors of the chords).  Draw the circumcircle for equilateral $\triangle ABC$.
 
-Draw a radius to a vertex of the triangle, and extend it as the diameter $BD$.
+Draw a radius to a vertex of the triangle, and extend it as the diameter $BD$, which crosses the opposing  side at $E$.
 
-We can prove a number of properties.  One is that $DE = OE$.  
-
-It follows that $OE$ is one-half of $OB$ and one-third of $BE$.
+We can prove a number of properties.  A good place to start is that $BD$ bisects $\angle B$.
 
 \emph{Proof}.
 
-\begin{center} \includegraphics [scale=0.2] {equi_tri.png} \end{center}
-
-(1) Given $AB = BC = AC$ and all three vertex angles ($\angle B$, $\angle BAC$, $\angle BCA$), are equal, so each is two-thirds of a right angle.
-
-(2) $B$ is equidistant from the ends of $AC$, so it lies on the perpendicular bisector of $AC$.
-
-(3) It follows that $AE = CE$
-
-(4) the angles at $E$ are right angles
-
-(5) and $\triangle BAE \cong \triangle BCE$ by SSS or SAS.
-
-(6) So $\angle B$ is bisected, with $\angle ABD = \angle CBD$.
-
-By (3), the ratio of any side of the original triangle to $AE$ is $2:1$.
-
-(7) By Thales' theorem, $\triangle BAD$ and $\triangle BCD$ are right triangles.  
-
-(8) By (4), all the smaller triangles are right triangles.
-
-(9) By the corollary of the inscribed angle theorem $\angle CAD = \angle CBD$ and both are one-third of a right angle.
-
-(10) For the same reason, $\angle BDA = \angle BCA$ and by (1) both are two-thirds of a right angle.
-
-(11) By (3) and (4) $\triangle DAE \cong \triangle DCE$ by SAS.
-
-(12) Thus $AD = DC$.
-
-(13) and $\angle DAE = \angle DCE$.
+Connect $AO$ and $CO$ (only one is shown).  
 
 \begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
 
-(14) Draw $OA$.  $OA$ bisects $\angle BAC$ (just as $\angle B$ is bisected by $OB$, see above).
+$\triangle AOB \cong \triangle COB$ by SSS.
 
-(15) Hence $\angle OAC$ is one-third of a right angle.
+It follows that $\angle B$ is bisected.
 
-By (9) $\angle CAD$ is one-third of a right angle, so by (15) $\angle OAD$ is two thirds of a right angle.
+Since $AB = CB$, $\triangle ABE \cong \triangle CBE$ by SAS.
 
-(16) $\triangle AOD$ is (at least) isosceles, with base angles equal. By sum of angles, it follows that $\triangle AOD$ is equilateral.
-
-[Possibly easier:  $\triangle AOD$ is isosceles, with two sides being radii of the same circle.  $\angle AOD$ is the central angle for one-half of $\angle B$, hence it equals $\angle B$.  By sum of angles, $\triangle AOD$ is equi-angular, and then by I.6 it is equilateral.]
-
-(17) By (16) $OA = AD$ (i.e. $AD$ is equal to the radius).
-
-(18) $AOCD$ has opposing angles equal, so it is a parallelogram.
-
-(19) $AOCD$ has adjacent sides equal, so it is a rhombus.
+So the angles at $E$ are all equal, and thus right angles.
 
 $\square$
 
-\emph{Proof}. (Alternate)
+The next property is that $\triangle OAD$ is also equilateral.
 
-\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
+\emph{Proof}.
 
-$\triangle ABD$ is a right triangle by Thales' theorem.
+$\angle AOD$ is the central angle for the half-angle at $\angle B$, hence $\angle AOD = \angle B$.
 
-$\angle B$ is bisected so $\triangle ABD$ is 30-60-90.  We know that for such a triangle $2 AD = BD$.
-
-Thus $AD = OA = OD$, $\triangle AOD$ is equilateral, and $AOCD$ has four equal sides, so it is a rhombus.
-
-It follows that the diagonal $OD$ is bisected by $AC$.
+By inscribed angles, $\angle BDA = \angle C$, so $\triangle OAD$ is equi-angular, by sum of angles.  It is therefore equilateral.
 
 $\square$
 
-\emph{Proof}. (Alternate)
+The three congruence classes of right triangles are all similar. 
 
 \begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
 
-$\angle AOC$ is the central angle for $\angle ABC$, so it is twice $\angle ABC$.
+\emph{Proof}.
 
-$\angle ADB = \angle BCA$ and $\angle CDB = \angle BAC$ so $\angle ADC$ is twice $\angle BCA$ or $\angle BAC$.
+$\triangle BAD$ is a right triangle by Thales' theorem.  
 
-It follows that $\angle ADC = \angle AOC$.
+From above, $\triangle BEA$ and $\triangle AED$ are both right as well.
 
-But by Thales' theorem, $\angle BAD = \angle BCD$ and both are right angles.
+The first two share $\beta$ (the half-angle at $B$), while the third has $\angle ADB$ shared with $\triangle BAD$.
 
-Since the opposing angles are equal, $AOCD$ is a parallelogram.
+$\square$
 
-It follows that $OA = CD$ and $OC = AD$, thus all four sides are equal and $AOCD$ is a rhombus.
+$AD = AO = CO = CD$.
 
-Therefore, the diagonals bisect one another.
+\emph{Proof}.
+
+From above, $\triangle OAD$ is equilateral.  Similarly, $\triangle OCD$ is equilateral.
+
+It follows that $AOCD$ is a rhombus.
+
+This would also follow by the converse of the diagonals theorem for parallelograms, since $AE = CE$.
+
+$\square$
+
+Finally, $DE = OE = $ one-half of $OB$ and one-third of $BE$.
+
+\emph{Proof}.
+
+$\triangle BEA \sim \triangle BAD \sim \triangle AED$.
+
+Then $AD$ is one-half $BD$, but $DE$ is one-half $AD$, hence $1/4$ of $BD$.  
+
+Since $OD$ is one-half of $BD$, $DE$ is one-third of $BE$.
 
 $\square$
 
 \emph{Proof}.  (Alternate).
+
+Let the side length be $2$ and then $AE = CE = 1$.  By crossed chords, $AE \cdot CE = 1 = BE \cdot DE$.
+
+But by the Pythagorean theorem $BE = \sqrt{3}$ and then $DE = 1/\sqrt{3}$ and their ratio is
+\[ \frac{1}{\sqrt{3} \cdot \sqrt{3}} = \frac{1}{3} \]
+
+$\square$
+
+\emph{Proof}.  (Alternate).
+
+\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
 
 Let $AD = CD = d$ and $r$ be the radius of the circle.
 
@@ -173,7 +160,7 @@ By Ptolemy's theorem:
 \[ sd + sd = 2 rs \]
 \[ d = r \]
 
-It follows that $AOCD$ is a parallelogram, etc.
+It follows that $AOCD$ is a parallelogram, the diagonals bisect one another, etc.
 
 $\square$
 
@@ -181,14 +168,17 @@ Thus, the altitude of the equilateral triangle is $3/4$ of the diameter of the c
 
 \subsection*{problem}
 
-Here is a problem from Paul Yiu.  Given that $ABC$ is equilateral and that the points $D$ and $E$ are midpoints of the sides, find $DF/DE$.
-\begin{center} \includegraphics [scale=0.3] {equi2.png} \end{center}
+Here is a problem from Dr. Paul Yiu.  Given that $ABC$ is equilateral and that the points $D$ and $E$ are midpoints of the sides, find $DF/DE$.
+\begin{center} \includegraphics [scale=0.2] {equi2b.png} \end{center}
 
-We \emph{could} calculate the length of the perpendicular from $O$ to $DE$ and then use the Pythagorean theorem.
+We \emph{could} calculate the length of the perpendicular from the center of the circle ($O$, not labeled) to $DE$ and then use the Pythagorean theorem.
 
-A simpler approach is to set the side length of the triangle to $2$, so each half is $1$, and since $ADE$ is also equilateral, $DE = 1$.  Let $DF$ be $x$.  Then, by the theorem of crossed chords we have that
+A simpler approach is to set the side length of the triangle to $2$, so each half is $1$, and since $BDE$ is also equilateral, $DE = 1$ (or use the midline theorem).  
+
+Let $DF$ be $x$.  Then, by the theorem of crossed chords we have that
 \[ 1 \cdot 1 = (x-1) \cdot x \]
-\[ x^2 - x - 1 \]
+\[ x^2 - x - 1 = 0 \]
+Solve using the quadratic equation:
 \[ x = \frac{1 + \sqrt{5}}{2} = \phi \]
 This is the famous ``golden'' ratio.
 
@@ -209,7 +199,7 @@ so the square root is $\sqrt{5}/2$ and then we must add $1/2$ to obtain $DF$.  T
 Here is a second problem from Dr. Yiu.
 
 Crossing lines are drawn from the vertices in an equilateral triangle, such that the larger pair of angles at $P$ are each $120^{\circ}$.
-\begin{center} \includegraphics [scale=0.35] {equi3.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {equi3b.png} \end{center}
 We have that, since $\angle ZPY + \angle A = $ two right angles, the angles inside the quadrilateral at $Z$ and $Y$ are supplementary, so the opposing ones are equal.
 
 A consequence of that is $\triangle AYB$ and $\triangle BZC$ have all three angles the same, but also share a side, hence they are congruent.  Therefore $AY = BZ$ and $AZ = YC$.
@@ -231,11 +221,11 @@ so we can write
 \[ PC = AC \cdot YC/ZC \]
 Then we form the ratio (canceling $AB = AC$)
 \[ \frac{PB}{PC}  = \frac{ZB}{YB} \cdot \frac{ZC}{YC} \]
-\begin{center} \includegraphics [scale=0.35] {equi3.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {equi3b.png} \end{center}
 Using the equalities $ZC = BY$, $AY = ZB$, $AZ = YC$:
 \[ \frac{PB}{PC}  = \frac{ZB}{YC} = \frac{AY}{AZ} \]
 
-I have no idea if there is an easier solution, just happy to have found one.
+I don't know if there is an easier solution, just happy to have found one.
 
 \subsection*{Bertrand's paradox}
 

@@ -22,7 +22,14 @@
 %[my-super-duper-separator]
 
 In a previous \hyperref[sec:Ptolemy]{\textbf{chapter}} we introduced Ptolemy's theorem.
-\begin{center} \includegraphics [scale=0.5] {pt1.png} \end{center}
+\begin{center} 
+\includegraphics [scale=0.12] {pt1b.png} 
+\includegraphics [scale=0.13] {pt1c.png} 
+\end{center}
+
+In the left panel
+\[ AB \cdot CD + BC \cdot AD = AC \cdot BD \]
+or somewhat more compactly in the right panel:  $ac + bd = ef$.
 
 Here we provide two more proofs of this theorem, as examples of wonderful proofs, and then explore some consequences.
 \begin{center} \includegraphics [scale=0.4] {Ptolemy3.png} \end{center}
@@ -35,25 +42,39 @@ Above is a graphic from wikipedia that shows where we're going in the first proo
 
 \label{sec:Ptolemy_similar_triangles}
 
-Find $P$ on the diagonal such that $\angle ADB$ is equal to $\angle PDC$.   We are ignoring the central angle $\angle BDP$ for now --- the open magenta dot.
+\emph{Proof}.
 
-We can show that $\triangle ABD \sim \triangle PCD$ (see the angles marked equal in the diagram --- two equal is enough).  We have the components of $\angle D$ and also $\angle ABD = \angle PCD$ by the inscribed angle theorem.
+\begin{center} \includegraphics [scale=0.14] {Ptolemy12b.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.4] {Ptolemy12.png} \end{center}
+Find $P$ on $AC$ such that $\angle ADP = \angle CDB$ (red dots).
 
-The ratios are $AB/BD/AD = PC/CD/PD$, and in particular
-\[ \frac{AB}{BD} = \frac{PC}{CD} \]
+Since $ABCD$ is a cyclic quadrilateral, we can find other equal angles (black and magenta dots).
+
+We write the vertices in the same order as the equal angles.
+
+$\triangle ADP \sim \triangle BDC$.
+
+So
+\[ \frac{AD}{BD} = \frac{DP}{CD} = \frac{AP}{BC} \]
+\[ AD \cdot BC = AP \cdot BD \]
+
+Since $\angle PDB$ is shared, $\angle ADB = \angle PDC$.
+
+$\triangle PDC \sim \triangle ADB$.
+
+So
+\[ \frac{PD}{AD} = \frac{CD}{BD} = \frac{PC}{AB} \]
 \[ AB \cdot CD = PC \cdot BD \]
-At the same time, $\triangle APD \sim \triangle BCD$ .  Now the extra angle in the center of $\angle D$ counts in both:  $\angle BDC = \angle ADP$.  Also, $\angle DAC = \angle DBC$ by the inscribed angle theorem.
 
-The ratios are $AP/PD/AD = BC/CD/BD$, and in particular
-\[ \frac{AP}{AD} = \frac{BC}{BD} \]
-\[ BC \cdot AD = AP \cdot BD \]
-Combining the two equations
-\[ AB \cdot CD + BC \cdot AD = (AP + PC) \cdot BD \]
+\begin{center} \includegraphics [scale=0.14] {Ptolemy12b.png} \end{center}
+
+Adding
+\[ AB \cdot CD + AD \cdot BC = PC \cdot BD + AP \cdot BD \]
 \[ = AC \cdot BD \]
 
 $\square$
+
+This is Ptolemy's theorem.
 
 Yiu also proves the converse theorem.
 
@@ -65,50 +86,60 @@ For an alternate notation see \hyperref[sec:Ptolemy_alt]{\textbf{here}}.
 
 \label{sec:Ptolemy_switch_sides}
 
-\emph{Proof}.  (adapted from wikipedia).
+(adapted from wikipedia).
 
 \url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
 
-\begin{center} \includegraphics [scale=0.5] {pt2.png} \end{center}
+In the proof below, we denote the area of polygons such as $ABCD$ as $(ABCD)$.
 
-Let the angle $s$ (red dot) be subtended by arc $AB$ and the angle $t$ (black dot) be subtended by arc $CD$.  Then the central $\angle DPC = s + t$ and it has $\sin s + t$.  The other central $\angle APD$ has the same sine, as it is supplementary to $s + t$.
+\emph{Proof}.
 
-Let the components of the diagonals be $AC = q + s$ and $BD = p + r$.  
+\begin{center} \includegraphics [scale=0.16] {pt2a.png} \end{center}
+We add up (twice) the areas of the component triangles:
 
-\begin{center} \includegraphics [scale=0.5] {pt3.png} \end{center}
+\[ 2(AMB) = qr \cdot \sin AMB \]
+\[ 2(BMC) = qs \cdot \sin BMC \]
+\[ 2(CMD) = ps \cdot \sin AMB \]
+\[ 2(AMD) = pr \cdot \sin BMC \]
 
-Twice the areas of the four small triangles will then be equal to
-
-\[ 2A = (pq + qr + rs + sp) \sin s + t \]
-
-Simple algebra will show that 
-
-\[ (pq + qr + rs + sp) = (p + r)(q + s) \]
-\[ = AC \cdot BD \]
-
-The product of the diagonals times the sine of either central angle is equal to twice the area of the quadrilateral.  
-
+But $\sin AMB = \sin BMC$.  Hence twice the area of $(ABCD)$ is
+\[ 2(ABCD) = (qr + qs + pr  + ps) \cdot \sin AMB \]
+\[    = (q + p)(r + s) \cdot \sin AMB \]
+\[    = AC \cdot BD \cdot \sin AMB \]
 We're on to something.  Now, the great idea.  
 
-\begin{center} \includegraphics [scale=0.5] {pt4.png} \end{center}
+Move the point $D$ to $D'$ such that $AD' = CD$ and $AD = CD'$.
+\begin{center} \includegraphics [scale=0.16] {pt2b.png} \end{center}
 
-Move $D$ to $D'$, such that $AD' = CD$ and $CD' = AD.$   We know that the arithmetic works out because if two pairs of arcs span the same whole, then their sum is equal, and so is the sum of the corresponding chords.
+When we do this, note two things.  First, $\angle CAD = \angle ACD'$ (black dots), because the arcs they intercept are equal, $AD' = CD$.
 
-$\triangle ACD \cong \triangle ACD'$  by SSS, so they have the same area.  Therefore the area of $ABCD$ is equal to the area of $ABCD'$.
+Second, $\triangle ADC \cong \triangle ACD'$ by SSS.  Therefore the area hasn't changed:  $(ABCD) = (ABCD')$.
 
-Some of the angles switch with the arcs.  In particular, angle $t$ (black dot) now corresponds to arc $AD'$.  As a result $s + t$ is the measure of the whole angle at vertex $C$.  The whole angle at vertex $A$ is supplementary, and the sine of the whole angle at vertex $A$ is equal to that at $C$.
+Now compute (twice) the area of two component triangles.
+\begin{center} \includegraphics [scale=0.16] {pt2c.png} \end{center}
 
-So twice the area of $\triangle ABD'$ is $AB \cdot AD' \cdot \sin s + t$, and twice that of $\triangle BCD'$ is $BC \cdot CD' \cdot \sin s + t$.  Add these two areas, equate them with the previous result, and factor out the common term $\sin s + t$:
+\[ 2(ABD') = AB \cdot AD'  \cdot  \sin \angle BAD' \]
+\[  = AB \cdot AD'  \cdot \sin \angle BCD' \]
 
-\[ AC \cdot BD = AB \cdot AD' + BC \cdot CD' \]
+\[ 2(CBD') = BC \cdot CD' \cdot \sin \angle BCD' \]
+since the two angles are supplementary.
 
-But $AD' = CD$ and $CD' = AD$ so
+But $\angle BCD' = \angle ADC + \angle CAD$.  (Check out the dots).
 
-\[ AC \cdot BD = AB \cdot CD + BC \cdot AD \]
+So $\angle BCD' = \angle AMB$.  Thus, their sines are equal.  We have
 
-This is Ptolemy's theorem. 
+\begin{center} \includegraphics [scale=0.16] {pt2c.png} \end{center}
+
+\[ 2(ABD') + 2(CBD') = 2(ABCD) \]
+\[ [ \ AB \cdot AD' + BC \cdot CD'  \ ] \ \sin \angle BCD' = AC \cdot BD \cdot \sin AMB \]
+\[ AB \cdot AD' + BC \cdot CD' = AC \cdot BD \]
+
+Finally, since $AD = CD'$ and $CD = AD'$:
+\[ AB \cdot CD + BC \cdot AD = AC \cdot BD \]
 
 $\square$
+
+This is Ptolemy's theorem.
 
 \textbf{corollaries}
 
@@ -127,26 +158,29 @@ We proved this earlier, without using Ptolemy's theorem, as Van Schooten's theor
 
 Here's a different problem from basically the same diagram (Coxeter).
 
-\begin{center} \includegraphics [scale=0.2] {equi5.png} \end{center}
+\begin{center} \includegraphics [scale=0.18] {equi5b.png} \end{center}
 \[ \frac{1}{PA} + \frac{1}{PC} = \frac{1}{PQ} \]
+
+Let us re-label with $PA = t$, $PC = u$ and $PQ = w$.  We will prove that:
+\[  \frac{1}{t} + \frac{1}{u} = \frac{1}{w} \]
+
+\begin{center} \includegraphics [scale=0.18] {equi5c.png} \end{center}
 
 \emph{Proof}.
 
-Going back to similar triangles:
-\[ \triangle AQB \sim \triangle PQC, \ \ \ \ \ \ \triangle AQP \sim \triangle BQC \]
-We have then:
-\[ AQ:BQ:AB = PQ:QC:PC \]
-\[PQ:AQ:PA = QC:BQ:BC \]
-From the first:
-\[ \frac{AB}{PC} = \frac{AQ}{PQ} \]
-and then
-\[ \frac{PQ}{PA} = \frac{QC}{BC} \]
-Hence 
-\[ \frac{1}{PC} + \frac{1}{PA} = \frac{AQ}{AB \cdot PQ} + \frac{QC}{BC \cdot PQ} \]
-\[ = \frac{1}{PQ} \cdot (\frac{AQ}{AB} + \frac{QC}{BC} ) \]
+We have similar triangles:  
+\[ \triangle AQB \sim \triangle PQC, \ \ \ \ \ \ \ \  \triangle AQP \sim \triangle BQC \]
 
-But of course $AB = BC$ and $AQ + QC = AC = AB = BC$, so finally:
-\[ \frac{1}{PC} + \frac{1}{PA} = \frac{1}{PQ} \]
+Which gives the ratios
+\[ \frac{v}{y} = \frac{s}{u} = \frac{x}{w}, \ \ \ \ \ \ \ \  \frac{w}{y} = \frac{t}{s} = \frac{x}{v} \]
+
+Thus:
+\[ \frac{s}{u} = \frac{x}{w}, \ \ \ \ \ \ \ \  \frac{s}{t} = \frac{y}{w} \]
+Adding
+\[ \frac{s}{u} + \frac{s}{t} = \frac{x + y}{w} = \frac{s}{w} \]
+\[ \frac{1}{t} + \frac{1}{u} = \frac{1}{w} \]
+
+$\square$
 
 \subsection*{Pythagorean theorem}
 

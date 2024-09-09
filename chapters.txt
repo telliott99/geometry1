@@ -40,11 +40,9 @@ Practice with proofs
 Ptolemy
 Elements
 Broken Chord
-Euler Theorem
-Euler Line
+Equilateral triangles
 Angle bisectors
 Excircles and Heron
-Equilateral triangles
 More isosceles
 Steiner Lehmus
 
@@ -57,6 +55,8 @@ Law of Cosines
 
 Applications of similarity
 Ptolemy revisited
+Euler Theorem
+Euler Line
 Menelaus's theorem
 Ceva's Theorem
 Pythagoras by area
