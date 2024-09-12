@@ -48,17 +48,15 @@ To construct an equilateral triangle on a given line segment.
 \begin{center} \includegraphics [scale=0.3] {PI_1a.png} \end{center}
 
 The first step is to draw two circles on centers $A$ and $B$.
-\begin{center} \includegraphics [scale=0.25] {PI_1b.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {bisect1.png} \end{center}
 
 The circles are drawn with each radius equal to the line segment $AB$.  It is a property of circles that all points on the circle are at the same distance from the center.  Thus all points on the left-hand circle are equidistant from $A$, and all points on the second one are equidistant from $B$.  
 
 Therefore, the point $C$  where the circles cross is equidistant from \emph{both} $A$ and $B$.
 
-For this, we don't really need the entire circles, just the part where the arcs cross at $C$.
+Now use the straight edge to draw $\triangle ABC$.  Since $AC = AB$ and $BC = AB$, we know that $AC = BC$.  The triangle is equilateral.
 
 \begin{center} \includegraphics [scale=0.4] {PI_1c.png} \end{center}
-
-Now use the straight edge to draw $\triangle ABC$.  Since $AC = AB$ and $BC = AB$, we know that $AC = BC$.  The triangle is equilateral.
 
 $\square$
 
@@ -69,27 +67,31 @@ $\circ$ \ D I.15  all radii of a circle are equal.
 $\circ$ \ CN I.1  things which equal the same thing also equal one another.
 
 If we look again at the figure, and label the other point where the circles cross as $D$:
-\begin{center} \includegraphics [scale=0.3] {PI_1d.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {bisect2.png} \end{center}
+
+We have a second equilateral triangle, congruent to the first.
 
 \subsection*{Euclid I.9:  bisection of an angle}
 
 \label{sec:Euclid_I_9}
 
-To bisect a given angle.
+To bisect a given angle.  Let $\angle BAC$ be the angle to bisect.
 
-\begin{center} \includegraphics [scale=0.4] {PI_9a.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {bisect4.png} \end{center}
 
-As radii of a circle on center $O$, we first find points $A$ and $B$ equidistant from $O$ (left panel).  Let that distance be $r$.
+As radii of a circle on center $A$, we first find points $D$ and $E$ equidistant from $A$.  So $AD = AE$.
 
-We want to draw circles on centers $A$ and $B$ that have the same radius, and the easiest way to do that (with a collapsible compass), is to make the radius equal to $r$, which we can measure.
+Next, we draw circles on centers $D$ and $E$ that have the same radius, and the easiest way to do that (with a collapsible compass), is to make the radius equal to $DE$.
 
-As radii of circles on the centers $A$ and $B$, find $C$ equidistant from $A$ and $B$ (middle panel), with radius also equal to $r$.
+As radii of circles on the centers $D$ and $E$, $DE = DF = EF$ and $\triangle DEF$ is equilateral.
 
-Thus, $OA = OB = AC = BC$ (right panel).  
+Here is a somewhat cleaner view.
 
-So $\triangle OAC \cong \triangle OBC$ by SSS, Euclid I.8.
+\begin{center} \includegraphics [scale=0.16] {Euclid_I_9.png} \end{center}
 
-Therefore $\angle BOC$ is congruent to $\angle AOC$ and the given angle is bisected.
+$AF$ is shared, so $\triangle ADF \cong \triangle AEF$ by SSS, Euclid I.8.
+
+Therefore $\angle BAF$ is congruent to $\angle CAF$ and the given angle $\angle BAC$ is bisected.
 
 $\square$
 
@@ -115,28 +117,23 @@ We solve the second case and then show how the other two can be adapted to it.
 
 \label{sec:Euclid_I_10}
 
-Simply construct two circles of equal radius, one centered at $Q$ and the other at $R$.  It's easiest to choose the radius to be equal to the length $QR$ (left panel, below).
+Simply construct two circles of equal radius, one centered at $Q$ and the other at $R$.  It's easiest to choose the radius to be equal to the length $QR$.
 
-\begin{center} 
-\includegraphics [scale=0.25] {perp9.png} 
-\includegraphics [scale=0.25] {perp10.png} 
-\end{center}
+\begin{center} \includegraphics [scale=0.16] {bisect3.png}  \end{center}
 
-The point $S$ is on both circles, hence it is a radius of both, and therefore equidistant from $Q$ and $R$.  $QS = SR = QR$.  
-
-The three points form an equilateral triangle, $\triangle QRS$ by I.1.
+As before, the point $S$ is on both circles, hence it is a radius of both, and therefore equidistant from $Q$ and $R$.  $QS = SR = QR$.  The three points form an equilateral triangle, $\triangle QRS$.
 
 The point $T$ below the line segment has the same property, and $\triangle QRS$ is congruent to $\triangle QRT$ by SSS.
 
-Furthermore, we claim that the line segment $ST$ is perpendicular to $QR$ and the point $P$ where $ST$ intersects $QR$ is such that $QP = PR$, and $SP = PT$.
+Furthermore, we claim that the angles as $P$ are right angles.  Thus, $SPT \perp QPR$.
 
 Euclid's proof is simple. 
 
+\begin{center} \includegraphics [scale=0.16] {bisect3.png}  \end{center}
+
 \emph{Proof}.
 
-$\triangle QRS$ and $\triangle QRT$ are both equilateral and congruent by SSS.
-
-Thus $\triangle QST \cong \triangle RST$ by SSS, and both are isosceles.
+$\triangle QST \cong \triangle RST$ by SSS, and both are isosceles.
 
 It follows that $\angle QSP = \angle RSP$, i.e. $\angle QSR$ is bisected.
 
@@ -145,29 +142,6 @@ So $\triangle QPS \cong \triangle RPS$ by SAS.
 This gives $QP = RP$.
 
 Also, the angles at $P$, $\angle QPS = \angle RPS$, so all four are right angles.
-
-$\square$
-
-\begin{center} 
-\includegraphics [scale=0.25] {perp10.png} 
-\end{center}
-
-Here is another way to proceed.
-
-\emph{Proof}.
-
-We are given that $\triangle QRS \cong \triangle QRT$ by SSS (see above).  So both angles at $Q$ (right panel) are equal, and then $\triangle QPS \cong \triangle QPT$ by SAS.
-
-Therefore the base angles at $P$ are equal and thus right angles, and therefore all the angles at $P$ are right angles.
-
-$\triangle PRS \cong \triangle QPS$ by hypotenuse-leg in a right triangle (HL).  It follows that $QP = PR$ so $SPT$ bisects $QR$ and also forms a right angle where it intersects at $P$.
-
-\begin{center} 
-\includegraphics [scale=0.25] {perp9.png} 
-\includegraphics [scale=0.25] {perp10.png} 
-\end{center}
-
-All four smaller triangles are congruent by SAS or SSS or HL.
 
 $\square$
 
@@ -203,30 +177,44 @@ Alternatively, find a point below the line equidistant from $Q$ and $R$.  Procee
 
 \subsection*{bisector is the altitude of an isosceles triangle}
 
-Suppose we know two points $Q$ and $R$.  We find the point $P$ equidistant between them and construct the perpendicular bisector $PS$.  Then the two sides $SQ$ and $SR$ have equal length.  Triangle $\triangle SQR$ is isosceles.
+Suppose we know two points $B$ and $C$.  We find the point $M$ equidistant between them and construct the perpendicular bisector $AM$.  Then the two sides $AB$ and $AC$ have equal length.  $\triangle ABC$ is isosceles.
 
-\begin{center} \includegraphics [scale=0.35] {perp_3.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {perp3b.png} \end{center}
 
-It is true for \emph{any} point on the line drawn through $S$ and $P$.  For example, $TQ = TR$ in the figure above.
+That is true for \emph{any} point on the line extended through $A$ and $M$.  For example, $A'B = A'C$ in the figure above.
 
 \subsection*{perpendicular bisector converse}
 
-Suppose are given that $BD = DC$ and that $\angle ADC$ is a right angle.  For any point on $AD$, we can draw triangles with vertices at $B$ and $C$ that are congruent by SAS.
+The converse theorem says that \emph{every} point which is equidistant from $B$ and $C$ lies on $AM$ or an extension of it.  
 
-\begin{center} \includegraphics [scale=0.4] {iso13.png} \end{center}
+Here are two proofs.  The first one relies on the \hyperref[sec:triangle_inequality]{\textbf{triangle inequality}}, which says that in any triangle, the sum of any two sides must be greater than the length of the third side.
 
-We conclude that every point on $AD$ (and extensions of $AD$) is equidistant from $B$ and $C$.
+We give a plausible argument for the triangle inequality based on a construction.  (We'll look at Euclid's proof later).  The theorem is trivially true if the third side is not the longest.  Hence we compare the two shorter sides to the longest one.
 
-The converse theorem says that \emph{every} point which is equidistant from $B$ and $C$ lies on $AD$.  
+\begin{center} \includegraphics [scale=0.2] {tri_ineq1} \end{center}
 
-Here are two proofs, the first one relying on the \hyperref[sec:triangle_inequality]{\textbf{triangle inequality}}, which says that in any triangle, the sum of any two sides must be greater than the length of the third side.  We will prove this theorem later.  
+Let $AB$ be the points connected by the longest side $c$.  We claim that the sum of the lengths of the other two sides $a$ and $b$ must be such that:
+\[ a + b > c \]
+
+Draw two circles, one on center $A$, and the other on center $B$, with radii $a$ and $b$ the same as the two shorter sides.  There are two points where those circles cross, $C$ and $C'$.  Triangles constructed using either one of those as the third vertex are congruent by SSS.  (Mirror images are fine).
+
+Now consider what happens as one of those two sides gets shorter.  Let $a$ be the side that is decreased in length.
+\begin{center} \includegraphics [scale=0.25] {tri_ineq2} \end{center}
+
+\begin{center} \includegraphics [scale=0.25] {tri_ineq3} \end{center}
+
+As the combined length drops to be less than the longest side, it is no longer possible to construct a triangle.
+
+$\square$
 
 To the current proof:
 
 \emph{Proof}.
 
-Suppose that $P$ is equidistant from $B$ and $C$ but does not lie on the perpendicular bisector.  Then, find the point where $PC$ crosses the bisector at $A$.
-\begin{center} \includegraphics [scale=0.4] {iso13c.png} \end{center}
+Suppose that $P$ is equidistant from $B$ and $C$ but does not lie on the perpendicular bisector.  Suppose that $P$ lies on the same side of the bisector as $B$.
+
+Find the point where $PC$ crosses the bisector at $A$.
+\begin{center} \includegraphics [scale=0.16] {perp_8.png} \end{center}
 By the forward theorem, $AB = AC$.
 
 We are supposing that $PB = PC$.  By the triangle inequality
@@ -242,27 +230,25 @@ See \hyperref[sec:perp_bi_converse]{\textbf{here}} for a somewhat fuller explana
 
 \subsection*{perpendicular bisector using I.7}
 
-We want to prove that every point which is equidistant from two points on a line lies on the perp bisector.
+We will prove that every point which is equidistant from two points on a line lies on the perpendicular bisector.
 
-Let $AM \perp BC$, and bisect it such that $BM = BC$.
+Let $AM \perp BC$, and bisect it such that $BM = CM$.  $AM$ is the perpendicular bisector of $BC$.
 
-$AM$ is the perpendicular bisector of $BC$.
-
-Without loss of generality, let $P$ lie on the same side of $AM$ as $C$.
-
-\begin{center} \includegraphics [scale=0.15] {Perp_bisector.png} \end{center}
+\begin{center} \includegraphics [scale=0.18] {perp_9.png} \end{center}
 
 \emph{Proof}.
 
-Now, suppose $PM$ is also perpendicular to $BC$ at $M$.
+Suppose $P$ lies on the same side of $AM$ as $B$.
 
-Then $PM$ bisects $BC$ so it is a perpendicular bisector of $BC$.
+Now, seeking a contradiction, suppose $PM$ is also perpendicular to $BC$ at $M$.
+
+$PM$ bisects $BC$ so it is a perpendicular bisector of $BC$.
 
 By the forward theorem $PB = PC$.
 
-Now find $P'$ on $AM$ such that $PC = P'C$.  
+Now find $P'$ on $AM$ such that $P'B = PB$.  
 
-We have three equal segments:  $PB = PC = P'C$.
+We have three equal segments:  $PB = PC = P'B$.
 
 By the forward theorem, since $P'$ is a point on the perpendicular bisector, $P'B = P'C$.
 
@@ -274,11 +260,8 @@ This is a contradiction.  There is only one perpendicular through $BC$ at $M$.
 
 $\square$
 
-Alternatively, suppose that $PB = PC$.  Then $\triangle PBM \cong \triangle PCM$ by SSS.
+\begin{center} \includegraphics [scale=0.18] {perp_9.png} \end{center}
 
-$\angle PMB = \angle PMC$ and both are right angles, so $PM$ is also perpendicular to $BC$ at $M$.
-
-Then the proof runs just as before.  It cannot be that $PB = PC$ but $P$ is not on $AM$.
 
 \subsection*{bisector equidistant from sides}
 
@@ -364,5 +347,18 @@ But we are given that this triangle is isosceles, so black and magenta are equal
 
 Alternatively, use the fact that the exterior angle is the sum of the two base angles, and just use alternate interior angles once.
 
+It is generally true that the adjacent bisectors of an internal and external angle form a right angle.
+
+\begin{center} \includegraphics [scale=0.16] {bisector_ext2.png} \end{center}
+
+$\angle DBF$ is right.
+
+\emph{Proof}.
+
+Twice $\angle DBC$ plus twice $\angle FBC$ is equal to two right angles.  
+
+The result follows easily.
+
+$\square$
 
 \end{document}

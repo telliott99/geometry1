@@ -93,57 +93,54 @@ $\bullet$ \ Two sides equal $\Rightarrow$ opposite angles equal.
 
 There is a simple demonstration based on angle bisection, and another based on the ability to cut a line segment into two equal parts, also called a bisection.  
 
-\begin{center} \includegraphics [scale=0.4] {iso6b.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {I_5_SAS.png} \end{center}
 
 \emph{Demonstration}.
 
-We are given $AB = AC$ (left panel).  
+In the left panel, we are given $BA = BC$.
 
-Draw the bisector of the top angle $A$ (middle panel).  This construction forms equal angles at the top, marked with red dots.  
+Draw the bisector of $\angle B$ (middle panel).  This construction forms equal angles at the top, marked with red dots.  So $\angle ABD = \angle CBD$.
 
-$AB = AC$ and $\angle BAD = \angle DAC$.
+$BD$ is shared (3 hash marks, right panel).
 
-$AD$ is shared.
+The two smaller triangles $\triangle ABD$ and $\triangle CBD$ are congruent by SAS.
 
-The two smaller triangles $\triangle ABD$ and $\triangle ACD$ are congruent by SAS.
-
-We write that as $\triangle ABD \cong \triangle ACD$.
+We write that as $\triangle ABD \cong \triangle CBD$.
 
 $\square$
 
-Therefore (as corresponding parts of congruent triangles) the base angles are equal (right panel).  Other corresponding angles and sides are equal as well.
+Therefore (as corresponding parts of congruent triangles) the base angles are equal..  Other corresponding angles and sides are equal as well.
 
 The full set of equal angles and sides is:
+\begin{center} \includegraphics [scale=0.16] {I_5_result.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.4] {iso14b.png} \end{center}
-
-The base is bisected, there is a right angle where the bisector $AD$ cuts the base, plus of course the central line segment $AD$ is equal to itself.
+The base is bisected, there is a right angle where the bisector $BD$ cuts the base, plus of course the central line segment $BD$ is equal to itself.
 
 \subsection*{converse}
 
 \label{sec:isosceles_converse}
 
-We can also prove the converse theorem:
+We can also prove the converse theorem by a similar approach:
 
 $\bullet$ \ Two angles equal $\Rightarrow$ opposite sides equal.
 
-\begin{center} \includegraphics [scale=0.4] {iso7b.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {I_6_AAS.png} \end{center}
 
 \emph{Proof}.
 
 We are given that the angles marked with black dots are equal. 
 
-We again draw the bisector of the angle $A$.  Then we have all three angles the same, and the side $AD$ is shared.
+We again draw the bisector of the angle $B$.  Then, by sum of angles, we have all three angles the same, and the side $AD$ is shared.
 
 Therefore, $\triangle ABD \cong \triangle ADC$ by AAS.
 
-It follows that $AB = AC$.  
+It follows that $BA = BC$.  
 
-As before, there are right angles at the base, and the base is bisected.
+Since ADC lie on one straight line (they are \emph{collinear}), there are right angles at the base.
 
 $\square$
 
-Euclid's proof of the isosceles triangle theorem is more complicated that what we have given above, and there is a good reason for this.  
+Euclid's proof of the isosceles triangle theorem is more complicated than what we have given above, and there is a good reason for this.  
 
 Our demonstration depends on the existence of the angle bisector, but we haven't actually shown how to do that.  It will turn out that \hyperref[sec:Euclid_I_9]{\textbf{construction}} of the bisector \emph{depends on} the isosceles triangle theorem.  
 
@@ -151,22 +148,23 @@ That's a problem because the reasoning is circular, thus invalid.  We cannot use
 
 \subsection*{other proofs}
 
-We used the angle bisector at vertex $A$ for the proofs above.  But we might equally have constructed a right angle at $D$, or bisected the base.  We will just show diagrams for both proofs adapted to these methods and sketch the idea.
+We used the angle bisector at vertex $B$ for the proofs above.  But we might equally have constructed a right angle at $D$, or bisected the base.  We will just show diagrams for proofs adapted to these methods and sketch the idea.
 
-\begin{center} \includegraphics [scale=0.27] {iso8.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {I_5_SSS.png} \end{center}
 
-Above, we are given $AB = AC$ and right angles at $D$ (and $BCD$ \emph{colinear}).  We have hypotenuse-leg in a right triangle (HL), so the two small triangles are congruent.
+Above, we are given $BA = BC$ and $AD = CD$, i.e. the base is bisected.  Since $BD$ is shared we have that $\triangle ABD \cong \triangle CBD$ by SSS.
 
-\begin{center} \includegraphics [scale=0.4] {iso9.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {I_6_AASb.png} \end{center}
 
-Above, we are given equal angles at $B$ and $C$ and right angles at $D$.  We have three angles equal plus a shared side, so congruent triangles by AAS (or after application of the triangle sum theorem, by ASA).
+Above, we are given equal angles at $A$ and $C$ and right angles at $D$.  We have three angles equal plus a shared side, so congruent triangles by AAS (or after application of the triangle sum theorem, by ASA).
+
+\begin{center} \includegraphics [scale=0.16] {I_5_HL.png} \end{center}
  
-\begin{center} \includegraphics [scale=0.4] {iso10.png} \end{center}
+Above, we are given $BA = BC$ and right angles at $D$ (and $BCD$ \emph{colinear}).  This might be called SSA.
 
-Above, we are given $AB = AC$ and $BD = DC$, i.e. the base is bisected.  Since $AD$ is shared we have that $\triangle ABD \cong \triangle ADC$ by SSS.
+However, since the triangles are right triangles, this is a special case called hypotenuse-leg in a right triangle (HL).  The two small triangles are congruent.  For a proof, look ahead to Pythagoras's theorem:  if in a right triangle we know two sides, we know the third.
 
-\begin{center} \includegraphics [scale=0.4] {iso11.png} \end{center}
+In general, if the known angle were not a right angle, this is not enough to show congruence.  However, there is much more to be said about this, as we will see.
 
-Finally, we are given equal angles at $B$ and $C$ and we bisect the base.  We have SSA but do not know yet about the right triangle.  This presents some difficulties, which we put off until later.
 
 \end{document}

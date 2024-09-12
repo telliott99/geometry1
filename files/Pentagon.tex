@@ -25,23 +25,23 @@
 
 In this chapter we explore some properties of a regular pentagon.  A pentagon has 5 sides, and a regular polygon has all sides equal.
 
-The question arises of how to specify the construction of a regular pentagon.  It's fairly difficult to do this by hand with a ruler, just guessing.  Constructions exist, as we'll see below.
+The question arises of how to draw a regular pentagon.  It's fairly difficult to do this freehand with a ruler, just guessing.  Constructions exist, as we'll see below.
 
 Euclid deals with the question by constructing an isosceles triangle with the base angles twice the angle at the third vertex in IV.10, and in IV.11 he shows that such a triangle can be used to find five equally spaced points on a circle.
 
-We follow a different path.
+We follow a different approach.  For now, assume that we have done this.
 
 \begin{center} \includegraphics [scale=0.16] {pent6.png} \end{center}
 Consider the regular pentagon $ABCDE$, with diagonals also drawn internally.
 
 Since $AB = AC$, by I.5 we have $\angle ABC = \angle ACB$.
 
-It is a challenge to relate these two angles to the two marked with black dots at vertex $A$.  How to justify the equality?  
+It is a challenge to relate these two angles to the two marked with black dots at vertex $A$, below left.  How to justify the equality?  
 
-We rely on rotational symmetry.  Each vertex must have the same component angles.  This gives us the four equal angles (black dots, left panel).
+We rely on rotational symmetry.  Each vertex must have the same component angles.  This gives us the four equal angles (black dots, left panel).  We could mark all the corresponding angles, such as $\angle DBE$, equal at this point.
 \begin{center} \includegraphics [scale=0.16] {pent7.png} \end{center}
 
-The same principle gives us the equal central angles labeled with red dots in the right panel.  Then by sum of angles we have:
+Symmetry also gives us the equal central angles labeled with red dots in the right panel.  Then by sum of angles we have:
 \[ 2B + 3R = 4B + 1R \]
 which quickly leads to $B = R$.
 
@@ -49,20 +49,20 @@ The assumption that one can construct a circle which circumscribes the regular p
 
 \begin{center} \includegraphics [scale=0.16] {pent9.png} \end{center}
 
-We use the fact that the chords are all equal to fill in the rest of the equalities.
+One set of equal inscribed angles is marked.  We then use the fact that the chords are all equal to fill in the rest of the equalities.
 
-Each of the small angles is $1/5$ of two right angles or $36^{\circ}$.
+Thus, all the triangles have angles that consist of multiples of the same angle.  Each of these small angles is $1/5$ of two right angles or $36^{\circ}$.
 \begin{center} \includegraphics [scale=0.16] {pent8.png} \end{center}
 
 By I.6 we have that $AD = AE$.  Again, by symmetry, all the internal diagonals are equal.
 
-$ACPB$ has adjacent angles add to two right angles, so it is a parallelogram.  Therefore, it has opposite sides equal, but we are also given adjacent sides equal, so it is a rhombus.  There are five congruent rhombi in the figure.
+$ACPB$ has adjacent angles add to two right angles and opposite angles equal, so it is a parallelogram.  Therefore, it has opposite sides equal, but we are also given adjacent sides equal, so it is a rhombus.  There are five congruent rhombi in the figure.
 
-By sum of angles, the central $PQRST$ is also a regular pentagon.  One can repeat the process of drawing the diagonals and generate new pentagons inside pentagons, forever.
+By sum of angles, the central $PQRST$ is a pentagon, and by symmetry, it is a regular pentagon.  One can repeat the process of drawing the diagonals and generate new pentagons inside pentagons, forever.
 
 By alternate interior angles we have $\angle ASR = \angle ADE = \angle AED = \angle ARS$.  So $\triangle ASR$ is isosceles and $\triangle ASR \sim \triangle ADE$.
 
-There are two types of similar isosceles triangle in the figure:  tall skinny ones (72-144-144), and short fat ones (216-72-72).  The tall skinny ones come in three size classes, so for example $\triangle ASR \cong \triangle BTS$ and so on.
+There are two types of similar isosceles triangle in the figure:  tall skinny ones (36-72-72), and short fat ones (108-36-36).  The tall skinny ones come in three size classes, so for example $\triangle ASR \cong \triangle BTS$ and so on.
 
 Here are three examples of the tall skinny triangle:
 \begin{center} \includegraphics [scale=0.4] {three_triangles.png} \end{center}
@@ -73,9 +73,9 @@ When we work through the similar triangles using relationships between lengths (
 
 \begin{center} \includegraphics [scale=0.2] {golden_ratio2.png} \end{center}
 
-We draw a square and then extend two parallel sides to make a large rectangle and a small one at the same time.  We don't want just any rectangles, but require that they be similar, that is, they should have the same ratio of the long side to the short side.
+We draw a square and then extend two parallel sides to make a large rectangle and a small one at the same time.  We don't want just any rectangles, but require that they be similar, they should have the same ratio of the long side to the short side.
 
-We can conveniently model this in two ways.  In the first, the square is scaled to have side length $1$ and the extension is $x$, while in the square has side length $x$ and the extension is $1$.  For the first, similarity gives:
+We can conveniently model this in two ways.  In the first, the square is scaled to have side length $1$ and the extension is $x$, while in the second, the square has side length $x$ and the extension is $1$.  For the first, similarity gives:
 \[ \frac{x+1}{1} = \frac{1}{x} \]
 \[ x^2 + x = 1 \]
 \[ x^2 + x - 1 = 0 \]
@@ -84,43 +84,100 @@ For the second one:
 \[ \frac{x + 1}{x} = \frac{x}{1} \]
 \[ x + 1 = x^2 \]
 \[ x^2 - x - 1 = 0 \]
+
+The first version has solutions:
+\[ x = \frac{-1 \pm \ \sqrt{5}}{2} \]
+
 The second version has solutions:
 \[ x = \frac{1 \pm \ \sqrt{5}}{2} \]
 
-The positive branch gives $x > 1$.  This solution is called $\phi$, the golden mean.  It has a value of about
+The solutions are closely related.  It is traditional to pick the one that has $x > 1$.  We let $x$ be the long side of the rectangle and $1$ be the short side.
+
+This is called $\phi$, the famous golden mean or ratio.  
+\[ \phi = \frac{1 + \sqrt{5}}{2} \]
+
+It has a value of about
 \[ \frac{1 + \sqrt{5}}{2} \approx 1.65 \]
 
-To return to our problem, for the second approach, we should re-scale the sides of the medium-sized triangles to have a base $1$ and sides $x$.  This amounts to scaling the original figure by a factor of $x$.
-
+To return to our problem, we could work with the colored triangles and re-scale the figure by a factor of $x$.
 \begin{center} \includegraphics [scale=0.4] {three_triangles_2.png} \end{center}
 
-We write
+But there is an even nicer way, which comes from connecting adjacent sides of the pentagon.  In this case, we retain the original side lengths at $1$.
+
+\begin{center} \includegraphics [scale=0.2] {pent13.png} \end{center}
+
+Extend $AB$ and $ED$ to meet at $Y$.
+
+Since the external angles in $\triangle YBD$ are equal, by supplementary angles $\angle YBD = \angle YDB$, so by I.6 $\triangle YBD$ is isosceles.  
+
+Since $\triangle ADE$ has the same base angles and the same base, $\triangle ADE \cong \triangle ADB$.
+
+Let the ratio $AD:DE = YD:DE$ be $x$.  If the sides have unit length ($DE = 1$) then by similar triangles
+\[ \frac{DY}{BD} = \frac{EY}{AE} \]
 \[ \frac{x}{1} = \frac{x+1}{x} \]
-\[ x^2 = 1 + x \]
-which corresponds to our second case.
+\[ x^2 = x + 1 \]
 
-This equation is the one to remember, with $\phi$ substituted for $x$:
+So $x$ is $\phi$.
+The same ratio holds for any of the tall skinny triangles.
+
+This solution is as we said before, and the equation below is the one to remember, with $\phi$ substituted for $x$:
 \[ \phi^2 = 1 + \phi \]
-
-$\phi$ is the famous \emph{golden ratio} with the value
-\[ \phi = \frac{1 + \sqrt{5}}{2} \]
 
 We can check that $\phi$ really does solve the equation:
 \[ \phi^2 =  \frac{1 + \sqrt{5}}{2} \cdot  \frac{1 + \sqrt{5}}{2} \]
 \[ = \frac{1}{4} (1 + 2 \sqrt{5} + 5) \]
 \[ = 1 + \frac{2 + 2 \sqrt{5}}{4} = 1 + \phi \]
 
-One other thing we need can be obtained from the same figure:
-\begin{center} \includegraphics [scale=0.2] {three_triangles_3.png} \end{center}
+One other thing we need can be obtained from the re-scaled figure.  Let the sides be $x$ (or $\phi$)::
+\begin{center} \includegraphics [scale=0.4] {cos72.png} \end{center}
 
-The right triangle with hypotenuse $x$ (or $\phi$) and base $1/2$ at the upper left in the middle panel, has base angle $72^{\circ}$ because it contains two copies of the fundamental angle.
+The right triangle with hypotenuse $x$ (or $\phi$) and base $1/2$ at the upper left, has base angle $72^{\circ}$ because it contains two copies of the fundamental angle.
 
 The cosine of this angle is 
 \[ \cos 72^{\circ}  = \frac{1/2}{\phi}  = \frac{1}{2 \phi} \]
 
-We will come back for this.
+One can also see this in the other figure:
+\begin{center} \includegraphics [scale=0.2] {pent14.png} \end{center}
 
-\subsection*{construction}
+$\angle YBD = 72^{\circ}$.
+
+Its cosine is one-half of $BD$, that is, $1/2$, divided by $\phi$.  We will come back for this.
+
+\subsection*{more}
+
+There are occurrences of $\phi$ all over the regular pentagon (see the first reference below).
+
+One can also get the golden ratio, $\phi$, from the short squat triangles.
+
+\begin{center} \includegraphics [scale=0.25] {pent10.png} \end{center}
+\[ \frac{x}{1 + x} = \frac{1}{x} \]
+\[ x^2 = 1 + x \]
+as before.
+
+And another:
+
+\begin{center} \includegraphics [scale=0.16] {pent11.png} \end{center}
+
+Draw the perpendicular at any vertex, say $BZ$, so that $\angle ABZ$ is a right angle.
+
+$\angle DBE$ is bisected, since the total angle at $B$ is $108^{\circ}$, so by subtraction $\angle DBZ = 18^{\circ}$, which is half of $\angle DBE = 36^{\circ}$.
+
+We use the bisector theorem:
+\[ \frac{EZ}{DZ} = \frac{BE}{BD} = \frac{1 + x}{x} = x = \phi \]
+as shown immediately above.
+
+We can extend adjacent sides in the previous figure.  Since $\angle ABZ$ is a right angle and $\angle DBZ$ is one-half of the bisected internal $\angle DBE$ (in $\triangle BDE$), it follows that $\angle DBY$ is the bisector of the external $\angle DBX$.\
+
+\begin{center} \includegraphics [scale=0.30] {pent12.png} \end{center}
+
+By the external bisector theorem:
+\[ \frac{EY}{DY} = \frac{BE}{BD} = \phi \]
+
+When two adjacent sides of a regular pentagon are extended, then the length of the side plus the extension is in proportion to the side length as $\phi$.
+
+But this is also evident from the fact that $\triangle BYD$ is similar to $\triangle AYE$.
+
+\subsection*{construction of circumscribed pentagon}
 
 Joyce and Bogolmony both give this construction, due to Richmond.
 
@@ -156,23 +213,26 @@ We also know that $OQ + AQ = 2$ so
 \[ OQ = \frac{2}{1 + \sqrt{5}} \]
 \[ OQ = \frac{1}{\phi} \]
 
+In other words, the ratio $OP:OQ = \phi$.
+
 $\angle AOB$ has adjacent side $OQ = 1/\phi$ and the hypotenuse is $2$ so the cosine is $1/2 \phi$.
 
 But this is the cosine of $72^\circ$, which means that $\angle AOB = 72^{\circ}$, and corresponds to one-fifth of the complete circle.  It is the central angle of a pentagon.
 
-Here is a figure from Bogolmony which shows how the Richmond approach extends to finding all of the vertices of the regular pentagon (due to Conway and Guy).
-\begin{center} \includegraphics [scale=0.2] {Richmond3.png} \end{center}
+Here is a figure (redrawn from Bogolmony) which shows how Richmond's approach extends to finding all of the vertices of the regular pentagon (Bogolmony cites Conway and Guy).
+\begin{center} \includegraphics [scale=0.2] {Richmond4.png} \end{center}
 
-$APO$ is bisected by $PQ$.  $PR$ is drawn as the bisector of the external angle to $\angle APO$ (i.e. supplementary).  Two bisectors of supplementary angles together make one right angle.
+$APO$ is bisected by $PQ$.  $PR$ is drawn as the bisector of the external angle to $\angle APO$ (i.e. supplementary).  Two adjacent bisectors of supplementary angles together form a right angle.
 
 Thus $PR$ is perpendicular to $PQ$ at $P$ and forms $\triangle RPQ$ as a right triangle.  $\triangle RPQ \sim \triangle ROP \sim \triangle POQ$.
 
 By similar triangles we have that 
+\[ \frac{OP}{OR} = \frac{OQ}{OP} \]
 \[ OP^2 = OR \cdot OQ \]
 \[ 1 = OR \cdot \frac{1}{\phi} \]
 \[ OR = \phi \]
 
-Alternatively, recall the external angle bisector theorem.  The two sides $AP:OP$ are in the same ratio as $AR:OR = \sqrt{5}$.
+Bogolmony suggests that we recall the external angle bisector theorem.  The two sides $AP:OP$ are in the same ratio as $AR:OR = \sqrt{5}$.
 
 So $AR = \sqrt{5} \cdot OR$.  Then
 \[ AR = 2 + OR = \sqrt{5} \cdot OR \]
@@ -200,7 +260,15 @@ The angle whose cosine is $\phi/2$ is $36^{\circ}$.  Hence $\angle COD$ is twice
 
 Finally, we need to show that $\cos 36^{\circ} = \phi/2$.
 
-Recall the half angle formula:
+Here is one way:
+\begin{center} \includegraphics [scale=0.4] {cos36b.png} \end{center}
+
+In the figure above, the right triangle with hypotenuse $1$ and base $x/2$ at the upper left, has base angle $36^{\circ}$ because it contains a single copy of the fundamental angle.
+
+The cosine of this angle is 
+\[ \cos 36^{\circ}  = \frac{\phi}{2} \]
+
+Algebraically, we may recall the half angle formula:
 \[ \cos^2 A = \frac{1 + \cos 2A}{2} \]
 
 We had $\cos 72^{\circ} = 1/(2 \phi)$
@@ -216,11 +284,9 @@ And the result follows (I won't say easily).  The first method was a lot easier.
 
 $\square$
 
-$\phi$ shows up repeatedly in the sine and cosine of angles which are multiples of $18^{\circ}$.
-
 \subsection*{Euclid's construction}
 
-Euclid uses several steps to construct a pentagon circumscribed by a circle.  The critical chain of dependencies is II.11 $\Rightarrow$ IV.10 $\Rightarrow$ IV.11.  The latter two are pretty involved and we have seen a nice construction already.  Let us just look at II.11.
+Euclid uses several steps to construct a pentagon circumscribed by a circle.  The critical chain of dependencies is II.11 $\Rightarrow$ IV.10 $\Rightarrow$ IV.11.  The latter two are pretty involved and we have seen a nice construction already.  We will just look at II.11.
 
 \subsection*{II.11}
 
@@ -265,122 +331,63 @@ $\square$
 
 \begin{center} \includegraphics [scale=0.25] {Euclid_II_11.png} \end{center}
 
-Algebraically:
-\[ x(x-y) = y^2 \]
+Algebraically, let $AB = x, AH = y, HB = x - y$, and then
+\[ (x-y) \cdot x = y^2 \]
 \[ x^2 - xy = y^2 \]
-If $y = 1$ then
+\[ x^2 = xy + y^2 \]
+
+If $y = 1 = AH$ then
 \[ x^2 = x + 1 \]
-As advertised, the golden ratio.
+As advertised, $x = \phi = AB$, the golden ratio.
 
+\subsection*{$\phi$ in the square}
 
-\subsection*{Aside on $\phi$ and the Fibonacci sequence}
+Let's finish the chapter (and this volume) with one last example I found on Bogolmony's site.
 
-The Fibonacci sequence is defined as $F_{n+2} = F_{n+1} + F_n$, starting with $1$.  
+\url{https://www.cut-the-knot.org/do_you_know/GoldenRatioInSquare.shtml}
 
-The first ten numbers in the sequence are:
-\begin{verbatim}
-1 1 2 3 5 8 13 21 34 55 ...
-\end{verbatim}
+It was ``contributed by Ercole Suppa (Italy) at the Peru Geometrico facebook group.''
 
-Recall that $\phi^2 = 1 + \phi$.  The powers of $\phi$ generate an interesting pattern:
-\[ \phi^2 = \phi \cdot \phi = 1 + \phi \]
-\[ \phi^3 = \phi \cdot \phi^2 = \phi + \phi^2 = 1 + 2 \phi \]
-\[ \phi^4 = \phi \cdot \phi^3 = \phi + 2 \phi^2 = 2 + 3 \phi \]
-\[ \phi^5 = \phi \cdot \phi^4 = 2 \phi + 3 \phi^2 = 3 + 5 \phi \]
+\begin{center} \includegraphics [scale=0.2] {square_phi.png} \end{center}
 
-Both the first term and the cofactors generate the elements of the Fibonacci sequence from the powers of $\phi$
+One side of a square is bisected at $M$ and then the two incircles are drawn as shown.  Remarkably, the radii are in the ratio $R/r = \phi$.
 
-The reason is that $\phi^n + \phi^{n+1} = \phi^{n+2}$, which is the same as the definition for the Fibonacci numbers.
+\emph{Proof}.
 
-Going back to the solution that we left behind, take the negative branch of the square root, and let us call that other solution $\psi$.  
+Let the square $AC$ have sides of length $2$, so $MB = 1$ and $MC = \sqrt{5}$.  We find the semi-perimeters of the two triangles:
+\[ s_{\triangle MBC}  = \frac{1}{2} \cdot (3+\sqrt{5}) \]
+\[ s_{\triangle MDC} = \frac{1}{2} \cdot (2+2 \sqrt{5}) = 1+ \sqrt{5}\]
 
-\[ \psi = \frac{1 - \sqrt{5}}{2} \]
+Then we find the areas as
+\[ \mathcal{A}_{\triangle MBC} = rs_{\triangle MBC} = \frac{1}{2} \ r \ (3+\sqrt{5}) \]
+\[ \mathcal{A}_{\triangle MDC} = Rs_{\triangle MDC} = R\ (1+\sqrt{5}) \]
 
-If you look closely, you can easily see that
-\[ \psi + \phi = 1 \]
+\begin{center} \includegraphics [scale=0.2] {square_phi.png} \end{center}
 
-Since $\psi$ is also a solution of the original equation:
-\[ \psi^2 = 1 + \psi \]
-
-Furthermore
-\[ (\phi + \psi)^2 = \phi^2 + 2 \phi \cdot \psi + \psi^2 \]
-
-Now, the left-hand side is just $1$, since $\phi + \psi = 1$.  Furthermore $\phi^2 = 1 + \phi$ and $\psi^2 = 1 + \psi$ so
-\[ 1 = 1 + \phi + 2 \phi \cdot \psi + 1 + \psi \]
-\[ 1 = 3 + 2  \phi \cdot \psi  \]
-\[ \phi \cdot \psi = -1 \]
-
-Thus, $\psi$ is the negative inverse of $\phi$.  
-
-$\psi$ comes in handy in the following way.  Since $\psi$ solves our original equation, that means the powers of $\psi$ are just like the powers of $\phi$
-\[ \psi^2 = 1 + \psi \]
-\[ \psi^3 = 1 + 2 \psi \]
-\[ \psi^4 = 2 + 3 \psi \]
-\[ \psi^5 = 3 + 5 \psi \]
-
-So
-\[ \phi^5 - \psi^5 = 5(\phi - \psi) \]
-\[ \frac{\phi^5 - \psi^5}{\phi - \psi} = 5 \]
-
-$5$ is the fifth Fibonacci number.  If $F_n$ is the nth Fibonacci number
-\[ \frac{\phi^n - \psi^n}{\phi - \psi} = F_n \]
-
-This is called Binet's formula.  If you work out the denominator you find that it is just $\sqrt{5}$.  
-
-The general equation is
-\[ F_n = \frac{1}{\sqrt{5}} \cdot  (\phi^n - \psi^n) \]
-
-This formula is quite surprising, because the Fibonacci numbers $F_n$ on the left-hand side are \emph{integers}, and yet the first factor on the right-hand side is the inverse of a square root, which is definitely not an integer or even a rational number.  
-
-But it turns out that the differences $\phi^n - \psi^n$ contain only odd powers of $\sqrt{5}$.  So after multiplying by $1/\sqrt{5}$, we end up only with even powers, which are whole numbers.  
-
-In fact, there is a connection between the Fibonacci sequence and Pascal's triangle.  
-\begin{center} \includegraphics [scale=0.4] {fib_triangle.png} \end{center}
-
-If we let $f = \sqrt{5}$ then Binet's formula says the nth Fibonacci number is equal to 
-\[ (\frac{1}{2})^n \cdot \frac{1}{f} \cdot \ [ \ (1 + f)^n - (1 - f)^n \ ] \]
-
-If you do the two binomial expansions, they are the same except that each term of the second one has a factor of $(-1)^n$.  As a result, the odd powers survive, as twice the value.  In the case of $n = 5$ we would have
-\[ (\frac{1}{2})^5 \cdot \frac{1}{f} \cdot \ [ \ 10f + 20f^3 + 2f^5 \ ] \]
-\[ (\frac{1}{2})^5 \cdot \ [ \ 10 + 20f^2 + 2f^4 \ ] \]
-
-The coefficients of the powers of $f$ are twice the alternate coefficients in the binomial expansion for $(1 + f)^5$:  $5, 10$ and $1$.  If you work through more examples you'll see there is a cancellation that happens with $1/2^n$ so that this always results in an integer.
-
-\subsection*{proof of Binet's formula}
-
-\[ F_n = \frac{1}{\sqrt{5}} \cdot  (\phi^n - \psi^n) \]
-
-We prove the formula using induction.  We cover the method generally in the second volume of this book.  Here we simply test the two base cases:  $n=1$ and $n=2$.
-
-\[ F_1 =  \frac{1}{\sqrt{5}} \cdot  (\phi - \psi) \]
-We have
-\[ \phi - \psi = \frac{1 + \sqrt{5}}{2} - \frac{1 - \sqrt{5}}{2} \]
-\[ = \sqrt{5} \]
-so
-\[ F_1 = \frac{1}{\sqrt{5}} \cdot \sqrt{5} = 1 \]
-
+Since the base of one triangle is twice the other, we have
+\[ \mathcal{A}_{\triangle MDC} = 2A_{\triangle MBC} = r(3+\sqrt{5}) \]
 Then
-\[ F_2 = \frac{1}{\sqrt{5}} \cdot  (\phi^2 - \psi^2) \]
-Here
-\[ \phi^2 - \psi^2 = (\phi+1) - (\psi + 1) \]
-\[ = \phi - \psi = \sqrt{5} \]
-so
-\[ F_2 = \frac{1}{\sqrt{5}} \cdot \sqrt{5} = 1 \]
+\[ R(1+\sqrt{5}) = r(3+\sqrt{5}) \]
+\[ \frac{R}{r} = \frac{3+\sqrt{5}}{1+\sqrt{5}} \]
+which certainly doesn't look like $\phi$, although it does have $\sqrt{5}$.
 
-In the inductive step, we assume that the formula is correct for $n-2$ and $n-1$ and use those results to prove the formula for $n$.
+Let's just play around:
+\[ \phi = \frac{1 + \sqrt{5}}{2} \]
+\[ 2 \phi = 1 + \sqrt{5} \]
+\[ 2 \phi + 2 = 3 + \sqrt{5} \]
 
-\[ F_n = \frac{1}{\sqrt{5}} \cdot  (\phi^n - \psi^n) \]
+Hence we have that 
+\[  \frac{R}{r} = \frac{ 2 \phi + 2}{2 \phi} \]
+\[ = 1 + \frac{1}{\phi} \]
 
-We have
-\[ \phi^n - \psi^n = \phi^2 \phi^{n-2} - \psi^2 \psi^{n-2} \]
-\[ = (\phi + 1) \phi^{n-2} - (\psi + 1) \psi^{n-2} \]
-\[ = (\phi^{n-1} + \phi^{n-2}) - (\psi^{n-1} + \psi^{n-2}) \]
-\[ = (\phi^{n-1} - \psi^{n-1}) + (\phi^{n-2} - \psi^{n-2}) \]
-
-Bringing back the factor of $1/\sqrt{5}$, the first two terms become $F_{n-1}$ and the second pair become $F_{n-2}$.
-
-\[ F_n = F_{n-1} + F_{n-2} \]
+And since
+\[ \phi^2 = \phi + 1 \]
+\[ \phi = 1 + \frac{1}{\phi} \]
+It follows that 
+\[ \frac{R}{r} = \phi \]
 
 $\square$
+
+That's amazing!
 
 \end{document}
