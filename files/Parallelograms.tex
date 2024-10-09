@@ -89,6 +89,10 @@ Roughly speaking, in the figure below, cut off a right triangle from the left si
 
 \begin{center} \includegraphics [scale=0.5] {area7.png} \end{center}
 
+\subsection*{Area of a triangle}
+
+\label{sec:triangle_area}
+
 To reiterate, any triangle can be turned into a parallelogram, by attaching a rotated image of itself:
 
 \begin{center} \includegraphics [scale=0.2] {rot_triangle.png} \end{center}
@@ -120,7 +124,9 @@ A sophisticated approach is to call on I.43 and change the shape to a different 
 
 \subsection*{Euclid I.43}
 
-\hyperref[sec:Euclid_I_43]{\textbf{Parallelogram complements equal}} says that, in the figure below, the two smaller parallelograms not on the diagonal, $ABED$ and $EFIH$, are equal.  
+\label{sec:Euclid_I_43}
+
+This theorem says that, in the figure below, the two smaller parallelograms not on the diagonal, $ABED$ and $EFIH$, are equal.  
 
 \begin{center} \includegraphics [scale=0.15] {EI_43.png} \end{center}
 
@@ -148,12 +154,12 @@ Any rectangle can be turned into a square with the same area.  This is Euclid II
 
 Given that $D$ and $E$ are midpoints of their sides:  $AD = DB$ and $AE = EC$.  Prove that the colored areas are equal.
 
-\begin{center} \includegraphics [scale=0.4] {tra1.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {tra1b.png} \end{center}
 
 \emph{Solution}.
 
 Let the four triangular areas be labeled $I-IV$.  
-\begin{center} \includegraphics [scale=0.5] {tra2.png} \end{center}
+\begin{center} \includegraphics [scale=0.2] {tra2b.png} \end{center}
 
 Then, by the area-ratio theorem and using $AC$ as the base, and since the base is bisected:
 
@@ -163,17 +169,16 @@ But using $AB$ as the base
 
 \[ I + III = II + IV \]
 
-Add the two equations:
-
-\[ 2 \cdot I + II + III = 2 \cdot IV + II + III \]
+Add the two equations and cancel $II + III$ on both sides:
 \[ I = IV  \]
+
+Subtract the two equations and 
+\[ II - III = III - II \]
+\[ II = III \]
 
 $\square$
 
-We might note as well that since $DE$ bisects the sides it is parallel to the base $BC$.  (We will get to that, it is a consequence of similar triangles).  As a result, $II + IV$ and $III + IV$ have the same altitude as well as the same base $BC$, so they are equal.  In other words, subtracting the two equations:
-
-\[ II - III = III - II \]
-\[ II = III \]
+We might note as well that since $DE$ bisects the sides it is parallel to the base $BC$.  (We will get to that, it is a consequence of similar triangles).
 
 \subsection*{twice the area}
 

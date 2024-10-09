@@ -61,7 +61,10 @@ Menelaus's theorem
 Ceva's Theorem
 Pythagoras by area
 Ratio Boxes
+
+Polygons
 Pentagon
+Hexagon
 
 Addendum
 Author's notes
