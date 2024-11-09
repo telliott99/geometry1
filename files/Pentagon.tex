@@ -34,7 +34,7 @@ Here is a regular pentagon circumscribed by a circle.
 
 The inscribed angle theorem makes the derivation of equal angles easy..  In the figure above, the three angles marked with black (B) dots are all equal because each is subtended by chord $AB$.
 
-Because all the sides are equal, $AB = AC$ and so on, it follows that all three of the angles at any one vertex are equal.  In other words, $\angle DAE$ is subtended by $DE$ but $DE = CE$, so $\angle DAE = \angle CAE$.
+Because all the sides are equal, $AB = AC$ and so on, it follows that all three of the angles at any one vertex are equal.  $\angle DAE$ is subtended by $DE$ but $DE = CE$, so $\angle DAE = \angle CAE$.
 
 In fact, all of the vertices are also equal, since central triangles (not drawn) are congruent by SSS.  We could also appeal to the five-fold rotational symmetry.
 
@@ -46,14 +46,16 @@ which quickly leads to $B = R$, as we have already concluded.
 
 Each vertex consists of three copies of the same angle, each one of those small angles is $1/5$ of two right angles or $36^{\circ}$.  They add up to $104^{\circ}$ at the vertices.
 
+All five chords are equal as well since, for example, $\triangle ABC \cong \triangle ACE$ by SAS.  It follows that $\triangle ADE$ is isosceles.
+
 \subsection*{parallelogram}
 
 Again, each small angle at any vertex has the same measure.  We have marked only some of them in the figure below (left).
 \begin{center} \includegraphics [scale=0.16] {pent8.png} \end{center}
 
-The point is that in $ACPB$, adjacent vertices have five copies of the small angles, which sums to two right angles.  Thus, the figure is a parallelogram.  Moreover, it is a rhombus, because adjacent sides are equal, such as $AB = AC$.  Altogether, there are 5 such rhombi in the figure.
+In $ACPB$, adjacent vertices have five copies of the small angles, which add up to two right angles.  Thus, the figure is a parallelogram.  Moreover, it is a rhombus, because adjacent sides are equal, such as $AB = AC$.  Altogether, there are 5 such rhombi in the figure.
 
-Because of the parallelograms, $BC \parallel DE$ and so on.
+Because of the parallelograms, $BC \parallel DE$ and so on.  It follows that $\triangle ADE \sim \triangle ASR$.
 
 There are two classes of similar isosceles triangle in the figure:  tall skinny ones (36-72-72), and short fat ones (108-36-36).  The tall skinny ones come in three sizes, so for example 
 
@@ -61,7 +63,7 @@ There are two classes of similar isosceles triangle in the figure:  tall skinny 
 \[ \triangle ABT \cong \triangle DSB \]
 \[ \triangle ADE \cong \triangle EAB \]
 
-Each of these triangles contains the same angles, they are all similar, and they are all isosceles.
+Each of these triangles contains the same angles, so they are similar, and they are all isosceles.
 
 Here are three examples of the tall skinny triangle:
 \begin{center} \includegraphics [scale=0.4] {three_triangles.png} \end{center}
@@ -74,7 +76,7 @@ When we work through the similar triangles using relationships between lengths (
 
 \begin{center} \includegraphics [scale=0.3] {golden_ratio2.png} \end{center}
 
-We draw a square and then extend two parallel sides to make a large rectangle and a small one at the same time.  We don't want just any rectangles, but require that they be similar, they should have the same ratio of the long side to the short side.
+We draw a square and then extend two parallel sides to make a large rectangle and a small one at the same time.  We don't want just any rectangles, but require that they be similar:  they should have the same ratio of the long side to the short side.
 
 We can conveniently model this in two ways.  In the first, the square has side length $x$ and the extension is $1$, while in the second, the square is scaled to have side length $1$ and the extension is $y$.  These will give inverses.
 
@@ -86,20 +88,24 @@ We choose the first method.  Hence similarity gives:
 The solutions are:
 \[ x = \frac{1 \pm \ \sqrt{5}}{2} \]
 
-Since $\sqrt{5} > 2$ the minus branch gives $x < 0$.  We choose
+Since $\sqrt{5} > 1$ (also $> 2$ !) the minus branch gives $x < 0$.  We choose the positive branch:
 \[ x = \frac{1 + \sqrt{5}}{2} \]
 
-This is called $\phi$, the famous golden mean or ratio.  It has a value of about
-\[ \frac{1 + \sqrt{5}}{2} \approx 1.65 \]
+This is called $\phi$, the famous golden mean or ratio.  It has a value of about $1.65$.
+
+We can check that $\phi$ really does solve the equation:
+\[ \phi^2 =  \frac{1 + \sqrt{5}}{2} \cdot  \frac{1 + \sqrt{5}}{2} \]
+\[ = \frac{1}{4} (1 + 2 \sqrt{5} + 5) \]
+\[ = 1 + \frac{2 + 2 \sqrt{5}}{4} = 1 + \phi \]
 
 To return to our problem:
 \begin{center} \includegraphics [scale=0.15] {pent13.png} \end{center}
 
 Extend $AB$ and $ED$ to meet at $Y$.
 
-Since the external angles to $\triangle YBD$ are equal, by supplementary angles $\angle YBD = \angle YDB$, so by I.6 $\triangle YBD$ is isosceles.  
+Since the external angles to $\triangle YBD$ are equal, by I.6 $\triangle YBD$ is isosceles.  
 
-Since $\triangle ADE$ has the same base angles and the same base, $\triangle ADE \cong \triangle ADB$ by ASA.
+Since $\triangle ADE$ has the same base angles and equal base $BD = DE$, $\triangle ADE \cong \triangle YDB$ by ASA.
 
 Let $\triangle YDB$ have a ratio of the side length to the base of $x$.
 
@@ -112,24 +118,19 @@ Hence $x$ is really $\phi$.
 The equation below is the one to remember, with $\phi$ substituted for $x$:
 \[ \phi^2 = 1 + \phi \]
 
-We can check that $\phi$ really does solve the equation:
-\[ \phi^2 =  \frac{1 + \sqrt{5}}{2} \cdot  \frac{1 + \sqrt{5}}{2} \]
-\[ = \frac{1}{4} (1 + 2 \sqrt{5} + 5) \]
-\[ = 1 + \frac{2 + 2 \sqrt{5}}{4} = 1 + \phi \]
-
 There are some other values we will need that can be seen in this figure:
 \begin{center} \includegraphics [scale=0.16] {pent14.png} \end{center}
 
 $\angle YBD = 72^{\circ}$, since it has two copies of the fundamental angle.  Its cosine is one-half of $BD$, that is, $1/2$, divided by $\phi$ or
 \[ \cos 72^{\circ} = \frac{1}{2 \phi} \]
 
-We also will need another one
+We also will need:
 \begin{center} \includegraphics [scale=0.2] {pent15.png} \end{center}
 
 $\angle ABC = 36^{\circ}$.  Its cosine is one-half of $BC$, $\phi/2$, divided by $1$, or just   
 \[ \cos 36^{\circ} = \frac{\phi}{2} \]
 
-We will come back for both of these.
+We will come back for both of these results.
 
 \subsection*{more}
 
@@ -181,9 +182,9 @@ We also know that $OQ + AQ = 2$ so
 
 In other words, the ratio $OP:OQ = \phi$.
 
-$\angle AOB$ has adjacent side $OQ = 1/\phi$ and the hypotenuse is $2$ so the cosine is $1/2 \phi$.
+$\triangle OQB$ has adjacent side $OQ = 1/\phi$ and the hypotenuse is $2$ so the cosine is $1/2 \phi$.
 
-But this is the cosine of $72^\circ$, which means that $\angle AOB = 72^{\circ}$, and corresponds to one-fifth of the complete circle.  It is the central angle of a pentagon.
+But this is the cosine of $72^\circ$, which means that $\angle BOQ = \angle BOA = 72^{\circ}$, and corresponds to one-fifth of the complete circle.  It is the central angle of a pentagon.
 
 Here is a figure (redrawn from Bogolmony) which shows how Richmond's approach extends to finding all of the vertices of the regular pentagon (Bogolmony cites Conway and Guy).
 \begin{center} \includegraphics [scale=0.2] {Richmond4.png} \end{center}
@@ -202,7 +203,7 @@ But $OR$ is the adjacent side in the right triangle $COR$, with hypotenuse equal
 
 We showed above that the angle whose cosine is $\phi/2$ is $36^{\circ}$.  
 
-Hence $\angle COD$ is twice that or $72^{\circ}$, which is the correct measure for the central angle of one section of the regular pentagon.
+$\angle COD$ is twice $\angle COR$ or $72^{\circ}$, which is the correct measure for the central angle of one sector of the regular pentagon.
 
 \subsection*{Euclid's construction}
 
@@ -217,7 +218,8 @@ Euclid uses several steps to construct a pentagon circumscribed by a circle.  Th
 The idea is to find $H$ such that 
 \[ AB \cdot HB = AH^2 \]
 
-In other words, find $H$ so that the ratios above equal $\phi$.
+In other words, find $H$ such that
+\[ \frac{AB}{AH} = \frac{AH}{HB} = \phi \]
 
 We will prove that the area of rectangle $HBDK$, abbreviated $HD$, equals $FH$, the square on $AH$.
 
@@ -280,7 +282,7 @@ So
 \[ (2) \ AB \cdot BC = AC^2 = BD^2 \]
 
 As radii of $\mathcal{O}$, $AB = AD$ and $\triangle ABD$ is isosceles, with
-\[ (3) \ \beta = \angle BDA \]
+\[ (3) \ \beta = \angle BDA = \phi + \delta \]
 
 Join $CD$ and $AD$.
  
@@ -306,15 +308,13 @@ Thus $\triangle DBC$ is also isosceles.
 
 Furthermore, $\triangle DBC$ and $\triangle ABD$ are equi-angular (similar, although we won't need that).
 
-It follows that $BD = CD$ but by (2) $BD = AC$ so $CD = AC$ and thus $\triangle CAD$ is isosceles.
-
-Since $\triangle ACD$ is isosceles
+It follows that $BD = CD$ but by (2) $BD = AC$ so $CD = AC$ and thus $\triangle CAD$ is isosceles and then
 \[ \alpha = \phi \]
 
 By (4) $\delta = \alpha$ so
 \[ \delta = \phi \]
 
-Thus $\angle BDA$ is bisected by $CD$.
+$\angle BDA$ is bisected by $CD$.
 
 \begin{center} \includegraphics [scale=0.20] {Euclid_IV_10.png} \end{center}
 
@@ -333,16 +333,16 @@ Since $\triangle ABD$ has central angle $\alpha$ equal to one-fifth of a right t
 
 Therefore, the side $BD$ forms one side of a regular decagon inscribed in $\mathcal{O}$.
 
-Connecting alternate vertices yields a regular pentagon.  Following Bogolmony, we use this shortcut.  This completes the construction of a regular pentagon.
+Following Bogolmony, we use this shortcut:  connecting alternate vertices yields a regular pentagon..  This completes the construction.
 
 Euclid IV.11 inscribes a triangle with the same angles as above into a circle ($\triangle BED$, below).
 
 \begin{center} \includegraphics [scale=0.2] {Euclid_IV_11.png} \end{center}
 
-Bisect $\angle BED$ and extend the bisector to meet the circle at $C$.  Do the same with $\angle BDE$ to find $A$.
+Bisect $\angle BED$ and extend the bisector to meet the circle at $C$.  Do the same with $\angle BDE$ to find $A$.  This completes Euclid's construction.
 
 \subsection*{another bisection}
-Draw the perpendicular at any vertex, say $BZ$, so that $\angle ABZ$ is a right angle.
+Draw the perpendicular at any vertex, say $BZ \perp BA$, so that $\angle ABZ$ is a right angle.
 
 \begin{center} \includegraphics [scale=0.16] {pent11.png} \end{center}
 
@@ -372,7 +372,9 @@ Let $\triangle ABC$ be equilateral and $BCDE$ be a square.  Construct the circle
 
 \emph{Proof}.
 
-Scale the triangle so that $AC = 1$  Then $CF = \sqrt{2}$.
+Scale the triangle so that $AC = 1$  
+
+Then $CE = \sqrt{2} = CF$.
 
 We have $\cos A = \sin 30^{\circ} = \frac{1}{2}$
 
@@ -391,15 +393,18 @@ $\square$
 
 Here's another construction in the collection curated by Bogolmony, from John Arioni.
 
-The distance from the center of the circle to the corner of the rectangle is just $\sqrt{5}/2$.  So $\phi$ is quite literally constructed.
+The distance from the center of the circle to the corner of the rectangle is just $\sqrt{5}/2$.  So $\phi$ is quite literally constructed by adding $1/2$ (the radius of the circle) to give the length of the red line.
 
 It remains to show that
-\[ \frac{\sqrt{5} - 1}{2} = \frac{1}{\phi} \]
+\[ \phi + \frac{1}{\phi} = \sqrt{5} \]
 
-One could also write
-\[ \frac{2}{\phi} + 1 = \sqrt{5} \]
+Start from the usual expression for $\phi$ and solve for $\sqrt{5}$.  Equate the result to the left-hand side of what is above.
+\[ \phi + \frac{1}{\phi} = 2 \phi - 1 \]
+Multiply by $\phi$:
+\[ \phi^2 + 1 = 2 \phi^2 - \phi \]
+\[ 1 = \phi^2 - \phi \]
 
-I'll leave the algebra to you.
+That looks correct.  To obtain the proof, reverse these steps.
 
 $\square$
 
@@ -434,19 +439,15 @@ Then
 \[ \frac{R}{r} = \frac{3+\sqrt{5}}{1+\sqrt{5}} \]
 which certainly doesn't look like $\phi$, although it does have $\sqrt{5}$.
 
-Let's just play around:
+We could clear the denominator, multiplying by $(1-\sqrt{5})/(1-\sqrt{5})$, but instead let's just play around:
 \[ \phi = \frac{1 + \sqrt{5}}{2} \]
 \[ 2 \phi = 1 + \sqrt{5} \]
 \[ 2 \phi + 2 = 3 + \sqrt{5} \]
 
 Hence we have that 
 \[  \frac{R}{r} = \frac{ 2 \phi + 2}{2 \phi} \]
-\[ = 1 + \frac{1}{\phi} \]
-
-And since
-\[ \phi^2 = \phi + 1 \]
-\[ \phi = 1 + \frac{1}{\phi} \]
-It follows that 
+\[ = \frac{\phi + 1}{\phi} \]
+Recalling that $\phi + 1 = \phi^2$, it follows that
 \[ \frac{R}{r} = \phi \]
 
 $\square$
