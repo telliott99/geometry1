@@ -80,29 +80,37 @@ The first and second proofs are attributed to Archimedes.
 
 \emph{Proof}.
 
-Given arc $AD = $ arc $GD$ and $DE \perp AB$.
+Given $D$ is the midpoint of arc $ADG$ so arc $AD = $ arc $GD$. 
 
-Draw isosceles $\triangle DBZ$ as follows:
+Given $B$ lies on arc $GD$ (the minor arc, since $BD < GD < $ one half of the circle).
 
-Let $BE = ZE$.
+Let $DE \perp AB$.
+
+Find $Z$ on $AB$ such that $BE = ZE$.
 
 So $\triangle DBE \cong \triangle DZE$ by SAS.
 
-Then $BD = DZ$, and $\angle DBZ = \angle DZB$
+It follows that $BD = DZ$.
+
+So $\triangle DBZ$ is isosceles, and $\angle DBZ = \angle DZB$.
+
+This construction is used in several of the proofs.
 
 \begin{center} \includegraphics [scale=0.18] {BC_a.png} \end{center}
 
 Now find $H$ such that $BD = HD$.
 
-Subtracting equals, it follows that $GB = AH$.
+Subtracting equals, it follows that $GB = AH$.  (Equally, we could find the latter first).
 
-$\angle A$ is bisected since the halves are subtended by $BD = HD$.
+$\angle A$ is bisected since the two parts are subtended by $BD = HD$.
 
-We will show that $\angle ZDA = \angle HDA$.
+We will show that $\angle ZDA = \angle HDA$ which then gives $\triangle ZDA \cong \triangle HDA$.
 
 (1) $\angle DBZ$ corresponds to arc $DHA = $ arc $DH \ +$ arc $HA$.
 
 (2) Since $HD = BD$, $\angle DBZ$ corresponds to arc $BD \ +$ arc $HA$.
+
+\begin{center} \includegraphics [scale=0.18] {BC_a.png} \end{center}
 
 (3) Hence $\angle DBZ =  \angle DAB + \angle HDA$.
 
@@ -110,7 +118,7 @@ We will show that $\angle ZDA = \angle HDA$.
 
 (5) But $\angle DZB$ is external to $\triangle ZDA$, so it equals $\angle DAB + \angle ZDA$.
 
-(6) Equating equals, $\angle ZDA = \angle HDA$.
+(6) Equating equals and subtracting, $\angle ZDA = \angle HDA$.
 
 Thus $\triangle ZDA \cong \triangle HDA$ by ASA.
 
@@ -126,7 +134,9 @@ $\square$
 
 \emph{Proof}.
 
-Given arc $AD = $ arc $GD$ and $DE \perp AB$.
+Given arc $AD = $ arc $GD$, $B$ on arc $GD$, and $DE \perp AB$.
+
+So $GD = AD$.
 
 Extend $AEB$ to $Z$ such that $AE = ZE$.
 
@@ -251,13 +261,21 @@ It follows that $AB \parallel GH$.
 
 Parallel chords in a circle cut equal arcs and chords.
 
+\begin{center} \includegraphics [scale=0.18] {BC_5.png} \end{center}
+
 Thus $GB = AH = AZ$.
 
 Adding equals:
 
 $GB + BE = AZ + ZE = AE$.
 
-\begin{center} \includegraphics [scale=0.18] {BC_5.png} \end{center}
+$\square$
+
+There is a small problem with this proof.  One can draw the figure so that the extension of $DZ$ gives $H$ on the other side of $G$.
+
+\begin{center} \includegraphics [scale=0.25] {BC_5_alt.png} \end{center}
+
+It appears that $GH \parallel AB$, but now $GB$ is not one of the sides.  Can the proof be rescued?
 
 \subsection*{sixth proof:  Suter(f)}
 
