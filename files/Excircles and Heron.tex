@@ -23,46 +23,79 @@
 
 \label{sec:excircle_theorems}
 
-I came across some sophisticated ``elementary'' notes on geometry on the web, including an introduction to \emph{excircles}.  We can use excircles to simplify derivation of Heron's formula.  This relates the area of any triangle to one-half of its perimeter, the \emph{semi-perimeter} $s$, and the three sides:
+This chapter is an introduction to \emph{excircles}, which are so named by reference to \emph{incircles}.  The incircle is tangent to all three sides of a triangle and lies inside.  An excircle is tangent to one side and also tangent to extensions of the other two sides.
+
+In $\triangle ABC$, with opposite sides $a$, $b$ and $c$, the incircle on center $M$ is that circle to which all three sides are tangent.
+
+\begin{center} \includegraphics [scale=0.3] {excircle.png} \end{center}  
+The circle on center $N$ is tangent to side $c$ opposite $\angle C$, and also tangent to the extensions of sides $a$ and $b$.
+
+There is one excircle for each side of the original triangle.  We show how to construct an excircle below.
+
+We can use this construction to simplify derivation of Heron's famous formula, which relates the area of any triangle to one-half of its perimeter, the \emph{semi-perimeter} $s$, and the three side lengths:
+
 \[ A = \sqrt{s (s-a)(s-b)(s-c)} \]
 
-We develop a simple proof of Heron's theorem in this chapter that utilizes similar triangles and a construction with an excircle.  An algebraic excursion is delayed until \hyperref[sec:Heron_formula]{\textbf{later}}, when we also look at Brahmagupta.  At the end of the chapter we also look at Heron's original proof.
+We develop a simple proof of Heron's theorem in this chapter.  It utilizes similar triangles and a construction with an excircle.  An algebraic excursion is delayed until \hyperref[sec:Heron_formula]{\textbf{later}}, when we also look at Brahmagupta.  At the end of the chapter we also look at Heron's original proof.
 
-\subsection*{incircle}
-The \emph{incircle} of a triangle is contained within and just touches (is tangent to) each of the three sides.  It can be constructed by bisecting the angle at each vertex, and finding the point $M$ where the bisectors meet.  $M$ is then the center of the incircle.  
+\subsection*{tangents and incircles, again}
 
-\emph{Proof}.  Let the triangle be $\triangle ABC$ with side $a$ opposite vertex $A$, etc., as usual, and let $AM$ be the bisector of $\angle A$, $BM$ the bisector of $\angle B$, and so on.  Drop perpendiculars from $M$ to the sides at $F$, $G$ and $H$.
+First let's review how to draw the tangents from any point $P$ to a circle on center $O$.  Note that $P$ must lie outside the circle.  Draw the line $OP$ and bisect it at $Q$.  Then draw the circle on center $Q$ with radius $PQ = OQ$.  Find where that circle intersects the first one.
 
-\begin{center} \includegraphics [scale=0.15] {heron5b.png} \end{center}  
+\begin{center} \includegraphics [scale=0.3] {tangent2b.png} \end{center}  
 
-Long ago we proved that each pair of perpendiculars from an angle bisector forms two congruent right triangles, by hypotenuse-leg in a right triangle (HL), so, for example, $\triangle AMG \cong \triangle AMH$.  Thus, the two perpendiculars from any point on the bisector to the rays of the bisected angle are equal (\hyperref[sec:bisector_equidistant_sides]{\textbf{here}}).  
+Since $OP$ is a diameter of circle $Q$, by Thales' theorem, $\angle PTO$ is right, so $PT \perp $ the radius $OT$ of circle $O$ and by definition then, $PT$ is a tangent to the circle on center $O$, through $T$.  The other intersection at $S$ forms the other tangent $PS$.  
 
-But we can do the same for any pair of sides.  Therefore all three distances are equal, and we can then draw the circle, called the incircle, with that distance as the radius $r$.  $MF = MG = MH$.  $\square$
+Since $\triangle OTP$ and $\triangle OSP$ are both right triangles and share the same hypotenuse, as well as bases equal to the radius of circle $O$, the two triangles are congruent by HL.  Thus the two tangents from $P$ to circle $O$ are equal.  In addition, the congruent triangles mean that the line $OP$ is the bisector of $\angle TPS$.  
 
-Let the two congruent right triangles containing the half-angle at vertex $A$ have base $AG = AH = x$, and the two at $B$  base $y$ and the two at $C$ base $z$.  (These are not labeled as such in the diagram, we will see why in a minute).
+Conversely, if we bisect an angle and then draw perpendiculars from any point on the bisector, the two triangles are congruent.
+
+Now, the \emph{incircle} of a triangle is contained within and just touches (is tangent to) each of the three sides.  It can be constructed by bisecting the angle at each vertex, and finding the point $M$ where the bisectors meet.  $M$ is then the center of the incircle.  
+
+\begin{center} \includegraphics [scale=0.3] {heron5c.png} \end{center}  
+
+\emph{Proof}.  The proof just uses what we established above.  Let the triangle be $\triangle ABC$ with side $a$ opposite vertex $A$, etc., as usual, and let $AM$ be the bisector of $\angle A$, $BM$ the bisector of $\angle B$, and so on.  Drop perpendiculars from $M$ to the sides at $F$, $G$ and $H$.
+
+Above we showed that each pair of perpendiculars from an angle bisector forms two congruent right triangles, by hypotenuse-leg in a right triangle (HL), so, for example, $\triangle AMG \cong \triangle AMH$.  Thus, the two perpendiculars from any point on the bisector to the rays of the bisected angle are equal (\hyperref[sec:bisector_equidistant_sides]{\textbf{here}}).  
+
+But we can do the same for any pair of sides.  Therefore all three distances are equal, and we can then draw the circle, called the incircle, with that distance as the radius $r$.  $MF = MG = MH$. 
+
+$\square$
+
+Note: the half-angles formed by bisection (not labeled here) are named for the parent angle:   $\alpha + \alpha = \angle A$ and $\angle \alpha = \angle MAH$.
+
+Before moving on to excircles, we do a little arithmetic on the incircle.  Let the two congruent right triangles containing the half-angle at vertex $A$ have base $AG = AH = x$, and the two at $B$  base $y$ and the two at $C$ base $z$.
+
+\begin{center} \includegraphics [scale=0.3] {heron5d.png} \end{center}  
 
 The perimeter is $p = 2x + 2y + 2z$, and so the \emph{semi-perimeter} $s$ is
-\[ s = x + y + z = \frac{a + b + c}{2} \]
+\[ s = \frac{a + b + c}{2} = x + y + z \]
 
-Since $a = y + z$, using the equation above we can write
+Side $a$ lies opposite $\angle A$ (i.e. $a$ is the same as $BC$) so $a = y + z$, using the equation above we can write
 \[ s = x + a \]
 from which
 \[ x = s - a \]
-and this explains the labels in the figure above. 
+and this explains the labels in the figure below. 
 
-In addition, the area of the triangle is
-\[ A = xr + yr + zr = r(x + y + z) = rs \]
+\begin{center} \includegraphics [scale=0.15] {heron5b.png} \end{center}  
 
-A commonly used notation for area is $\mathcal{A} = (ABC)$, so we rewrite this as
-\[ (ABC) = rs \]
+We can check this.  From the diagram:  
+\[ (s-a) + (s-c) = 2s - a - c = b \]
 
-We will see terms like $s-a$, $s-b$, etc. again.  We note that 
+In addition, the area of the whole triangle is
+\[ A = 2 \cdot (\frac{xr}{2} + \frac{yr}{2} + \frac{zr}{2} ) \]
+\[ = r(x + y + z) = rs \]
+
+A commonly used notation for area is $\mathcal{A} = (ABC)$, so we can rewrite this as
+\[ \mathcal{A} = (ABC) = rs \]
+
+We will see terms like $s-a$, $s-b$, etc. below.  We note that 
 \[ s - a = \frac{a+b+c}{2} - a = \frac{-a + b + c}{2} \]
 Subtract side $a$ from $s$ on the left and change the sign on $a$ in the formula for the semi-perimeter.
 
 Another useful result that we will come back for later is
 \[ (s - a) + (s - b) + (s - c) = 3s - (a + b + c) \]
-\[ = s \]
+\[ 3s - 2s = s \]
 
 \subsection*{problem}
 
@@ -73,23 +106,26 @@ Show that the incircle for a $3-4-5$ right triangle has a radius equal to $1$.
 \begin{center} \includegraphics [scale=0.15] {heron7.png} \end{center}
 Any triangle has a single incircle and three excircles, one for each side of the triangle.  The excircle on side $c$ (opposite $\angle C$) is formed by extending sides $a$ and $b$ (i.e. $BC$ and $AC$ above) and then finding the circle that is tangent to those two extensions and also tangent to side $c$.
 
-Let $N$ be the center of the excircle on side $c$.  $N$ lies on the bisector of the original $\angle C$.  This follows from the fact that $CD$ and $CE$ are tangent to this excircle.
+Let $N$ be the center of the excircle on side $c$.  $N$ lies on the bisector of the original $\angle C$.  This follows from the definition that $CD$ and $CE$ are tangent to this excircle.
 
-Since $AD$ and $AJ$ are also tangents to the excircle from point $A$, if the angle supplementary to $\angle A$ (i.e. $\angle DAB$) is bisected, then the intersection of that bisector with the bisector of $\angle C$ occurs at $N$.
+Since $AD$ and $AJ$ are also tangents to the excircle from point $A$, if the angle supplementary to $\angle A$ (i.e. $\angle BAD$) is bisected, then the bisector also runs through $N$, so $N$ can be constructed by finding the intersection of the bisectors of $\angle DAB$ and $\angle C$.  The bisector of $\angle ABE$ goes through $N$ as well.
 
 \begin{center} \includegraphics [scale=0.15] {heron7.png} \end{center}
-Drop the vertical to side $c$ at $J$, or to either of the extensions at $D$ and $E$, to find the radius of the excircle $R$.
+Construct the perpendicular through $N$ from the extension of $AC$ (or of $BC$) meeting the extension at $D$ (or $E$) to find the radius of the excircle $R$.
 
-$R = ND = NE = NJ$.  (If we were to look at more than one excircle we might use a subscript like $R_c$.)
+$R = ND = NE = NJ$.  Since there is one excircle for each side, we may introduce a subscript like $R_c$.
 
-Using the latter notation for one moment, a surprising, simple relationship can be found:
-\[ R_c \cdot (s-c) = (ABC) \]
+We can see that $ND \perp CGD$ and also $MG \perp CGD$.  It follows that $\triangle MGC \sim \triangle NDC$ which gives:
+\[ \frac{R_c}{CD} = \frac{r}{CG} = \frac{r}{s-c} \]
+
+Rearranging
+\[ R_c \cdot (s-c) = r \cdot CD \]
+
+It will turn out (below) that the length $CD$ is equal to the semiperimeter $s$.  So going back to our previous result, the product above is equal to the area of the triangle:
+\[ \mathcal{A}_{\triangle ABC} = rs = R_c \cdot (s-c) \]
+
 This can be done for any side so  
 \[ R_a \cdot (s-a) = R_b \cdot (s-b) = R_c \cdot (s-c)  \]
-
-Returning to consideration of $R_c$ and suppressing the subscript, we now have two expressions for the area
-\[ rs = R \cdot (s-c)  \]
-We show how to derive this result below and use it for our key proof.
 
 \subsection*{tangent length}
 We can show that the length of the tangents $CD = CE$ is just $s$.
@@ -97,45 +133,43 @@ We can show that the length of the tangents $CD = CE$ is just $s$.
 
 \emph{Proof}.
 
-Let the length of each tangent from $C$ be $t$.  Then
+Let $AD = AJ = x$ and $BE = BJ = y$.
+
+We have two unknowns and two equations.
+\[ AJ + BJ = x + y = c \]
+and since the two tangents from any point are equal:
+\[ x + (s-a) + (s-c) = y + (s-b) + (s-c) \]
+\[ x - a = y - b \]
+\[ = c - x - b \]
+
+Rearranging
+\[ 2x = a - b + c \]
+
+Recall that (for example)
+\[ 2(s - b) = a - b + c \]
+Hence
+\[ 2x = 2(s-b) \]
+\[ x = s - b \]
+It follows that $y = s - a$ and 
+\[ CD = CE = (s - a) + (s - b) + (s-c) \]
+\[ = s \]
+
+Here is a slightly different and perhaps even simpler approach.  Let the length of each tangent from $C$ be $t$.  Then
 \[ 2t = CD + CE \]
-\[ = AD + (s-a) + (s-c) + BE + (s-b) + (s-c) \]
-But $AD = AJ$ and $BE = BJ$ and also $AJ + BJ = c$ so that gives
-\[ 2t = (s-a) + (s-c) + (s-b) + (s-c) + c \]
+\[ = x + (s-a) + (s-c) + y + (s-b) + (s-c) \]
+\[ = c + (s-a) + (s-c) + (s-b) + (s-c) \]
 \[ = (s-a) + (s-c) + (s-b) + s \]
-\[ = 2s \]
-Hence the length of the entire tangent is just $s$.
+\[ = 4s - 2s = 2s \]
+Hence $t = s$ and the length of the entire tangent is just $s$.
 
 $\square$
 
-We also have that 
-\[ CD = s = AD + (s - a) + (s - c) \]
-Compare with our previous result
-\[ s = (s - a) + (s - b) + (s - c) \]
-Thus
-\[ AD = s - b \]
+To summarize, the lengths of all these tangents, 3 pairs to the excircle and 3 pairs to the incircle, are particularly simple.  
 
-It turns out that the lengths of all these tangents, 3 pairs to the excircle and 3 pairs to the incircle, are particularly simple.  
-
-For example, the points of tangency $J$ and $H$ divide the side $c$ into the same two lengths:
+The points of tangency $J$ and $H$ divide the side $c$ into the same two lengths:
 \[ AD = AJ =  BH = s - b \]
 and
 \[ BE = BJ = AH = s - a \]
-
-\subsection*{another construct}
-\begin{center} \includegraphics [scale=0.18] {incircle2.png} \end{center}
-
-Extend the sides of $\triangle ABC$ a distance $a$ past vertex $A$ and so on.  
-
-Then one can draw a circle whose center is also the incenter of the triangle, that passes through the ends of all of the extended line segments.
-
-\emph{Proof}.  
-
-Draw the right triangle with one side equal to $r$, the radius of the incircle, and the other side extending side $b$ through vertex $A$, as shown.  The second side has length $s - a + a = s$.  
-
-Therefore the hypotenuse of every such right triangle is the same, and this is the radius of the large circle.
-
-$\square$
 
 \subsection*{Heron's formula}
 
@@ -158,13 +192,16 @@ So $\angle DAN$ is complementary to $\angle MAG$, since their sum is one right a
 
 The ratios of interest are:
 \[ \frac{s-b}{R} = \frac{r}{s-a} \]
-\[ r = \frac{(s-a)(s-b)}{R} \]
-\[ rs = \frac{s(s-a)(s-b)}{R} \]
-
-\begin{center} \includegraphics [scale=0.15] {heron10.png} \end{center}
-
-Combining with our previous result:
+\[ rR = (s-a)(s-b) \]
+But
+\[ rs = R(s-c) \]
+Solve both equations for $R$ and set them equal:
+\[ \frac{(s-a)(s-b)}{r} = \frac{rs}{s-c} \]
+Thus
+\[ r^2s = (s-a)(s-b)(s-c) \]
+and
 \[ (rs)^2 = s(s-a)(s-b)(s-c) \]
+
 But $rs$ is the area of the triangle $ABC$.
 
 \[ \mathcal{A}^2 = s(s-a)(s-b)(s-c) \]
@@ -195,59 +232,91 @@ This is the same relationship we obtained by determining the total length of the
 
 \label{sec:Heron_formula_Heron}
 
-Lastly we go through Heron's proof of the eponymous theorem.  I obtained this from a web page written by Dr. Paul Yiu, which has disappeared.
+Lastly, we go through Heron's proof of the eponymous theorem.  I obtained this from a web page written by Dr. Paul Yiu, which has disappeared.  There is also a nice discussion in Dunham.
+
+Let us start with a sketch of the proof.
+
+\begin{center} \includegraphics [scale=0.14] {heron2d.png} \end{center}
+
+We have $\triangle ABC$ with its incircle on center $I$ and perpendiculars drawn to the tangent points $D$ and $E$.  Extend a line from $B$ perpendicular to $CB$, forming a right angle $\angle CBL$.  Also extend a line from $I$ perpendicular to $CI$, forming a right angle $\angle CIL$.
+
+We we will be able to find two pairs of similar triangles: easily,  the dark red $\triangle KBL \sim \triangle KEI$, and in a more complicated fashion, the whole red $\triangle LBC \sim \triangle IDA$, in blue.  We first proceed assuming that has been done.
+
+I find it much more convenient to write the proof using single letters for the lengths, so these have been labeled as shown below.  
+
+The similar triangles give us two relationships:
+\begin{center} \includegraphics [scale=0.14] {heron2e.png} \end{center}
+\[ \frac{u}{r} = \frac{y-v}{v} \]
+\[ \frac{u}{r} = \frac{y+z}{x} \]
+
+Setting equals to equals:
+\[  \frac{y-v}{v} = \frac{y+z}{x} \]
+
+After that it is just a matter of algebra.  That is harder for Heron (actually the proof is probably from Archimedes), but relatively easy for us with our improved notation.
+
+We simply add $1$ to both sides.  This is the step where Heron needs to extension $BT = x$ since $x + y + z$ must equal a straight line segment in the diagram (see below).
+\[  \frac{y-v}{v} + \frac{v}{v} = \frac{y+z}{x} + \frac{x}{x} \]
+\[  \frac{y}{v} = \frac{x + y + z}{x} \]
+
+The ratio of the whole semi-perimeter ($CT$ below) to $x$ ($BT$ below) is equal to the ratio of $BE$ to $KE$.
+
+\[  \frac{y}{v} = \frac{s}{x} \]
+\[ xy = vs \]
+
+The last step is to involve $z$, and also somehow eliminate $v$.
+
+We notice that in the right $\triangle CIK$, the radius of the incircle $r$ divides the hypotenuse into two lengths $z$ and $v$.  By the standard proof of the geometric mean, we have 
+\[ r^2 = vz \]
+so
+\[ \frac{r^2}{z} = v = \frac{xy}{s} \]
+\[ r^2s = xyz  \]
+\[ (rs)^2 = xyzs \]
+
+This is the famous formula in a simple form. Now we proceed more formally to establish the similarity relations.
 
 The triangle is $\triangle ABC$ with incircle radii $ID$, $IE$ and $IF$.  The tangents are drawn as $x, y, $ and $z$.
 
-I find it easier to follow the proof using single letters for the lengths, so these have been labeled as shown.  $BT$ is drawn equal in length to $AD = x$, so that the whole length $CT$ is equal to the semi-perimeter, $s = x + y + z$.
+\begin{center} \includegraphics [scale=0.2] {heron2c.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.2] {heron2b.png} \end{center}
+There are two parts to the construction.  Most important, $\angle LIC$ and $\angle LBC$ are both drawn as right angles.  Also, $BT$ is drawn equal in length to $AD = x$, so that the whole length $CT$ is equal to the semi-perimeter, $s = x + y + z$.  We do not need this second part, but it makes Heron's task simpler.
 
 \emph{Proof}.
 
-$\triangle CBL$ and $\triangle CIK$ are drawn as right triangles with hypotenuse $CL$.
+\textbf{part 1}:  $\triangle CBL \sim \triangle AID$.
 
-By the converse of Thales' theorem, $B$ and $I$ lie on a circle with diameter $CL$.
+By construction, $\triangle CBL$ and $\triangle CIL$ are both right triangles with the same hypotenuse $CL$.  
 
-$BICL$ is then a cyclic quadrilateral with $\angle L$ supplementary to $\angle BIC$.  
+By the converse of Thales' theorem, $B$ and $I$ lie on the same circle, with diameter $CL$.  It follows that $BICL$ is a cyclic quadrilateral and therefore $\angle L$ is supplementary to $\angle BIC$.  
 
-But the latter is supplementary to $\beta + \gamma$ in $\triangle BIC$ (using our standard notation for the half-angles).  
+But the latter is supplementary to $\beta + \gamma$ in $\triangle BIC$ (using our standard notation for the half-angles at $B$ and $C$).  Hence $\angle L = \beta + \gamma$.
 
-Hence $\angle L = \beta + \gamma$.
+\begin{center} \includegraphics [scale=0.2] {heron2c.png} \end{center}
 
-But $\angle AID$ is complementary to $\alpha$, so it is also equal to $\beta + \gamma$.
+(This is even easier to see if we draw the circle on diameter $CL$:  the arc corresponding to $\angle L$ is divided between $\beta$ and $\gamma$).
 
-It follows that $\angle L = \angle AID$, and then $\triangle CBL \sim \triangle AID$.
+We also have that the sum of the half-angles $\alpha + \beta + \gamma = 90$.  Thus, $\angle AID$, which is complementary to $\alpha$ in the right triangle $\triangle AID$, is also equal to $\beta + \gamma$.
 
-It is somewhat easier to find $\triangle LBK \sim \triangle IEK$, since they are both right triangles with shared vertical angles.
+It follows that $\angle L = \angle AID$, and then the two right triangles are similar:  $\triangle CBL \sim \triangle AID$.
 
-We form ratios for the similar triangles.  From $\triangle CBL \sim \triangle AID$:
-\[ \frac{u}{r} = \frac{y+z}{x} \]
+\textbf{part 2} $\triangle LBK \sim \triangle IEK$
 
-Note that $y = BE = BD$ so $BK = y - t$.  Then from $\triangle LBK \sim \triangle IEK$:
-\[ \frac{u}{r} = \frac{y-t}{t} \]
-\begin{center} \includegraphics [scale=0.2] {heron2b.png} \end{center}
-
-Hence
-\[ \frac{y+z}{x} = \frac{y-t}{t} \]
-Which looks simple enough to be encouraging.  Add $1$ to both sides and it gets even better:
-\[ \frac{x + y+z}{x} = \frac{y}{t} \]
-
-Let $s$ be the semi-perimeter, as usual:
-\[ s = \frac{xy}{t} \]
-
-Since $\triangle IKC$ is right, and $IE = r \perp CK$, we have $r^2 = tz$ and $1/t = z/r^2$ so, substituting:
-\[ s = \frac{xyz}{r^2} \]
-\[ r^2 s = xyz \]
-\[ r^2 s^2 = xyzs \]
-
-since $\mathcal{A} = rs$
-\[ \mathcal{A}^2 = xyzs \]
+This is easier.  They are both right triangles and share vertical angles.
 
 $\square$
 
-This is Heron's theorem.
+\subsection*{One last construct}
 
+\begin{center} \includegraphics [scale=0.18] {incircle2.png} \end{center}
+
+Extend the sides of $\triangle ABC$ a distance $a$ past vertex $A$ and so on.  Then one can draw a circle whose center is also the incenter of the triangle, that passes through the ends of all of the extended line segments.
+
+\emph{Proof}.  
+
+Draw the right triangle with one side equal to $r$, the radius of the incircle, and the other side extending side $b$ through vertex $A$, as shown.  The second side has length $s - a + a = s$.  
+
+Therefore the hypotenuse of every such right triangle is the same, and this is the radius of the large circle.
+
+$\square$
 
 
 

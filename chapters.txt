@@ -37,9 +37,9 @@ Secant tangent theorem
 Power of a point
 
 Practice with proofs
+Broken Chord
 Ptolemy
 Elements
-Broken Chord
 Equilateral triangles
 Angle bisectors
 Excircles and Heron
@@ -61,10 +61,17 @@ Menelaus's theorem
 Ceva's Theorem
 Pythagoras by area
 Ratio Boxes
+Special circles
+Triangles in triangles
+Nine point circle
 
 Polygons
 Pentagon
 Hexagon
+
+Vectors without coordinates
+Simple vectors
+Napoleon's theorem
 
 Addendum
 Author's notes

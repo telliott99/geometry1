@@ -23,53 +23,46 @@
 
 \label{sec:angle_bisector}
 
-We consider a classic problem:  the ratio of sides when an internal line is drawn in a triangle.  
+Here's a classic problem:  can we say anything about the ratio of sides when an internal line is drawn in a triangle?  We first consider the case of a right triangle where the internal line is an angle bisector (left panel, below).  We can prove an important theorem.
 
-The line could in general be drawn anywhere, however two interesting cases are when  the angle is bisected (left panel), or when the opposing side is bisected (right panel).  
-
-\begin{center} \includegraphics [scale=0.16] {angle_bisector_b.png} \end{center}
-
-These two cases are not the same.  In the first $c \ne d$ and in the second $\alpha \ne \beta$.
-
-We consider the case of a right triangle first, briefly.  There is a more general theorem that is readily obtained for the angle bisector.  Let's investigate equal angles.  We are in a position to prove an important theorem.
+\begin{center} \includegraphics [scale=0.14] {angle_bisector_b.png} \end{center}
 
 \subsection*{angle bisector theorem}
 
 \label{sec:angle_bisector_theorem}
 
-\begin{center} \includegraphics [scale=0.2] {angle_bisector_c.png} \end{center}
+\begin{center} \includegraphics [scale=0.15] {angle_bisector_c.png} \end{center}
 
-In the upper triangle, we draw a line perpendicular to side $b$.  This results in two congruent right triangles by ASA.  
+The bisector forms two new internal triangles.  In the upper one (blue), we draw a line perpendicular to side $b$ which meets the bisector on the side opposite.  This forms two triangles with two angles the same, $\theta$ and the right angle (thus three angles the same), and one side shared.  So we have congruent right triangles by ASA.  
 
-Thus, the other sides $a$ and $c$ are equal.
+Thus, the two sides labeled $a$ are equal, as are the two sides labeled $c$.
 
-The triangle with sides $c,e,d$ is similar to the original, because both are right triangles and the top vertex is shared.  We have
-\[ \frac{a}{c} = \frac{c+d}{e} = \frac{b}{d} \]
-\[ ad = bc \]
-
-A good way to remember this is that the sides flanking the duplicated angle are in the same proportion as the parts of the base:
+The triangle with sides $c,e,d$ is similar to the whole original triangle, because both are right triangles and the top vertex is shared.  We have that the ratio of the short side to the hypotenuse is
 \[ \frac{a}{b} = \frac{c}{d} \]
+\[ ad = bc \]
+\[ \frac{a}{c} = \frac{b}{d} \]
+
+Tthe sides flanking the duplicated angle are in the same proportion as the parts of the base:
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.15] {angle_bisector_c.png} \end{center}
 
 The result can be pushed a little further:  Add $1$ to both sides:
 \[ \frac{a + b}{b} = \frac{c + d}{d} \]
 \[ \frac{a + b}{c + d} = \frac{b}{d} = \frac{a}{c} \]
 
-$\square$
+which may be a surprising result. 
 
-\begin{center} \includegraphics [scale=0.16] {angle_bisector_b.png} \end{center}
+We took advantage of the fact that the large triangle was a right triangle.  However, if you think about it, you should be able to see that the same result holds for an isosceles triangle.  There, the two sides are equal, and if the top angle is bisected, so is the base.  So the ratio of each side to its part of the base is also equal.
 
-which may be a surprising result and becomes important later in looking at Archimedes method for approximating the value of $\pi$. 
-
-In the proof just completed, we took advantage of the fact that the large triangle was a right triangle.  
-
-However, if you think about it for a minute, you should be able to see that the same result holds for an isosceles triangle.  There, the two sides are equal, and if the top angle is bisected, so is the base.  So the ratio of each side to its part of the base is also equal.
-
-This might lead you to wonder about whether the proof holds for a general triangle.  Indeed, we will show later on that the sides and bases are in proportion for any triangle, if the angle is bisected.
+This might lead you to wonder whether the proof holds for a general triangle.  Indeed, we will show later on that the sides and bases are in proportion for any triangle, if the angle is bisected.
 
 In the formula from above
 \[ \frac{a + b}{c + d} = \frac{b}{d} = \frac{a}{c} \]
 \[ = \frac{a}{c+d} + \frac{b}{c + d}  \]
-we have a relationship between sides of the right triangle with angle $2 \theta$ and the right triangle with angle $\theta$.  Archimedes uses this in his method to determine the value of $\pi$.
+
+we have a relationship between sides of the right triangle with angle $2 \theta$ and the right triangle with angle $\theta$.  Archimedes uses this in his method to place bounds on the value of $\pi$.
 
 In trigonometry, the relationship is written:
 \[ \frac{a}{c} = \cot \theta = \frac{a}{c + d} + \frac{b}{c + d} \]
@@ -79,19 +72,17 @@ In trigonometry, the relationship is written:
 
 \label{sec:right_triangle_midpoint_theorem}
 
-The line which bisects the hypotenuse in a right triangle is called the median, but this is commonly called the midpoint theorem.  It is a specific case of the theorem for a right triangle.
-
 \begin{center} \includegraphics [scale=0.35] {rt_tri_bisector.png} \end{center}
 
 In a right triangle, draw the line segment from the vertex that contains a right angle to the midpoint of the hypotenuse, separating it into two equal lengths $a$.  We will show that the length of the bisector is also $a$.
 
 We gave a proof of this earlier.  
 
-A simpler proof based on Thales' circle theorem is to let the hypotenuse be the diameter of a circle.
+An elegant proof is based on Thales' circle theorem.  Let the hypotenuse be the diameter of a circle.  
 
-Then the median is also a radius of the circle, so that $P$ is on the circle.
+Then, if the large triangle is a right triangle, the right angle lies on the circle and then $PS$ is a radius.
 
-By the converse of Thales' theorem, it follows that the angle at $P$ is a right angle.
+Alternatively if the median is a radius of the circle, then $P$ is on the circle.  By the converse of Thales' theorem, it follows that the angle at $P$ is a right angle.
 
 \subsection*{isosceles angle bisector theorem}
 
@@ -109,7 +100,7 @@ We claim that the angle bisectors are equal in length:  $AF = BD$.
 
 By the forward version of the isosceles triangle theorem, the entire $\angle A = \angle B$, so it follows that all four angles dotted blue and magenta are equal.
 
-Then $\triangle ABD \cong \triangle ABF$ by ASA.
+Then $\triangle ABD \cong \triangle BAF$ by ASA.
 
 As a result, $AF = BD$ and $AD = BF$.  
 
@@ -133,16 +124,42 @@ We defer discussion of the \hyperref[sec:Steiner_Lehmus_Theorem]{\textbf{Steiner
 
 \label{sec:generalized_angle_bisector_theorem}
 
-It turns out that although we used right triangles in our first proof of the angle bisector theorem, that wasn't strictly necessary.  We can say something about the general case.
+Although we used right triangles in our first proof of the angle bisector theorem, that wasn't strictly necessary.  The theorem is also true for the general case.
 
-We use the notion of area.
-\begin{center} \includegraphics [scale=0.4] {angle_bisector_r6.png} \end{center}
+We discuss several different proofs.  The first two draw right triangles involving the bisector, or part of it.
 
-Let's redraw the figure.  Below, we have $\triangle ABC$ with sides $a,b,c$ and the angle $C$ is bisected so the two angles marked with red dots are equal.
+\subsection*{similar right triangles}
+
+\emph{Proof}.
+
+In $\triangle ABC$ draw the bisector of $\angle C$ to join side $AB$, dividing it into lengths $x$ and $y$.
+
+We draw verticals from $A$ and $B$ to the angle bisector.
+
+\begin{center} \includegraphics [scale=0.45] {angle_bisector_r7g.png} \end{center}
+
+This forms two pairs of similar right triangles.  The first pair has complementary angle $\theta$
+\[ \frac{b}{a} = \frac{g}{h} \]
+
+And the second pair have equal vertical angles at the bisector.
+\[ \frac{x}{y} = \frac{g}{h} \]
+
+The result follows easily.
+\[ \frac{b}{a} = \frac{x}{y} \]
+
+$\square$
+
+The result we obtained previously is a special case where angle $A$ is a right angle, but the theorem is true generally.
+
+Alternatively, use the notion of area.  Draw verticals to the sides as shown.
+
+We have $\triangle ABC$ with sides $a,b,c$ and the angle $C$ is bisected so the two angles marked with red dots are equal.
 
 \begin{center} \includegraphics [scale=0.15] {angle_bisector_r7f.png} \end{center}
 
-Start from the point where the bisector meets the side opposite $\angle C$, cutting $c$ into $x$ and $y$.  Drop the perpendiculars to the sides $a$ and $b$.  By our previous work with bisectors we know these have the same length, marked as $h$.
+Start from the point where the bisector meets the side opposite $\angle C$, cutting $c$ into $x$ and $y$.  Drop the perpendiculars to the sides $a$ and $b$.  
+
+This forms two congruent right triangles, since the angles at the top are equal, and the hypotenuse is shared.  The equal sides are marked as $h$.
 
 We can compute the ratio of the areas of the left and right-hand sub-triangles in two ways.  
 
@@ -151,32 +168,28 @@ The first way uses the area-ratio theorem.
 
 The two triangles share a common altitude and the area is one-half the base times the altitude.  Since the altitude is shared, it cancels, together with the factor of one-half.
 
+\begin{center} \includegraphics [scale=0.15] {angle_bisector_r7f.png} \end{center}
+
 The second approach is to use the sides $a$ and $b$ as the two bases.  We have that the heights $h$ are equal.  Hence
 
 \[ \frac{A_L}{A_R} = \frac{b}{a} \]
 
 Equating the two results we have that
 \[ \frac{x}{y} = \frac{b}{a} \]
-which can be manipulated in various ways but I will just leave it as it is.
-
-The result we obtained previously is a special case where angle $A$ is a right angle, but the theorem is true generally.
 
 \subsection*{similar triangles}
 
-Generally speaking, any proof by comparing areas can also be done by similar triangles.  Here are two proofs of the general angle bisector theorem by similar triangles.
-\begin{center} \includegraphics [scale=0.18] {angle_bisector_r7d.png} \end{center}
+Here are two other proofs of the general angle bisector theorem by similar triangles.  These involve constructions that either extend the bisector to a line parallel to one side, or extend one side to meet a line parallel to the bisector.
 
-Both depend on extending a parallel line.  The first uses a line parallel to one of the sides.
+\begin{center} \includegraphics [scale=0.16] {angle_bisector_r7d.png} \end{center}
 
-Given that the angle at $C$ is bisected.  
-
-The claim is that $a/y=b/x$.
+Given that the angle at $C$ is bisected.  The claim is that $a/y=b/x$.
 
 \emph{Proof}.
 
 Draw $AE$ parallel to $BC$ and extend the angle bisector to meet it at $E$.   Then the angle at $E$ is equal to the half-angle, by alternate interior angles, 
 
-\begin{center} \includegraphics [scale=0.18] {angle_bisector_r7e.png} \end{center}
+\begin{center} \includegraphics [scale=0.16] {angle_bisector_r7e.png} \end{center}
 
 We have that $\triangle ACE$ is isosceles, so $b = b'$.
 
@@ -190,10 +203,11 @@ But since $b = b'$:
 
 $\square$
 
-\subsection*{third proof}
-Here is still another proof, from Paul Yiu, together with a problem.  It includes the bisector of the external angle as well.
+\subsection*{Yiu proof}
 
-The proof uses an extended line parallel to the bisector.
+Here is another proof presented by Paul Yiu, together with a problem.  It includes the bisector of the external angle as well.
+
+The first part uses an extended line parallel to the bisector.  (This is basically the same as Euclid VI.3).
 
 In $\triangle ABC$ let $BD$ bisect $\angle ABC$.  Then
 \[ \frac{AB}{AD} = \frac{BC}{CD} \]
@@ -240,7 +254,7 @@ Let $\angle CBE$ be an external angle for $\triangle ABC$, and $BF$ bisect it.  
 
 \emph{Proof}.
 
-Draw $GC \parallel BF$.
+Draw $GC \parallel BF$ (parallel to the bisector but \emph{internal} to the triangle).
 
 $\angle BGC = \angle BCG = \angle CBF = \angle EBF$ by alternate interior angles.
 
