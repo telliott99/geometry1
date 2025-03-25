@@ -7,14 +7,13 @@
 \usepackage{amsmath}
 \usepackage{parskip}
 \usepackage{color}
+
 %\usepackage{hyperref}
 %\usepackage{tocloft}
 %\setlength{\cftchapnumwidth}{2.5em}
 
 \PassOptionsToPackage{hyphens}{url}
 \usepackage[hidelinks, colorlinks=true, linkcolor=blue, urlcolor=red]{hyperref}
-
-%\setcounter{tocdepth}{3}
 
 \graphicspath{{_my_graphics_path}}
 
@@ -24,6 +23,8 @@
 
 \begin{document}
 \maketitle
+
+\setcounter{tocdepth}{3}
 \tableofcontents
 
 %\large

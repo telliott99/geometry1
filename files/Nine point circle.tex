@@ -25,43 +25,87 @@
 
 We've seen that the perpendicular bisectors of the sides and, separately, the angle bisectors of triangles, converge on (are concurrent with) points that are the centers of circles with interesting properties.  These circles contain either the vertices of the triangle (circumcircle) or have the sides as tangents to the circle (incircle).
 
-Now we investigate the altitudes and their point of convergence, the orthocenter.  It turns out there is a special circle, but it does not have the orthocenter as its center.
+Now we investigate the altitudes and their point of convergence, the orthocenter.  It turns out there is a special circle involving the altitudes, but it does not have the orthocenter as its center.
 
 Quite surprisingly, there are nine points on the circle.  Three of these are midpoints of the sides.  This means that all four categories of special points of a triangle are connected to circles of one kind or another.
 
 The circle that goes through the midpoints of the sides also goes through the points where the altitudes of a triangle meet the sides, as well as the midpoints of that part of each altitude lying between the orthocenter and the corresponding vertex.
 
-It's challenging to draw the figure.  Some of the measurements may look a little off, but the logic will show that the circle indeed contains the nine points cited.
+\subsection*{one approach}
 
-\begin{center} \includegraphics [scale=0.16] {ninepoint3.png} \end{center}
+\begin{center} \includegraphics [scale=0.25] {ninepoint9.png} \end{center}
 
 \emph{Proof}.
 
-In $\triangle ABC$ draw the altitudes $AD$, $BE$ and $CF$.  Bisect the sides at midpoints $L$, $M$ and $N$.  Mark the orthocenter at $H$ and bisect $AH$ at $P$, $BH$ at $Q$ and $CH$ at $R$.
+Here is a fairly simple way to approach the nine point circle.  
+
+Draw $\triangle ABC$, then find the midpoints of the sides to form $\triangle KLM$.  By the midpoint theorem, we have four congruent smaller triangles.
+
+One of them is inverted:  $\triangle KLM$.  Draw the circumcircle of $\triangle KLM$.  This is the nine point circle.
+
+Now draw another triangle, congruent to $\triangle KLM$, with its vertices lying on the same circle, such that the corresponding sides are parallel.  That is $\triangle PQR$.
+
+The easiest way to do this is to draw a rectangle such as $MLRQ$ with $ML$, the base of $\triangle KLM$ equal to $QR$, the base of $\triangle PQR$.
+
+There are actually three such rectangles on the circle, one for each side.  These are $MLRQ$, $PRKM$ and $MPLK$.
+
+Opposing vertices are the endpoints of diameters of the circle:  $MR$, $LQ$, and $PK$. 
+
+Comparing $\triangle KLM$ and $\triangle PQR$, there has been a rotation around the center $N$.
+
+So then the altitude from $A$ is perpendicular not only to $BC$ but also to $QR$ and to $ML$.  Let that altitude meet the base at $D$.  The trick is to show that $AD$ goes through $P$.  
+
+Note that $\triangle PQR \cong \triangle AML$.  
+
+The bases of these two are displaced by movement parallel to $MQ$, i.e. vertically, since $MLRQ$ is a rectangle and $APQM$ is a parallelogram.  
+
+It follows that $AP \parallel MQ$ and perpendicular to $ML$, $QR$ and $BC$ so it coincides with $AD$. 
+
+\begin{center} \includegraphics [scale=0.40] {ninepoint10.png} \end{center}
+
+Now since $PK$ is a diameter, it follows that $\angle KDP$ is right.  The same follows for $\angle LEQ$ and $\angle RFM$.
+
+Thus, each of the three altitudes of $\triangle ABC$ has its foot lying on the nine point circle.
+
+$\square$
+
+The last point would be to show that $AP$ is one-half the distance from $A$ to the orthocenter.  We'll see how to do this in the next part..
+
+It's challenging to draw the circle.  
+
+In the next figure, some of the measurements may look a little off, but the logic will show that the circle indeed contains the nine points cited.
+
+\begin{center} \includegraphics [scale=0.36] {ninepoint3.png} \end{center}
+
+\emph{Proof}.
+
+In $\triangle ABC$ draw the altitudes $AD$, $BE$ and $CF$.  Bisect the sides at midpoints $K$, $L$ and $M$.  Mark the orthocenter at $H$ and bisect $AH$ at $P$, $BH$ at $Q$ and $CH$ at $R$.
 
 Because of the six bisections, we can find a number of similar triangles to show that certain lines in the diagram are parallel, and then involving the altitudes, find certain right angles.
 
-For example, in $\triangle AHC$ we have that $P$ and $M$ are midpoints of two sides, so it follows that $\triangle APM \sim \triangle AHC$, and then $PM \parallel FHC$.
+For example, in $\triangle AHC$ we have that $P$ and $L$ are midpoints of two sides, so it follows that $\triangle APL \sim \triangle AHC$, and then $PL\parallel FHC$.
 
-Looking at $\triangle BHC$, by the same logic we can show that $QL \parallel FHC$.  But this implies $PM \parallel QL$.
+Looking at $\triangle BHC$, by the same logic we can show that $QK \parallel FHC$.  But this implies $PL \parallel QK$.
 
-In exactly the same way, we can show that $PQ \parallel AB$ and $ML \parallel AB$ so $PQ \parallel ML$.  Thus, $PMLQ$ is a parallelogram.  
+In exactly the same way, we can show that $PQ \parallel AB$ and $LK \parallel AB$ so $PQ \parallel LK$.  Thus, $PLKQ$ is a parallelogram.  
 
-Since $AB \perp CF$, it follows that $ML \perp PM$.  Thus, $\angle PML$ is right.  It follows that $PMLQ$ is a rectangle.
+Since $AB \perp CF$, it follows that $LK \perp PL$.  Thus, $\angle PLK$ is right.  It follows that $PLKQ$ is a rectangle.
 
-Next, draw the circle on diameter $PL$ (the center is not shown, but can be found by bisecting $PL$).  $\angle PML$ and $\angle PQL$ are both right, which means that points $M$ and $Q$ lie on this circle with diameter $PL$.  And since $\angle ADL$ is right, $D$ also lies on the circle.  That's five of the nine points.
+Next, draw the circle on diameter $PK$ (the center is not shown, but can be found by bisecting $PK$).  $\angle PLK$ and $\angle PQK$ are both right, which means that points $L$ and $Q$ lie on the circle with diameter $PK$.  And since $\angle ADK$ is right, $D$ also lies on the circle.  That's five of the nine points.
 
-\begin{center} \includegraphics [scale=0.16] {ninepoint3.png} \end{center}
+\begin{center} \includegraphics [scale=0.36] {ninepoint3.png} \end{center}
 
-Since $Q$ and $M$ lie on the circle and $\angle QPM$ and $\angle QLM$ are right, it follows that $QM$ is also a diameter of the same circle.  And since $QEM$ is right, $E$ also lies on this circle.
+Since $Q$ and $L$ lie on the circle and $\angle QPL$ and $\angle QKL$ are right, it follows that $QL$ is also a diameter of the same circle.  Alternatively, note that the center of the circle is at the bisector of $PK$, which since we have a rectangle, is also the bisector of $QL$ and $PK = QL$.
 
-\begin{center} \includegraphics [scale=0.32] {ninepoint4.png} \end{center}
+Since $QEL$ is right, $E$ also lies on this circle.
 
-A similar series of steps will show that $PRLN$ is a rectangle, which is enough to establish that $N$ and $R$ are on the circle, and that $NR$ is actually a diameter of the circle.  Since $\angle NFR$ is right, then $F$ also lies on the circle.
+\begin{center} \includegraphics [scale=0.36] {ninepoint4.png} \end{center}
 
-\begin{center} \includegraphics [scale=0.16] {ninepoint5.png} \end{center}
+A similar series of steps will show that $PRKM$ is a rectangle, which is enough to establish that $M$ and $R$ are on the circle, and that $MR$ is actually a diameter of the circle.  Since $\angle MFR$ is right, then $F$ also lies on the circle.
 
- We do not need it, but there is a third rectangle, namely, $NMRQ$.
+\begin{center} \includegraphics [scale=0.32] {ninepoint5.png} \end{center}
+
+ We do not need it, but there is a third rectangle, namely, $MLRQ$.
  
 $\square$
 
@@ -79,7 +123,7 @@ The nine-point circle \emph{is} the circumcircle of $\triangle PQR$.  We know a 
 
 \[ R = \frac{abc}{4 \mathcal{A}} \]
 
-Let $\triangle ABC$ have side lengths $a$, $b$ and $c$ and area $\mathcal{A}$.  Let $\triangle PQR$ have side lengths $a'$, $b'$ and $c'$ and area $\mathcal{A}'$.
+Let $\triangle ABC$ have side lengths $a$, $b$ and $c$ and area $\mathcal{A}$.  Let $\triangle PQR$ have side lengths $a'$, $b'$ and $c'$ and area $\mathcal{A}'$.  This triangle with vertices halfway along the sides of $\triangle ABC$ is called its medial triangle.
 
 We can use similar triangles to show that each side and altitude in $\triangle ABC$ is twice that of $\triangle PQR$.  
 
@@ -97,41 +141,32 @@ The first term is 8 and the second term is $1/4$ so the result is just a factor 
 
 \subsection*{center of nine point circle}
 
-I find from reading wikipedia
-
-\url{https://en.wikipedia.org/wiki/Nine-point_circle}
-
-that the center of the nine point circle bisects the Euler line.  Also, that the customary designation for this point is $N$, so we should (perhaps) redraw all the figures with $K$,$L$ and $M$ as the midpoints of the sides.
+I find from reading Coxeter that the center of the nine point circle bisects the Euler line.
 
 Recall that the centroid $G$ lies one-third of the way along the Euler line from the circumcenter $O$ to the orthocenter $H$.  Then $N$ bisects $OH$ and $G$ lies one-sixth of that length away from $N$, on the side toward $O$.
 
-\begin{center} \includegraphics [scale=0.30] {ninepoint7.png} \end{center}
-
-I found a proof in Coxeter.
+\begin{center} \includegraphics [scale=0.36] {ninepoint7.png} \end{center}
 
 \emph{Proof}.
 
-\begin{center} \includegraphics [scale=0.30] {ninepoint8.png} \end{center}
+\begin{center} \includegraphics [scale=0.36] {ninepoint8.png} \end{center}
 
-The side lengths of $\triangle PQR$ are exactly half those of $\triangle ABC$.
+We established above that the side lengths of $\triangle PQR$ are exactly half those of $\triangle ABC$.
 
 But the sides of $\triangle KLM$ are also exactly half those of $\triangle ABC$.
 
 So the two smaller triangles are congruent.  They share the same circumcircle on center $N$, since all the vertices lie on the circle, which is the nine point circle for the parent $\triangle ABC$.  
 
-The two triangles are related by rotation through a half-turn on center $N$.
+Since $ML \parallel BC$ (and so on), the two triangles are related by rotation through a half-turn on center $N$.
 
 Find the circumcenter of $\triangle ABC$ by dropping perpendiculars from points $K$, $L$ and $M$ to meet at $O$.  The same lines are the altitudes of $\triangle KLM$, since for example, $ML \parallel QR \parallel BC$.
+
+\begin{center} \includegraphics [scale=0.36] {ninepoint8.png} \end{center}
 
 The circumcenter of $\triangle ABC$, point $O$, is the same point as the orthocenter of $\triangle KLM$.  Rotation about $N$ converts $H$ into $O$ and vice-versa.  It follows that the distances are the same:  $HN = ON$.
 
 $\square$
 
-\subsection*{Feuerbach}
-
-In 1822 Feuerbach showed that the nine-point circle is tangent to the three excircles of a triangle, as well as the incircle.
-
-\begin{center} \includegraphics [scale=0.2] {Feuerbach.png} \end{center}
-
+\url{https://en.wikipedia.org/wiki/Nine-point_circle}
 
 \end{document}

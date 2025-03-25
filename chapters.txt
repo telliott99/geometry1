@@ -61,17 +61,15 @@ Menelaus's theorem
 Ceva's Theorem
 Pythagoras by area
 Ratio Boxes
+
+Special stuff
 Special circles
 Triangles in triangles
 Nine point circle
 
-Polygons
-Pentagon
-Hexagon
-
-Vectors without coordinates
-Simple vectors
-Napoleon's theorem
+Revisiting proofs
+Proof by contradiction
+Induction
 
 Addendum
 Author's notes

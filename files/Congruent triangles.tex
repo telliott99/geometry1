@@ -24,7 +24,7 @@
 
 Probably the most fundamental idea concerning triangles is how to decide that two triangles are \emph{congruent}.  If so, they have all 3 sides the same length, and all 3 angles the same measure.
 
-However this is logically the converse (backwards) of what we really want to know.  We would like to be able to say that that two triangles are congruent \emph{if} they have [ some properties ].
+However this is logically the converse (backwards) of what we really want to know.  We would like to be able to say that that two triangles are congruent \emph{if} they have some properties.
 
 We will find tests that, if passed, imply congruence.
 
@@ -38,7 +38,7 @@ We will also allow the term congruent to apply to the case of a triangle and its
 
 Perhaps a practical definition would be that if you used a pair of scissors to cut out one triangle and then lay it on top of the second one so that it superimposes exactly, they would be congruent.
 
-In fact this is how Euclid handles the issue in the first theorem of \emph{Elements}, I.4.
+In fact this is how Euclid handles the issue in the first theorem of \emph{Elements}, I.4.  (The first three \emph{propositions} are actually constructions).
 
 A little thought may convince you that if all three corresponding side lengths are equal, two triangles are congruent.  Draw one side of a triangle, and from its endpoints draw circles with radii the length of the other two sides.
 
@@ -50,11 +50,13 @@ We see that the radii cross at two and only two different points, which have mir
 
 It is certainly possible to come up with side lengths that \emph{cannot} form a triangle.  Consider (left panel, above) what would happen if the two shorter sides were exactly equal to the longest one.  Then they would meet at a single point on the longest side, and there would be no triangle.
 
-If the sum were shorter, they would not meet at all.  This is called the triangle inequality and we'll prove it more formally later.
+If the sum were shorter, they would not meet at all.  This is called the triangle inequality:  the two shorter sides of a triangle must sum to more than the length of the longest side.  We'll prove it more formally later.
 
 Thus, we arrive at a fundamental theorem about congruency for triangles:
 
-$\bullet$  Two triangles are \emph{congruent} if they have the same three side lengths. 
+$\bullet$  Two triangles are \emph{congruent} if they have the same three equal side lengths.
+
+When we say ``equal sides'', we are making a comparison \emph{between} two triangles, that corresponding sides are equal.
 
 This test is abbreviated SSS (side-side-side).
 
@@ -110,7 +112,7 @@ It is often useful to marking sides and (particularly) angles to show they are e
 
 In this diagram, sides of equal length are indicated by one or more short lines called hash marks.  
 
-Equal angles are usually indicated by dots in this book. Dots are easier to place on the figures, and lend themselves to color-coding;  the common method for pencil and paper is to draw an arc with a hash across it, or just use a filled and open circle.
+Equal angles are usually indicated by dots in this book. Dots are easier to place on the figures, and lend themselves to color-coding;  the common method for pencil and paper is to draw arcs with one or more hash across them.
 
 \begin{center} \includegraphics [scale=0.4] {ASA3.png} \end{center}
 
@@ -130,7 +132,7 @@ We do not know the angle at vertex $C$ between $a$ and $b$ so we imagine $b$ swi
 
 If $b$ is longer than this but still $b < a$, there are two points $A$ and $A'$ where $b$ can intersect with the side projecting from vertex $B$. 
 
-This is the \emph{ambiguous case}:  we have two possibilities.  If two different triangles match by the SSA criterion, we cannot say whether they are congruent or not without more information.
+This is the \emph{ambiguous case}:  we have two possibilities.  If two different triangles match by the SSA criterion, we cannot say whether they are congruent or not without more information.  It is not that we don't know anything, we just don't know enough to choose one of two possibilities.
 
 The right angle case is not ambiguous, but we'll save that for the chapter on right triangles.
 
@@ -142,7 +144,7 @@ It won't hurt my feelings if you think of them as axioms.  The famous mathematic
 
 \label{sec:two_angles_similar}
 
-Sometimes two triangles are not congruent, but have all three angles the same.  We call such triangles \emph{similar}.
+Sometimes two triangles are not congruent, but have all three angles the same.  We call such triangles \emph{similar}.  They have the same shape.
 
 \begin{center} \includegraphics [scale=0.4] {similar.png} \end{center}
 
@@ -185,7 +187,9 @@ It turns out not to be possible.  Later we will have a theorem which say that in
 
 Consider $\triangle ABC$.  The side opposite the vertex $A$ may be referred to as $BC$, but $CB$ is also fine.  In many cases I prefer a single letter for the label, usually $a$.  If we refer to the \emph{length} of the side, we will prefer $a$, although elsewhere one may see $|BC|$ or even just, ``the length $BC$''. 
 
-There is no compelling reason to prefer $\triangle ABC$ to any of the five other permutations of three letters, such as $\triangle BAC$, beyond a liking for lexicographical order.  If we have two triangles sharing two vertices, we should usually write those shared letters in the same positions, thus, $\triangle BCA$ and $\triangle DCA$.
+There is no compelling reason to prefer $\triangle ABC$ to any of the five other permutations of three letters, such as $\triangle BAC$, beyond a liking for alphabetical order.  Old texts may use the letters $A$, $B$, and $G$, because the third letter in Greek is Gamma, $\Gamma$.
+
+If we have two triangles sharing two vertices, we should usually write those shared letters in the same positions, thus, $\triangle BCA$ and $\triangle DCA$.
 
 When we work with similar triangles and their corresponding angles, we will strive to label the angles in the order of their equality.  Thus if $\triangle ABC \sim \triangle QPR$, you should expect that $\angle A = \angle Q$, and so on.
 

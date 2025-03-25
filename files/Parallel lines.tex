@@ -1,4 +1,4 @@
-\documentclass[11pt, oneside]{article} 
+\subsection*\documentclass[11pt, oneside]{article} 
 \usepackage{geometry}
 \geometry{letterpaper} 
 \usepackage{graphicx}
@@ -21,7 +21,7 @@
 
 %[my-super-duper-separator]
 
-\subsection*{Alternate interior angles}
+%\subsection*{Alternate interior angles}
 
 \label{sec:alternate_interior_angle_theorem}
 
@@ -35,7 +35,7 @@ Euclid says that if (in the left panel) $\theta + \phi$ is less than two right a
 
 Of course the fact that they meet means they cannot be parallel lines, since two parallel lines never meet.
 
-He does not worry about the case where the sum of $\theta + \phi$ is greater than two right angles.  If the sum is less on the right-hand side of the transversal, it will be greater on the left-hand side.
+He does not worry about the case where the sum of $\theta + \phi$ is greater than two right angles.  If the sum is less on the right-hand side of the transversal, it will be greater on the left-hand side.  \emph{Problem}.  Prove this.
 
 The other two panels also show parallel lines.  The known equal angles have different names in these cases, but we will not worry about that.  We refer to all of them as examples of lines parallel by equal \emph{alternate interior angles}, even though technically, that only refers to the middle panel.
 
@@ -46,7 +46,7 @@ There is a large philosophical literature on this issue, and there are other way
 
 \url{https://proofwiki.org/wiki/Axiom:Euclid%27s_Fifth_Postulate}
 
-\subsection*{Logic}
+\subsection*{if and only if}
 
 $\bullet$ \ Two lines are parallel, \emph{if and only if} a third crossing line makes the adjacent interior angles sum to two right angles.
 
@@ -76,7 +76,7 @@ This postulate is also valid in reverse.  If we have a line that traverses two o
 
 \subsection*{symmetry}
 
-This is first of all a statement about the world, that we can have two lines that run alongside each other but don't touch.  Another way to talk about the situation is to say that if we sight down a pair of parallel lines from left to right, then turn the paper $180^{\circ}$ and look again, the picture will look the same.
+This is first of all a statement about the world, that we can have two lines that run alongside each other but don't touch.  Another way to talk about the situation is to say that if we sight down a pair of parallel lines from left to right, like a railroad track, then $180^{\circ}$ and look again, the picture will be identical.
 
 By rotational symmetry then, we have no reason to distinguish two parallel lines in the forward and reverse directions.  It follows that the intersection between two parallel lines and a third line that crosses them should look the same in both directions, the angles involved should have the same measures.  That is our theorem.  
 
@@ -88,6 +88,8 @@ Without getting too deep in the philosophical weeds, it's clear that mathematics
 
 This choice of definition works for geometry in the flat plane, but not on a curved surface like the earth.  That's a familiar situation where our postulate is not appropriate.
 
+Lines of longitude go vertically on the globe.  They are great circles, they all have the same length and go through the poles.  Lines of latitude, on the other hand, form circles of different lengths and get shorter as you near the poles.
+
 Two adjacent lines of longitude can be drawn so as to cross the equator at right angles, and the lines are parallel there, but they will meet (intersect) at the poles.  
 
 \begin{center} \includegraphics [scale=0.4] {lat_long.png} \end{center}
@@ -96,7 +98,7 @@ The same thing happens if you imagine the earth at the center of the universe, l
 
 The parallel postulate only holds for geometry on a \emph{flat} surface.
 
-\subsection*{axioms}
+\subsection*{Axioms}
 
 Euclid also lists five axioms, things which are assumed.  Here are two examples:
 
@@ -112,11 +114,9 @@ William Dunham has written a lot about the history of mathematics in Greece, sta
 
 \subsection*{Triangle sum theorem}
 
-We come to our first truly novel theorem.  It relies on everything we've said so far.  It is attributed to Thales, one of three elementary but novel theorems for which he is thought to have developed proofs.
-
-\emph{Triangle sum theorem}
-
 \label{sec:triangle_sum_theorem}
+
+We come to our first truly novel theorem.  It relies on everything we've said so far.  It is attributed to Thales, one of three elementary but novel theorems for which he is thought to have developed proofs.
 
 $\bullet$  The sum of the three angles in any triangle is equal to two right angles.
 
@@ -161,7 +161,8 @@ This figure makes a proof without words:
 
 \begin{center} \includegraphics [scale=0.6] {triangle_sum_angles3} \end{center}
 
-\subsection*{another proof}
+\subsection*{Another proof}
+
 Here is a different proof of both of these theorems relating to the angles in a triangle.  This one is from Lara Alcock (\emph{Mathematics Rebooted}).
 
 It never hurts to re-prove important results by a different method.  This serves as a check on both the result and the methods.
@@ -181,6 +182,8 @@ Subtract the first equation from the second
 \[ s + t + u = 2 \ \text{right angles} \]
 
 $\square$
+
+Note:  both terms, exterior angle and external angle, are used to describe the same angle by different writers.  I'm not aware of a reason to prefer one or the other.
 
 \subsection*{problem}
 
@@ -215,8 +218,6 @@ One likely basis is the false story that Columbus had trouble getting financing 
 The real reason the Italian and Portuguese bankers from whom Columbus sought financing thought he would fail is that they had a pretty good idea of the size of the spherical earth and thus of the distance to China, while the over-optimistic Columbus believed it was about half the true value.  The prospective financiers knew that he was not able to carry the supplies necessary for a trip of this length.
 
 Morris Kline (\emph{Mathematics and the Physical World}) says that the error is due to geographers after Eratosthenes, who reduced the estimated circumference from 24,000 to 17,000 miles.
-
-\subsection*{Eratosthenes}
 
 Views of the Greek philosophers on the earth and its sphericity are detailed here
 
