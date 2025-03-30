@@ -1,0 +1,373 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Tangent-secant theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Let us start with two propositions from Book II of \emph{Elements}, which deal with what might be termed geometric algebra.
+
+\subsection*{Euclid II.5}
+
+\label{sec:Euclid_II_5}
+
+\begin{center} \includegraphics [scale=0.2] {gnomon1.png} \end{center}
+
+In this figure, the line $AB$ is bisected at $M$ with $AM = MB$.
+
+and then the point $P$ placed somewhere within the segment $MB$.  II.5, says that
+\[ AP \cdot PB + MP^2 = MB^2 \]
+
+It may make more sense if we try algebra first.  Let $x = AM$ and $y = MP$ so $AP = x + y$ and $PB = x - y$ and then
+
+\[ AP \cdot PB = x^2 - y^2 \]
+
+and we can read these off the diagram:
+\[ AP \cdot PB = MB^2 - MP^2 \]
+\[ AP \cdot PB + MP^2  = MB^2 \]
+
+$AP \cdot PB$ is the area of rectangle $AD$.
+\begin{center} \includegraphics [scale=0.2] {gnomon1.png} \end{center}
+
+$PE$ is the square on $PB$, with $PB = BE$, and $CF$ is the square on $CD$, with $CD = MP = EG$.
+
+The construction contains two sets of equal rectangles.  The first is $AC = ME = BF$.  And the second is $MD = DG$.  This is by I.43.
+
+In the figure below, the two white parallelograms are equal.
+\begin{center} \includegraphics [scale=0.12] {EI_43.png} \end{center}
+
+We saw an example very early for rectangles as the \hyperref[sec:area_ratio_theorem]{\textbf{area-atio theorem}}.
+\begin{center} \includegraphics [scale=0.4] {Acheson_G42.png} \end{center}
+\[ ad = bc \]
+
+Returning to the present theorem
+\begin{center} \includegraphics [scale=0.2] {gnomon1.png} \end{center}
+
+As  noted, the construction contains two sets of equal rectangles.  The first is $AC = ME = PG$, while the second is $MD = DG$.
+
+Here's the neat idea: the rectangle $PG$ contains the blue rectangle plus $DG$.  But since $MD = DG$ this is also $ME$ and $ME = AC$.
+
+So then finally $AD$ is equal in area to the L-shaped piece called a \emph{gnomon}.  
+
+And if we add $CF$ (equal to $MP^2$) to that we have $MG$ (equal to $MB^2$).
+
+\[ AP \cdot PB + MP^2 = MB^2 \]
+
+In Joyce's annotated \emph{Elements} he says (paraphrasing) that this solves a quadratic.  Suppose we are asked
+
+\begin{quote} Find two numbers $x$ and $y$ so that their sum is a known value $b$ and their product is a known value $c^2$. \end{quote}
+
+In modern terms:
+\[ x (b-x) = c^2 \]
+\[ x^2 - bx + c^2 = 0 \]
+\[ x = \frac{b}{2} \pm \ \sqrt{(\frac{b}{2})^2 - c^2} \]
+
+\begin{center} \includegraphics [scale=0.45] {Euclid_II_5c.png} \end{center}
+
+Here
+\[ AB = b \ \ \ \ \ \  BC = b/2 = CS \ \ \ \ \ \  DS = CR = c \]
+so
+\[ CD^2 = (\frac{b}{2})^2 - c^2 \]
+
+and
+\[ AD = AC + CD \]
+\[ =  \frac{b}{2} \pm \ \sqrt{(\frac{b}{2})^2 - c^2} \]
+is equal to $x$.
+
+This problem is also called the mean proportion, and is solved easily (in modern times) by the same construction, where we can show that $DS^2 = AD \cdot DB$ by using similar right triangles.  We looked at this in the chapter on simple proofs of the Pythagorean theorem.
+
+\subsection*{Euclid II.6}
+
+\label{sec:Euclid_II_6}
+
+The second theorem is very similar but has the point $P$ located on an extension of $AB$:
+\begin{center} \includegraphics [scale=0.15] {gnomon2.png} \end{center}
+
+The result is nearly the same as before, just with the squares switched:
+\[ AP \cdot PB + MB^2 = MP^2 \]
+although $AP$ is not what it used to be.  One way to remember:  the difference of squares must be positive.  In the first case $MB > MP$, and in the second, $MP > MB$.
+
+Again we have a gnomon and a difference of squares.  The gnomon is equal to the whole rectangle $AP \cdot PB$ and when added to $MB^2$ we get the whole large square $MP^2$
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+In algebraic terms we let $AM = x$ and now $PB = y$ so
+\[ (2x + y) y + x^2 = 2xy + y^2 + x^2 = (x + y)^2 \]
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+\subsection*{Euclid III.35:  application to chords}
+
+\label{sec:Euclid_III_35}
+
+We have a chord $AB$ of a circle on center $O$.  $AB$ is bisected at $M$ and $P$ is placed somewhere within $MB$.
+\begin{center} \includegraphics [scale=0.16] {EIII_35b.png} \end{center}
+
+By II.5
+\[ AP \cdot PB + MP^2 = MB^2 \]
+
+We notice both squares are part of right triangles.
+\[ MP^2 = OP^2 - OM^2 \]
+\[ MB^2 = OB^2 - OM^2 \]
+
+Substituting into the first equation, $OM$ cancels, leaving
+\[ AP \cdot PB + OP^2 = OB^2 \]
+
+Let $OP = d$, the distance from $P$ to the center, and $OB$ is the radius, so
+\[ AP \cdot PB = r^2 - d^2 \]
+
+This result is \emph{independent} of the particulars of $AB$ and depends only on the placement of $P$ in the circle (and the requirement that $AB$ pass through $P$).  
+
+So any other chord that also passes through $P$, say $CD$, has the same result.
+
+\begin{center} \includegraphics [scale=0.15] {EIII_35c.png} \end{center}
+\[ AP \cdot PB = CP \cdot PD \]
+
+This is just the crossed chord theorem in disguise.
+
+A modern proof would use similar triangles, but this requires a theory of proportions that Euclid doesn't have yet in book III.  We'll see that below.
+
+\subsection*{tangent}
+
+The next theorem concerns the tangent.
+\begin{center} \includegraphics [scale=0.18] {EIII_36.png} \end{center}
+
+Here we have $AB$ bisected at $M$, the center of the circle, and then $P$ placed on the extension of $AB$.
+
+By II.6
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+$MB$ and $MT$ are radii so
+\[ AP \cdot PB = MP^2  - MT^2 = PT^2 \]
+
+The length of the tangent from point $P$, squared, is equal $AP \cdot PB$.
+
+We can again generalize the result by letting $d$ be the distance of $P$ from the center of the circle, $MP$, and $t$ be the length of the tangent, $PT$.  Then
+\[ d^2 - r^2 = t^2 \]
+
+The result has the same magnitude as for crossed chords, but with a minus sign.  And again, this makes sense since the difference of squares must be positive.  Before we had $r > d$, now we have $d > r$.
+
+\subsection*{secant}
+
+\begin{center} \includegraphics [scale=0.20] {EIII_36b.png} \end{center}
+
+As with the tangent, by II.6 we have
+\[ AP \cdot PB + MB^2 = MP^2 \]
+
+and again, we have right triangles so
+\[ AP \cdot PB + (MB^2 + OM^2) = (MP^2 + OM^2) \]
+\[ AP \cdot PB + OB^2 = OP^2 \]
+
+so again
+\[ AP \cdot PB = d^2 - r^2 \]
+
+By using the previous two results together, we have that for any secant drawn from $P$, $PA \cdot PB$ is equal to the square of the tangent from the same point $PT^2$.
+
+This is the $\hyperref[sec:tangent_secant_theorem]{\textbf{tangent-secant theorem}}$.
+
+\subsection*{proofs based on similar triangles}
+
+\begin{center} \includegraphics [scale=0.25] {TS1.png} \end{center}
+
+\[ PA \cdot PA' = PB \cdot PB' \]
+
+When thinking about such problems, or asked to establish a proof yourself, it is always helpful to consider the form with the ratios:
+
+\[ \frac{PA}{PB} = \frac{PB'}{PA'} \]
+
+This strongly suggests we look at similar triangles.
+
+\emph{Proof}.
+
+We showed previously that for any quadrilateral whose four vertices all lie on one circle (a cyclic quadrilateral), the opposing vertices have supplementary angles.  Opposing vertices add to $180^{\circ}$ because their arc segments add up to one whole circle.
+
+In the figure above, $\angle ABB'$ supplementary to both $\angle PBA$ and $\angle PA'B'$. 
+
+\begin{center} \includegraphics [scale=0.25] {TS1.png} \end{center}
+
+Therefore $\triangle PBA$ is similar to $\triangle PA'B$.  The similarity is such that
+
+\[ \frac{PA}{PB} = \frac{PB'}{PA'} \]
+
+Given a point $P$ outside the circle, the external part of any secant times the entire secant is a constant.
+
+One curious thing about this theorem is that these triangles are similar, and nested, but flipped.
+
+\[ PA \cdot PA' = PB \cdot PB' \]
+
+$\square$
+
+We can do a bit more.
+
+\subsection*{Tangent-secant theorem}
+
+\label{sec:tangent_secant_theorem}
+
+\begin{center} \includegraphics [scale=0.25] {TS2b.png} \end{center}
+
+Let the points $B$ and $B'$ approach each other to become one point, re-labeled as $T$.  Then $PT$ will be a tangent of the circle.  Previously we had
+\[ PA \cdot PA' = PB \cdot PB' \]
+
+Now we modify it slightly:
+
+\[ PA \cdot PA' = PT \cdot PT \]
+\[ PA \cdot PA' = PT^2 \]
+
+This is the tangent-secant theorem.
+
+We must have two similar triangles, $\triangle PAT$ and $\triangle PTA'$.  The whole angle at vertex $T$ must correspond to $\angle PAT$.
+
+Now run the logic backward and write the proof.
+
+Note:  we've seen this sort of reverse logic a few times already.  The method has a name!  It was called the method of "analysis" by Pappus (320 A.D.), see Posamentier (Introduction).
+
+To do this explicitly, show that since $\angle PTA$ includes the tangent, it cuts arc $AT$ just as $\angle PA'T$ does.
+
+Instead, we take advantage of the tangent point to do something new.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.25] {TS2.png} \end{center}
+
+Draw the diameter $QOT \perp PT$ and also draw $QA$.  Since they correspond to equal arcs, the angles at $Q$ and $A'$ are equal.
+
+By Thales' circle theorem, $\angle QAT$ is right.  So $\angle Q$ is complementary to $\angle ATQ$.
+
+But the diameter is perpendicular to the tangent.  So $\angle ATQ$ is complementary to $\angle PTA$.
+
+It follows that $\angle PTA = \angle PA'T$.
+
+$\triangle PAT$ is similar to $\triangle PTA'$ by AAA, since they also share the angle at $P$.  This gives
+
+\[ \frac{PT}{PA} = \frac{PA'}{PT} \]
+
+which can be rearranged to the statement of the theorem:
+
+\[ PA \cdot PA' = PT^2 \]
+
+$\square$
+
+One application of this theorem is to a determination of the size of the earth.
+
+\begin{center} \includegraphics [scale=0.5] {al_biruni.png} \end{center} 
+
+In the figure, the circle is the earth, of radius $R$, $h$ is the height of a convenient mountain, and $D$ is the distance to the horizon, which is tangent to the earth's radius.
+
+Recall from the tangent-secant theorem 
+\[ D^2 = h(2R + h) \]
+
+We neglect $h^2$ compared to the other term so
+\[ D^2 \approx 2Rh \]
+
+About 1019 C.E., finding $h$ and $D$, Al-Biruni computed a value for $R$ equivalent to 3939 miles.
+
+
+\subsection*{Looking at Euclid}
+
+We're looking up at a statue of Euclid on a column.
+
+\begin{center} \includegraphics [scale=0.4] {euclid.png} \end{center}
+
+We resist the temptation to make a dumb joke.
+
+\begin{center} \includegraphics [scale=0.25] {bogie.png} \end{center}
+
+In any event, we'd like to get the widest angle view, giving the largest apparent size of the statue.  If you get too close, the statue is greatly foreshortened and the angle small, and naturally, it is small at a distance.  There must be a best view, in the middle.
+
+Here is Acheson's solution:
+
+\begin{center} \includegraphics [scale=0.6] {euclid2.png} \end{center}
+
+Let the foot and head of Euclid be at $P$ and $Q$ and draw the circle containing those two points which is also tangent to your eye-level.  Then the tangent point provides the best view.
+
+The reason is that a circle through any other horizontal position crosses the eye-level at two points.  Such a circle will necessarily be bigger.
+
+Consequently the arc $PQ$, which is fixed in size, will be a smaller fraction of the circle.  
+
+As a smaller fraction, both the central angle $\angle POQ$ will be smaller as well as the angle subtended at $A$ or $B$ (one-half of that).
+
+The tangent-secant theorem even gives a quantitative answer.  
+
+If $R$ is the point where the extension of $QP$ meets eye-level (the ground), then suppose the point $Q$ is $h$ units above the ground and $P$ is $g$ units.  The tangent-secant formula is 
+
+\[ RT \cdot RT = PR \cdot QR \]
+
+which says that the square of the optimum viewing distance is $h\cdot g$.  The optimal distance $d$ is
+
+\[ d = \sqrt{hg} \]
+
+I knew I'd seen this problem before, and I find that I wrote it up for my Calculus book.  It turns out to be from Acheson's book on Calculus, and is originally about Lord Nelson's statue in Trafalgar Square.
+
+The calculus treatment is not nearly as pretty as reasoning about the tangent;  fortunately we came to the same answer.
+
+\subsection*{Problem}
+
+\subsection*{problem}
+
+We continue with a problem that we solved in part \hyperref[sec:sec_tan_problem]{\textbf{previously}}.
+
+We showed that there are three similar triangles in the figure below
+\begin{center} \includegraphics [scale=0.3] {prob_A_level2.png} \end{center}
+
+We showed that $\triangle XYZ \sim \triangle XQP$ and also $\triangle XYZ \sim \triangle XRS$.
+
+The last part of the problem says that given $QS = XR$, prove that $PS^2 = XS \cdot YR$.  It is also given that $TPS$ is tangent to the small circle at $P$.
+
+In this chapter, we developed the tangent-secant theorem, which says that the part of the secant outside the circle, multiplied by the whole thing, is equal to the tangent squared:
+\[ QS \cdot ZS = PS^2 \]
+
+\emph{Proof}.
+
+By similar triangles, we have that 
+\[ \frac{XZ}{XY} = \frac{XS}{XR} = \frac{ZS}{YR}  \]
+That last equality requires some algebra.  We use this figure again:
+\begin{center} \includegraphics [scale=0.3] {prob_A_level3.png} \end{center}
+We have that
+\[ \frac{a}{b} = \frac{a + a'}{b + b'} \]
+\[ \frac{a}{a + a'} = \frac{b}{b + b'} \]
+\[ \frac{a + a'}{a} = \frac{b + b'}{b} \]
+\[ \frac{a'}{a} = \frac{b'}{b} \]
+\[ \frac{a}{b} = \frac{a'}{b'} \]
+The partial sides are in the same ratio as the whole.
+
+Back to our problem.  Multiplying by the denominators:
+\[ XS \cdot YR = XR \cdot ZS \]
+
+\begin{center} \includegraphics [scale=0.3] {prob_A_level2.png} \end{center}
+We're given that $XR = QS$
+\[ XS \cdot YR = QS \cdot ZS \]
+but by the tangent-secant theorem
+\[ QS \cdot ZS = PS^2 \]
+so we have
+\[ XS \cdot YR = PS^2 \]
+
+$\square$
+
+I really dislike doing algebra with $XS$ and the rest, so I substituted single letters for the sides and fiddled with the algebra while working backward (analysis) until I could see the answer.
+\begin{center} \includegraphics [scale=0.4] {prob_A_level4.png} \end{center}
+
+The tangent-secant theorem says that $f^2 = d \cdot (c + d + e)$.  We're given that $(c + d + e) = (a + b)$.  
+
+So $f^2 = d \cdot (a + b)$.  We are asked to prove that this is equal to $(c + d) \cdot b$.
+
+Forming ratios we have
+\[ \frac{b}{d} = \frac{a + b}{c + d} \]
+But this is just the result that the partial sides are in the same ratio as the whole.
+
+Reverse (and substitute $XS$ etc.) to write the proof.  
+
+\end{document}

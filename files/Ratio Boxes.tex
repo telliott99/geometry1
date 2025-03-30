@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Github-math/figures/}}
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Ratio boxes}
@@ -106,6 +106,46 @@ This one can also be done by areas (next figure).  $\triangle ABD$ and $\triangl
 
 But looked at another way, they have bases $BD$ and $DC$ on the same parallel, so they have the same height drawn to vertex $A$.  Hence, the areas are in the ratio $BD:DC$.  Thus
 \[ \frac{AB}{AC} = \frac{BD}{DC} \]
+
+\subsection*{frustum}
+A frustum is a truncated pyramid.
+
+\begin{center} \includegraphics [scale=0.20] {frustum.png} \end{center}
+
+It's known, and we discuss elsewhere a proof, that the volume of a cone or pyramid is 
+\[ V = \frac{1}{3} \ \cdot hA \]
+
+where $h$ is the height and $A$ is the area of the base.  We'll make things slightly easier by writing
+\[ 3V = hs^2 \]
+with $s$ being the side length, for a square pyramid.
+
+A frustum has the top chopped off.   We will be given the side length at the bottom $a$, and the side length on the top $b$, as well as the height of the frustum $h$.
+
+We need to compute the height of the whole thing $H$, then find the height of the missing top part as $H-h$.  We'll use those two to get the volume of the frustum by subtraction.
+
+Let $H$ be the entire height, and then by similar triangles we have
+\[ \frac{H}{a} = \frac{H-h}{b} = \frac{h}{a-b} \]
+
+This is our ratio box for the problem.  The height of the small missing piece is 
+\[ H - h = \frac{b}{a} H \]
+Then the volume we seek uses the difference:
+\[ 3V = a^2 H - b^2 (H-h)  \]
+\[ = a^2H - b^2H \ \frac{b}{a} \]
+\[ = (a^2 - \frac{b^3}{a}) H \]
+
+But now we need $H$ in terms of $h$, since that's what we're given, so going back to the ratios we have:
+\[ H = \frac{a}{a-b} h \]
+which gives
+
+\[ 3V = (a^2 - \frac{b^3}{a}) \frac{a}{a-b} \ h \]
+\[ = \frac{a^3 - b^3}{a-b} \ h \]
+
+And if we fool around for a while, we may discover that the numerator can be factored as
+\[ (a^2 + ab + b^2)(a - b) = a^3 - b^3 \]
+which gives, finally
+\[ 3V = h (a^2 + ab + b^2) \]
+
+
 
 \subsection*{Menelaus's Theorem}
 \begin{center} \includegraphics [scale=0.18] {ratios15b.png} \end{center}

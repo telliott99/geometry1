@@ -91,7 +91,7 @@ $\bullet$  An inscribed angle is one-half the corresponding central angle lying 
 
 \emph{Proof}.
 
-Euclid's proof uses the external angle theorem.   $\angle BOC$ is the external angle to $\triangle OAB$.
+Euclid's proof (the theorem is proposition 20 of book III), uses the external angle theorem.   $\angle BOC$ is the external angle to $\triangle OAB$.
 
 Thus, it is equal to the sum of $\angle OAB + \angle OBA$.  
 
@@ -129,7 +129,7 @@ By the first proof, $\angle BOD = 2 \angle BAD$ and $\angle COD = 2 \angle CAD$.
 
 $\square$
 
-A somewhat more elegant proof of the second case is as follows.
+An elegant proof of the second case is as follows.
 
 \begin{center} \includegraphics [scale=0.14] {EIII_20d.png} \end{center}
 
@@ -155,19 +155,25 @@ $\square$
 
 \label{sec:angles_on_same_arc}
 
-\begin{center} \includegraphics [scale=0.15] {inscribed angles.png} \end{center}
-
 $\bullet$  Angles that lie on the same arc or are subtended by the same chord in the same circle, are equal.  
+
+This theorem is Euclid III.21.  
+
+The previous \hyperref[sec:inscribed_angle_theorem]{\textbf{inscribed angle theorem}} is Euclid III.20, which says that the central angle on any chord or arc or ``segment'' of a circle, is twice an arbitrary peripheral (inscribed) angle on the same segment of the same or equal circle.
+
+Euclid III.21  is an immediate consequence of the previous one, because the peripheral angle in III.20 is \emph{arbitrary}.
+
+The two theorems are sometimes thought to be the same.  III.20 might be better referred to as the central angle theorem, and III.21 as the inscribed angle theorem.  However, that is not the customary usage.
+
+III.21 will appear often in the pages to come.  We will refer to it as \hyperref[sec:angles_on_same_arc]{\textbf{equal angles $\iff$ equal arcs}} or more simply, equal angles \emph{on} equal arcs, unless we slip, and call it the inscribed angle(s) theorem.
+
+\begin{center} \includegraphics [scale=0.15] {inscribed angles.png} \end{center}
 
 \emph{Proof}.
 
 This is an immediate consequence of the previous theorem, since two such angles are equal to one-half of the \emph{same} central angle. $\angle POQ$ is the central angle for arc $PQ$ and hence is twice both $\angle PRQ$ and $\angle PSQ$.  Thus, $\angle PRQ = \angle PSQ$.
 
 $\square$
-
-This theorem is Euclid III.21.  It is such an immediate consequence of the \textbf{inscribed angles theorem} (Euclid III.20) that they are sometimes thought the same.
-
-Possibly I have mis-stated this elsewhere in the book.  Theorem III.21 will appear often in the pages to come.
 
 \subsection*{converse}
 
@@ -235,6 +241,67 @@ It follows that $DG = DH$ and $\triangle CHG$ is isosceles as well.
 
 $\square$
 
+
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
+
+Posamentier gives this problem.  
+
+Let $O$ be the center of the circumcircle of $\triangle ABC$.
+
+Let $BE \perp AC$ and $BD$ bisect $\angle B$.
+
+Show that $BD$ also bisects $\angle OBE$.
+
+\emph{Proof}.
+
+Given $\angle ABD = \angle CBD$.
+
+Draw $OC$.
+
+The central $\angle BOC$ is 2 $\angle BAC$.
+
+But $\triangle BOC$ is isosceles with equal base angles.
+
+Thus $\angle BAC + \angle OBC = 90$.
+
+$\angle ABE$ is also complementary to $\angle BAE$, hence $\angle BAE$ is equal to $\angle OBC$.
+
+\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
+
+Subtracting equals:  $\angle EBD = \angle OBD$.
+
+$\square$
+
+\emph{Proof}.  (Alternate).
+
+I have redrawn the figure slightly.
+
+\begin{center} \includegraphics [scale=0.30] {Posamentier1_4c.png} \end{center}
+
+Claim: the altitude and diameter of the circumcircle through $A$ form equal angles with the sides $AB$ and $AC$.
+
+Let $\triangle ABC$ have its circumcircle on center $O$, so $AO$ is a radius.  Extend $AO$ to form the diameter $AD$.
+
+Let $AX$ be the altitude to $A$, so it cuts $BC$ at a right angle and extends to the circle at $X$.
+
+By Thales' circle theorem, $\angle AXD$ is right.  It follows that $XD \parallel BC$.
+
+Parallel chords in a circle cut equal arcs.  (Note:  we prove this elsewhere.  Hint:  connect the opposing ends of the two chords to give equal inscribed angles).
+
+Hence $BX = CD$ and then by inscribed angles, $\angle BAX = \angle CAD$.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.30] {Posamentier1_4c.png} \end{center}
+
+As a corollary, if $AY$ bisects $\angle A$, by subtraction, the bisector also bisects the angle between the altitude and the radius AO.
+
+Alternatively, find $Y$ as the midpoint of arc $XD$.  
+
+Then we have equal arcs $XY = DY$, $BY = CY$, and $BX = CD$.  Results about the angles follow easily.
 
 \subsection*{geometric mean}
 
@@ -330,7 +397,7 @@ That gives us similar triangles $\triangle XYZ \sim \triangle XRS$ from which th
 
 $\square$
 
-The last part of the problem says that given $SQ = XR$, prove that $PS^2 = XS \cdot YR$  We're not ready to do that yet.  It uses the information about the tangent and the \hyperref[sec:secant_tangent_theorem]{\textbf{secant-tangent theorem}}.
+The last part of the problem says that given $SQ = XR$, prove that $PS^2 = XS \cdot YR$  We're not ready to do that yet.  It uses the information about the tangent and the \hyperref[sec:tangent_secant_theorem]{\textbf{tangent-secant theorem}}.
 
 \emph{Proof}.  (Alternate).
 
@@ -390,37 +457,6 @@ The same argument applies to $EC$ and $EP$.  Therefore the inner arc is composed
 
 $\square$
 
-\subsection*{problem}
-
-\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
-
-Posamentier gives this problem.  
-
-Let $O$ be the center of the circumcircle of $\triangle ABC$.
-
-Let $BE \perp AC$ and $BD$ bisect $\angle B$.
-
-Show that $BD$ also bisects $\angle OBE$.
-
-\emph{Proof}.
-
-Given $\angle ABD = \angle CBD$.
-
-Draw $OC$.
-
-The central $\angle BOC$ is 2 $\angle BAC$.
-
-But $\triangle BOC$ is isosceles with equal base angles.
-
-Thus $\angle BAC + \angle OBC = 90$.
-
-$\angle ABE$ is also complementary to $\angle BAE$, hence $\angle BAE$ is equal to $\angle OBC$.
-
-\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
-
-Subtracting equals:  $\angle EBD = \angle OBD$.
-
-$\square$
 
 \subsection*{Queen Dido}
 

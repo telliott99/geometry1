@@ -129,22 +129,6 @@ $\square$
 
 I will leave the right panel to you.
 
-This is a proof from Gelfand and Saul's trigonometry book.  
-
-\begin{center} \includegraphics [scale=0.5] {Gelfand2.png} \end{center}
-
-I have added the labels for side length.
-
-If it's not obvious, note that we start with two adjacent squares of area $a^2 + b^2$.  Two triangles (shaded) are cut off and re-arranged to make a shape whose area is $c^2$.
-
-$\square$
-
-Here is a colored version of the same proof I found on the web.
-
-\begin{center} \includegraphics [scale=0.4] {pyth_dissection.png} \end{center}
-
-\url{https://t.co/xTnARHQNWw}
-
 \subsection*{similar triangles}
 
 \label{sec:Pythagoras_similar_triangles}
@@ -176,12 +160,55 @@ Add them:
 
 $\square$
 
+\begin{center} \includegraphics [scale=0.4] {triangle3.png} \end{center}
+
 Another relationship from similar triangles is long side to short side:
 \[ \frac{h}{x} = \frac{y}{h} \]
 \[ h^2 = xy \]
 \[ h = \sqrt{xy} \]
 
 $h$ is the \emph{geometric mean} of $x$ and $y$.
+
+Another proof (from Dunham's Problems) also relies on similarity.
+
+\emph{Proof}.
+
+\begin{center} \includegraphics [scale=0.45] {pyth23.png} \end{center}
+
+In a right triangle, bisect one of the smaller angles, and mark off the same length as the adjacent side $a$ on the hypotenuse.  Draw the side $x$ from where the bisector meets side $b$.
+
+It is easy to see that the two triangles containing the angle bisectors are congruent by SAS.  
+
+Therefore, we have that $x$ makes a right angle where it cuts the hypotenuse.  Fill in the other sides:
+\begin{center} \includegraphics [scale=0.45] {pyth24.png} \end{center}
+
+We have that the right triangle with side $x$ is similar to the original.  From the corresponding sides we obtain:
+\[ \frac{x}{a} = \frac{c-a}{b} = \frac{b-x}{c} \]
+From the first and second terms:
+\[ bx = a(c-a) = ac - a^2 \]
+From the second and third terms:
+\[ c^2 - ac = b^2 - bx \]
+Substitute for $bx$:
+\[ c^2 - ac = b^2 - ac + a^2 \]
+\[ c^2 = a^2 + b^2 \]
+
+$\square$
+
+This is a proof from Gelfand and Saul's trigonometry book.  
+
+\begin{center} \includegraphics [scale=0.5] {Gelfand2.png} \end{center}
+
+I have added the labels for side length.
+
+If it's not obvious, note that we start with two adjacent squares of area $a^2 + b^2$.  Two triangles (shaded) are cut off and re-arranged to make a shape whose area is $c^2$.
+
+$\square$
+
+Here is a colored version of the same proof I found on the web.
+
+\begin{center} \includegraphics [scale=0.4] {pyth_dissection.png} \end{center}
+
+\url{https://t.co/xTnARHQNWw}
 
 \subsection*{proof without words}
 
@@ -269,5 +296,9 @@ We leave this one as a challenge.
 \emph{Hint 2}:  For two sides of a fixed total length, the isosceles right triangle has the largest area (why?).  Given the hypotenuse, what are the side lengths?
 
 Now use this fact to find the maximum area in terms of the sides, and compare that with the data we are given.
+
+
+There are a number of other proofs of the Pythagorean theorem later in the book.  See the last chapter \hyperref[sec:list_Pythagorean_proofs]{\textbf{here}} for links.
+
   
 \end{document}

@@ -9,7 +9,6 @@ Triangles
 Congruent triangles
 Isosceles triangles
 Right triangles
-Introduction to Euclid
 Bisection
 
 Area
@@ -33,10 +32,11 @@ Tangents
 Arcs of a circle
 Chords in a circle
 Cyclic quadrilateral
-Secant tangent theorem
+Tangent secant theorem
 Power of a point
 
 Practice with proofs
+Introduction to Euclid
 Broken Chord
 Ptolemy
 Elements
@@ -67,9 +67,9 @@ Special circles
 Triangles in triangles
 Nine point circle
 
-Revisiting proofs
-Proof by contradiction
-Induction
+Polygons
+Pentagon
+Hexagon
 
 Addendum
 Author's notes
