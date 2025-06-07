@@ -243,63 +243,63 @@ $\square$
 
 \subsection*{problem}
 
-\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {Posamentier_mod_1.png} \end{center}
 
-Posamentier gives this problem.  
+Posamentier gives this problem.  Let $O$ be the center of the circumcircle of $\triangle ABC$.
 
-Let $O$ be the center of the circumcircle of $\triangle ABC$.
+Let $CD \perp AB$ and $CX$ bisect $\angle C$.
 
-Let $BE \perp AC$ and $BD$ bisect $\angle B$.
-
-Show that $BD$ also bisects $\angle OBE$.
+Show that $CD$ also bisects $\angle ACX$.
 
 \emph{Proof}.
 
-Given $\angle ABD = \angle CBD$.
+Given $\angle ACX = \angle BCX$.
 
 Draw $OC$.
 
-The central $\angle BOC$ is 2 $\angle BAC$.
+The central $\angle BOC$ is 2 $\angle CAB$.
 
 But $\triangle BOC$ is isosceles with equal base angles.
 
-Thus $\angle BAC + \angle OBC = 90$.
+Thus $\angle CAB$ and $\angle OCB$ are complementary.
 
-$\angle ABE$ is also complementary to $\angle BAE$, hence $\angle BAE$ is equal to $\angle OBC$.
+$\angle ACD$ is also complementary to $\angle CAB$, hence $\angle CAB$ is equal to $\angle OCB$.
 
-\begin{center} \includegraphics [scale=0.16] {Posamentier1_4b.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {Posamentier_mod_1.png} \end{center}
 
-Subtracting equals:  $\angle EBD = \angle OBD$.
+Subtracting equals:  $\angle BCX = \angle OCX$.
 
 $\square$
+
+The angle bisector at $C$ also bisects the angle between the altitude and the radius from $C$.
 
 \emph{Proof}.  (Alternate).
 
 I have redrawn the figure slightly.
 
-\begin{center} \includegraphics [scale=0.30] {Posamentier1_4c.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {Posamentier_mod_2.png} \end{center}
 
-Claim: the altitude and diameter of the circumcircle through $A$ form equal angles with the sides $AB$ and $AC$.
+Claim: the altitude and diameter of the circumcircle through $C$ form equal angles with the sides $CA$ and $CB$.
 
-Let $\triangle ABC$ have its circumcircle on center $O$, so $AO$ is a radius.  Extend $AO$ to form the diameter $AD$.
+Let $\triangle ABC$ have its circumcircle on center $O$, so $CO$ is a radius.  Extend $CO$ to form the diameter $CF$.
 
-Let $AX$ be the altitude to $A$, so it cuts $BC$ at a right angle and extends to the circle at $X$.
+Let $CD$ be the altitude from $C$, so it cuts $AB$ at a right angle and extends to the circle at $E$.
 
-By Thales' circle theorem, $\angle AXD$ is right.  It follows that $XD \parallel BC$.
+By Thales' circle theorem, $\angle CEF$ is right.  It follows that $EF \parallel AB$.
 
 Parallel chords in a circle cut equal arcs.  (Note:  we prove this elsewhere.  Hint:  connect the opposing ends of the two chords to give equal inscribed angles).
 
-Hence $BX = CD$ and then by inscribed angles, $\angle BAX = \angle CAD$.
+Hence $AE = BF$ and then by inscribed angles, $\angle ACE = \angle BCF$.
 
 $\square$
 
-\begin{center} \includegraphics [scale=0.30] {Posamentier1_4c.png} \end{center}
+\begin{center} \includegraphics [scale=0.40] {Posamentier_mod_2.png} \end{center}
 
-As a corollary, if $AY$ bisects $\angle A$, by subtraction, the bisector also bisects the angle between the altitude and the radius AO.
+By subtraction, the bisector also bisects the angle between the altitude and the radius AO.
 
-Alternatively, find $Y$ as the midpoint of arc $XD$.  
+Alternatively, find $Y$ as the midpoint of arc $AB$.  
 
-Then we have equal arcs $XY = DY$, $BY = CY$, and $BX = CD$.  Results about the angles follow easily.
+Then we have equal arcs $AY = BY$, $AE = BF$, and $EY = FY$.  Results about the angles follow easily.
 
 \subsection*{geometric mean}
 
@@ -325,41 +325,62 @@ We discuss this here because originally, there was a proof-without-words that th
 
 I decided to add some words.
 
-\begin{center} \includegraphics [scale=0.4] {arcs15.png} \end{center}
-A right triangle is inscribed in a semicircle.  
+\begin{center} \includegraphics [scale=0.4] {arcs15b.png} \end{center}
+A right triangle is inscribed in a semicircle.
 
-Let the length of the long dotted line be $c$.  Then
-\[ a^2 + h^2 = c^2 \]
-Let the length of the short dotted line be $d$.  Then
-\[ b^2 + h^2 = d^2 \]
+We can use the Pythagorean theorem three times or just rely on the fact that the two smaller triangles are similar with equal ratios of sides including:
 
-Adding together
-\[ a^2 + b^2 + 2 h^2 = c^2 + d^2 \]
-
-But a third application of the Pythagorean theorem shows that the right-hand side is just $(a + b)^2$ so
-\[ a^2 + b^2 + 2 h^2 = (a + b)^2 \]
-\[ 2 h^2 = 2 ab \]
-\[ h^2 = ab \]
-
-$\square$
-
-An even simpler proof is to recognize that the two smaller triangles are similar with equal ratios of sides including:
 \[ \frac{h}{a} = \frac{b}{h} \]
-and the result follows immediately.
+and the result follows immediately:
+\[ ab = h^2 \]
 
 This says that the square of the altitude $h$ is equal to the product of chord segments (we will prove this geometrically in the next chapter as well).
 
 \[ h = \sqrt{ab} \]
 
+\begin{center} \includegraphics [scale=0.4] {arcs15b.png} \end{center}
+
 But we also have that $a + b = 2r$ and hence
 \[ r = \frac{a + b}{2} \]
+
 Do you recognize these?  The second expression is the arithmetic mean of $a$ and $b$, while the first is the geometric mean.
 
 The geometry shows that $h \le r$ so:
 \[ \sqrt{ab} \le \frac{a + b}{2} \]
 
-The geometric mean is always less than the arithmetic mean, except when $a = b$, where they are equal (or all of $n$ values are equal).
+The geometric mean is always less than the arithmetic mean, except when $a = b$, where they are equal (or all of $n$ values are equal, when there are more than two values).
 
+\subsection*{problem}
+
+I have lost track of where I found this problem.
+
+Given $\triangle ABC$ with its circumcircle.  Given $AD$ is an altitude.
+
+Extend $AD$ to meet the circle at $X$, and also extend $AD$ vertically to $H \mid HD = DX$.  Join $HB$ and extend $CA$ to $E$.  Show that $CAE\perp HB$.
+
+\begin{center} \includegraphics [scale=0.4] {inscribed_problem.png} \end{center}
+
+Hint:  draw point $P$ where $HB$ cuts the circle.  Show that arc $PAC = $ arc $CX$.
+
+Ignoring the hint for now, we are given that $BC$ is a perpendicular bisector of $HX$.  
+
+Hence $\triangle HBX$ is isosceles with $HB = BX$ and $\angle BXD = \angle H$.
+
+But $\angle BXD$ and $\angle C$ cut the same arc $AB$.  So $\angle H = \angle C$.
+
+We also have vertical angles so it follows that $\triangle AEH \sim \triangle ADC$.  Thus $\angle AEH$ is right.  
+
+$\square$
+
+Going back to the hint about $P$.  Again, $\triangle HBX$ is isosceles.  
+
+\begin{center} \includegraphics [scale=0.4] {inscribed_problem.png} \end{center}
+
+$\angle PBC = \angle XBC$, so arc $PAC = XC$.
+
+Then $\angle HAE = \angle DAC$ and both equal $\angle PBC$ since they stand on equal arcs.
+
+$\angle H$ is shared.  It follows that $\triangle HAE \sim \triangle EBC$.  Since $BPEH$ are collinear, and the angles at $E$ are equal, they are both right.
 
 \subsection*{problem}
 
@@ -376,14 +397,14 @@ The relationships that seem obvious from the diagram are given.  Namely, $PXYR$ 
 And the two circles each have the four points lying on them as shown.  
 
 $TPS$ is tangent to the smaller circle at $P$.
-\begin{center} \includegraphics [scale=0.3] {prob_A_level1.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {prob_A_level1a.png} \end{center}
 
 The problem asks us to show that $SR$ is parallel to $ZY$ and hence, \emph{deduce} that $YX/ZX = YR/SZ$.
 
 The approach that first occurred to me was to use the similar triangles that arise from crossed chords.  However, the problem asks us to start by showing that the given line segments are parallel.  This is a hint to a different proof.
 
 The result comes from the theorem which is the basis of this chapter: the inscribed angle theorem.
-\begin{center} \includegraphics [scale=0.3] {prob_A_level2.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {prob_A_level1b.png} \end{center}
 
 \emph{Proof}.
 

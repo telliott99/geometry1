@@ -10,6 +10,7 @@ Congruent triangles
 Isosceles triangles
 Right triangles
 Bisection
+Additional constructions
 
 Area
 Quadrilaterals
@@ -74,7 +75,6 @@ Hexagon
 Addendum
 Author's notes
 Angular measure
-Additional constructions
 Additional proofs
 Two final proofs
 Resources

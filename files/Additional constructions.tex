@@ -21,19 +21,47 @@
 
 %[my-super-duper-separator]
 
+This chapter explores some constructions that come very early in Euclid's \emph{Elements}.  These are not strictly necessary to understanding the material that's coming.  However, in Euclid's view they are \emph{logically} necessary, so we include them here.
+
 \subsection*{collapsible compass}
 
-We note briefly that there is a restriction in Euclid's \emph{Elements} to a \emph{collapsible} compass, one which loses its setting when lifted from the page.  That means that generally, you wouldn't be able to draw two circles of the same radius on different centers.
+There is a famous restriction to a \emph{collapsible} compass, one which loses its setting when lifted from the page.  That means that generally, you wouldn't be able to draw two circles of the same radius on different centers.
 
-We get around that restriction by drawing the circles on $Q$ and $R$ with the same radius $QR$.  
+In erecting a perpendicular bisector, we get around that restriction by drawing the circles on $Q$ and $R$ with the same radius $QR$, by placing $Q$ and $R$ the same distance apart as the radius to be used.
 
-We will call a compass that is able to hold its setting, a \emph{standard} compass.  Within the first few pages of that book, it is shown how to use a collapsible compass to carry out the very construction we said we couldn't do, namely, construct two circles on $Q$ and $R$ with equal radius and that radius not equal to $QR$ or $QP$.
+We will call a compass that is able to hold its setting, a \emph{standard} compass.  Within the first few pages of Euclid, it is shown how to use a collapsible compass to carry out the very construction we said we couldn't do, namely, construct two circles on $Q$ and $R$ with equal radius and that radius not equal to $QR$ or $QP$.
 
 Also, see the video at the url:
 
 \url{https://www.mathopenref.com/constperpextpoint.html}
 
-We have skipped that part here.
+\subsection*{Euclid I.1:  construction of an equilateral triangle}
+
+We saw this in the previous chapter.
+
+\subsection*{Euclid I.2:  transfer a length}
+
+\label{sec:Euclid_I_2}
+To construct a line segment on a point, equal to a given line segment.
+\begin{center} \includegraphics [scale=0.3] {Euclid_1_2a.png} \end{center}
+Since this immediately follows the first construction, it seems likely we will need an equilateral triangle.  The other thing we know how to do is to draw circles.
+
+Construct a circle of radius $BC$ on center $B$.  Where that intersects the extension of $DB$ at $F$ we have a length equal to one side of the $\triangle$ plus $BC$.
+
+So then draw a circle on center $D$ of radius $DF$.
+
+\begin{center} \includegraphics [scale=0.3] {Euclid_1_2b.png} \end{center}
+The intersection of that circle with the extension of $DA$ marks off a length equal to one side of the $\triangle$ plus $BC$.
+
+So $AG = BF = BC$, as required.
+
+If it is desired to draw a line segment of length $BC$ in some other direction from $A$, we just need another circle, centered at $A$.  That is Proposition 3.
+
+In sum then, we can mark off any length from one line segment onto another, even with just a collapsing compass.
+
+\subsection*{construct a given angle at a given point}
+
+Briefly, construct the triangle containing the desired angle by using SSS.  This can be done by transferring lengths as just described above.
 
 \subsection*{Euclid I.31:  construct a line parallel to another line}
 
@@ -47,15 +75,15 @@ First, pick some point on the line segment $P$, and draw a line segment through 
 
 \begin{center} \includegraphics [scale=0.4] {parallel1.png} \end{center}
 
-Find $Q$ on the second line such that $QP > OQ$.
+Find $Q$ on the second line, on the same side as $O$, such that $QP > OQ$.
 
 \begin{center} \includegraphics [scale=0.4] {parallel2.png} \end{center}
 
-Now draw the circle with center $Q$ and radius $QP$ and, at the intersection with the first line, $R$.  Draw the line $QR$.  
+Now draw the circle with center $Q$ and radius $QP$ and, at the intersection with the first line, $R$.  Draw the line $QR$.  $\triangle PQR$ is isosceles.
 
-Finally, draw the circle with center $Q$ and radius $OQ$, and at the intersection of the circle with the last line, find $T$.
+Finally, draw the circle with center $Q$ and radius $OQ$, and at the intersection of the circle with the last line, find $T$.  $OQ = QT$ and $QP = QR$.  Therefore the base angles of $\triangle QOT$ and $\triangle QPR$ are equal.
 
-We have that $OQ = QT$ and $QP = QR$.  Therefore the base angles of $\triangle QOT$ and $\triangle QPR$ are equal and therefore the triangles are similar by AAA.  
+We have that $\triangle OQT$ is also isosceles, and because it shares the angle at the other vertex the two triangles are similar:  $\triangle PQR \sim \triangle OQT$.
 
 Therefore the bases $PR$ and $OT$ are parallel, by the converse of the alternate interior angles theorem.
 
@@ -69,7 +97,7 @@ We wish to divide a general segment (in red, below) into an even number of piece
 
 \begin{center} \includegraphics [scale=0.4] {division.png} \end{center}
 
-Using one end of the target segment, draw any other line, and mark off on that line segments of equal length, using a compass.  (Even with a collapsible compass, this can be done sequentially by moving the fixed point).
+Using one end of the target segment, draw any other line, and mark off on that line segments of equal length, using a compass.  Even with a collapsible compass, this can be done sequentially by drawing a series of circles..
 
 Then, erect the perpendicular bisector of the black line at each point and extend the bisector to the target red line.
 
@@ -77,6 +105,6 @@ We will have that $AB = BC = CD$.  Furthermore, since $AB = BC$, $AB = \frac{1}{
 
 $\square$
 
-This construction uses properties of \emph{similar} triangles that we have not explained yet.  Since the angle at $A$ is shared and the angle with the black line is always the same, all the triangles have the same shape and their sides are in proportion.  We have fixed that proportion as an integer:  $1$, $2$ or $3$.
+This construction uses properties of \emph{similar} triangles that we have not proved yet.  Since the angle at $A$ is shared and the angle with the black line is always the same, all the triangles have the same shape and their sides are in proportion.  We have fixed that proportion as an integer:  $1$, $2$ or $3$.
 
 \end{document}

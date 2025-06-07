@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Github-Math/figures/}}
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Equilateral triangles}
@@ -69,77 +69,53 @@ It can be quicker to rely on the fact that the area goes like the square of the 
 
 Here is a fun construction based on an equilateral triangle.  
 
-\begin{center} \includegraphics [scale=0.2] {equi_tri.png} \end{center}
-
 Any triangle fits into a unique circle (see the discussion of circles and bisectors of the chords).  Draw the circumcircle for equilateral $\triangle ABC$.
 
-Draw a radius to a vertex of the triangle, and extend it as the diameter $BD$, which crosses the opposing  side at $E$.
+We can prove a number of properties.  First, draw the diameter from vertex $C$.
 
-We can prove a number of properties.  A good place to start is that $BD$ bisects $\angle B$.
+\begin{center} \includegraphics [scale=0.2] {equi6.png} \end{center}
 
 \emph{Proof}.
 
-Connect $AO$ and $CO$ (only one is shown).  
+(1) Given equal sides $AB = AC = BC$.
+
+(2) We have three equal angles at $A$, $B$ and $C$ by two applications of isosceles triangles, or by inscribed angles on equal arcs.
+
+(3) By Thales' theorem, $\angle CAD$ and $\angle CBD$ are both right.
+
+(4) $\triangle CAD \cong \triangle CBD$ by HL.
+
+(5) $\rightarrow AD = BD$.
+
+(6) $\rightarrow CD$ bisects $\angle C$ by inscribed angles on equal arcs.
+
+(7) $AQ = DQ = BQ$ as radii of the circle.
+
+(8) $\rightarrow \triangle QAD$ is isosceles.
+
+(9) $\rightarrow  \angle QAD = \angle QDA$.
+
+(10) But $\angle  QDA = \angle CBA$, so $\triangle QAD$ and $\triangle QBD$ are equilateral.
+
+\begin{center} \includegraphics [scale=0.2] {equi6.png} \end{center}
+
+(11) $\rightarrow   AD$ and $DB$ are also equal in length to radii.
+
+(12) $\rightarrow AQBD$ is a parallelogram (two pairs of equal sides).
+
+(13) $M$ bisects both $AB$ and $QD$ (crossed diagonals bisect each other).
+
+(Actually, this is a general result for altitudes as we show elsewhere).
+
+(14) There are four congruent triangles with right angles at $M$ by SSS.
+
+(15)  $\rightarrow CQM$ is bisector, median and altitude of $\triangle ABC$ and $Q$ is incenter, centroid and orthocenter as well.
+
+There are certainly other ways of proceeding.  For example, since $\triangle AQC \cong \triangle BQC$, $\angle C$ is bisected and then $\triangle ACD \cong \triangle BCD$ and we have right angles at $D$.
+
+$\square$
 
 \begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
-
-$\triangle AOB \cong \triangle COB$ by SSS.
-
-It follows that $\angle B$ is bisected.
-
-Since $AB = CB$, $\triangle ABE \cong \triangle CBE$ by SAS.
-
-So the angles at $E$ are all equal, and thus right angles.
-
-$\square$
-
-The next property is that $\triangle OAD$ is also equilateral.
-
-\emph{Proof}.
-
-$\angle AOD$ is the central angle for the half-angle at $\angle B$, hence $\angle AOD = \angle B$.
-
-By inscribed angles, $\angle BDA = \angle C$, so $\triangle OAD$ is equi-angular, by sum of angles.  It is therefore equilateral.
-
-$\square$
-
-The three congruence classes of right triangles are all similar. 
-
-\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
-
-\emph{Proof}.
-
-$\triangle BAD$ is a right triangle by Thales' theorem.  
-
-From above, $\triangle BEA$ and $\triangle AED$ are both right as well.
-
-The first two share $\beta$ (the half-angle at $B$), while the third has $\angle ADB$ shared with $\triangle BAD$.
-
-$\square$
-
-$AD = AO = CO = CD$.
-
-\emph{Proof}.
-
-From above, $\triangle OAD$ is equilateral.  Similarly, $\triangle OCD$ is equilateral.
-
-It follows that $AOCD$ is a rhombus.
-
-This would also follow by the converse of the diagonals theorem for parallelograms, since $AE = CE$.
-
-$\square$
-
-Finally, $DE = OE = $ one-half of $OB$ and one-third of $BE$.
-
-\emph{Proof}.
-
-$\triangle BEA \sim \triangle BAD \sim \triangle AED$.
-
-Then $AD$ is one-half $BD$, but $DE$ is one-half $AD$, hence $1/4$ of $BD$.  
-
-Since $OD$ is one-half of $BD$, $DE$ is one-third of $BE$.
-
-$\square$
 
 \emph{Proof}.  (Alternate).
 

@@ -28,11 +28,11 @@ However this is logically the converse (backwards) of what we really want to kno
 
 We will find tests that, if passed, imply congruence.
 
-\begin{center} \includegraphics [scale=0.4] {congruent1b.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {congruent1c.png} \end{center}
 
-We allow one triangle to be rotated at any angle with respect to the other.  The red and blue triangles are an example of this.  Equal sides have been shaded to show which ones correspond.
+We allow one triangle to be rotated at any angle with respect to the other.  $\triangle ABC$ and $\triangle DEF$ are an example of this.  Equal sides have been colored to show which ones correspond.
 
-We will also use the term congruent to apply to the case of a triangle and its mirror image.  All three of the triangles shown above are congruent, even though the green one is flipped with respect to the others --- they are mirror images.
+We will also use the term congruent to apply to the case of a triangle and its mirror image.  All three of the triangles shown above are congruent, even though the one on the right is flipped with respect to the others --- they are mirror images.
 
 \subsection*{SSS test for congruence}
 
@@ -72,7 +72,7 @@ $\circ$  ASA (angle-side-angle)
 
 $\circ$  AAS (angle-angle-side)
 
-When we say SAS, we mean that the equal angle we know lies between the pair of equal sides.  Similarly, ASA means that we know one side of a triangle and the two angles at either end of that side are the angles in question.
+When we say SAS, we mean that the angle we know is equal is the one that lies between the pair of equal sides.  Similarly, ASA means that we know one side of a triangle and the two angles at either end of that side are the angles in question.
 
 As we did above for SSS, a good way to think about the congruence condition SAS is to imagine trying to construct a triangle from the given information, and ask whether it is uniquely determined.  
 
@@ -86,13 +86,13 @@ Of course we might have drawn the shorter side as the horizontal.  If we did tha
 
 \label{sec:ASA}
 
-The next one is ASA.  Since we know two angles, we know the third.  Here is a diagram of the situation:
+The next one is ASA.  Of course, since we know two angles, we know the third, by sum of angles.  However, we do not even need that.  Here is a diagram of the situation:
 
 \begin{center} \includegraphics [scale=0.4] {ASA1.png} \end{center}
  
 Draw the known side, then using the known angles, start two other sides from the ends of that side.  They must cross at a unique point.
 
-But...actually, if we start the two lines from opposite ends of the horizontal
+But... actually, if we start the two lines from opposite ends of the horizontal
 
 \begin{center} \includegraphics [scale=0.4] {ASA4.png} \end{center}
 
@@ -106,13 +106,13 @@ Crucially, we know \emph{which} two angles flank the known side.  Equivalently, 
  
 \subsection*{marks for equality}
 
-It is often useful to marking sides and (particularly) angles to show they are equal.  Here is 
+It is often useful to mark sides and (particularly) angles to show they are equal.  Here is 
   
 \begin{center} \includegraphics [scale=0.4] {SAS.png} \end{center}
 
 In this diagram, sides of equal length are indicated by one or more short lines called hash marks.  
 
-Equal angles are usually indicated by dots in this book. Dots are easier to place on the figures, and lend themselves to color-coding;  the common method for pencil and paper is to draw arcs with one or more hash across them.
+Equal angles are usually indicated by dots in this book. Dots are easier to place on the figures, and lend themselves to color-coding;  the common method for pencil and paper is to draw arcs with one or more hashes across them.
 
 \begin{center} \includegraphics [scale=0.4] {ASA3.png} \end{center}
 
@@ -138,7 +138,7 @@ The right angle case is not ambiguous, but we'll save that for the chapter on ri
 
 If you compare this chapter with most others in the book you'll notice that we have not formally proved that any of these methods are correct.  Even Euclid encounters some difficulty with this point.  He "proves" SAS by a method that is arguably not really a proof.
 
-It won't hurt my feelings if you think of them as axioms.  The famous mathematician David Hilbert does this.  We will revisit the issue when we look at Euclid's proofs.
+It won't hurt my feelings if you think of them as axioms.  The famous mathematician David Hilbert did this.  We will revisit the issue when we look at Euclid's proofs.
 
 \subsection*{similar triangles have equal angles}
 
@@ -148,7 +148,7 @@ Sometimes two triangles are not congruent, but have all three angles the same.  
 
 \begin{center} \includegraphics [scale=0.4] {similar.png} \end{center}
 
-Similarity means that all three angles are the same but the triangles are of different overall sizes.
+Similarity means that all three angles are the same but the triangles are scaled differently, they are of different sizes.
 
 Our basic criterion for similarity is AAA (angle-angle-angle).  
 
@@ -179,13 +179,13 @@ We will come back to proofs about similar triangles in a later chapter.  In part
 
 When two triangles are congruent, each of the three angles and all three sides are the same.  You might wonder whether the sides could be placed in a different order.  We usually draw side of length $a$ opposite $\angle A$, side $b$ opposite $\angle B$ and side $c$ opposite $\angle C$.  Can we switch the sides so that say, the length $c$ is opposite $\angle B$?
 
-It turns out not to be possible.  Later we will have a theorem which say that in any triangle, the longest side is opposite the largest angle, and the smallest side opposite the smallest angle.  If switching two sides were possible, the theorem would be false.
+It turns out not to be possible.  Later we will have a theorem which says that in any triangle, the longest side is opposite the largest angle, and the smallest side opposite the smallest angle.  If switching two sides were possible, the theorem would be false.
 
 \subsection*{note on notation}
 
 \begin{center} \includegraphics [scale=0.15] {triangle9.png} \end{center}
 
-Consider $\triangle ABC$.  The side opposite the vertex $A$ may be referred to as $BC$, but $CB$ is also fine.  In many cases I prefer a single letter for the label, usually $a$.  If we refer to the \emph{length} of the side, we will prefer $a$, although elsewhere one may see $|BC|$ or even just, ``the length $BC$''. 
+Consider $\triangle ABC$.  The side opposite the vertex $A$ may be referred to as $BC$, but $CB$ is also fine.  In many cases, especially when doing algebra, I prefer a single letter for the label, usually $a$.  If we refer to the \emph{length} of the side, we will prefer $a$, although elsewhere one may see $|BC|$ or even just, ``the length $BC$''. 
 
 There is no compelling reason to prefer $\triangle ABC$ to any of the five other permutations of three letters, such as $\triangle BAC$, beyond a liking for alphabetical order.  Old texts may use the letters $A$, $B$, and $G$, because the third letter in Greek is Gamma, $\Gamma$.
 
