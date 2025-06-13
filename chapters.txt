@@ -1,45 +1,10 @@
-# First
-
-Lines and angles
+Preface
 Introduction
-Angles
-Parallel lines
-
-Triangles
-Congruent triangles
-Isosceles triangles
-Right triangles
-Bisection
-Additional constructions
-
-Area
-Quadrilaterals
-Rectangles
-Parallelograms
-Altitudes
-Right triangle similarity
-Similar triangles
-
-Pythagorean theorem
-Simple proofs
-Euclid's proof
-Pappus's proof
-Brief review
-
-Circles
-Circles and angles
-Inscribed angles
-Tangents
-Arcs of a circle
-Chords in a circle
-Cyclic quadrilateral
-Tangent secant theorem
-Power of a point
 
 Practice with proofs
-Introduction to Euclid
 Broken Chord
 Ptolemy
+Introduction to Euclid
 Elements
 Equilateral triangles
 Angle bisectors
@@ -56,14 +21,14 @@ Law of Cosines
 
 Applications of similarity
 Ptolemy revisited
-Euler Theorem
-Euler Line
 Menelaus's theorem
 Ceva's Theorem
 Pythagoras by area
 Ratio Boxes
 
 Special stuff
+Euler Theorem
+Euler Line
 Special circles
 Triangles in triangles
 Nine point circle
@@ -71,6 +36,15 @@ Nine point circle
 Polygons
 Pentagon
 Hexagon
+
+Vectors without coordinates
+Simple vectors
+Napoleon's theorem
+
+Later geometry
+Heron and Brahmagupta
+The Almagest
+Pappus
 
 Addendum
 Author's notes

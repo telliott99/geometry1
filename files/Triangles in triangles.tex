@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Github-math/figures/}}
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Incenter, Orthocenter, Circumcenter}
@@ -20,42 +20,34 @@
 \Large
 
 %[my-super-duper-separator]
-In the figure below, the outer black triangle lies on its circumcircle, where the circumcenter is the red point at the center.  
 
-The midpoints of the sides of the black outer triangle are joined to form a second triangle, in red.
-\begin{center} \includegraphics [scale=0.35] {three_points.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {gauss_crop.png} \end{center}
 
-We will show that the perpendicular bisectors of the sides of the outer triangle are the altitudes of the red triangle.  
+In the figure above, the outer red triangle lies on its circumcircle, where the circumcenter is the white point at the center.  
 
-Furthermore, if the points where the altitudes meet the sides of the red triangle are joined to form a third inner triangle, those same altitudes are the angle bisectors of the inner triangle.
+The midpoints of the sides of the outer triangle are joined to form a second triangle, in blue.  We will show that the perpendicular bisectors of the sides of the outer triangle are the altitudes of the blue triangle.   The proof is due to Gauss.
 
-So for this arrangement, we have circumcenter concurrent (at the same point) with the orthocenter, which in turn is concurrent with the incenter.
+Even more interesting, if the feet of the altitudes of the blue triangle are joined to make a third triangle, the angle bisectors of that triangle meet at an incenter, I.  The incenter of the dark gray third triangle is the orthocenter of the blue triangle and also the circumcenter of the original red triangle.
 
 \subsection*{Gauss and altitude}
 
 \label{sec:Gauss_orthocenter}
 
-We will prove that the altitudes of a triangle are the perpendicular bisectors of a particular triangle which encloses it.  The proof is due to Gauss.
-
 \emph{Proof}.
 
-\begin{center} \includegraphics [scale=0.3] {gauss_altitudes.png} \end{center}
+Recall that we can find the circumcenter of any triangle by erecting perpendicular bisectors at the midpoints of the sides.  
 
-Draw the outer triangle, in black.  Connect the midpoints of the sides to form an inner triangle, in red.  Also draw the perpendicular bisectors of the outer triangle.
-
-By the \hyperref[sec:midpoint_theorem]{\textbf{midpoint theorem}}, each side of the outer triangle is parallel to one side of the inner triangle and equal to twice its length.  Since we have opposing sides equal and parallel, this gives three parallelograms in the figure.
-
-The perpendicular bisector of each black side (dotted line) is the altitude of the paired red side, because it starts from a vertex of the red triangle and meets the base at a right angle due to the parallel sides.
-
-This shows that the circumcenter of the enclosing triangle is the orthocenter of the smaller, enclosed triangle.  Since the circumcenter exists and is a single point, so is the orthocenter.
+But those midpoints are the vertices of the blue triangle.  And in drawing the triangle on the midpoints, by the midpoint theorem the resulting triangle has sides parallel to the original.  So the perpendicular bisectors of the first triangle are perpendicular to the sides of the second, and also go through its vertices.  Thus, they are altitudes of the second triangle.
 
 $\square$
 
-\subsection*{orthocenter}
+\begin{center} \includegraphics [scale=0.4] {gauss_crop.png} \end{center}
+
+\subsection*{orthocenter and incenter}
 
 \label{sec:orthocenter_and_incenter}
 
-We have shown previously that the three altitudes meet at a single point, the orthocenter.  The proofs include one from \hyperref[sec:Newton_altitude]{\textbf{Newton}}, and the previous one (from \hyperref[sec:Gauss_orthocenter]{\textbf{Gauss}}).
+We have proven previously that the three altitudes meet at a single point, the orthocenter.  The proofs include one from \hyperref[sec:Newton_altitude]{\textbf{Newton}}, and the previous one (from \hyperref[sec:Gauss_orthocenter]{\textbf{Gauss}}).
 
 \begin{center} \includegraphics [scale=0.4] {altitude_proof_1.png} \end{center}
 
@@ -65,35 +57,31 @@ In other words, the incenter of the small triangle is the same point as the orth
 
 \emph{Proof}.
 
-The key to the proof is to recognize that we can use a part of an altitude as the diameter of a circle.  Draw the circle that has for its diameter the line segment connecting the orthocenter and one vertex of the large triangle.
+The key to the proof is to recognize that we can use a part of an altitude as the diameter of a circle.  Draw the circle that has for its diameter the line segment connecting the orthocenter $H$ and vertex $B$ of the large blue triangle.
 
-Now consider the parts of the other two altitudes that terminate in right angles at the sides of the red triangle.   I claim that these two points lie on the same circle.  
+In this diagram we have changed the color of the inner triangle to be red, and also, the orthocenter of the blue triangle, where the altitudes cross, is not labeled because the figure is already too busy.  It is, however, marked with a red dot.
+
+\begin{center} \includegraphics [scale=0.4] {ortho_incenter_crop.png} \end{center}
+
+Now consider the parts of the other two altitudes that terminate at $D$ and $F$   I claim that these two points lie on the same circle.  
 
 The reason is that, each one individually, taken together with the first two points, forms a right triangle.  By the converse of Thales theorem, they must lie on the circle. 
-\begin{center} \includegraphics [scale=0.4] {altitude_proof_8.png} \end{center}
 
-(The included side of the inner triangle is \emph{not necessarily} perpendicular to the diameter, the first one looks so because the original triangle is nearly isosceles --- see below).
+The same thing can be done with $CH$ as the diameter of a different circle, through  $D$ and $E$.
 
-Now we can use the \hyperref[sec:equal_angles_same_arc]{\textbf{theorem}} about arcs that subtend an angle on the perimeter of the circle.  The two angles on the circle marked with red dots correspond to the same arc of the magenta circle, so they are equal.
+Now we can use the \hyperref[sec:equal_angles_same_arc]{\textbf{theorem}} about arcs that subtend an angle on the perimeter of the circle.  
 
-For the next step, we use vertical angles (marked with black dots) to show that two triangles are similar, since they also contain right angles.  Therefore, we can mark a third angle as equal to the others with a red dot.
+$\angle ADF = \angle EBA$ for this reason, while $\angle ACF = \angle ADE$ as well.
 
-\begin{center} \includegraphics [scale=0.4] {altitude_proof_9.png} \end{center}
-  
-Finally we draw a circle for a different vertex. Now it is obvious that the solid black line is not necessarily perpendicular to the altitude.
+But then we notice that $\triangle HEC$ and $\triangle HFB$ are right triangles that share vertical angles, so they are similar.  In particular $\angle ACF = \angle EBA$.
 
-Using the arc theorem, we find another equal angle, for a total of four angles marked with red dots.  We see that the one vertex of the inner triangle is bisected into two equal angles marked with red dots.
+Thus, all four angles marked with black dots are equal.  Therefore, the angle at vertex $D$ in $\triangle EDF$ is bisected by the altitude of the outer triangle $AD$.
 
-\begin{center} \includegraphics [scale=0.4] {altitude_proof_10.png} \end{center}
+Exactly the same logic will show that the angles at the other two vertices of $\triangle DEF$ are also bisected by the altitudes of $\triangle ABC$.
 
-But the same thing can be done for the two other vertices of the inner triangle.  The pattern of the angles is the same.  
+\begin{center} \includegraphics [scale=0.4] {ortho_incenter_crop.png} \end{center}
 
-With all the dots filled in:
-\begin{center} \includegraphics [scale=0.4] {altitude_proof_7.png} \end{center}
-
-This shows that the dotted lines are angle bisectors for the small triangle.
-
-Thus, the orthocenter of the large triangle and the incenter of the triangle inscribed between the points where altitudes meet the base, are the same point.
+We conclude that the orthocenter $H$ of the blue triangle is the incenter $I$ of the red triangle.
 
 $\square$
 

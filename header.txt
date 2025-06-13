@@ -17,7 +17,7 @@
 
 \graphicspath{{_my_graphics_path}}
 
-\title{Elementary Geometry}
+\title{Plane Geometry:  Practice with Proofs}
 \author{Tom Elliott}
 \date{\today}
 
