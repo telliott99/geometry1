@@ -29,29 +29,35 @@ In this chapter we will study some more \emph{Propositions} from the first volum
 
 $\bullet$  \ In any triangle, if one of the sides is produced (extended), then the exterior angle is greater than either of the interior and opposite angles.
 
-\begin{center} \includegraphics [scale=0.4] {Euclid_I_16.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {EI_16.png} \end{center}
 
-In $\triangle ABC$ extend side $BC$ to $D$.  We are concerned with the exterior $\angle ACD$.
+In $\triangle ABC$ extend side $AB$ to $D$.  We are concerned with the exterior $\angle FBD$.
 
-The claim is that $\angle ACD$ is greater (larger) than either of the interior angles $\angle ABC$ or $\angle BAC$.
+The claim is that $\angle FBD$ is greater (larger) than either of the interior angles $\angle ACB$ or $\angle CAB$.
 
 \emph{Proof}.
 
-Find the midpoint of side $AC$ at $E$ so $AE = EC$ and then draw $BEF$ so that $BE = EF$.  Note that $\angle ECD$ is the same angle as $\angle ACD$.
+Find the midpoint of side $BC$ at $E$ so $BE = EC$ and then draw $AEF$ so that $AE = EF$ and join $BF$.  
 
-We have equal angles at $E$ by the vertical angle theorem.  So by SAS the two smaller triangles $\triangle BEA$ and $\triangle CEF$ to the left and right are congruent.
+Note that $\angle EBD = \angle CBD$ is the external angle for $\triangle ABC$.
 
-Thus $\angle BAE = \angle ECF$.  Since the whole is greater than the part, $\angle ECD > \angle ECF = \angle BAE$.
+We have equal angles at $E$ by the vertical angle theorem.  
 
-We can make a similar construction and proof for $\angle ABC$.
+So by SAS the two smaller triangles $\triangle AEC$ and $\triangle BEF$ to the left and right are congruent.
+
+Thus $\angle ACE = \angle FBE$.  Since the whole is greater than the part, $\angle EBD > \angle FBE = \angle ACE$.
+
+We can make a similar construction and proof for $\angle BAC$.
 
 The exterior angle is greater than either of the interior and opposite angles.
 
 $\square$
 
-\begin{center} \includegraphics [scale=0.4] {Euclid_I_16.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {EI_16.png} \end{center}
 
-One might ask why Euclid doesn't use supplementary angles to obtain a stronger proof.  The main reason is that he has not yet proved the triangle sum theorem.  That is Euclid I.32.
+One might ask why Euclid doesn't use supplementary angles to obtain a stronger proof.  The answer seems to be that he is trying to go as far as he can without using the parallel postulate.
+
+He will need that for the triangle sum theorem.  That is Euclid I.32.  And then that gives the stronger form of the external angle theorem.
 
 However, we did previously show a proof of the triangle sum theorem, that the sum of angles in any triangle is equal to two right angles.  
 
@@ -65,75 +71,67 @@ $\bullet$ \ the external angle is equal to the sum of two internal angles
 
 \emph{Proof}.
 
-\begin{center} \includegraphics [scale=0.4] {PI_16d.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {EI_16.png} \end{center}
 
-As supplementary angles, $u + u' =$ two right angles.  As the three angles of a triangle, $s + t + u =$ two right angles as well.
+As supplementary angles, $\angle ABC + \angle  CBD = $ two right angles.  
 
-But things equal to the same thing are equal to each other:
-\[ u + u' = s + t + u \]
+As the three angles of a triangle, $\angle ABC + \angle ACB + \angle CAB =$ two right angles as well.
 
-Subtracting equals from equals:
-\[ u' = s + t \]
+But things equal to the same thing are equal to each other.  Subtracting we obtain
+\[ \angle  CBD =  \angle ACB + \angle CAB  \]
 
 $\square$
 
-This relationship is fundamental.
+This relationship is obviously fundamental.
 
 The next theorem is also extremely useful, and it follows from Euclid I.16.
 
-\subsection*{Euclid I.18}
+\subsection*{Euclid I.18: Longer side $\Rightarrow$ larger angle}
 
 \label{sec:Euclid_I_18}
 
 $\bullet$  \ Comparing two sides in any triangle, if one side is longer than the other, then the angle opposite is larger.
 
-\begin{center} \includegraphics [scale=0.4] {PI_18a.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {EI_18.png} \end{center}
+
+In $\triangle ABC$, suppose that $BC > AC$.  We will show that $\angle A > \angle B$.
 
 \emph{Proof}.
 
-Given that side $b > a$, mark off $a$ on $b$.
+Mark off $AD = AC$.  By the isosceles triangle theorem, $\angle CAD = \angle CDA$.
 
-\begin{center} \includegraphics [scale=0.4] {PI_18b.png} \end{center}
+Since the whole is greater than the part, $\angle A = \angle CAB > \angle CAD$.
 
-By the external angle theorem (I.16)
-\[ v > t \]
+But $\angle CDA$ is the external angle for $\triangle ABD$ so it is equal to $\angle BAD$ + $\angle B$.
 
-
-
-But $v = s'$ (by Euclid I.5) so 
-\[ s' > t \]
-And since $s > s' $
-\begin{center} \includegraphics [scale=0.4] {PI_18a.png} \end{center}
-\[ s >  s' > t \]
+By transiitivity of inequality:  $\angle A > \angle B$. 
 
 $\square$
 
 We get the converse almost for free.
 
-\subsection*{Euclid I.19}
+\subsection*{Euclid I.19:  Larger angle $\Rightarrow$ longer side }
 
 \label{sec:Euclid_I_19}
 
 $\bullet$  \ Comparing two angles in any triangle, if one angle is larger than the other, then the side opposite is longer.
 
-\begin{center} \includegraphics [scale=0.4] {PI_18a.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {EI_18.png} \end{center}
 
 \emph{Proof}.
 
-We are given $s > t$ and claim that $b > a$.
+We are given $\angle A > \angle B$ and claim that $BC > AC$.
 
-We proceed by eliminating the other two possibilities.  Rewrite the order of terms as $t < s$, with the claim $a < b$.
+We proceed by eliminating the other two possibilities.  It cannot be that $BC = AC$ because then, by Euclid I.5, the angles would be equal but we are given that they are not.
 
-It cannot be that $a = b$ because then $s = t$ by isosceles $\triangle$ (Euclid I.5), but we are given $s > t$.
+Suppose that $AC > BC$.  Then by Euclid I.18 just above, we have that $\angle B > \angle A$.
 
-So then suppose $a > b$.  By the previous proposition (Euclid I.18), we would have that $t > s$.  But this is again contrary to what we were given.  
-
-Since the other two possibilities are eliminated, we must have $a < b$.
+However, this also contradicts what was given.  We must have $\angle A > \angle B$.
 
 $\square$
 
 We have made use of what's called a trichotomy.  There are only three possibilities:
-\[ a < b, \ \ \ \ \ \ a = b, \ \ \ \ \ \ a > b \]
+\[ \angle A > \angle B, \ \ \ \ \ \ \angle A = \angle B, \ \ \ \ \ \ \angle A < \angle B \]
 
 This applies to line segments and angles as well as many other things.
 

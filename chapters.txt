@@ -4,7 +4,6 @@ Introduction
 Practice with proofs
 Broken Chord
 Ptolemy
-Introduction to Euclid
 Elements
 Equilateral triangles
 Angle bisectors
@@ -44,7 +43,7 @@ Napoleon's theorem
 Later geometry
 Heron and Brahmagupta
 The Almagest
-Pappus
+Pappus's proof of Pythagoras
 
 Addendum
 Author's notes

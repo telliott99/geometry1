@@ -230,11 +230,12 @@ $\angle COD$ is twice $\angle COR$ or $72^{\circ}$, which is the correct measure
 
 Euclid uses several steps to construct a pentagon circumscribed by a circle.  The critical chain of dependencies is II.11 $\Rightarrow$ IV.10 $\Rightarrow$ IV.11.   We first look at II.11.
 
-\subsection*{II.11}
+\subsection*{Euclid II.11}
 
 \begin{quote}To cut the line $AB$ at $H$ such that the rectangle contained by the whole and one of the segments is equal to the square on the other segment.\end{quote}
 
-\begin{center} \includegraphics [scale=0.20] {Euclid_II_11.png} \end{center}
+% \begin{center} \includegraphics [scale=0.20] {Euclid_II_11.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {EII_11_label.png} \end{center}
 
 The idea is to find $H$ such that 
 \[ AB \cdot HB = AH^2 \]
@@ -257,7 +258,7 @@ Draw the square on $AF$.  $H$ is the desired point.
 I claim $HB \cdot AB = AH^2$.
 \[ \frac{AH}{HB} = \frac{AB}{AH} \]
 
-\begin{center} \includegraphics [scale=0.20] {Euclid_II_11.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {EII_11_label.png} \end{center}
 
 In other words, the golden ratio or mean.
 
@@ -275,7 +276,7 @@ Subtract the shared area $AK$ from each.  We obtain:
 
 $\square$
 
-\begin{center} \includegraphics [scale=0.20] {Euclid_II_11.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {EII_11_label.png} \end{center}
 
 Algebraically, let $AB = x, AH = y, HB = x - y$, and then
 \[ (x-y) \cdot x = y^2 \]
@@ -286,7 +287,7 @@ Scale so that $y = 1 = AH$ then
 \[ x^2 = x + 1 \]
 As advertised, $x = \phi = AB$, the golden ratio.
 
-\subsection*{IV.10}
+\subsection*{Euclid IV.10 and IV.11}
 
 Next, Euclid uses II.10 to construct an isosceles triangle that has its base angles twice the vertex.  What is below does not follow word for word, but it's close.
 
@@ -294,65 +295,34 @@ Draw the circle $\mathcal{O}$ on center $A$ with arbitrary radius $AB$.
 
 By the construction of II.11, cut $AB$ at $C$ so that $AB \cdot BC = AC^2$.
 
-\begin{center} \includegraphics [scale=0.20] {Euclid_IV_10.png} \end{center}
+%\begin{center} \includegraphics [scale=0.20] {Euclid_IV_10.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {EIV_10_label.png} \end{center}
 
-Now find $D$ on $\mathcal{O}$ such that
-\[ (1) \ BD = AC \]
+Now find $D$ on $\mathcal{O}$ such that BD = AC.  So 
+\[ AB \cdot BC = AC^2 = BD^2 \]
 
-So 
-\[ (2) \ AB \cdot BC = AC^2 = BD^2 \]
+As radii of $\mathcal{O}$, $AB = AD$ and $\triangle ABD$ is isosceles.
 
-As radii of $\mathcal{O}$, $AB = AD$ and $\triangle ABD$ is isosceles, with
-\[ (3) \ \beta = \angle BDA = \phi + \delta \]
+Join $CD$ and $AD$.  Draw the circle $\mathcal{Q}$ containing points $A$,$C$,$D$.
 
-Join $CD$ and $AD$.
- 
-Draw the circle $\mathcal{Q}$ containing points $A$,$C$,$D$.
-
-A crucial step is that that by the converse of the tangent-secant theorem, (2) means that $BD$ is tangent to $\mathcal{Q}$ at $D$.
+A crucial step is that that by the converse of the tangent-secant theorem, the relationship above means that $BD$ is tangent to $\mathcal{Q}$ at $D$.
 
 Therefore, since they are subtended by the same arc:
-\[ (4) \ \delta = \alpha \]
+\[ \angle A = \angle BDC \]
 
-\begin{center} \includegraphics [scale=0.20] {Euclid_IV_10.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {EIV_10_label.png} \end{center}
 
-Adding equals:
-\[ \angle BDA = \delta + \phi = \alpha + \phi \]
+Since they have equal apex angle and share the base angle at $B$, $\triangle ABD \sim \triangle ADB$.
 
-As the external angle to $\triangle CAD$:
-\[ (5) \ \gamma =  \alpha + \phi = \angle BDA  \]
+Thus $\triangle DBC$ is also isosceles, with $CD = BD = AC$.  But this means that $\triangle ACD$ is also isosceles. 
 
-By (3) $\beta = \angle BDA$, and by (5) $\gamma = \angle BDA$, hence
-\[ \beta = \gamma \]
+It follows that $\angle CDA = \angle CAD = \angle BDC$, and $CD$ bisects $\angle D$.
 
-Thus $\triangle DBC$ is also isosceles.
-
-[ Once we have (4), we can get here even quicker.  $\triangle ABD$ has apex angle $\alpha$ and base angles $\beta$.  $\triangle DBC$ has the equal apex angle $\delta = \alpha$ and one base angle known ($\beta$).  It follows that all three angles are shared, so $\triangle ABD \sim \triangle DBC$. ]
-
-Furthermore, $\triangle DBC$ and $\triangle ABD$ are equi-angular (similar, although we won't need that).
-
-It follows that $BD = CD$ but by (2) $BD = AC$ so $CD = AC$ and thus $\triangle CAD$ is isosceles and then
-\[ \alpha = \phi \]
-
-By (4) $\delta = \alpha$ so
-\[ \delta = \phi \]
-
-$\angle BDA$ is bisected by $CD$.
-
-\begin{center} \includegraphics [scale=0.20] {Euclid_IV_10.png} \end{center}
-
-In summary, we have 
-\[ \alpha = \delta = \phi \]
-
-and three isosceles triangles.  So
-
-\[ 2 \alpha = \angle BDA = \beta = \gamma \]
-
-In the isosceles $\triangle ABD$ each of the equal base angles is equal to $\beta$ and is twice the vertex angle $\alpha$.
+Finally the base $\angle DCB$ is equal to $\angle A$ plus $\angle CDA$ by the external angle theorem, and since these are equal, $\angle B = \angle DCB$ is twice $\angle A$.
 
 $\square$
 
-Since $\triangle ABD$ has central angle $\alpha$ equal to one-fifth of a right triangle, it is one-tenth of the complete circle.
+Since $\triangle ABD$ has central $\angle A$ equal to one-fifth of a right triangle, it is one-tenth of the complete circle.
 
 Therefore, the side $BD$ forms one side of a regular decagon inscribed in $\mathcal{O}$.
 
@@ -370,6 +340,8 @@ Draw the perpendicular at any vertex, say $BZ \perp BA$, so that $\angle ABZ$ is
 \begin{center} \includegraphics [scale=0.16] {pent11.png} \end{center}
 
 $\angle DBE$ is bisected, since the total angle at $B$ is $108^{\circ}$, so by subtraction $\angle DBZ = 18^{\circ}$, which is one half of $\angle DBE = 36^{\circ}$.
+
+(Of course, the Greeks would reason in terms of fractions of a right angle).
 
 We use the bisector theorem again:
 \[ \frac{EZ}{DZ} = \frac{BE}{BD} = \frac{1 + x}{x} = x = \phi \]
@@ -412,22 +384,22 @@ $\square$
 
 \subsection*{problem}
 
-\begin{center} \includegraphics [scale=0.15] {golden.png} \end{center}
+\begin{center} \includegraphics [scale=0.35] {phi_circle.png} \end{center}
 
-Here's another construction in the collection curated by Bogolmony, from John Arioni.
+Here's another construction in the collection curated by Bogolmony, from John Arioni.  Let the diameter of the circle be $1$, so the rectangle has sides of length $1$ and $2$ and the diameter is $\sqrt{5}$.
 
-The distance from the center of the circle to the corner of the rectangle is just $\sqrt{5}/2$.  So $\phi$ is quite literally constructed by adding $1/2$ (the radius of the circle) to give the length of the red line.
+Let the distance from the corner of the rectangle to the first edge of the circle be $x$.  We have that
+\[ x + 1 + x = \sqrt{5} \]
+Then
+\[ x = \frac{\sqrt{5} - 1}{2} = \phi - 1 \]
 
-It remains to show that
-\[ \phi + \frac{1}{\phi} = \sqrt{5} \]
+But then the distance from the corner to the \emph{other} edge of the circle is just $1 + x = \phi$.
 
-Start from the usual expression for $\phi$ and solve for $\sqrt{5}$.  Equate the result to the left-hand side of what is above.
-\[ \phi + \frac{1}{\phi} = 2 \phi - 1 \]
-Multiply by $\phi$:
-\[ \phi^2 + 1 = 2 \phi^2 - \phi \]
-\[ 1 = \phi^2 - \phi \]
+Finally, recall that 
+\[ \phi^2 = \phi + 1 \]
+\[ \phi = 1 + \frac{1}{\phi} \]
 
-That looks correct.  To obtain the proof, reverse these steps.
+So $\phi - 1 = 1/\phi$.
 
 $\square$
 
