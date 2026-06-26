@@ -1,0 +1,56 @@
+Preface
+Introduction
+
+Practice with proofs
+Broken Chord
+Elements
+Equilateral triangles
+Angle bisectors
+Excircles and Heron
+More isosceles
+Steiner Lehmus
+Tangent secant theorem
+Power of a point
+Hippocrates
+
+Trigonometry
+Basic trigonometry
+Double angle
+Sum of angles by scaling
+Sum of angles by Ptolemy
+Law of Cosines
+
+Applications of similarity
+Ptolemy revisited
+Menelaus's theorem
+Ceva's Theorem
+Pythagoras by area
+Ratio Boxes
+
+Polygons
+Pentagon
+Hexagon
+
+Specials
+Euler Theorem
+Euler Line
+Special circles
+Triangles in triangles
+Nine point circle
+
+Vectors without coordinates
+Simple vectors
+Napoleon's theorem
+
+Later geometry
+Heron and Brahmagupta
+The Almagest
+
+Addendum
+Author's notes
+Angular measure
+Additional proofs
+Two final proofs
+Resources
+List of theorems
+References

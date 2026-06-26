@@ -1,0 +1,175 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+
+\title{Hexagon}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{angles in the hexagon}
+\label{sec:hexagons}
+
+A hexagon has 6 sides, and a regular hexagon has all six sides equal.  In this chapter we explore some of its properties.
+
+Euclid, IV.15 has a nice construction.  
+\begin{center} \includegraphics [scale=0.20] {hex1.png} \end{center}
+
+Draw a circle on center $O$, and draw a diameter $AD$.  Then draw circles on centers $A$ and $D$ with the same radius, so $AO=DO$.  
+
+First, $OA$, $OB$, $OC$, $OD$, $OE$ and $OF$ are all radii of the original circle.  
+
+Second, the segments $AB = AF = AO$, and $DC = DE = DO$.  It follows that $\triangle AOB$ is equilateral and so is $\triangle COD$.  
+
+Finally, the base angle of $\triangle BOC$, $\angle BOC$, is $60^{\circ}$, and the triangle is isosceles, so it is also equilateral.
+
+As a result, we have six equilateral triangles, and the polygon $ABCDEF$ is a regular hexagon.  
+
+\begin{center} \includegraphics [scale=0.25] {hex3.png} \end{center}
+Let the side length (and radius) be $1$.  Then Pythagoras's theorem gives us that the apothem $OM$ has a length of $\sqrt{3}/2$.
+
+\begin{center} \includegraphics [scale=0.25] {hex2b.png} \end{center}
+
+So twice the area of each component triangle is
+\[ 2 \mathcal{A}_{\triangle AOB} = \frac{\sqrt{3}}{2} \cdot 1 \]
+
+The total area of the hexagon is three times that or
+\[ \mathcal{A}_{hex} = \frac{3 \sqrt{3}}{2}\]
+
+This approximates the area of the unit circle ($\pi$), but it is not a very good approximation.
+
+Similarly, the total perimeter is $6$, which approximates the total perimeter of the unit circle ($2 \pi$), but it is not especially close yet either.
+
+\subsection*{lower bound for $\pi$}
+
+Let $\triangle ABC$ be a right triangle inscribed in a semicircle, and the angle at $A$ is bisected.
+
+\begin{center} \includegraphics [scale=0.3] {hex4.png} \end{center}
+
+The idea is that the side of $\triangle ABC$ that is a chord of the circle, $BC = a + c$, approximates the perimeter of the circle.
+
+Let $\triangle OBC$ (the arms are not drawn) be an equilateral triangle.  By the inscribed angle theorem, $2 \theta = 30^{\circ}$, one-half of $\angle BOC$.  The total perimeter is $6$ times that.
+
+Now imagine that we are able to find the length $e$.  $e$ is clearly much closer to the actual circle, so $6$ times $2e$ would be a better approximation to the perimeter.
+
+Using this idea, with both inscribed and circumscribed hexagons, Archimedes came up with both upper and lower bounds, namely, $223/71 < \pi < 22/7$.
+
+We begin with a result that comes from the bisector theorem.
+\[ \frac{a}{c} = \frac{b}{d} \]
+\[ \frac{a}{c} + 1 = \frac{b}{d} + 1 \]
+\[ \frac{a+c}{c} = \frac{b+d}{d} \]
+\[ \frac{a+c}{b+d} = \frac{c}{d} = \frac{a}{b}  \]
+\[ \frac{b+d}{a+c} = \frac{b}{a} \]
+\[ \frac{b}{a+c} + \frac{d}{a+c} = \frac{b}{a} \]
+
+Using trigonometric functions, we can write this as
+\[ \cot 2 \theta + \csc 2 \theta = \cot \theta \]
+
+\begin{center} \includegraphics [scale=0.3] {hex4.png} \end{center}
+If we're doing multiple rounds we would need Pythagoras's theorem
+\[ \sin^2 \theta + \cos^2 \theta = 1 \]
+\[ 1 + \cot^2 \theta = \frac{1}{\sin^2 \theta} = \csc^2 \theta \]
+
+First add the cotangent and cosecant of the double angle to find the cotangent, then use the above procedure to get the cosecant.  Do the same thing again, as many times as you wish.
+
+\subsection*{computation}
+
+We start with a $30-60-90$ triangle ($2 \theta = 30^{\circ}$).
+
+The next thing to decide is the scale.  If $d = 1$ then the perimeter equals $\pi$;  alternatively with $d=2$ then the perimeter is $2 \pi$.
+
+Let $d = 2$.
+
+\[ BC = a+c = 1 \]
+\[ b = \sqrt{3} \]
+
+The whole computation has to be done with rational numbers, because that's how the Greeks did things.
+
+We need a rational approximation for $\sqrt{3}$.  The value Archimedes used was $\sqrt{3} \approx 1351/780$.  (I have written elsewhere about how he may have come up with that).  
+
+The ratio to the true value is $\approx 1.0000003$.  It is over, but we will use the value as the inverse, so that's actually under, appropriate for a lower limit.
+
+\begin{center} \includegraphics [scale=0.3] {hex4.png} \end{center}
+\[ \csc 2 \theta = 2 \]
+\[ \cot 2 \theta  = \sqrt{3} = \frac{1351}{780} \]
+\[ \cot \theta = \frac{1560 + 1351}{780} = \frac{2911}{780}  \]
+
+\[ \csc^2 \theta = 1 +  \frac{8473921}{608400} = \frac{9082321}{608400} \]
+Archimedes approximates this as 
+\[ \csc \theta = \frac{AB}{BD} = \frac{3013-3/4}{780} = \frac{2}{e} \]
+
+Note that $3013-3/4$ is slightly larger than the true value of the square root, but this error makes our estimate \emph{lower}, since it shows up as the inverse, below.  So the estimate is valid as a lower bound.
+
+$e$ is twice $\approx 0.25881$.  There are $12$ copies of $e$ in the perimeter but that's for $2 \pi$
+\begin{center} \includegraphics [scale=0.3] {hex4.png} \end{center}
+
+To get $\pi$, we do $12 \cdot \ \approx 0.25881 = \ \approx 3.10577$.
+
+\subsection*{Liu Hui}
+
+Another approach is rely entirely on the Pythagorean theorem.  Let $AC$ be the chord for an $n$-gon.
+
+\begin{center} \includegraphics [scale=0.4] {pi_calc4.png} \end{center}
+
+Then the distance from $B$ to the circle is
+\[ BD = OC - \sqrt{OC^2 - BC^2} \]
+\[ BD^2 = OC^2 - 2\ \sqrt{OC^2 - BC^2} + OC^2 - BC^2 \]
+\[ = 2OC^2 - 2\ \sqrt{OC^2 - BC^2} - BC^2 \]
+
+$CD$ is the chord for the $2n$-gon and its squared length is
+\[ CD^2 = BD^2 + BC^2 \]
+\[ = BD^2 + 2OC^2 - 2\ \sqrt{OC^2 - BC^2} \]
+
+Each round of angle-halving involves three squares (one is used twice), two square roots and some arithmetic.
+
+This is not as elegant as Archimedes' method, which needs only a single square and one square root, but Liu Hui was persistent.
+
+He was persistent enough to recognize that $355/113$ is a much better approximation to $\pi$ than either of Archimedes' values or even Ptolemy's $377/120$.
+
+$355/113$ has a \emph{much} smaller error than any other rational approximation until the integer components get very large.  Likely, Ptolemy missed that because he did not know the true value to enough accuracy.
+
+\subsection*{$\phi$ in the hexagon}
+
+Suppose we inscribe a hexagon into a circle on center $Q$.  The problem comes with a big hint since a hexagram (aka Star of David) has been drawn using the vertices of the hexagon.
+
+\begin{center} \includegraphics [scale=0.2] {star.png} \end{center}
+
+Now draw the circle on center $O$ whose half-radius is $OQ$, and extend one of the sides of the hexagram, $AB$ to meet the larger circle at $P$.
+
+Show that $AP/AB = \phi$.
+
+\emph{Proof}.
+
+By our work with equilateral triangles we know that $OM$ is one-quarter of $OP$.  
+
+So then let $OM = 1$ and $OP = 4$ and
+\[ PM^2 = OP^2 - OM^2 = 15 \]
+\[ PM = \sqrt{15} \]
+
+\[ MB = \sqrt{3} \]
+\[ \frac{PM}{MB} = \sqrt{5} \]
+\[ \frac{PM}{AB} = \frac{\sqrt{5}}{2} \]
+\[ \frac{AM}{AB} = \frac{1}{2} \]
+
+$AP/AB$ is the sum of the last two terms, which is just $\phi$.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.2] {star.png} \end{center}
+
+
+
+\end{document}

@@ -1,0 +1,203 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Beginnings of trigonometry}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{double angle formulas}
+
+Draw a unit circle with central angle $\theta$ and then double the central angle below the horizontal diameter.  Let $x$ be the base of the two smaller triangles, the side adjacent to angle $\theta$, and $y$ the side opposite.
+
+\begin{center} \includegraphics [scale=0.4] {trig_beg_3.png} \end{center}.
+
+Then by the basic definitions of trigonometry, we have that $x = \cos \theta$ and $y = \sin \theta$.  The area of each small triangle is $xy/2$ and the area of the two combined is simply
+\[ A = xy = \sin \theta \cos \theta \]
+
+Now, rotate the triangle counter-clockwise until the red side on the right lies along the diagonal.  The dotted vertical line is clearly $\sin 2 \theta$ and since the base is length $1$, the area of that same triangle is now
+
+\[ A = \frac{1}{2} \cdot \sin 2 \theta \]
+Combining the results
+\[ \sin 2 \theta = 2 \sin \theta \cos \theta \]
+
+This is the first double angle formula, for sine.  We claim that it still works even if the sum is greater than a right angle but keep things simple by not talking about it more.
+
+\subsection*{double angle for cosine}
+Consider this right triangle with an inscribed angle of $\phi$.  Label the sides of a triangle containing the central angle $2 \phi$ as $x$ and $y$ to simplify the figure.  Let $r = 1$ so then
+\[ y = \sin 2 \phi, \ \ \ \ \ \ x = \cos 2 \phi \]
+
+Whenever we drop an altitude in a right triangle, the smaller triangles are similar to the original.  This accounts for the second $\angle \phi$ in the figure.
+\begin{center} \includegraphics [scale=0.4] {trig_beg_6.png} \end{center}
+We note for later that the base of the altitude divides the base into $r + x$ and $r - x$.
+
+Using the small triangle with angle $\phi$
+\[ \frac{y}{2 \sin \phi} = \cos \phi \]
+\[ y = 2 \sin \phi \cos \phi \]
+Since $y = \sin 2 \phi$, this is just what we had before.
+
+Along the base of the triangle extending from the left, we have (again, $r = 1$):
+\[ \frac{r + x}{2 \cos \phi} = \frac{1 + x}{2 \cos \phi} = \cos \phi \]
+\[ \frac{1 + x}{2} = \cos^2 \phi \]
+But (from the small triangle again)
+\begin{center} \includegraphics [scale=0.4] {trig_beg_6.png} \end{center}
+
+\[ \frac{r - x}{2 \sin \phi} = \frac{1 - x}{2 \sin \phi} = \sin \phi \]
+\[ \frac{1 - x}{2} = \sin^2 \phi \]
+And then
+\[  \frac{1 + x}{2} - \frac{1 - x}{2} = x  \]
+but $x = \cos 2 \phi$ so
+\[ \cos 2 \phi = \cos^2 \phi - \sin^2 \phi \]
+Note also that
+\[ \cos^2 \phi + \sin^2 \phi = \frac{1 + x}{2} + \frac{1 - x}{2} = 1 \]
+which is true for any angle $\phi$, a restatement of the Pythagorean theorem.
+
+Here is the same proof but scaled so that the diameter has unit length and we use sine and cosine labels rather than $x$ and $y$.  The details are left to you.
+\begin{center} \includegraphics [scale=0.4] {half_angle_3.png} \end{center}
+
+\subsection*{half-angle formulas}
+
+The half-angle formulas are easy to derive from the double angle cosine formula, because the sine and cosine terms are separated:
+
+\[ \cos 2A = \cos^2 A - \sin^2 A \]
+Just use our favorite identity ($\sin^2 A + \cos^2 A = 1$) to obtain
+\[ \cos 2A = \cos^2 A - (1 - \cos^2 A) \]
+or
+\[ \cos 2A = (1 - \sin^2 A) - \sin^2 A \]
+
+We'll do the sine first
+\[ 2\sin^2 A = 1 - \cos 2A \]
+\[ \sin A = \sqrt{\frac{1 - \cos 2A}{2}} \]
+which is easily verified using the values for $30^{\circ}$ and $60^{\circ}$.
+
+On the other hand:
+\[ \cos 2A = \cos^2 A + \cos^2 A - 1 \]
+Solve for $\cos A$:
+\[ \cos A = \sqrt{\frac{1 + \cos 2A}{2}} \]
+
+This is called the half-angle formula since $A$ is one-half of $2A$.  That the sum of the squares is equal to $1$ is also easily verified.  We see that the square roots go away, the $\cos 2A$ terms will cancel and we end up with $1/2 + 1/2$.
+
+\subsection*{some algebra}
+
+You might be tempted to try to derive a formula for $\sin 2A$ from that for $\cos 2A$ (or vice-versa), using our favorite identity.  Let us re-write the formulas substituting $s$ for $\sin A$ and $c$ for $\cos A$:
+\[ \sin 2A = 2sc, \ \ \ \ \ \  \cos 2A = c^2 - s^2 \]
+
+They have different forms:  the first mixes $s$ and $c$, while the second has a difference of squares.  If we were to take
+\[ (c + s)^2 = c^2 + 2sc + s^2 \]
+\[ (c - s)^2 = c^2 - 2sc + s^2 \]
+\[ (c + s)(c - s) = c^2 - s^2 \]
+
+There is some of what we want, but in the formula for $\cos 2A$ one term is positive and one negative.  What's going on?
+
+First, just verify what $\sin^2 2A + \cos^2 2A$ is equal to:
+\[ = 4s^2c^2 + c^4 - 2s^2c^2 + s^4 \]
+\[ = c^4 + 2s^2c^2 + s^4 \]
+\[ = (s^2 + c^2)^2 = 1^2 = 1 \]
+That checks out, and it contains a hint to the answer.  We used $4s^2c^2 - 2s^2c^2$ to convert $-2s^2c^2$ to the positive $2s^2c^2$.
+
+Remember, to do the conversion we square the sine or cosine, subtract it from $1$ and then take the square root.  \[ \sin \theta = \sqrt{1 - \cos^2 \theta} \]
+\[ \cos \theta = \sqrt{1 - \sin^2 \theta} \]
+
+It is easier to see how this works using the first formula.  So we start with the formula for cosine of $2A$ and plug in:
+\[ 1 - (c^2 - s^2)^2 = 1 - (c^4 - 2s^2c^2 + s^4) \]
+
+Add (and subtract) $2s^2c^2$ in the parentheses!
+\[ = 1 - (c^4 + 2s^2c^2 + s^4 - 4s^2c^2) \]
+\[ = 1 - \ [ \ (c^2 + s^2)^2 - 4s^2c^2 \ ]  \]
+\[ = 1 - 1 + 4s^2c^2 = 4s^2c^2 \]
+and now the square root is easy and gives exactly what we need.
+
+Then it becomes clear that we can add $(s^2 + c^2) - 1$ or $(s^2+c^2)^2 - 1$ to expressions and if they will simplify, it helps us.  Hence to obtain the formula for $\cos 2A$, starting with $1$ minus sine squared:
+\[ 1 - 4s^2c^2 \]
+\[ = 1 - 4s^2c^2 + (s^2 + c^2)^2 - 1 \]
+\[ = - 4s^2c^2 + \ [ \ s^4 + 2s^2 c^2 - c^4 \ ]   \]
+\[ = s^4 - 2s^2c^2 + c^4) \]
+\[ = (s^2 - c^2)^2 = (c^2 - s^2)^2 \]
+remembering that $(x - y)^2 = (y - x)^2$.
+
+Take the square root to finish.
+
+\subsection*{examples}
+Restating the double-angle formula for sine
+\[ \sin 2A = 2 \sin A \cos A \]
+
+Plugging in
+\[ \sin 60^{\circ} = 2 \cdot \frac{1}{2} \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}  \]
+and
+\[ \cos 2A = \cos^2 A - \sin^2 A \]
+plugging in again
+\[ \cos 60^{\circ} = ( \frac{\sqrt{3}}{2})^2 - (\frac{1}{2})^2 = \frac{3}{4} - \frac{1}{4} = \frac{1}{2} \]
+They both look good.
+
+We can also use the formulas to check supplementary angles (recall that $\sin 180 = 0$ and $\cos 180 = -1$):
+
+\[ \sin 180 - A = \sin 180 \cos A - \sin A \cos 180 \]
+\[ = 0 - (- \sin A) = \sin A \]
+\[ \cos 180 - A = \cos 180 \cos A + \sin 180 \sin A \]
+\[ = - \cos A + 0 = - \cos A \]
+
+Of course, we hardly need algebra for the result about the sine of the supplementary angle.  Two inscribed angles with the supplementary arcs clearly have the same sine:
+\begin{center} \includegraphics [scale=0.4] {supp.png} \end{center}
+The total arc of the circle is $2 \pi$, while the two angles $\theta$ and $\phi$ together take up that entire arc.  As inscribed angles they sum to one-half or $\pi$.  Hence $\theta$ and $\phi$ are supplementary.
+
+But we previously had
+\[ L = d \sin \phi = 2r \sin \phi \]
+where $L$ is the length of the dotted line, and if the circle is scaled appropriately, it \emph{is} $\sin \phi$.  But it is also $\sin \theta$.
+
+\subsection*{equilateral triangle}
+
+\begin{center} \includegraphics [scale=0.4] {trig_60.png} \end{center}
+Here is another way of looking at $30^{\circ}$ and $60^{\circ}$.  Let the central angle $\theta$ be such that the triangle formed is equilateral.  
+
+Now the central angle is equal to both of the base angles, and the measure of all these angles is $60^{\circ}$ or $\pi/3$.
+
+Since $\triangle OQR$ is equilateral, the chord $QR$ is the same length as the radius.  It follows that the sine of the inscribed angle $\phi$ is $r/2r = 1/2$.  And of course the length of $PR$, which is 2 times the sine of $60^{\circ}$, is $\sqrt{3}$.
+
+\subsection*{Archimedes and pi}
+
+Later we will explore the math relating to Archimedes' method to approximate $\pi$, resulting in the bounds $3\ 10/71 < \pi < 3\ 1/7$.
+
+The lower bound is about $3.1408$ and the upper bound about $3.1429$ while the true value is about $3.1416$.  (There is an interesting story relating to a fraction which is a much, much better estimate of $\pi$, namely $355/113$, good to six digits).
+
+As you probably know, the method involves calculating the length of the perimeter of circumscribed and inscribed regular polygons. 
+
+We can build on two basic results from the geometry of right triangles:
+\begin{center} \includegraphics [scale=0.3] {pi12.png} \end{center}
+
+The first is that the sum of the cotangent and cosecant for the original angle are equal to the cotangent of the half-angle:
+\[ \frac{a}{f} + \frac{c}{f} = \frac{a}{d} \]
+\[ \cot 2 \theta + \csc 2 \theta = \cot \theta \]
+
+This follows from the angle bisector theorem, $a/d = c/e$, with a bit of manipulation.
+\[ \frac{a}{c} = \frac{d}{e} \]
+\[ \frac{a}{c} + \frac{c}{c} = \frac{d}{e} + \frac{e}{e} \]
+\[ \frac{a + c}{d + e} = \frac{c}{e} = \frac{a}{d} \]
+Adding components in the denominator of the first term:
+\[ \frac{a + c}{f} = \frac{a}{d} \]
+
+Another way to get there is to use the double angle formulas.  We'll abbreviate $\sin, \cos, \tan$ as $S,C,T$ and identify the values for the half-angle as lowercase.  The formulas are:
+\[ S = 2sc  \]
+\[ C = c^2 - s^2 = 2c^2 - 1 \] 
+
+The cotangent of $2 \theta$ is then (cosine/sine):
+\[ \frac{1}{T} = \frac{C}{S} = \frac{2c^2 - 1}{2sc} \]
+\[ = \frac{1}{t} - \frac{1}{S} \]
+which rearranges to give the result
+\[ \frac{1}{t} = \frac{1}{T} + \frac{1}{S} \]
+
+\end{document}

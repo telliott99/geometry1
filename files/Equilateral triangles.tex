@@ -1,0 +1,350 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Equilateral triangles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{circumscribed equilateral triangle}
+
+Here is a fun construction based on an equilateral triangle.  
+
+Any triangle fits into a unique circle (see the discussion of circles and bisectors of the chords).  Draw the circumcircle for equilateral $\triangle ABC$.
+
+We can prove a number of properties.  First, draw the diameter from vertex $C$.
+
+\begin{center} \includegraphics [scale=0.2] {equi6.png} \end{center}
+
+\emph{Proof}.
+
+(1) Given equal sides $AB = AC = BC$.
+
+(2) We have three equal angles at $A$, $B$ and $C$ by two applications of isosceles triangles, or by inscribed angles on equal arcs.
+
+(3) By Thales' theorem, $\angle CAD$ and $\angle CBD$ are both right.
+
+(4) $\triangle CAD \cong \triangle CBD$ by HL.
+
+(5) $\rightarrow AD = BD$.
+
+(6) $\rightarrow CD$ bisects $\angle C$ by inscribed angles on equal arcs.
+
+(7) $AQ = DQ = BQ$ as radii of the circle.
+
+(8) $\rightarrow \triangle QAD$ is isosceles.
+
+(9) $\rightarrow  \angle QAD = \angle QDA$.
+
+(10) But $\angle  QDA = \angle CBA$, so $\triangle QAD$ and $\triangle QBD$ are equilateral.
+
+\begin{center} \includegraphics [scale=0.2] {equi6.png} \end{center}
+
+(11) $\rightarrow   AD$ and $DB$ are also equal in length to radii.
+
+(12) $\rightarrow AQBD$ is a parallelogram (two pairs of equal sides).
+
+(13) $M$ bisects both $AB$ and $QD$ (crossed diagonals bisect each other).
+
+(Actually, this is a general result for altitudes as we show elsewhere).
+
+(14) There are four congruent triangles with right angles at $M$ by SSS.
+
+(15)  $\rightarrow CQM$ is bisector, median and altitude of $\triangle ABC$ and $Q$ is incenter, centroid and orthocenter as well.
+
+There are certainly other ways of proceeding.  For example, since $\triangle AQC \cong \triangle BQC$, $\angle C$ is bisected and then $\triangle ACD \cong \triangle BCD$ and we have right angles at $D$.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
+
+\emph{Proof}.  (Alternate).
+
+Let the side length be $2$ and then $AE = CE = 1$.  By crossed chords, $AE \cdot CE = 1 = BE \cdot DE$.
+
+But by the Pythagorean theorem $BE = \sqrt{3}$ and then $DE = 1/\sqrt{3}$ and their ratio is
+\[ \frac{1}{\sqrt{3} \cdot \sqrt{3}} = \frac{1}{3} \]
+
+$\square$
+
+\emph{Proof}.  (Alternate).
+
+\begin{center} \includegraphics [scale=0.2] {equi_tri2.png} \end{center}
+
+Let $AD = CD = d$ and $r$ be the radius of the circle.
+
+By Ptolemy's theorem:
+\[ sd + sd = 2 rs \]
+\[ d = r \]
+
+It follows that $AOCD$ is a parallelogram, the diagonals bisect one another, etc.
+
+$\square$
+
+Thus, the altitude of the equilateral triangle is $3/4$ of the diameter of the circle that just encloses it.  And the point where the altitudes meet in an equilateral triangle is $1/3$ of the way up from the base, since $r = 2a$.  
+
+\subsection*{problem}
+
+Here is a problem from Dr. Paul Yiu.  Given that $ABC$ is equilateral and that the points $E$ and $F$ are midpoints of the sides, find $EF/FG$.
+\begin{center} \includegraphics [scale=0.35] {equi_phi_label} \end{center}
+
+We \emph{could} calculate some lengths and then try using the Pythagorean theorem.  But we can get the ratios in other ways.
+
+\emph{Proof}.
+
+We assert that $DE = FG$ and leave that proof as an exercise.  
+
+Let the ratio of $EF$ to $FG$ be $\rho$ ($EF = \rho$ and $FG = 1$).
+
+But $CF = BF = EF$ by the midline theorem and the fact that $CF$ is one-half of a side length.
+
+By the theorem of crossed chords we have that
+\[ \rho^2 =( \rho + 1) \cdot 1 \]
+This is the quadratic equation whose solution is the famous ``golden'' ratio.
+
+Yet a third way to approach the problem is to note that $\triangle FGB \sim \triangle FCD$.  When we set up the ratios, we will have the same relationship as above.
+
+\[ \frac{\rho}{\rho + 1} = \frac{1}{\rho} \]
+
+\subsection*{doing the math}
+
+\begin{center} \includegraphics [scale=0.35] {equi_phi_label} \end{center}
+
+We will scale the triangles so that the altitude of $\triangle CEF = 1$ and that of $\triangle ABC = 2$.  This gives side lengths of $2/\sqrt{3}$ and $4/\sqrt{3}$.
+
+The radius of the circumcircle is $2/3$ of the altitude of $\triangle ABC$, so $4/3$.  Let $MG$ be the midpoint of $EF$ and $Q$ the center of the circumcircle.  
+
+Then $QM = 4/3 - 1 = 1/3$.  By the Pythagorean theorem:
+\[ MG^2 = (4/3)^2 - (1/3)^2 = 15/9 = 5/3 \]
+\[ MG = \frac{\sqrt{5}}{\sqrt{3}} \]
+
+Add half the side length:
+\[ EG = \frac{\sqrt{5} + 1}{\sqrt{3}} \]
+
+Then divide by the side length, to obtain, finally $\phi = (\sqrt{5} + 1)/2$.
+
+\subsection*{problem}
+
+Here is a second problem from Dr. Yiu.
+
+Let $\triangle ABC$ be equilateral.  Choose $X$ at an arbitrary point on $BC$ and draw $AX$.  
+
+Now add a further condition:   draw $BY$ so that the angles at $P$ are $120^\circ$ or $60^\circ$.
+
+\begin{center} \includegraphics [scale=0.4] {equi_Yiu_label.png} \end{center}
+
+Combined with the constraints on vertex angles, and side lengths, this gets us somewhere.
+
+It follows that $\angle CYP$ and $\angle CXP$ are supplementary, which means in turn that
+
+\[ \angle BYA = \angle CXA \]
+
+Since the corresponding triangles have equal vertex angles at $A$ and $C$, they are similar.  We have 
+
+$\circ$ \ (i) $\triangle PYA \sim \triangle CXA \sim \triangle AYB$.
+
+In the same way we have
+
+$\circ$ \ (ii) $\triangle PXB \sim \triangle CYB \sim \triangle AXB$.
+
+\begin{center} \includegraphics [scale=0.4] {equi_Yiu_label.png} \end{center}
+
+We can get a \emph{a lot} of equalities out of this.  As one example,
+
+\[ \frac{AY}{AB} = \frac{CX}{AC} \]
+
+But $AB = AC$, so it follows that $AY = CX$, and then by subtraction, $BX = CY$.
+
+So finally, we have not just similarity, but congruence.  $\triangle CXA \cong \triangle AYB$ by SAS (or SSS), from which we obtain $AX = BY$.
+
+\subsection*{drawing the circumcircle}
+
+In the last problem, we have a quadrilateral ($CXPY$) whose opposing angles are supplementary.  This means that it is a cyclic quadrilateral.  Let us draw that circle.
+
+\begin{center} \includegraphics [scale=0.4] {equi_Yu_quad.png} \end{center}
+
+Recalling our work on tangents and secants we can quickly see why $\triangle PYA \sim \triangle CXA$ and $\triangle PXB \sim \triangle CYB$.  But I don't see anything that helps with the rest.
+
+\subsection*{Bertrand's paradox}
+
+Grinstead and Snell's wonderful \emph{Introduction to Probability} has this problem (example 2.6).  It's called Bertrand's paradox.  We are asked to draw a chord of a unit circle randomly.
+
+\begin{center} \includegraphics [scale=0.75] {Bertrand1.png} \end{center}
+
+Here we might say, let's choose each of three angles $\alpha$, $\beta$ and $\theta$ randomly (uniform density) from $[0, 2 \pi]$.  
+
+But there is no reason why we cannot re-orient the axes so that the radius to $B$ lies along the $x$-axis, so there are really only two choices.  
+
+The question is posed:  what is the probability that the length of this random chord is $> \sqrt{3}$.
+
+However, there are several different approaches to parametrize the problem, and randomizing the different parameters leads to different results.
+
+\subsection*{equilateral triangles}
+
+We briefly review some properties of equilateral triangles which we looked at earlier, with a slightly different take.
+
+Drop an altitude and observe the ratio of side lengths.  It is convenient to start with a side length of 2 for the original triangle, then in the bisected copies the sides are in the ratio 1-2-$\sqrt{3}$ (the $1$ by bisection, and $\sqrt{3}$ by the Pythagorean theorem).
+
+The angle at each vertex of the original equilateral triangle is $\pi/3$, so the new triangles have angles of $\pi/6$, both by bisection or because the altitude forms an angle of $\pi/2$ at the base, so the sum of angles theorem gives us the last angle.
+
+In the right panel, the equilateral triangle is inscribed in a unit circle, so $OR = OP = OQ = 1$.  We have seen that the line segment $OM$ has a length of $1/2$.  In $\triangle OPQ$ the central angle at $O$ is equal to the vertex angle of the original triangle, and $\triangle OPQ$ is isosceles, hence it must be equilateral. 
+
+\begin{center} \includegraphics [scale=0.6] {Bertrand2.png} \end{center}
+
+\subsection*{first parametrization}
+
+The altitude of the inscribed equilateral triangle in a unit circle has length $3/2$.  This means that the ratio of the inscribed triangle to the standard one is $\sqrt{3}/2$.
+
+And that means the side length of the inscribed equilateral triangle is $\sqrt{3}$.
+
+That explains the length chosen for the chord in this problem.  We see that if $M$ is chosen at random anywhere along $OP$, one-half of the time the chord formed will be larger than $\sqrt{3}$.
+
+\begin{center} \includegraphics [scale=0.5] {Bertrand2.png} \end{center}
+
+So the probability we are asked to give is just $1/2$.
+
+\subsection*{second parametrization}
+
+\begin{center} \includegraphics [scale=0.5] {Bertrand3.png} \end{center}
+
+The second parametrization has the same triangle we just saw, $\triangle PQR$.  The angle at vertex $R$ is $\theta$.
+
+$\theta$ can lie in the interval $[0, \pi/2]$, and in the event that $\theta < \pi/6$, the chord length $RQ > \sqrt{3}$.
+
+The probability that the chord is greater than $\sqrt{3}$ in length is $1/3$, since $\pi/6$ is one-third of $\pi/2$.
+
+\subsection*{third parametrization}
+
+Finally, we imagine picking two coordinates $(x,y)$ at random from the interior of the circle.  We place the midpoint of the chord $M$ at $(x,y)$.
+
+If $M$ is such that $r = \sqrt{x^2 + y^2} < 1/2$, then $M$ will be closer to the center of the circle than $1/2$ and so the chord length will be $> \sqrt{3}$.
+
+The number of points that have this property is proportional to the relative areas of the inside small circle, and the larger circle around is.
+
+\[ \frac{\pi (1/2)^2}{\pi} = \frac{1}{4} \]
+
+We see that, depending on which parameter is randomized, we obtain a probability of $1/2$, $1/3$ or $1/4$.
+
+In Jaynes's words, the problem is not well-formed.
+
+\subsection*{problem}
+
+\begin{center} \includegraphics [scale=0.4] {area_prob2.png} \end{center}
+We have a square with side $a$ and an equilateral triangle, also with side $a$.  Their bases are colinear and a red line is drawn as shown.  What is the area of the blue triangle?
+
+The angles marked $\theta$ are equal because the base and the top of the square are parallel, but the angle is \emph{not} $30$.  The red line intersects the side of the square at half the height, so $a/2$.
+
+We compute \emph{twice} the area of the combined blue and part of the equilateral triangle as $a^2/2$ and that of the blue triangle as $xa/2$.  But what is $x$?
+
+We need a preliminary result.  The Pythagorean theorem allows us to calculate that the altitude of an equilateral triangle is $\sqrt{3}$ times one-half the base.
+\begin{center} \includegraphics [scale=0.2] {equi.png} \end{center}
+
+Back to our problem.  The triangle with $x$ as its base does have an angle of $30$ so its height $h$ is $\sqrt{3} \cdot x$.  We compute twice the area of the part of the equilateral triangle as $\sqrt{3} xa$.
+\begin{center} \includegraphics [scale=0.4] {area_prob2.png} \end{center}
+
+Put the whole thing together as
+\[ 2\mathcal{A} = \frac{a^2}{2} = \frac{xa}{2} + \sqrt{3} xa \]
+\[ a = x + 2 \sqrt{3} x \]
+\[ x = \frac{a}{1 + 2 \sqrt{3}} \]
+
+The final result is $1/2$ times $a/2$ times what we have above.
+
+\subsection*{problem}
+
+Here is a problem from the entrance exam for Harvard, 1901.  
+
+A circle is internally tangent to an equilateral triangle at two points.
+\begin{center} \includegraphics [scale=0.4] {harvard1901_6.png} \end{center}
+
+The very top part of the diagram (which is missing) would look something like the next figure, where we have added a dotted horizontal line tangent to the circle.
+
+\begin{center} \includegraphics [scale=0.6] {harvard1901_6a.png} \end{center}
+
+We draw the horizontal tangent and can easily show that the other angles are also $60^\circ$, so the dotted line forms an equilateral triangle as well.
+
+The whole angle at the top is $60^\circ$ so the half-angle is $30^\circ$.  The triangle containing $r$ as the base is thus a right triangle with sides in the ratio 1-2-$\sqrt{3}$, and we are given that $r = 1$, so those are the actual measurements.
+
+From above, we have that the side length of this triangle is $2 \sqrt{3} \cdot r$ and the area is $3 \sqrt{3} \cdot r^2$.  The part of the triangle which has been cut off is one side length.  
+
+We have also added a length that is $2/3$ of the perimeter of a unit circle, so $4/3 \ \pi r$.  Since $r = 1$, the net is $4/3 \ \pi - 2 \sqrt{3} \approx 0.72$.  
+
+Hence the perimeter has actually \emph{increased} slightly.
+
+\begin{center} \includegraphics [scale=0.6] {harvard1901_6a.png} \end{center}
+
+For the area, the new figure is obviously missing the circle, with area equal to $\pi$.
+
+In addition there is another corner missing, which is one-third of the difference between the area of the equilateral triangle (with the dotted line as its base), and the circle.  The triangle area is (as we said) $ 3 \sqrt{3} \cdot r^2 =  3 \sqrt{3}$.
+
+Subtracting the circle we have
+\[ 3 \sqrt{3} - \pi \]
+
+Finally, multiply by $1/3$
+\[ \Delta \mathcal{A} = \frac{1}{3} \cdot (3 \sqrt{3} - \pi) \]
+
+The entire missing area is the result above plus $\pi$, for the circle.  And that needs to be subtracted from the area of the original triangle, which is $\sqrt{3}/4 \cdot 49$.
+
+The final calculation is
+\[ \frac{\sqrt{3}}{4} \cdot 49 - \ [ \ \frac{1}{3} \cdot (3 \sqrt{3} - \pi) + \pi \ ] \]
+\[ = \frac{\sqrt{3}}{4} \cdot 49 - (\sqrt{3} + \frac{2 \pi}{3} ) \]
+
+We leave the actual arithmetic for another day.
+
+\subsection*{Van Schooten's theorem}
+
+\begin{center} \includegraphics [scale=0.45] {Van_Schooten.png} \end{center}
+
+Given an equilateral $\triangle ABC$ draw its circumcircle.
+
+Draw an arbitrary line segment from vertex $A$ through side $BC$ to meet the circle at $M$.
+
+Prove that $AM = BM + MC$.
+
+This is given as a problem by Surowski (1.3.6).  It is a challenging problem, particularly if you are not given the full diagram.  Perhaps you may be given a hint that since we want $BM + MC$ you should extend either $BM$ or $CM$ appropriately.
+
+\emph{Proof}.
+
+Draw lines from $M$ to each vertex of $\triangle ABC$ and extend $MB$ to give $MD = AM$.  Join $AD$.
+
+By inscribed angles both angles at $M$ are equal to two-thirds of a right angle.
+
+Since $MD = AM$, $\triangle AMD$ is isosceles with the vertex equal to two-thirds of a right angle.
+
+Thus $\triangle AMD$ is equilateral.   This accounts for all of the red dots.  ($\angle A$ is not marked, to keep the diagram simpler).
+
+Subtract the central $\angle MAB$ from two equal angles to yield $\angle CAM = \angle BAD$.
+
+\begin{center} \includegraphics [scale=0.45] {Van_Schooten.png} \end{center}
+
+$\triangle CAM \sim \triangle BAD$.
+
+But $AB = AC$ and also $AM = AD$, so $\triangle BAD \cong \triangle CAM$ by ASA or SAS.
+
+It follows that $BD = MC$.
+
+Thus $BD + MB = MC + MB$ and the former is equal to MD.
+
+$\square$
+
+This theorem is easy to prove using Ptolemy's theorem.  Ptolemy says that, in a cyclic quadrilateral, multiply the lengths of opposing sides and add the two products, and that is equal to the product of the diagonals.
+
+Here, let $AB = AC = BC = 1$.  Then Ptolemy says:
+\[ MC \cdot 1 + MB \cdot 1 = AM \cdot 1 \]
+\[ MC + MB = AM \]
+
+\end{document}

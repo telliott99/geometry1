@@ -1,0 +1,481 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Broken Chord}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+The theorem of the ``broken chord'' is ascribed to Archimedes, although his original work --- the \emph{Book of Circles} --- has been lost.  
+
+It was analyzed in proofs collected by the Arabic mathematician Al Biruni in his \emph{Book on the Derivation of Chords in a Circle}.
+
+The theorem was not simply of academic interest, but related to the construction of tables of chords in the \emph{Almagest} by Pappus (covered elsewhere).
+
+Here is the general setup:
+\begin{center} \includegraphics [scale=0.2] {BC_0.png} \end{center}
+
+Let $A$ and $G$ be any two points on a circle, and let $D$ be equidistant from both, so that arc $AD$ is equal to arc $GD$.  Let $B$ be another point on the circle, lying between $G$ and $D$.
+
+Drop the perpendicular from $D$ to $E$ on $BC$.  
+
+The claim of the theorem is that $GB + BE = AE$.
+
+(I wondered about the choice of $G$ as one of the letters but then remembered that the Greek alphabet proceeds:  $\alpha$, $\beta$, $\gamma \dots$  Later we will see $Z$ and $H$, and $T$ --- zeta, eta, theta).
+
+In this chapter we will look at a number of proofs including several ascribed to Archimedes.  This topic is a great one for \emph{elementary} geometry because the proofs are fairly easy and there are literally dozens of them.  There is also the sense of connection with the ancients in working on a topic which got Archimedes' attention.
+
+My original source for this problem was  
+
+\url{https://www.uni-miskolc.hu/~matsefi/HMTM_2020/papers/HMTM_2020_Drakaki_Broken_chord.pdf}
+
+There, it is said that the book contains 22 proofs of the theorem, including 3 different ones due to Archimedes.
+
+Later I found a link to Al Biruni's book, in Arabic:
+
+\url{https://tile.loc.gov/storage-services/service/gdc/gdcwdl/wd/l_/07/46/9/wdl_07469/wdl_07469.pdf}
+
+I cannot read Arabic, but the diagrams are reproduced, and using them I worked out a couple more proofs.  
+
+Even more recently, I came across a translation of this book, written in German by a historian named Heinrich Suter about 1910:
+
+\url{http://www.jphogendijk.nl/biruni/Suter-Chords.pdf}
+
+I was able to translate a part of that book into English.  I don't read German either, but the scanned text of Suter is copyable, and Google Translate does a decent job.  What makes it hard is that the OCR is so flaky --- I'm not complaining --- I think it's amazing that it works at all.  But it took quite a bit of editing.
+
+\url{https://www.dropbox.com/scl/fi/zzuibok8apr6i2trwfb4r/}
+
+I count 23 examples (labeled $a$ through $x$, with no $j$), and four of those are Suter's own proofs, which leaves a total of 19 for Al Biruni.  (Although some of these contain multiple approaches with the same diagram). 
+
+\subsection*{inscribed angles}
+
+Before starting, let's recall the important corollary (Euclid III.21) of the inscribed angle theorem (Euclid III.20).
+
+By definition, the central angle sweeping out a given arc is equal in measure to the length of the arc.  Any peripheral angle subtended by the same arc is one-half that central angle. The result is that angles which lie on the same arc or are subtended by the same chord in the same circle, are equal.  
+
+\begin{center} \includegraphics [scale=0.15] {inscribed angles.png} \end{center}
+
+$\angle R = \angle S$ (i.e., $\angle PRQ = \angle PSQ$)
+
+We will also need the theorem that, in a given circle, equal arcs correspond to equal chords, and vice-versa, from \hyperref[sec:equal_arcs_equal_chords]{\textbf{here}}.
+
+And we will also use several times the theorem that any point on the perpendicular bisector of a segment forms an isosceles triangle when connected with the endpoints of the segment.
+
+\subsection*{preliminary work}
+
+We are given arc $AD = $ arc $GD$. 
+
+Given $B$ lies on arc $GD$ (the minor arc, since $BD < GD < $ one half of the circle).
+
+$DE \perp AB$.
+
+\begin{center} \includegraphics [scale=0.18] {BC_x.png} \end{center}
+
+Many constructions draw the isosceles triangle $DBZ$ as shown above.  Note that $\angle DBZ$ cuts the arc $AD$ so it is equal to any other angle that might be drawn cutting $AD$ or $GD$.
+
+$\angle DBZ = \angle DZB$, corresponding to the combined arcs $AD$ and $GD$, which leaves arc $AG$.  It follows easily that $\angle BDZ = \angle ABG$.
+
+Several angles are equal to arc $AG + GD$.  These include $\angle DZA$ (external to $\angle DBZ$ plus $\angle BDZ$), $\angle GBD$ (supplementary to arc $GD$) and $\angle AHD$ (supplementary to arc $AD$).
+
+\subsection*{first proof:  Suter (a)}
+
+The first and second proofs are attributed to Archimedes.
+
+\emph{Proof}.
+
+Draw the isosceles $\triangle DBZ$, with $\angle DBZ = \angle DZB$.
+
+\begin{center} \includegraphics [scale=0.18] {BC_a.png} \end{center}
+
+Now place $H$ such that $BD = HD$.
+
+Subtracting equals, it follows that $GB = AH$.  (Equally, we could find the latter first).
+
+$\angle A$ is bisected since the two parts are subtended by $BD = HD$.
+
+From the preliminaries, we have $\angle AZD = \angle AHD$
+
+Thus $\triangle ZDA \cong \triangle HDA$ by ASA.
+
+It follows that $AZ = AH = GB$.
+
+Adding equals:  $GB + BE = AZ + ZE = AE$.
+
+$\square$
+
+\subsection*{second proof:  Suter (c)}
+
+\begin{center} \includegraphics [scale=0.18] {BC_c.png} \end{center}
+
+\emph{Proof}.
+
+Given arc $AD = $ arc $GD$, $B$ on arc $GD$, and $DE \perp AB$.
+
+So $GD = AD$.
+
+Extend $AEB$ to $Z$ such that $AE = ZE$.
+
+$\triangle DZE \cong \triangle DAE$ by SAS.
+
+So $\triangle DZA$ is isosceles and $DZ = AD = GD$.
+
+Hence $\triangle DZG$ is isosceles with base angles equal.
+
+Since $\triangle DZA$ is isosceles, $\angle DZE = \angle DAE$.
+
+Since they correspond to the same arc, $\angle DAE = \angle DGB$.
+
+Hence $\angle DZE = \angle DGB$.
+
+Subtracting equals we have $\angle BZG = \angle BGZ$.
+
+Thus $\triangle BZG$ is isosceles, and $ZB = BG$.
+
+Adding equals: $BG + BE = ZB + BE = AE$.
+
+$\square$
+
+\subsection*{third proof}
+
+This elegant proof is ascribed to Gregg Patruno, a student at Stuyvesant High School in New York (1980).  I found it in
+
+\url{https://www.researchgate.net/publication/341579803_FROM_THE_THEOREM_OF_THE_BROKEN_CHORD_TO_THE_BEGINNING_OF_TRIGONOMETRY}
+
+[Drakaki attributes it to Patruno].
+
+The diagram can be found in Al Biruni's book (p. 15), but, according to Suter's translation, that proof is subtly different.  Patruno starts with $AZ = GB$, whereas Suter (m) starts with $DB = DZ$.  We discuss this point at the end of the chapter.
+
+\begin{center} \includegraphics [scale=0.18] {BC_3.png} \end{center}
+
+\emph{Proof}.
+
+Find $Z$ such that $AZ = GB$.
+
+$\angle G = \angle A$, as inscribed angles on the same arc.
+
+We are given $GD = AD$.
+
+Hence $\triangle BDG \cong \triangle ZDA$ by SAS.
+
+So $BD = ZD$.
+
+Hence $\triangle DBZ$ is isosceles.
+
+It follows that $\triangle BDE \cong \triangle ZDE$ by HL.
+
+So $BE = ZE$.
+
+Adding equals:
+
+$GB + BE = ZE + GB = ZE + AZ = AE$.
+
+$\square$
+
+\subsection*{fourth proof:  Suter (i)}
+
+This one is attributed to El-Sidjzi (972), but may actually have been known to Apollonius.
+
+\url{https://www.researchgate.net/publication/341579803_FROM_THE_THEOREM_OF_THE_BROKEN_CHORD_TO_THE_BEGINNING_OF_TRIGONOMETRY}
+
+This figure from Al Biruni (below) suggests a neat line of attack.
+
+\begin{center} \includegraphics [scale=0.35] {Al_Biruni_5.png} \end{center}
+
+Recall from our work on parallel chords in a circle, a result about the extensions from a rectangle in a circle.  In the figure below, $DE = CF$.
+
+\begin{center} \includegraphics [scale=0.16] {rect_in_circle2.png} \end{center}
+
+\emph{Proof}.  
+
+Let $AB$ and $EF$ be two parallel chords in a circle with unequal lengths.  Draw the perpendiculars $AD$ and $BC$.  Then $ABCD$ is a rectangle.  
+
+$\angle AFE = \angle BAF$ by alternate interior angles.  So arc $AE = $ arc $BF$.
+
+It follows easily that $\triangle ADE \cong \triangle BCF$ by HL.
+
+$\square$
+
+\emph{Proof}.  Alternate.  Draw the radius which bisects $AB$.  Since $AB \parallel CD$, the same radius bisects $CD$ and it also bisects $EF$, since they are collinear.  If $M$ is the point of bisection on $CD$, then $ME = MF$ and the result follows easily by subtraction. $\square$
+
+So now (changing notation):
+
+\begin{center} \includegraphics [scale=0.18] {BC_i.png} \end{center}
+
+\emph{Proof}.
+
+As before, arc $GD = $ arc $AD$, and $DE \perp AEB$.
+
+Erect the perpendicular to $DE$ at $D$ and find where it cuts the circle at $Z$.  This always forms a polygon since $BD < AD$.
+
+Erect the perpendicular $ZH$. 
+
+Since it has all right angles, $DZHE$ is a rectangle.
+
+By our preliminary work, $\triangle DBE \cong \triangle ZAH$.
+
+Thus arc $BD = $ arc $AZ$ and $BE = AH$.
+
+Subtracting equals, arc $DZ = $ arc $GB$.
+
+It follows that $GB = DZ = EH$.
+
+Adding equals:
+
+$GB + BE = EH + AH = AE$.
+
+$\square$
+
+\subsection*{fifth proof}
+
+Here is another diagram from Al Biruni's book in Arabic.
+
+\begin{center} \includegraphics [scale=0.35] {Al_Biruni_3.png} \end{center}
+
+Re-rendered:
+
+\begin{center} \includegraphics [scale=0.18] {BC_5.png} \end{center}
+
+$\triangle DBZ$ is isosceles, as usual, and $DZ$ is extended to meet the circle at $H$.  To make the discussion simpler, let us refer to the measure of $\angle DBZ$ as $\alpha$ and that of $\angle BDZ$ as $\beta$.
+
+There are four other angles all equal to $\alpha$, $\angle DZB$ (by construction), $\angle AZH$ (vertical angles), $\angle AHZ$ (cuts the same arc $AD$), and $\angle GHD$ (cuts arc $GD = $ arc $AD$).
+
+We also have the third angle in $\triangle DBZ$, namely $\angle BDZ = \beta$ which cuts arc $BGH$.  This angle is equal to $\angle BAH$ (cuts the same arc).
+
+It follows that the sum of all the angles at $A$ and $H$ is equal to 180, from which we obtain $AB \parallel GH$.  
+
+Parallel chords in a circle cut equal arcs and chords.
+
+\begin{center} \includegraphics [scale=0.18] {BC_5.png} \end{center}
+
+Thus $GB = AH$.  And since $\triangle AZH$ is isosceles, $GB = AH = AZ$.
+
+Adding equals:
+
+$GB + BE = AZ + ZE = AE$.
+
+$\square$
+
+However, this proof is incomplete, since for a given arrangement of $G$, $A$ and $D$, depending on the placement of $B$, one can draw $H$ in three different ways --- coincident with $G$, or lying on either side of it.
+
+\begin{center} \includegraphics [scale=0.20] {BC_5a.png} \end{center}
+
+The left panel is our original diagram.  In the right panel, it appears that $GH \parallel AB$.  Can the proof be rescued?
+
+In a word, yes.  There are various approaches.  Here is a sketch of a simple proof.  
+
+\emph{Proof}.  (Sketch).
+
+Draw the tangent at $D$ and connect $AD$ and $GD$.
+
+Since the two other angles formed by the tangent cut the arcs $GD$ and $AD$, they are equal to $\angle DBZ = \alpha$.
+
+Then, $\angle ADG$ is equal to $\angle BDH$, 
+
+We obtain $AG = BH$ as arcs of equal angles, and thus $GH \parallel AB$ and then proceed as in the first case.
+
+$\square$
+
+We might also proceed by showing that the obtuse angles at $X$, $Z$ and $B$ are all equal.  
+
+Since the acute angles at $X$ are equal, it follows that $\triangle BDX \sim \triangle BZX \sim \triangle GHX$.
+
+\begin{center} \includegraphics [scale=0.15] {BC_5b.png} \end{center}
+
+We still have to show that $AH = AZ$, but this follows since $\angle AHD$ cuts arc $AD$ so $\triangle AHZ$ is isosceles.
+
+$\square$
+
+The \textbf{third case} is where the extension of $DZ$ terminates exactly on point $G$.  $H$ coincides with $G$.
+
+A simple proof is to complete $\triangle DGA$.
+\begin{center} \includegraphics [scale=0.26] {BC_5e.png} \end{center}
+
+The base angles cut the arcs $AD$ and $GD$, so the triangle is similar to $\triangle BDZ$.  In particular, the base angles are equal to $\alpha$, so they cut equal arcs.  Thus $AG = BG$.
+
+Since $\triangle AZG$ is also isosceles, we have $AG = AZ$ so $AZ = BG$, and the result follows easily.
+
+$\square$
+
+\subsection*{sixth proof:  Suter(f)}
+
+\emph{Proof}.
+
+Draw the circle on center $D$ with radius $AD$.  Extend $AB$ to $Z$.  Draw $AD$ and $GD$.
+
+\begin{center} \includegraphics [scale=0.35] {BC_6.png} \end{center}
+
+$AZ$ is a chord of the circle on $D$.  The perpendicular $DE$ goes through the center $D$, therefore it bisects $AZ$.
+
+We have $AE = ZE = ZB + BE$.
+
+Three angles intercept an arc between points $A$ and $G$, $\angle BZG$ on the big circle, $\angle ABG$ on the small circle, and $\angle ADG$ on both.
+
+Since $\angle ADG$ is a central angle in the big circle on $D$, it is twice $\angle AZG$.  But $\angle ADG = \angle ABG$.
+
+Hence $\angle ABG$ is external to $\triangle BZG$ and twice the measure of $\angle BZG$.  It follows that $\angle BZG = \angle BGZ$.
+
+Thus $\triangle AZG$ is isosceles with $GB = ZB$.
+
+Substituting into what we had above:  $AE = GB + BE$.
+
+$\square$
+
+\subsection*{seventh proof:  Suter(p)}
+
+\emph{Proof}.
+
+Draw $GD$ and $AD$.  Extend $GB$ to $Z$ and connect to $D$ such that $Z$ is a right angle.
+
+\begin{center} \includegraphics [scale=0.35] {BC_7.png} \end{center}
+
+$\angle ZGD = \angle BAD$ because they cut the same arc.  We get the third angle by sum of angles and also $GD = AD$ so $\triangle GZD \cong \triangle AED$ by ASA.
+
+$DZ = DE$ and then $\triangle DBZ \cong \triangle DBE$ by HL.  So $BZ = BE$.
+
+From the first congruence $GZ = AE$.
+
+$GZ = GB + BZ = GB + BE$.
+
+$\square$
+
+\subsection*{eighth proof:  Suter(n)}
+
+As before, $AD = GD$ and $DE \perp AB$.
+
+\begin{center} \includegraphics [scale=0.20] {BC_8.png} \end{center}
+
+\emph{Proof}.
+
+Extend $DE$ to cut the circle at $Z$.
+
+Draw $AG$ and its perpendicular bisector $HTK$.  It is a diameter of the circle and goes through $D$.  Why?
+
+Connect $ZK$ and then draw $MK \parallel DEZ$.
+
+Since $DHTK$ is a diameter, $\angle Z$ is right.  We're given that $\angle DEA$ is right.
+
+Since $MK \parallel DEZ$, $EMKZ$ is a rectangle.
+
+By similar right triangles, $\angle D = \angle HKM = \angle A$.
+
+So $BG = ZK = EM$.
+
+From rectangles in a circle we know that $BE = AM$.
+
+Add equals to equals to obtain the result.
+
+$\square$
+
+That's enough proofs of this theorem.  There are quite a few more.  Each one follows naturally from an inspired diagram, and they are nearly all different.
+
+\subsection*{on the value of SSA}
+
+\label{sec:use_of_SSA}
+
+Something interesting happens with the third proof if you approach the premises slightly differently.
+
+\begin{center} \includegraphics [scale=0.18] {BC_3.png} \end{center}
+
+We draw $GD$ as before, but we forget to set $GB = AZ$ and instead put $BE = ZE$, as in some other proofs.  Then what happens?
+
+We have $SAS$ in the small right triangles so $\triangle DBE \cong \triangle DZE$, which means $DB = DZ$.  We have $GD = AD$ as before and $\angle A = \angle G$.
+
+We are tempted to compare $\triangle GBD$ with $\triangle AZD$.  What we have is SSA, which --- it's been drilled into our heads --- is \emph{not enough}, unless there is a right angle, in which case we call it hypotenuse-leg in a right triangle (HL).
+
+But let's take a closer look.  For SSA in the ambiguous case there are only two possibilities.  We can see both of them in the figure!
+
+Certainly $\angle GBD$ is obtuse.  It is supplementary to an angle (not drawn) subtended by $GD$, which is certainly less than half of the circle (since it equals $AD$ and there is more than that in addition).
+
+We also know something about $\angle AZD$.  It is equal to the sum of two angles which add up to more than a right angle.  It follows that $\angle AZD$ is obtuse.
+
+Therefore, the angles are not only obtuse but clearly equal.
+
+From Suter, here is what Archimedes says:
+
+\begin{center} \includegraphics [scale=0.75] {Suter2a.png} \end{center}
+
+(re-phrasing):  $GD = AD$ by the property of the median, $BD$ is shared, and $\angle G = \angle A$, so we have SSA.
+
+Now, $Z$ has been drawn such that $ZE = AE$ which means $ZD = AD$, so we have actually another triangle sharing SSA with $\triangle GBD$.
+
+Archimedes says that $\angle GBD$ corresponds to everything except arc $GD$, i.e. $DAHG$.
+
+And $\angle DBZ$ is external to $\triangle ABD$, supplementary to $\angle DBA$ subtended by arc $AD$, so $\angle DBZ$ is corresponds to everything except arc $AD$, i.e. $AHGB$.  
+
+The missing parts are equal, so the angles are equal.  Since we know two angles, we know three.  Therefore, $\triangle ZBD \cong \triangle GBD$ by ASA.
+
+\subsection*{more}
+
+There is one additional proof of the broken chord theorem that I know about, beyond what is in Suter.
+
+It is on the web attributed to someone named Bùi Quang Tuån.  There is another proof from the same source of the \hyperref[sec:Pthm_Tuan]{\textbf{Pythagorean theorem}} that I like even better. 
+
+\url{https://www.cut-the-knot.org/pythagoras/BrokenChordPythagoras.shtml}
+
+Google also turns up a blog, but no biographical info.
+
+\url{https://artofproblemsolving.com/community/c1598}  
+
+This proof is based on a rectangle, and I leave it to you to see how it relates to the fourth proof, above.  I've written about it elsewhere. 
+
+Note:  some additional material is here:
+
+\url{https://www.cut-the-knot.org/triangle/BrokenChordmpdlc.shtml}
+
+\subsection*{\emph{Star of David} proof of the Pythagorean theorem}
+
+\label{sec:star_of_david}
+
+\url{https://www.cut-the-knot.org/pythagoras/PythStarOfDavid.shtml}
+
+\begin{center} \includegraphics [scale=0.35] {pyth21b.png} \end{center}
+Draw two congruent mirror-image right triangles in a circle, oriented so that $EF \perp AB$ (and $BC \perp DE$).  
+
+Note that $AB$ and $DE$ both pass through $O$, the center of the circle, because any right triangle inscribed in a circle has its hypotenuse as a diameter, by the converse of Thales' circle theorem.
+
+$OA$ and $OD$ are perpendicular by construction and diagonals, so they are perpendicular bisectors.  Thus
+\[ AE = AF = DC = DB \]
+
+Arc $EC$ plus arc $CD$ is equal to $180^{\circ}$.
+
+So it is equal to the arc $EB$, which added to arc $DB$ gives 180.
+
+Then $E$ is the median point between $B$ and $C$ and the perpendicular dropped from $E$ which meets $AB$ in a right angle, cuts $AB$ so
+\[ AP + AC = PB \]
+\[ AC = PB - AP \]
+by the theorem of the broken chord.  The two pieces of $AB$ are
+\[ AB = AP + PB \]
+
+Putting this together, we have:
+\[ AB + AC = 2PB \]
+and
+\[ AB - AC = 2AP \]
+Hence
+\[ PB = \frac{1}{2} (AB + AC), \ \ \ \ \ \ AP = \frac{1}{2} (AB - AC) \]
+
+\begin{center} \includegraphics [scale=0.35] {pyth21b.png} \end{center}
+
+By the theorem of crossed chords
+\[  \frac{AB + AC}{2} \cdot \frac{AB - AC}{2} = ( \frac{EF}{2} )^2 \]
+\[  AB^2 - AC^2 = EF^2 = BC^2 \]
+
+The result follows.
+
+$\square$
+
+\end{document}

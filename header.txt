@@ -1,0 +1,31 @@
+\documentclass[12pt, oneside]{report}
+
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+
+%\usepackage{hyperref}
+%\usepackage{tocloft}
+%\setlength{\cftchapnumwidth}{2.5em}
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[hidelinks, colorlinks=true, linkcolor=blue, urlcolor=red]{hyperref}
+
+\graphicspath{{_my_graphics_path}}
+
+\title{Plane Geometry:  Practice with Proofs}
+\author{Tom Elliott}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%\large
+%\normalsize

@@ -1,0 +1,57 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Power of a point}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+The crossed chord and tangent-secant theorems can be unified by considering $PA$ and $PB$ as directed line segments.  In the crossed-chords example, they point in opposite directions so their product is negative, while for tangent and secant they point in the same direction.
+
+We can view the result for chords $r^2 - d^2$ as the same as the result for the tangent, $d^2 - r^2$, provided we take account of the sign of $AP \cdot PB$.
+
+The previous results regarding secants and tangents are sometimes described in a definition called the "power" of a point, which unifies the treatment of points inside and outside the circle.
+
+\begin{center} \includegraphics [scale=0.5] {ppoint1.png} \end{center}
+
+\url{https://artofproblemsolving.com/wiki/index.php/Power_of_a_Point_Theorem}
+
+Let's start with a point outside.
+\begin{center} \includegraphics [scale=0.20] {power1.png} \end{center}
+
+The length of the tangent and the radius are simply related to the distance from any point $P$ to the center of the circle, $d$:
+\[ d^2 = t^2 + r^2 \]
+\[ t^2 = d^2 - r^2 \]
+$d^2 - r^2$ is defined as the \emph{power} $p$ of the point $P$.
+
+From our previous work, we know that 
+\[ p = t^2 = PT^2 = PA \cdot PA' \]
+
+The definition also works for a point inside the circle.
+\begin{center} \includegraphics [scale=0.20] {power2.png} \end{center}
+
+By the crossed chords theorem:
+\[ PA \cdot PA' = (r+d)(r-d) \]
+\[ = r^2 - d^2 = -p \]
+
+That is, it works if we use \emph{directed line segments}, so that the product $PA \cdot PA'$ for $P$ inside the circle has its two components pointing in opposite directions, and thus acquires a minus sign.
+
+If the point is \emph{on} the circle, it's a bit strange, but we are at the boundary between $p < 0$ and $p > 0$, so it seems reasonable that $p = 0$ for points on the circle.  And there, of course
+\[ p = d^2 - r^2 = 0 \]
+
+\end{document}

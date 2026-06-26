@@ -1,0 +1,144 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Introduction}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\begin{center} \includegraphics [scale=0.15] {isosceles9.png} \end{center}
+
+The following statements about isosceles triangles are equivalent:
+\begin{enumerate}
+\item two sides equal
+\item base angles equal
+\item medians ($m$) equal
+\item angle bisectors ($l$) equal
+\item altitudes ($h$) equal
+\item the bisector, median and altitude at $b$ coincide
+\end{enumerate}
+
+where in (1-5) the medians, bisectors and altitudes in question are those extending to the equal sides.
+
+The figure shows (right panel) the case for the medians, but we will use the same labels for the other cases in the discussion below.
+
+The question is then how to prove these one from the other, for example 1 $\Rightarrow$ 3 or 5 $\Rightarrow 2$.  Of course, we already have 1 $\Rightarrow$ 2 and 2 $\Rightarrow$ 1.  
+
+In what we might call the forward direction \{ 1,2 \} $\Rightarrow$ \{ 3,4,5,6 \}, these proofs are quite easy.  I encourage you to try them before reading further.
+
+The converse proofs are another matter.
+
+\subsection*{forward}
+
+\label{sec:more_isosceles_fwd}
+
+\begin{center} \includegraphics [scale=0.16] {isosceles10.png} \end{center}
+
+1 $\Rightarrow$ 3
+
+\emph{Proof}. $AF$ and $CH$ are medians in $\triangle ABC$.  Given $AB = CB$ and $\angle A = \angle C$, it follows that $AH = CF$ (by the definition of median) and thus by SAS we have $\triangle ACH \cong \triangle CAF$.  Hence $AF = CH$.  $\square$
+
+1 $\Rightarrow$ 4
+
+\emph{Proof}. $AF$ and $CH$ are angle bisectors in $\triangle ABC$.  Given $\angle A = \angle C$, the half-angles are also equal, so by ASA we have $\triangle ACH \cong \triangle CAF$.  Hence $AF = CH$.  $\square$
+
+1 $\Rightarrow$ 5
+
+\emph{Proof}.  $AF$ and $CH$ are altitudes in $\triangle ABC$.  Twice the area of $\triangle ABC$ may be computed as $AF \cdot CB = CH \cdot AB$.  But $AB = CB$.   Hence $AF = CH$.  $\square$
+
+\subsection*{converse}
+
+\label{sec:more_isosceles_con}
+
+One of the converse proofs is also easy.
+
+5 $\Rightarrow$ 1
+
+\emph{Proof}.  $AF$ and $CH$ are altitudes in $\triangle ABC$.  Twice the area of $\triangle ABC$ may be computed as $AF \cdot CB = CH \cdot AB$.  But $AF = CH$.   Hence $AB = CB$.  $\square$
+
+\begin{center} \includegraphics [scale=0.16] {isosceles10.png} \end{center}
+
+4 $\Rightarrow$ 1
+
+If the angle bisectors are equal, then the triangle is isosceles.  This is a famous theorem, and there is a whole chapter about it here:  \hyperref[sec:Steiner_Lehmus_Theorem]{\textbf{Steiner-Lehmus theorem}}.
+
+3 $\Rightarrow$ 1
+
+For this one, we look ahead to the $\hyperref[sec:law_of_cosines]{\textbf{Law of cosines}}$.
+
+\emph{Proof}.
+
+We have that the medians are equal, namely, $AF = CH$.  Let them be equal to $m$.  Using the law of cosines, compute the length $m$ squared of the side opposite $\angle B$ in two different triangles.
+
+Let side $a = BC$ (the side opposite $\angle A$), and similarly side $c = AB$ (the side opposite $\angle C$).
+
+So $BF = a/2$ and $BH = c/2$.  Then
+\[ m^2 = a^2 + (c/2)^2 - 2a \cdot c/2 \cdot \cos B \]
+\[ m^2 = c^2 + (a/2)^2 - 2c \cdot a/2 \cdot \cos B \]
+
+The last terms on the right-hand side are equal, namely
+\[ ac \cdot \cos B = ac \cdot \cos B \]
+
+Setting the two expressions equal, it follows that
+\[ a^2 + (c/2)^2 =  c^2 + (a/2)^2 \]
+\[ \frac{3}{4} a^2 = \frac{3}{4} c^2 \]
+\[ a^2 = c^2 \]
+
+Since $a$ and $c$ are both lengths, we may take the positive square roots for each, and thus $a = c$. 
+
+$\square$
+
+\subsection*{median, bisector and altitude at $b$}
+
+\begin{center} \includegraphics [scale=0.16] {isosceles11.png} \end{center}
+
+Let $b$ be the side opposite $\angle B$ as usual.
+
+\textbf{1 $\Rightarrow$ 6}
+
+We have that $AB = CB$ and $\angle A = \angle C$.
+
+\emph{Proof}.  Let $BG$ be the median to $AC$ such that $AG = GC$  Then $\triangle ABG \cong \triangle CBG$ by SSS.  Thus $\angle B$ is bisected and $\angle AGB = \angle CGB$ and both are right angles.  $\square$
+
+\emph{Proof}.  Let $BG$ be the altitude to $AC$ such that $\angle AGB = \angle CGB$ and both are right angles.  Then $\triangle ABG \cong \triangle CBG$ by HL.  Thus $\angle B$ is bisected and $AG = GC$.   $\square$
+
+\emph{Proof}.  Let $BG$ bisect $\angle B$.  Then $\triangle ABG \cong \triangle CBG$ by SAS.  Thus $\angle AGB = \angle CGB$ and both are right angles, and $AG = GC$.   $\square$
+
+\textbf{6 $\Rightarrow$ 1}
+
+We will prove that if any two of these statements are both true, then $a = c$.   In what follows, if we have  $\triangle ABG \cong \triangle CBG$, then (1) and (2) follow immediately.
+
+\emph{Proof}.  If the bisector and the altitude at $b$ coincide, then $\triangle ABG \cong \triangle CBG$ by ASA. $\square$
+
+\emph{Proof}.  If the median and the altitude at $b$ coincide: then $\triangle ABG \cong \triangle CBG$ by SAS.$\square$
+
+Finally, suppose the bisector and the median at $b$ coincide.  Draw perpendiculars from the midpoint of $b$ to each of sides $a$ and $c$.
+
+\begin{center} \includegraphics [scale=0.16] {isosceles12.png} \end{center}
+
+\emph{Proof}.
+
+$BG$ bisects $\angle B$, $\angle GDB = \angle GEB$ and both are right angles, therefore $\angle BGE = \angle BGD$ by sum of angles.  The hypotenuse $BG$ is shared.  It follows that $\triangle BEG \cong \triangle BDG$ by ASA.  Thus $GE = GD$.
+
+Then (since $AG = GC$), $\triangle AEG \cong \triangle CDG$ by HL.  It follows that $\angle A = \angle C$ and then by 2 $\Rightarrow$ 1, we have $a = c$.
+
+$\square$
+
+This material is covered in Byer (see $\hyperref[sec:list_of_references]{\textbf{References}}$).
+
+\end{document}
