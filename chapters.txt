@@ -25,7 +25,7 @@ Ptolemy revisited
 Menelaus's theorem
 Ceva's Theorem
 Pythagoras by area
-Ratio Boxes
+Ratio Boxes revisited
 
 Polygons
 Pentagon

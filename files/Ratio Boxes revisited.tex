@@ -21,131 +21,7 @@
 
 %[my-super-duper-separator]
 
-In this short chapter, we will look at a device which, at least for now, I'm going to call \emph{ratio boxes}.  Here's the idea:
-\begin{center} \includegraphics [scale=0.18] {ratios1.png} \end{center}
-
-We start with two similar triangles, $\triangle abc$ nested inside $\triangle ABC$.
-
-One part of the definition is that the sides have equal ratios.  For example, $a : A = b : B$, also written as
-\[ \frac a A = \frac b B \]
-Now, you can look at the figure and take away that result, easily enough.  But sometimes you need more than one relationship, and if the vertices have the labels, then it's more complicated. 
-
-You may notice that there are two similar triangles but nine entries in the box.  The reason is the following:
-\[ \frac a b = \frac A B  = \frac{a + a'} {b + b'} \] 
-\[ \frac {a + a'}  a  = \frac{b + b'} b \] 
-\[ \frac {a'}  a  = \frac{b'} b \] 
-\[ \frac {a'}  {b'}  = \frac a b = \frac A B \] 
-
-I like to write the sides that are in proportion as shown in the rectangular grid.  
-\begin{center} \includegraphics [scale=0.15] {ratios8.png} \end{center}
-
-Orient it as you like.  I usually proceed from the shortest side to the longest side.  Sometimes that is hard to see so we start matching sides with the angle opposite.  
-
-But however, you do it, there are nine sides or differences of sides.  Here the ratios \emph{within} triangles go across, and the ones \emph{between} triangles go down.
-
-The next example uses the traditional Greek notation (well, with Roman letters).
-
-\begin{center} \includegraphics [scale=0.18] {ratios2.png} \end{center}
-This is exactly the same as before, except the sides are labeled by the flanking vertices.  It is fairly easy to go through a figure and make such a box.
-
-The value is this:  any four entries that are in the shape of a rectangle form a valid ratio.  For example:  $PQ : PS = QR : SU$.  You can also see immediately that $PQ \cdot SU = PS \cdot QR$. 
-\begin{center} \includegraphics [scale=0.15] {ratios9.png} \end{center}
-If you have three picked you know the fourth.  If you have two picked, and they are not related horizontally or vertically (like $PQ$ and $SU$), then you obtain the other two partners immediately.
-
-\subsection*{right triangles}
-\begin{center} \includegraphics [scale=0.15] {ratios3.png} \end{center}
-As you know, if you draw the (one) altitude in a right triangle, it forms two smaller similar triangles.  The reason is complementary angles, as shown by the red dots marking equal angles.
-
-Say we want a proof of Pythagoras's Theorem.  We need $a^2$ and $b^2$.  They jump right out of the box:
-\[ a^2 = xc \]
-\[ b^2 = yc \]
-\[ a^2 + b^2 = xc + yc = c^2 \]
-$\square$
-
-We also see, without ever referring back to the figure, that $h^2 = xy$.  $h$ is the \emph{geometric mean} of $x$ and $y$.
-
-\subsection*{secants}
-\begin{center} \includegraphics [scale=0.15] {ratios4.png} \end{center}
-$PAB$ and $PCD$ are secants of this circle.  The red dots show equal angles.  The reason is that $\angle B$ and $\angle ACD$ are supplementary, because they are opposite angles of a \emph{cyclic quadrilateral}.  Together they correspond to a complete arc of the circle.
-
-But $\angle PCA$ and $\angle ACD$ are supplementary too.  So the marked angles are equal.  And since two pairs of angles are equal, we have similar triangles:  $\triangle PCA \sim \triangle PBD$.  I try to remember to write the vertices in the order of similarity, so for example:  $PC : CA = PB : BD$.
-
-Go through each triangle and write the sides that have equal angles opposite.  The famous result is:  $PA \cdot PB = PC \cdot PD$.
-
-I have left out the entry in the starred box, because it looks funny.  It is $BD-AC$.
-
-\subsection*{tangent-secant}
-\begin{center} \includegraphics [scale=0.15] {ratios5.png} \end{center}
-Here we have a secant $PQR$ and a tangent, $PT$.  The angle that the tangent makes with a chord is easily shown to be equal to any inscribed angle subtended by that chord.  That accounts for the red dots.
-
-Again we have similar triangles, this time, one is nested inside another, so there are only six terms in the box.  Here I followed the angles, first red then $\angle P$.
-
-The famous result is the Secant Tangent Theorem (or Tangent Secant Theorem):  $PQ \cdot PR = PT^2$.
-
-It writes itself.
-
-\subsection*{Angle Bisector Theorem}
-
-We revisit this theorem, from \hyperref[sec:generalized_angle_bisector_theorem]{\textbf{here}}.  We are given that the angle at $A$ ($\angle BAC$), is bisected.
-
-So we draw a line segment $BE$ parallel to side $AC$ and extend the bisector to meet it.
-\begin{center} \includegraphics [scale=0.15] {ratios16.png} \end{center}
-Because of the parallel lines, $\angle BED$ gets a red dot as well.  And that means $\triangle BED \sim \triangle DAC$, which gives the ratio box in the figure.  Here we want to be careful to match the sides with equal angles opposite.
-
-Highlight the segments we think might be interesting.  Finally, notice that $\triangle ABE$ is isosceles, so $AB = BE$.  We obtain:
-\[ \frac{AC}{DC} = \frac{BE}{BD} = \frac{AB}{BD} \]
-
-$\square$
-
-The sides and divisions of the base are in equal proportion.  This can also be written as
-\[ \frac{AB}{AC} = \frac{BD}{DC} \]
-
-This one can also be done by areas (next figure).  $\triangle ABD$ and $\triangle ACD$ have the same altitude $h$.  So the areas are in the ratio $AB:AC$.
-
-\begin{center} \includegraphics [scale=0.15] {ratios17.png} \end{center}
-
-But looked at another way, they have bases $BD$ and $DC$ on the same parallel, so they have the same height drawn to vertex $A$.  Hence, the areas are in the ratio $BD:DC$.  Thus
-\[ \frac{AB}{AC} = \frac{BD}{DC} \]
-
-\subsection*{frustum}
-A frustum is a truncated pyramid.
-
-\begin{center} \includegraphics [scale=0.20] {frustum.png} \end{center}
-
-It's known, and we discuss elsewhere a proof, that the volume of a cone or pyramid is 
-\[ V = \frac{1}{3} \ \cdot hA \]
-
-where $h$ is the height and $A$ is the area of the base.  We'll make things slightly easier by writing
-\[ 3V = hs^2 \]
-with $s$ being the side length, for a square pyramid.
-
-A frustum has the top chopped off.   We will be given the side length at the bottom $a$, and the side length on the top $b$, as well as the height of the frustum $h$.
-
-We need to compute the height of the whole thing $H$, then find the height of the missing top part as $H-h$.  We'll use those two to get the volume of the frustum by subtraction.
-
-Let $H$ be the entire height, and then by similar triangles we have
-\[ \frac{H}{a} = \frac{H-h}{b} = \frac{h}{a-b} \]
-
-This is our ratio box for the problem.  The height of the small missing piece is 
-\[ H - h = \frac{b}{a} H \]
-Then the volume we seek uses the difference:
-\[ 3V = a^2 H - b^2 (H-h)  \]
-\[ = a^2H - b^2H \ \frac{b}{a} \]
-\[ = (a^2 - \frac{b^3}{a}) H \]
-
-But now we need $H$ in terms of $h$, since that's what we're given, so going back to the ratios we have:
-\[ H = \frac{a}{a-b} h \]
-which gives
-
-\[ 3V = (a^2 - \frac{b^3}{a}) \frac{a}{a-b} \ h \]
-\[ = \frac{a^3 - b^3}{a-b} \ h \]
-
-And if we fool around for a while, we may discover that the numerator can be factored as
-\[ (a^2 + ab + b^2)(a - b) = a^3 - b^3 \]
-which gives, finally
-\[ 3V = h (a^2 + ab + b^2) \]
-
-
+We look at Ratio Boxes some more, and introduce the topic of inversive geometry.
 
 \subsection*{Menelaus's Theorem}
 \begin{center} \includegraphics [scale=0.18] {ratios15b.png} \end{center}
@@ -281,6 +157,44 @@ which is exactly what we need to cancel!
 \[ \frac{CD}{DB} \cdot \frac{BF}{FA} \cdot \frac{AE}{EC} = \frac{C'B}{BA'} \cdot \frac{A'B}{BC'}  = 1 \]
 
 $\square$
+
+\subsection*{frustum}
+A frustum is a truncated pyramid.
+
+\begin{center} \includegraphics [scale=0.20] {frustum.png} \end{center}
+
+It's known, and we discuss elsewhere a proof, that the volume of a cone or pyramid is 
+\[ V = \frac{1}{3} \ \cdot hA \]
+
+where $h$ is the height and $A$ is the area of the base.  We'll make things slightly easier by writing
+\[ 3V = hs^2 \]
+with $s$ being the side length, for a square pyramid.
+
+A frustum has the top chopped off.   We will be given the side length at the bottom $a$, and the side length on the top $b$, as well as the height of the frustum $h$.
+
+We need to compute the height of the whole thing $H$, then find the height of the missing top part as $H-h$.  We'll use those two to get the volume of the frustum by subtraction.
+
+Let $H$ be the entire height, and then by similar triangles we have
+\[ \frac{H}{a} = \frac{H-h}{b} = \frac{h}{a-b} \]
+
+This is our ratio box for the problem.  The height of the small missing piece is 
+\[ H - h = \frac{b}{a} H \]
+Then the volume we seek uses the difference:
+\[ 3V = a^2 H - b^2 (H-h)  \]
+\[ = a^2H - b^2H \ \frac{b}{a} \]
+\[ = (a^2 - \frac{b^3}{a}) H \]
+
+But now we need $H$ in terms of $h$, since that's what we're given, so going back to the ratios we have:
+\[ H = \frac{a}{a-b} h \]
+which gives
+
+\[ 3V = (a^2 - \frac{b^3}{a}) \frac{a}{a-b} \ h \]
+\[ = \frac{a^3 - b^3}{a-b} \ h \]
+
+And if we fool around for a while, we may discover that the numerator can be factored as
+\[ (a^2 + ab + b^2)(a - b) = a^3 - b^3 \]
+which gives, finally
+\[ 3V = h (a^2 + ab + b^2) \]
 
 
 \end{document}

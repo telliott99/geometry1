@@ -279,6 +279,21 @@ The constant ratio has an interesting value, which can be seen by going back to 
 which, applied to this case, gives 
 \[ \frac{a}{\sin A} = 2r \]
 
+Here is another simple proof.
+
+\begin{center} \includegraphics [scale=0.3] {sine_law.png} \end{center}
+
+In the circumcircle for $\triangle ABC$, draw the diameter through $C$ with length $2R$, and label the other endpoint as $J$.  Since they lie on the same arc, $\angle A = \angle J$.  But then clearly
+
+\[ \sin A = \sin J = \frac{a}{2R} \]
+\[ \frac{a}{\sin A} = 2R \]
+
+and this can be done for any of the three angles in $\triangle ABC$.
+
+\subsection*{problem}
+
+Use the same idea to extend this proof to the case where $\angle A$ is obtuse.  Hint:  $\sin A = \sin (180 - A)$.
+
 \subsection*{other functions}
 
 We'll just mention a few other common trig (short for trigonometric) functions that are constructed from sine and cosine, although they aren't used much in this book.
@@ -467,6 +482,22 @@ We use the law of sines:
 \[ BH = 2R \cos B \]
 
 \[ HD = 2R \cos B \cos C \]
+
+\subsection*{sum of angles}
+
+(from Coxeter, chapter 1).
+
+\begin{center} \includegraphics [scale=0.25] {sine_of_sum.png} \end{center}
+\[ a = x + y = c \cos B + b \cos C \]
+
+Since they are supplementary, $\angle B + \angle C = 180 - \angle A$, and using the law of sines:
+\[ \sin (B+C) = \sin A = a \cdot \frac{\sin B}{b} \]
+\[ = \frac{\sin B}{b} (c \cos B + b \cos C) \]
+The second term on the right-hand side is easy.  For the first term, use the law of sines again:
+\[ \frac{\sin B}{b} = \frac{\sin C}{c}  \]
+We obtain
+\[ \sin (B + C) = \sin C \cos B + \sin B \cos C \]
+This is called the sum of angles formula for sine.  Show that the first part works for obtuse $\angle B$.
 
 
 \end{document}
