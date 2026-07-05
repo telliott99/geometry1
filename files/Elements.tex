@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Github-Math/figures/}}
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Euclid's Elements}
@@ -31,13 +31,13 @@ $\bullet$  \ In any triangle, if one of the sides is produced (extended), then t
 
 \begin{center} \includegraphics [scale=0.4] {EI_16.png} \end{center}
 
-In $\triangle ABC$ extend side $AB$ to $D$.  We are concerned with the exterior $\angle FBD$.
+In $\triangle ABC$ extend side $AB$ to $D$.  We are concerned with the exterior $\angle EBD$.
 
-The claim is that $\angle FBD$ is greater (larger) than either of the interior angles $\angle ACB$ or $\angle CAB$.
+The claim is that $\angle EBD$ is greater (larger) than either of the interior angles $\angle ACB$ or $\angle CAB$.
 
 \emph{Proof}.
 
-Find the midpoint of side $BC$ at $E$ so $BE = EC$ and then draw $AEF$ so that $AE = EF$ and join $BF$.  
+Find the midpoint of side $BC$ at $E$ so $BE = EC$ and then draw $AEF$ so that $AE = EF$ and join $BF$.
 
 Note that $\angle EBD = \angle CBD$ is the external angle for $\triangle ABC$.
 
@@ -45,15 +45,21 @@ We have equal angles at $E$ by the vertical angle theorem.
 
 So by SAS the two smaller triangles $\triangle AEC$ and $\triangle BEF$ to the left and right are congruent.
 
-Thus $\angle ACE = \angle FBE$.  Since the whole is greater than the part, $\angle EBD > \angle FBE = \angle ACE$.
+Thus $\angle ACE = \angle FBE$ by the converse of alternate interior angles.
 
-We can make a similar construction and proof for $\angle BAC$.
+Since the whole is greater than the part, $\angle EBD > \angle FBE = \angle ACE$.
+
+\begin{center} \includegraphics [scale=0.4] {EI_16.png} \end{center}
+
+But also, $AC \parallel BF$ by by the converse of alternate interior angles.
+
+So $\angle CAB = \angle FBD$ by alternate interior angles.
+
+Again, the whole is greater than the part, $\angle EBD > \angle FBD= \angle CAB$.
 
 The exterior angle is greater than either of the interior and opposite angles.
 
 $\square$
-
-\begin{center} \includegraphics [scale=0.4] {EI_16.png} \end{center}
 
 One might ask why Euclid doesn't use supplementary angles to obtain a stronger proof.  The answer seems to be that he is trying to go as far as he can without using the parallel postulate.
 
@@ -98,13 +104,15 @@ In $\triangle ABC$, suppose that $BC > AC$.  We will show that $\angle A > \angl
 
 \emph{Proof}.
 
-Mark off $AD = AC$.  By the isosceles triangle theorem, $\angle CAD = \angle CDA$.
+Mark off $CD = AC$.  
 
-Since the whole is greater than the part, $\angle A = \angle CAB > \angle CAD$.
+By the isosceles triangle theorem, $\angle CAD = \angle CDA$.
 
-But $\angle CDA$ is the external angle for $\triangle ABD$ so it is equal to $\angle BAD$ + $\angle B$.
+$\angle CAD < \angle A$.
 
-By transiitivity of inequality:  $\angle A > \angle B$. 
+But $\angle CDA$ is the external angle for $\triangle ABD$ so it is greater than $\angle B$.
+
+By transitivity of inequality:  $\angle A > \angle B$. 
 
 $\square$
 
@@ -124,7 +132,9 @@ We are given $\angle A > \angle B$ and claim that $BC > AC$.
 
 We proceed by eliminating the other two possibilities.  It cannot be that $BC = AC$ because then, by Euclid I.5, the angles would be equal but we are given that they are not.
 
-Suppose that $AC > BC$.  Then by Euclid I.18 just above, we have that $\angle B > \angle A$.
+Suppose that $AC > BC$.  
+
+Then by Euclid I.18 just above, we have that $\angle B > \angle A$.
 
 However, this also contradicts what was given.  We must have $\angle A > \angle B$.
 
@@ -160,6 +170,21 @@ $\square$
 An equivalent statement is the famous ``a straight line is the shortest distance between two points''.
 
 The triangle inequality has corresponding statements and proofs in other parts of mathematics including real and complex analysis.
+
+Here is a different proof that we showed in the first book.
+
+\subsection*{Triangle inequality by circles}
+
+\emph{Proof}.
+
+Consider $\triangle ABC$.  Draw circle $\mathcal{C}_1$ on center $B$ with radius $AB$ and also circle $\mathcal{C}_2$ on center $A$ with radius $AC$.  The third vertex $C$ lies on the intersection of the two circles.  
+\begin{center} \includegraphics [scale=0.2] {tri_ineq1} \end{center}
+
+If $AB$ is longer (greater) than the sum of the two radii, then the circles will not cross one another. 
+
+If $AB$ is equal to this sum, then they only touch, on the line $AB$.  Thus, in order for there to be a triangle, $AB$ must be less than the sum of the diameters:  $AB < AC + BC$.  
+
+$\square$
 
 \subsection*{Euclid I.24.  SAS inequality theorem}
 
@@ -222,23 +247,6 @@ Clearly, $AF > AE > FC$.  So
 But by the Pythagorean theorem, the left-hand side is $DC^2$, while the right-hand side is $DA^2$.  Taking side lengths as the positive square root, we have $DC < DA$.  $\square$
 
 In fact, \emph{every} point which lies on the same side of the perpendicular bisector of $AC$ as $C$, is closer to $C$ than to $A$.
-
-\subsection*{Triangle inequality by circles}
-
-Here is a modern proof of Euclid I.20.
-
-\emph{Proof}.
-
-Consider $\triangle ABC$.  Draw circle $\mathcal{C}_1$ on center $B$ with radius $AB$ and also circle $\mathcal{C}_2$ on center $C$ with radius $AC$.  The third vertex $A$ lies on the intersection of the two circles.  
-\begin{center} \includegraphics [scale=0.25] {tri_inequalityb.png} \end{center}
-
-If $BC$ is longer (greater) than the sum of the two radii, then the circles will not cross one another. 
-
-If $BC$ is equal to this sum, then they only touch, on the line $BC$.  Thus, in order for there to be a triangle, $BC$ must be less than the sum of the diameters:  $BC < AB + AC$.  
-
-$\square$
-
-\url{https://arxiv.org/pdf/1803.01317}
 
 \subsection*{angle of reflection}
 

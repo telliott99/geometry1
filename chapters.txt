@@ -49,7 +49,6 @@ The Almagest
 Addendum
 Author's notes
 Angular measure
-Additional proofs
 Two final proofs
 Resources
 List of theorems

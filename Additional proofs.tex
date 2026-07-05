@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Github-Math/figures/}}
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
 
 \title{Midpoint theorem}
 \date{}
@@ -120,44 +120,8 @@ Suppose that $AD/AB = DF/BC = k$.  Then $AG/AH$ also is equal to $k$.
 The ratio of areas is then
 \[ \frac{\Delta_{ADF}}{\Delta_{ABC}} =  \frac{\frac{1}{2} DF \cdot AG}{\frac{1}{2} BC \cdot AH} = k^2 \]
 
-\subsection*{all triangles}
 
-\label{sec:similarity_right_to_all_triangles}
-
-Any triangle can be decomposed into two right triangles.  
-
-We previously proved the equal angles for two similar right triangles implies equal ratios of sides.  Now we combine the results for the two sub-triangles, both right triangles, and we will have the result for the general case.  
-
-We use a flipped and rotated copy of the smaller triangle.  Start with two triangles similar because the angles are the same (left panel).  
-
-\begin{center} \includegraphics [scale=0.35] {similar13.png} \end{center}
-
-Make a copy of the smaller triangle and rotate it and then attach at the top (forming a parallelogram).  The original small triangle and the flipped version are congruent by our construction.
-
-From congruent triangles we get the angle equalities in the right panel.
-
-We also have two pairs of parallel sides, either by alternate interior angles or because $s + t + u$ is equal to two right angles.
-
-Now, draw the two altitudes, label the sides, and suppress the labels for the angles but just mark them with colored circles.
-
-The angles marked with filled dots are equal (black and black, and red and red) by parallel sides as we just said, and the open dots with the same colors are equal because they are complementary angles in a right triangle.
-
-\begin{center} \includegraphics [scale=0.35] {similar14.png} \end{center}
-Thus, we have two different pairs of similar right triangles.  
-\[ \frac{a}{h} = \frac{a'}{h'} \]
-\[ \frac{b}{h} = \frac{b'}{h'} \]
-
-So then
-\[ \frac{h}{h'} = \frac{a}{a'} =  \frac{b}{b'} \]
-Corresponding sides of the two original triangles have equal ratios of sides. (It is important that we extended the equal ratios result to the hypotenuse for this to work).
-
-But there is nothing special about this pair of sides, we could have chosen any other pair, either $a$ and $c$ or $b$ and $c$, and have the same result.
-
-Therefore if any two triangles have three angles the same, the side lengths are all in the same proportion.
-
-$\square$
-
-\subsection*{similar triangles}
+subsection*{similar triangles}
 
 Euclid VI.2 gives us all we need.  However, let's take a moment to look at a different proof.
 
@@ -228,44 +192,6 @@ As $n$ gets very large we approach equality:
 for the second case as well.
 
 In calculus we say that, in the limit, as $n \rightarrow \infty$, they become equal.  If this seems strange, wait for the discussion of the limit concept, in calculus.
-
-\subsection*{Ptolemy's by similar triangles}
-
-\label{sec:Ptolemy_alt}
-
-\begin{center} \includegraphics [scale=0.4] {Ptolemy3.png} \end{center}
-
-Above is a graphic from wikipedia that shows where we're going in the first proof.  We will form two sets of similar triangles and use our knowledge about corresponding ratios.
-
-\url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
-
-\emph{Proof}.
-
-It is often easier to adopt a modern notation, designating side lengths by single letters.  In this problem, we have sides $a,b,c,d$ and diagonals $m$ and $n$.  
-
-The angles marked with magenta dots are equal as peripheral angles subtended by the same arc, and the same with the blue dots.
-
-The key insight is to draw the line segment marked $k$, separating $n$ into two parts, $n'$ and $n''$.  The line is drawn so that the angles marked with black dots are equal.  
-\begin{center} \includegraphics [scale=0.35] {Ptolemy2b.png} \end{center}
-Other pairs of angles are equal by the inscribed angle theorem (blue and magenta).
-
-The first pair of similar triangles has one vertex with the black dotted angles, and a second vertex with blue dots.  Taking the opposite sides in the same order, we have the ratios:
-\[ \frac{n'}{b} = \frac{k}{a} = \frac{d}{m}  \]
-
-The second pair of similar triangles contain a vertex consisting of the black dotted angle \emph{plus} the central angle between the two black dots.  Refer to the wikipedia figure if this sounds confusing.  There these angles are marked with red arcs. 
-
-This pair of triangles also has a second vertex with magenta dots.  Taking the opposite sides in the same order we have
-\[ \frac{n''}{c} = \frac{k}{d} = \frac{a}{m} \]
-
-The second trick is to pick the right relationships to manipulate.  We know we don't want $k$ in the answer, (and we do want all of $abcd$ plus $mn'$ and $n''$), so choose from the first:
-\[ \frac{n'}{b} = \frac{d}{m}  \ \ \ \Rightarrow \ \ \ bd = mn' \]
-and from the second:
-\[ \frac{n''}{c} = \frac{a}{m} \ \ \ \Rightarrow \ \ \ ac = mn'' \]
-Simply add the two equations
-\[ ac + bd = m(n' + n'') = mn \]
-
-$\square$
-
 
 \subsection*{difference of sines}
 

@@ -395,5 +395,58 @@ It follows that $ST = UV$.
 
 $\square$
 
+\subsection*{double tangents}
+
+\begin{center} \includegraphics [scale=0.35] {tangent14b.png} \end{center}
+
+Here is a closely related problem from Paul Yiu.  It's a bit repetitive, but we get some extra results involving distances, and also see that the problem is more general than just excircles.
+
+Let lines be drawn, each one tangent to both of two circles.  There are four such lines.  The diagram above has simplified labels.  In the next one, the points are labeled for reference.
+\begin{center} \includegraphics [scale=0.35] {tangent14c.png} \end{center}
+
+Let $PB$ and $PC$ be tangent to both circles.  Furthermore draw the crossed tangents $KM$ and $LN$.  
+
+The four pairs of short tangents have lengths $p$, $q$, $r$ and $s$.  For a single pair originating from the same point, the two of them are equal.
+
+We want to determine the relationships between the lengths $a,b,c,p,q,r,s$.
+
+The tangents crossing at $X$ are labeled $c$ in the first diagram and $SV$ and $TU$ in the second.  These are equal, because they are composed of two tangents to each circle extended from the intersection in the middle at $X$.  
+
+Before going further, let's look at a simplified diagram.
+\begin{center} \includegraphics [scale=0.3] {tangent14d.png} \end{center}
+
+If $PX$ is drawn through the center of the circle at $Q$, the angles at $P$ and $X$ are bisected and then $\triangle PKX \cong \triangle PNX$ by ASA.  It follows that $XK = XN$, and since $XS = XT$, we have $SK = TN$.  Similarly, $KA = ND$.
+
+So, looking again at the problem
+\begin{center} \includegraphics [scale=0.4] {tangent14b.png} \end{center}
+we see that $p = s$ and $q = r$.  The next question is the relationship between $p$ and $q$.  We can write other equalities based on tangents from different points:
+
+\[ LA = p + a = q + c = LT \]
+\[ KV = p + c = a + q = KB \]
+\begin{center} \includegraphics [scale=0.35] {tangent14c.png} \end{center}
+
+Adding and cancelling $a + c$, we have that $p = q$.
+\begin{center} \includegraphics [scale=0.35] {tangent14b.png} \end{center}
+
+So all four of the short segments are also equal:  $p = q = r = s$.  And substituting above, we find that $a = c$.
+
+Finally, we derive the position of $P$, the origin point of the tangents that do not cross.  We also derive the position of $X$, the intersection of the tangents that do cross,
+
+Since both lie on the line between centers, we worry only about the horizontal dimension.  Let $PO = y$.  Let the radius of the circle on center $O$ be $R$ and that of the other circle on $Q$ be $\rho$.
+
+Let the distance between the two circles be $d$.  Then we have two similar right triangles, with
+\[ \frac{y}{R} = \frac{y+d}{\rho} \]
+\[ \frac{\rho}{R} = \frac{y+d}{y} = 1 + \frac{d}{y} \]
+which is easily solved for $y$.
+
+\[ y = \frac{d}{\rho/R - 1} \]
+
+To find $OX = x$, we have a closely related equation 
+\[ \frac{x}{R} = \frac{d-x}{\rho} \]
+which is worked out by similar algebra.
+\[ \frac{\rho}{R} = \frac{d-x}{x} \]
+
+\[ x = \frac{d}{\rho/R + 1} \]
+
 
 \end{document}

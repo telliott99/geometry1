@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Github-Math/figures/}}
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Sum of angles}
@@ -148,59 +148,21 @@ Read the result:
 \[ \sin s-t = \sin s \cos t - \cos s \sin t \]
 \[ \cos s-t = \cos s \cos t + \sin s \sin t \]
 
-\subsection*{alternative derivation}
+\subsection*{sum of angles}
 
-There are many derivations of the sum of angles formulas.  Here is an algebraic one based on the \hyperref[sec:law_of_sines]{\textbf{law of sines}}.
-\[ \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c} \]
+(from Coxeter, chapter 1).
 
-Start with this triangle
-\begin{center} \includegraphics [scale=0.35] {sum_angles_9.png} \end{center}
-
+\begin{center} \includegraphics [scale=0.25] {sine_of_sum.png} \end{center}
 \[ a = x + y = c \cos B + b \cos C \]
-From the law of sines:   $\sin A = (a/b) \sin B$.  Substituting for $a$:
-\[ \sin A = \frac{c \cos B + b \cos C}{b} \sin B \]
-\[ = \frac{c}{b} \sin B \cos B + \sin B \cos C \]
 
-Again from the law of sines:  $\sin B = (b/c) \sin C$, so
-\[ \sin A = \sin C \cos B + \sin B \cos C \]
-
-But since $A$ and $B + C$ are supplementary, their sines are equal, thus
-\[ \sin B + C = \sin C \cos B + \sin B \cos C \]
-
-$\square$
-
-The proof for an obtuse angle is left as an exercise.
-
-\subsection*{general formula for sine}
-
-Here is a related, simple proof of the formula for sine.
-
-Consider the following triangle, where the angle at one vertex is divided by the altitude to the opposing side, forming angles $\theta$ and $\phi$.  We are interested in finding the sine of the two angles added together.
-
-\begin{center} \includegraphics [scale=0.4] {trig_beg_5.png} \end{center}
-
-But first we must introduce a standard formula for the area of a triangle, illustrating it by the angle $\alpha$.  From our previous work we know that twice the area of the triangle is $hc$, but $h$ is also part of a formula for sine, namely $h/a = \sin \alpha$, which can be rearranged to give $h = a \sin \alpha$.  In other words
-\[ 2A = hc = ac \sin \alpha \]
-
-In general, twice the area of any triangle is the product of two sides times the sine of the angle between.  So in this case, we also have that
-\[ 2A = ab \sin (\phi + \theta) \]
-
-Now we just calculate the area of the two smaller triangles and add them together.  We have
-\[ 2A = ha \sin \phi + hb \sin \theta \]
-I'm going to rearrange this slightly
-\[ 2A = a \sin \phi  \cdot h + b \sin \theta \cdot h \]
-
-For these angles, $h$ is connected to a trig function, but this time it's the cosine.
-\[ h = a \cos \phi = b \cos \theta \]
-Substituting two times into the previous equation, we obtain
-\[ 2A = a \sin \phi  \cdot b \cos \theta + b \sin \theta \cdot a \cos \phi \]
-and equate it to the first result
-\[ ab \sin (\phi + \theta) = a \sin \phi  \cdot b \cos \theta + b \sin \theta \cdot a \cos \phi \]
-
-We can cancel $ab$ from all three terms:
-\[ \sin (\phi + \theta) =  \sin \phi \cos \theta + \sin \theta \cos \phi \]
-
-This is the general form for the sine of the sum of two angles.  It is apparent that it reduces to the previous double angle formula in the case where $\theta = \phi$.
+Since they are supplementary, $\angle B + \angle C = 180 - \angle A$, and using the law of sines:
+\[ \sin (B+C) = \sin A = a \cdot \frac{\sin B}{b} \]
+\[ = \frac{\sin B}{b} (c \cos B + b \cos C) \]
+The second term on the right-hand side is easy.  For the first term, use the law of sines again:
+\[ \frac{\sin B}{b} = \frac{\sin C}{c}  \]
+We obtain
+\[ \sin (B + C) = \sin C \cos B + \sin B \cos C \]
+This is called the sum of angles formula for sine.  Show that the first part works for obtuse $\angle B$.
 
 \subsection*{alternate version}
 Just to be complete, here is an alternative version  I found that may be even simpler.
