@@ -18,6 +18,7 @@ Basic trigonometry
 Double angle
 Sum of angles by scaling
 Sum of angles by Ptolemy
+Heron by scaling
 Law of Cosines
 
 Applications of similarity

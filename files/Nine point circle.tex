@@ -24,30 +24,48 @@
 
 \label{sec:nine_point_circle}
 
-The perpendicular bisectors of the sides of a triangle intersect (are concurrent) at a point which is the center of the circumcircle, the circle that goes through all three vertices.  
+The perpendicular bisectors of the sides of a triangle intersect (are concurrent) at a point which is the center of the circumcircle, the circle that goes through all three vertices.
 
-A second important point is where the angle bisectors intersect, giving the center of the circle that has the sides as tangents --- the incircle.  (This point can be found by construction; that it exists is easy to prove using the angle bisector theorem and the converse of Ceva's theorem).
+The angle bisectors intersect at the center of the circle that has the sides as tangents --- the incircle.  (This point can be found by construction; that it exists is easy to prove using the angle bisector theorem and the converse of Ceva's theorem).
+
+\begin{center} \includegraphics [scale=0.3] {nine_point_intro.png} \end{center}
+
+Now we investigate the altitudes and their point of convergence at $H$, the orthocenter.  It turns out there is a special circle involving the feet of the altitudes, but it does not have the orthocenter as its center.  
+
+Quite surprisingly, there are nine special points on the circle and for that reason (naturally) it is called the nine-point circle.
+
+Starting from $\triangle ABC$, find the midpoints of the sides and connect them to form the medial $\triangle KLM$.  Recall that by the midline theorem, this forms four congruent smaller triangles.
+
+Also by that theorem the sides are parallel, e.g. $MK \parallel AC$, so we have three parallelograms.
+
+\begin{center} \includegraphics [scale=0.3] {nine_point_intro.png} \end{center}
+
+$AK$ is a diagonal of the parallelogram $ALKM$, so the point where it cuts the other diagonal $ML$, divides $ML$ into equal parts.  The perpendiculars erected at these points (not labeled), intersect at a point which is the circumcenter of $\triangle KLM$.
+
+We're calling that point $N$.  It is the center of the nine point circle for $\triangle ABC$.  
+
+$O$, $G$ (centroid), $N$, and $H$ all lie on one line.  This line is \emph{not} $BL$, we will draw it later.
+
+\subsection*{medial triangle and its rotation}
 
 \begin{center} \includegraphics [scale=0.3] {ninepoint_rot_circ.png} \end{center}
 
-Now we investigate the altitudes and their point of convergence, the orthocenter.  It turns out there is a special circle involving the feet of the altitudes, but it does not have the orthocenter as its center.  Quite surprisingly, there are nine special points on the circle. 
+Having found the circumcenter $N$ of the medial $\triangle KLM$, draw its circumcircle through $K,L,M$.  
 
-Starting with $\triangle ABC$, find the midpoints of the sides to form $\triangle KLM$.  By the midpoint theorem, we have four congruent smaller triangles.  These are similar to the original $\triangle ABC$ with ratio 1/2.
-
-$\triangle KLM$ is called the medial triangle for $\triangle ABC$.
-
-Find the circumcenter $N$ of $\triangle KLM$ in the usual way and draw its circumcircle through $K,L,M$.  The circumcircle for $\triangle KLM$ is is the nine point circle for $\triangle ABC$.
+This is also the nine point circle for $\triangle ABC$.
 
 \begin{center}
 \includegraphics [scale=0.25] {ninepoint_center.png}
 \includegraphics [scale=0.25] {ninepoint_reflect.png}
 \end{center}
 
-Next, we want to rotate $\triangle KLM$ by 180 degrees around the point $N$.  One way to do that construction is to extend the diagonals through $N$.  Form the three possible rectangles, each will have one side from $\triangle KLM$ and an opposite side from $\triangle PQR$.
+Now, rotate $\triangle KLM$ by 180 degrees around the point $N$.  One way to do that construction is to extend diagonals through $N$.  
+
+Form the three possible rectangles, each will have one side from $\triangle KLM$ and an opposite side from $\triangle PQR$.
 
 %\begin{center} \includegraphics [scale=0.25] {ninepoint_reflect.png} \end{center}
 
-We can show that $\triangle PQR$ is congruent to the other smaller triangles including $\triangle KLM$.  $\triangle PQR \cong \triangle KLM$ by SSS and $\triangle PQR \sim \triangle ABC$.  For example, $\angle AML = \angle Q = \angle B$.
+We can show that $\triangle PQR$ is congruent to the other smaller triangles including $\triangle KLM$.  $\triangle PQR \cong \triangle KLM$ by SSS and $\triangle PQR \sim \triangle ABC$.  For example, $\angle AML = Q = B$.
 
 Hence $ML \parallel QR$ and $ML \parallel BC$ by the midline theorem so $QR \parallel BC$.  This can be extended to the other sides of $\triangle ABC$ as well.
 

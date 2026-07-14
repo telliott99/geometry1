@@ -51,11 +51,11 @@ The converse proofs are another matter.
 
 1 $\Rightarrow$ 3
 
-\emph{Proof}. $AF$ and $CH$ are medians in $\triangle ABC$.  Given $AB = CB$ and $\angle A = \angle C$, it follows that $AH = CF$ (by the definition of median) and thus by SAS we have $\triangle ACH \cong \triangle CAF$.  Hence $AF = CH$.  $\square$
+\emph{Proof}. $AF$ and $CH$ are medians in $\triangle ABC$.  Given $AB = CB$ and $A = C$, it follows that $AH = CF$ (by the definition of median) and thus by SAS we have $\triangle ACH \cong \triangle CAF$.  Hence $AF = CH$.  $\square$
 
 1 $\Rightarrow$ 4
 
-\emph{Proof}. $AF$ and $CH$ are angle bisectors in $\triangle ABC$.  Given $\angle A = \angle C$, the half-angles are also equal, so by ASA we have $\triangle ACH \cong \triangle CAF$.  Hence $AF = CH$.  $\square$
+\emph{Proof}. $AF$ and $CH$ are angle bisectors in $\triangle ABC$.  Given $A = C$, the half-angles are also equal, so by ASA we have $\triangle ACH \cong \triangle CAF$.  Hence $AF = CH$.  $\square$
 
 1 $\Rightarrow$ 5
 
@@ -83,9 +83,9 @@ For this one, we look ahead to the $\hyperref[sec:law_of_cosines]{\textbf{Law of
 
 \emph{Proof}.
 
-We have that the medians are equal, namely, $AF = CH$.  Let them be equal to $m$.  Using the law of cosines, compute the length $m$ squared of the side opposite $\angle B$ in two different triangles.
+We have that the medians are equal, namely, $AF = CH$.  Let them be equal to $m$.  Using the law of cosines, compute the length $m$ squared of the side opposite $B$ in two different triangles.
 
-Let side $a = BC$ (the side opposite $\angle A$), and similarly side $c = AB$ (the side opposite $\angle C$).
+Let side $a = BC$ (the side opposite $A$), and similarly side $c = AB$ (the side opposite $C$).
 
 So $BF = a/2$ and $BH = c/2$.  Then
 \[ m^2 = a^2 + (c/2)^2 - 2a \cdot c/2 \cdot \cos B \]
@@ -107,17 +107,17 @@ $\square$
 
 \begin{center} \includegraphics [scale=0.16] {isosceles11.png} \end{center}
 
-Let $b$ be the side opposite $\angle B$ as usual.
+Let $b$ be the side opposite $B$ as usual.
 
 \textbf{1 $\Rightarrow$ 6}
 
-We have that $AB = CB$ and $\angle A = \angle C$.
+We have that $AB = CB$ and $A = C$.
 
-\emph{Proof}.  Let $BG$ be the median to $AC$ such that $AG = GC$  Then $\triangle ABG \cong \triangle CBG$ by SSS.  Thus $\angle B$ is bisected and $\angle AGB = \angle CGB$ and both are right angles.  $\square$
+\emph{Proof}.  Let $BG$ be the median to $AC$ such that $AG = GC$  Then $\triangle ABG \cong \triangle CBG$ by SSS.  Thus $B$ is bisected and $\angle AGB = \angle CGB$ and both are right angles.  $\square$
 
-\emph{Proof}.  Let $BG$ be the altitude to $AC$ such that $\angle AGB = \angle CGB$ and both are right angles.  Then $\triangle ABG \cong \triangle CBG$ by HL.  Thus $\angle B$ is bisected and $AG = GC$.   $\square$
+\emph{Proof}.  Let $BG$ be the altitude to $AC$ such that $\angle AGB = \angle CGB$ and both are right angles.  Then $\triangle ABG \cong \triangle CBG$ by HL.  Thus $B$ is bisected and $AG = GC$.   $\square$
 
-\emph{Proof}.  Let $BG$ bisect $\angle B$.  Then $\triangle ABG \cong \triangle CBG$ by SAS.  Thus $\angle AGB = \angle CGB$ and both are right angles, and $AG = GC$.   $\square$
+\emph{Proof}.  Let $BG$ bisect $B$.  Then $\triangle ABG \cong \triangle CBG$ by SAS.  Thus $\angle AGB = \angle CGB$ and both are right angles, and $AG = GC$.   $\square$
 
 \textbf{6 $\Rightarrow$ 1}
 
@@ -133,12 +133,49 @@ Finally, suppose the bisector and the median at $b$ coincide.  Draw perpendicula
 
 \emph{Proof}.
 
-$BG$ bisects $\angle B$, $\angle GDB = \angle GEB$ and both are right angles, therefore $\angle BGE = \angle BGD$ by sum of angles.  The hypotenuse $BG$ is shared.  It follows that $\triangle BEG \cong \triangle BDG$ by ASA.  Thus $GE = GD$.
+$BG$ bisects $B$, $\angle GDB = \angle GEB$ and both are right angles, therefore $\angle BGE = \angle BGD$ by sum of angles.  The hypotenuse $BG$ is shared.  It follows that $\triangle BEG \cong \triangle BDG$ by ASA.  Thus $GE = GD$.
 
-Then (since $AG = GC$), $\triangle AEG \cong \triangle CDG$ by HL.  It follows that $\angle A = \angle C$ and then by 2 $\Rightarrow$ 1, we have $a = c$.
+Then (since $AG = GC$), $\triangle AEG \cong \triangle CDG$ by HL.  It follows that $A = C$ and then by 2 $\Rightarrow$ 1, we have $a = c$.
 
 $\square$
 
 This material is covered in Byer (see $\hyperref[sec:list_of_references]{\textbf{References}}$).
+
+\subsection*{Coxeter 1.9.4}
+
+Coxeter has this problem.  Find $\angle EDB$.
+\begin{center} \includegraphics [scale=0.3] {Coxeter_iso1.png} \end{center}
+
+By doing arithmetic on the vertices, you can write four equations in four unknowns but the equations are not independent, so there are many solutions.
+
+We can already see two more isosceles triangles.  The brilliant idea is to draw more lines and then make use of isosceles triangles.
+\begin{center} \includegraphics [scale=0.3] {Coxeter_iso2.png} \end{center}
+
+Drop $DF$ parallel to $BC$ and then find $G$ where $CF$ intersects $BD$.  The angle at $D$ marked with a red dot is $60^\circ$ by alternate interior angles.  
+
+Because $BC \parallel FD$, $\triangle ADF$ is isosceles and by I.5 the angles supplementary to the base angles are also equal.
+
+$\triangle AFD \sim \triangle ABC$.
+
+$CD = BF$ by subtraction.
+
+Then $\triangle CDF \cong \triangle BFD$ by SAS.
+
+Thus $\angle BDF = \angle CFD$ so $\triangle GDF$ is equilateral and so is $\triangle BCG$.
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_iso4.png} \end{center}
+
+By sum of angles $\triangle BCE$ has equal base angles, so it is isosceles with $BE = BC$.
+
+But $BC = BG$ so $BE = BG$ and $\triangle BGE$ is isosceles with base angles = 80.
+
+Also by sum of angles, the base $\angle GFE = 40$ and then by the external angle theorem $\angle EGF$ has the same measure so $\triangle EFG$ is isosceles.
+
+It follows that $EFDG$ is a kite and its diagonal $DE$ is an angle bisector.  
+
+So $\angle EDG$ is one-half of a vertex of an equilateral triangle.
+
+$\square$
+
 
 \end{document}
