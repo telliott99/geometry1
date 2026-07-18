@@ -150,23 +150,23 @@ One way to remember the terms is that, going around in any direction, we take th
 
 Take the extension first if you run into it first.
 
-We also need to prove the theorem for an alternative setup.  Even though the black line in the figure below does not go through the triangle, it is technically a transversal.  Imagine that we start at the vertex at the lower right, run along $a'$ to the black line, run back along $a$ to the top, and so on.
+We also need to prove the theorem for an alternative setup.  Even though the line $XYZ$ in the figure below does not go through $\triangle ABC$, it is still a transversal.  Imagine that we start at the vertex $B$, run along $BY$ to the black line, run back along $CY$ to the top, and so on.
 
-\begin{center} \includegraphics [scale=0.4] {menelaus3.png} \end{center}
-Notice that we are re-defining $a$, $b$ and $c$.
+\begin{center} \includegraphics [scale=0.35] {menelaus11.png} \end{center}
 
-\[ \frac{r}{p} \cdot \frac{p}{q} \cdot \frac{q}{r} = \frac{a'}{a} \cdot \frac{b}{b'} \cdot \frac{c}{c'} \]
+By drawing the figure with the transversal horizontal, we see the similarity to the first version.
 
-We can remember this as, take the first length we run into, and put it on top of the ratio.
+\[ \frac{h_1}{h_3} = \frac{BX}{AX} \ \ \ \ \ \ \ \ \frac{h_3}{h_2} = \frac{AY}{CY}  \ \ \ \ \ \ \ \ \frac{h_2}{h_1} = \frac{CZ}{BZ} \]
 
-Menelaus is a preliminary lemma to an easy proof of Ceva's theorem, which becomes important in thinking about the concurrency of lines in a triangle, like those which bisect the opposing sides and meet at the centroid.  Ceva's theorem gives a condition under which three lines like this are concurrent, or meet at a point.
+Multiply the left-hand sides to obtain $1$, thus
+\[  \frac{BX}{AX}  \cdot  \frac{AY}{CY}  \cdot \frac{CZ}{BZ} \]
 
-Menelaus's theorem can be seen as in some sense as similar to Ceva, because it provides conditions under which three points can be proved collinear, or on one line.
+We can remember this as, start from a vertex, run to the line, then to the next vertex.  Also, take the first length we run into, and put it on top of the ratio.  It is a bit confusing because if we think of ratios between sides and parts of sides we have part/side $\cdot$ side/part $\cdot$ part/side.
 
-It will come in handy in another problem, called Pappus's Theorem.
+We extend this result below.
 
 \subsection*{alternative definition}
-There is a somewhat more sophisticated version of Menelaus's Theorem which views the path around a triangle as consisting of \emph{directed} (that is, \emph{signed}) line segments.
+There is a more sophisticated version of Menelaus's Theorem which views the path around a triangle as consisting of \emph{directed} (that is, \emph{signed}) line segments.
 
 \begin{center} \includegraphics [scale=0.15] {menelaus4.png} \end{center}
 The transversal is $XZY$, which meets the extension of $BC$ at $Y$.  Since $Y$ does not lie between $B$ and $C$, the line segments $BY$ and $YC$ point in opposite directions.  The ratio $BY:YC$ thereby acquires a minus sign.
@@ -184,5 +184,11 @@ $C$ to $Z$ to $A$  $\Rightarrow$   $CZ:ZA$
 
 Each ratio has a minus sign so the total product also has a minus sign.  Menelaus's Theorem says:
 \[ \frac{AX}{XB} \cdot \frac{BY}{YC} \cdot \frac{CZ}{ZA} = - 1 \]
+
+Menelaus is a preliminary lemma to an easy proof of Ceva's theorem, which becomes important in thinking about the concurrency of lines in a triangle, like those which bisect the opposing sides and meet at the centroid.  Ceva's theorem gives a condition under which three lines like this are concurrent, or meet at a point.
+
+Menelaus's theorem can be seen as in some sense as similar to Ceva, because it provides conditions under which three points can be proved collinear, or on one line.
+
+It will come in handy in another problem, called Pappus's Theorem.
 
 \end{document}

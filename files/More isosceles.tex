@@ -141,6 +141,48 @@ $\square$
 
 This material is covered in Byer (see $\hyperref[sec:list_of_references]{\textbf{References}}$).
 
+\subsection*{sneaky problem}
+
+Here is a problem I found on the web (I forget where).
+
+\begin{center} \includegraphics [scale=0.6] {sneaky_prob_a.png} \end{center}
+
+The constraints are:  (i) $\angle CAB = B + 30$; and  (ii) $\triangle CAD$ is isosceles.  We are asked to determine $\angle BAD$.
+
+The issue is shown in the next figure.  It is possible to fix $\angle BAD$ and then draw a number of different isosceles triangles. 
+\begin{center} \includegraphics [scale=0.35] {sneaky_prob_b.png} \end{center}
+
+The question is whether we can also satisfy the other constraints.  We can.
+
+$\angle CAD$ is one of the the isosceles base angles.  We have by the external angle theorem:
+
+\[ \angle CAD = \angle BAD + \angle ABD \]
+\[ \angle CAD + \angle BAD = \angle ABD + 30 \]
+
+Subtract the first from the second.  Clearly we can solve for $\angle BAD$.
+
+\begin{center} \includegraphics [scale=0.6] {sneaky_prob_a.png} \end{center}
+
+Somehow, the slivers by which the angles are increased must be equal.  
+
+Here is a proof.
+
+Draw the bisector of the extended isosceles triangle (parallel to the first bisector in the diagram).
+
+Let $\theta$ be one-half the apex angle of the original red isosceles triangle.
+
+Let $\phi$ be one-half the apex angle of the extended isosceles triangle.  
+
+Let $\delta = \theta - \phi$ be the difference.
+
+In going from the red triangle to the extended one we take away $\delta$ from the apex and add it to the base of the right triangle on the left.
+
+\begin{center} \includegraphics [scale=0.35] {sneaky_prob_b.png} \end{center}
+
+Since the two bisectors are parallel, when extended to the base they form the same angle.  So again, the difference, $\delta = \theta - \phi$ is taken away on top and added on the bottom.  $\delta$ is equal to the sliver.
+
+Exactly the same logic holds on both sides.  The two slivers must have equal angles.
+
 \subsection*{Coxeter 1.9.4}
 
 Coxeter has this problem.  Find $\angle EDB$.
