@@ -1,0 +1,132 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Euclid's Elements}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Nelsen has a PWOW (proof without words) of an algebraic theorem related to the incircle radius $r$ and parts of the sides $x,y,z$.  
+
+\url{https://www.maa.org/sites/default/files/Nelsen2-0859469.pdf}
+
+\begin{center} \includegraphics [scale=0.5] {incircle3.png} \end{center}
+
+The claim is that
+\[ xyz = r^2(x + y + z) \] 
+
+We have the angle bisectors as $\alpha, \beta$ and $\gamma$, and then e.g., $\tan \alpha = r/x$.
+
+The proof is a scaling proof.  Since the three half-angles add to give one right angle, we can fit them into the corner of a rectangle like this.
+\begin{center} \includegraphics [scale=0.3] {Nelsen1.png} \end{center}
+
+The rectangle is to be scaled so that the left and right sides are equal to the expressions that we claimed are equal.  Start with $xyz$ on the left.  Since $\tan \alpha = r/x$, we must have a scaling factor of $yz$ which gives:
+
+\begin{center} \includegraphics [scale=0.3] {Nelsen2.png} \end{center}
+
+Now the part that requires some intuition.  We want 
+\[ xyz = r^2(x + y + z) \] 
+
+and we need to break the right-hand side up into two parts.  So try this:
+\begin{center} \includegraphics [scale=0.3] {Nelsen2b.png} \end{center}
+
+Then from $\tan \alpha = r/x$ and $\tan \gamma = r/z$ we get
+
+\begin{center} \includegraphics [scale=0.3] {Nelsen2c.png} \end{center}
+
+And we are done with our proof!  The tangents have the correct values, and we have equality on the top and bottom of the rectangle, so the sides must be equal.
+
+\subsection*{going further}
+
+We can check our work by calculating sides of the white triangle with $\beta$.
+
+First, find the hypotenuse of two blue triangles.  From Pythagoras, if the sides are $ak$ and $bk$, then the hypotenuse is $\sqrt{a^2 + b^2} \cdot k$.  So define:
+
+\[ w = \sqrt{r^2 + x^2} \]
+
+\begin{center} \includegraphics [scale=0.3] {Nelsen3b.png} \end{center}
+
+Getting $w$ for both sides of the triangle with $\beta$ is nice.  Now define
+\[ u = \sqrt{r^2 + y^2} \]
+\[ v = \sqrt{r^2 + z^2} \]
+
+The hypotenuse for $\angle \beta$ becomes $uwz$.
+\begin{center} \includegraphics [scale=0.3] {Nelsen6.png} \end{center}
+
+Calculated the other way (red triangle), we get the hypotenuse as $vr(x+y)$.
+
+The sine and cosine of the angles have simple expressions:
+\[ \sin \alpha = \frac{r}{w}, \ \ \ \ \ \ \ \ \sin \beta = \frac{r}{u}, \ \ \ \ \ \ \ \ \sin \gamma = \frac{r}{v} \]
+\[ \cos \alpha = \frac{x}{w}, \ \ \ \ \ \ \ \ \cos \beta = \frac{y}{u}, \ \ \ \ \ \ \ \ \cos \gamma = \frac{z}{v} \]
+
+Again, we don't really need it, but it would be nice to show that the two expressions for the hypotenuse of the white triangle are equal, namely
+\[ uwz = vr (x+y) \]
+
+How to get rid of $u,v,w$?  Resist the urge to substitute the square roots.  Instead, multiply both sides by $r$ and divide by $uvw$:
+\[ \frac{r}{v} \cdot z = \frac{r}{u} \cdot \frac{r}{w} \cdot (x+y) \]
+
+\begin{center} \includegraphics [scale=0.3] {Nelsen6.png} \end{center}
+
+Using the values from above, $r/v = \sin \gamma$ and since the sum of $\alpha + \beta$ is complementary to $\gamma$:
+\[ \frac{r}{v} = \sin \gamma = \cos (\alpha + \beta) \]
+\[ = \cos \alpha \cos \beta - \sin \alpha \sin \beta \]
+\[ = \frac{x}{w} \cdot \frac{y}{u} - \frac{r}{w} \cdot \frac{r}{u} \]
+
+substituting
+\[ (\frac{x}{w} \cdot \frac{y}{u} - \frac{r}{w} \cdot \frac{r}{u}) \cdot z = \frac{r}{u} \cdot \frac{r}{w} \cdot (x+y) \]
+
+That's a great simplification since we can cancel $u$ and $w$ on the bottom everywhere, giving
+\[ z(xy - r^2) = r^2 (x + y) \]
+But this is just our formula back again.
+\[ xyz = r^2 (x + y + z) \]
+
+By setting up the figure with the correct ratios for the tangents and going through the calculation, we obtained the relationship that we seek.
+
+$\square$
+
+\subsection*{Heron's formula}
+
+We have that 
+\[ xyz = r^2(x + y + z) \]
+
+Since $s = x + y + z$, this can also be written as:
+\[ xyz = r^2s\]
+
+Recall that the area of $\triangle ABC$ symbolized by $\mathcal{A}$ is equal to $rs$, so multiply by $s$ to give
+\[ sxyz = r^2s^2 = \mathcal{A}^2 \]
+
+Looking again at the incircle
+\begin{center} \includegraphics [scale=0.5] {incircle3.png} \end{center}
+$s = x + y + z = x + a$ and so on.  
+
+So $x = s - a$, $y = s - b$ and $z = s - c$ and then
+\[ s(s-a)(s-b)(s-c) = \mathcal{A}^2 \]
+
+This is called Heron's formula, but it is likely due to Archimedes.
+
+\subsection*{triple cotangent}
+
+From
+\[ xyz = r^2s\]
+we can get
+\[ \frac{xyz}{r^3} = \frac{s}{r} \]
+\[ \frac{x}{r} \cdot \frac{y}{r} \cdot \frac{z}{r} = \frac{x}{r} + \frac{y}{r} + \frac{z}{r} \]
+
+This beast is called the triple cotangent law.
+
+\end{document}

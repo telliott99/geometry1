@@ -1,0 +1,266 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pythagorean Theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+\subsection*{Einstein}
+
+\label{sec:Pythagoras_area}
+
+Late in life, Albert Einstein wrote that he had two experiences as a youth that influenced him tremendously.  The first was when he received a compass as a child and was intrigued by the question of what "force" made the needle turn to the north.
+
+The second was that, while studying geometry at about age 12, he had developed on his own a proof of the Pythagorean theorem.  He said the achievement had a profound effect on him, illustrating the power of pure thought.  
+
+Strogatz says that the proof relied in a simple way on symmetry.
+
+\url{https://www.newyorker.com/tech/annals-of-technology/einsteins-first-proof-pythagorean-theorem}
+
+\subsection*{areas in proportion}
+
+We will prove the part that Strogatz says was obvious to Einstein from symmetry, which he may have assumed.  The idea is that for two similar right triangles, the area of each triangle is in a constant ratio to the product on any two sides, including the square on any one side.  
+
+So the area is proportional to the hypotenuse squared.  
+
+This is easy to see for an isosceles right triangle where we can calculate simply that $k = 1/4$.
+
+\begin{center} \includegraphics [scale=0.4] {einstein2.png} \end{center}
+
+But it is true for similar right triangles in general.
+
+\emph{Proof}.
+
+We assume that the sides of similar triangles are in proportion.  This fundamental proof has been given elsewhere.
+
+\begin{center} \includegraphics [scale=0.4] {similar2.png} \end{center}
+
+\[ \frac{a}{A} = \frac{b}{B} = \frac{c}{C} = k \]
+
+For right triangles, twice the area is the product of the two sides, hence the ratio of the areas is
+\[ \frac{ab}{AB} = \frac{a}{A} \cdot \frac{b}{B} = k^2 \]
+
+But $k = c/C$ so
+\[  \frac{ab}{AB}  = \frac{c^2}{C^2} \]
+which can be rearranged to give
+\[ \frac{ab}{c^2}  = \frac{AB}{C^2} \]
+
+We conclude that the area of each right triangle is in a constant ratio to the square on any side, including the hypotenuse.
+
+$\square$
+
+\begin{center} \includegraphics [scale=0.4] {einstein1.png} \end{center}
+
+\subsection*{Einstein's proof}
+
+Given this symmetry, here is what is thought to be Einstein's proof of the Pythagorean theorem.
+
+\emph{Proof}.
+
+Let the constant of proportionality between area and hypotenuse squared be $f$.
+
+Form two smaller triangles with hypotenuse of lengths $a$ and $b$.  These are the two triangles formed by dropping an altitude to the hypotenuse in the original right triangle.
+
+The two smaller triangles have areas $fa^2$ and $fb^2$ but they add to give the larger one so:
+\[ fa^2 + fb^2 = fc^2 \]
+
+Divide by $f$ and we're done.
+
+\begin{center} \includegraphics [scale=0.4] {einstein1.png} \end{center}
+
+$\square$
+
+We have done the arithmetic to prove this relationship, but an appeal to symmetry abstracts away the underlying arithmetic of ratios.  A true believer would simply write the last equation and then divide by $f$.
+
+\subsection*{extension of Pythagoras}
+
+\begin{center} \includegraphics [scale=0.12] {pyth_corollary3.png} \end{center}
+
+Draw the altitudes in a triangle such as $\triangle ABC$.  We can form pairs of similar triangles by sharing one of the vertex angles.  For example $\triangle AGB \sim \triangle AHC$ and $\triangle BFA \sim \triangle BHC$.  Form one ratio for each pair:
+\[ \frac{AG}{AB} = \frac{AH}{AC} \ \ \ \ \ \ \ \ \frac{BF}{AB} = \frac{BH}{BC} \]
+Be careful to pick the side \emph{not} opposite the shared angle.
+
+Cross multiply:
+\[ AG \cdot AC = AB \cdot AH \]
+\[ BF \cdot BC = AB \cdot BH \]
+and add:
+\[ AG \cdot AC + BF \cdot BC = AB \cdot (AH + BH) \]
+A small rearrangement gives a general extension of the Pythagorean Theorem.
+\[ AG \cdot AC + BF \cdot BC = AB \cdot AB \]
+
+\begin{center} \includegraphics [scale=0.12] {pyth_corollary3.png} \end{center}
+ Now let the angle at vertex $C$ become a right angle.  $AG \rightarrow AC$ and $BF \rightarrow BC$ so
+\[ AC \cdot AC + BC \cdot BC = AB \cdot AB \]
+
+$\square$
+
+It would be worth thinking about whether this proof extends to the case of an obtuse triangle.  We leave that as an exercise.
+
+\subsection*{Garfield's proof}
+
+\label{sec:Garfield}
+
+Here is a proof by a future President of the United States, James A. Garfield.  (He was a congressman at the time).
+
+\begin{center}
+\includegraphics [scale=0.5] {garfield4.png}
+\includegraphics [scale=0.5] {garfield2.png}
+\end{center}
+
+\emph{Proof}.
+
+Draw a right triangle with sides $a,b$ and $c$, and a second, rotated copy as shown.  The angles opposite sides $a$ and $b$ are complementary angles.  So the angle marked with a dot is a right angle, and the triangle with sides labeled $c$ is a right triangle.
+
+The area of the entire quadrilateral is the product of the left side $(a + b)$ and the \emph{average} of $a$ and $b$ (top and bottom).  This can be seen intuitively.  
+
+The halfway point of the solid red line has horizontal dimension $(a+b)/2$.  Hence
+\[ A = (a+b) \cdot \frac{1}{2} (a + b) \]
+
+If you're worried about that argument, just subtract the area of the triangle with two dotted sides from the quadrilateral that includes it:
+\[ A = (a + b)b - \frac{(a+b)(b-a)}{2} \]
+\[ = (a + b)(b - \frac{b}{2} + \frac{a}{2}) \]
+\[ = (a+b) \cdot \frac{1}{2} (a + b) \]
+which is just what we said.  
+
+So now:
+\[ A = \frac{a^2}{2} + ab + \frac{b^2}{2} \]
+
+But we can also calculate the area of the quadrilateral as the sum of the three triangles:
+\[ A = \frac{ab}{2} + \frac{ab}{2} + \frac{c^2}{2} \]
+Equate the two and the result follows almost immediately.
+
+$\square$
+
+\subsection*{product of slopes}
+
+Let's take Garfield's basic figure and turn it sideways.
+
+\begin{center} \includegraphics [scale=0.5] {garfield5.png} \end{center}
+
+As we said, since the triangles are right triangles, the angle marked with a red dot is also a right angle.
+
+Later, in analytical geometry, we will define the slope of a line as \emph{rise over run}.  So, for example, the slope of the hypotenuse of the right-hand triangle is $b/a$.
+
+In a similar way, the slope of the hypotenuse of the left-hand triangle is $-a/b$.  We think of the "run" of a line as going from left to right.  This line heads down as we go to the right, hence the minus sign.
+
+So then the product of slopes is
+
+\[ \frac{-a}{\ \ b} \cdot \frac{b}{a} = -1 \]
+
+This is a proof that the product of the slopes of two line segments that meet at a right angle is equal to $-1$.
+
+\subsection*{lunes}
+
+Anything else that goes like the square of the side has the same relationship:
+
+\begin{center} \includegraphics [scale=0.35] {Posamentier5_12.png} \end{center}
+
+The areas add:  $Q + R = P$.
+
+These semi-circular areas are called lunes.
+
+\subsection*{fancy proof}
+
+\label{sec:Pthm_Tuan}
+
+Tuån extended the broken chord theorem of Archimedes to a proof of the Pythagorean theorem in a very clever way.  
+
+Here is a diagram.
+
+\begin{center} \includegraphics [scale=0.35] {broken_chord16.png} \end{center}
+
+We start with two right triangles ($AB$ is a diameter of the circle).  One of the triangles, $\triangle APB$, is isosceles.
+
+The sides of $\triangle ABC$ are labeled as $a, b$ and $c$, opposite the corresponding vertices.  Side $BC$ has length $a$.
+
+$PM$ is drawn perpendicular to $AC$.  By the broken chord theorem, 
+\[ AM = MC + BC \]
+
+Twice that is
+\[ AM + MC + BC = AC + BC = b + a \]
+so 
+\[ AM = \frac{b + a}{2} \]
+while
+\[ MC = AM - BC \]
+\[ = \frac{b + a}{2} - a = \frac{b -a}{2} \]
+
+$PM$ is extended to meet the diagonal at $N$ and past it to $B'$.  $B'$ is chosen so that $B'BCM$ is a rectangle.  Thus side $MB'$ is equal to $BC$ and so to $a$.
+
+We make two preliminary claims.  The first is that $\triangle PMC$ is a right \emph{isosceles} triangle.  Let us accept that provisionally.
+\[ PM = MC = \frac{b - a}{2} \]
+
+The second is that the areas of the two triangles shaded yellow are equal.
+
+\begin{center} \includegraphics [scale=0.35] {broken_chord16.png} \end{center}
+
+We reason as follows.  Add $\triangle NB'B$ to both.  
+
+$\triangle AB'B$ and $\triangle MB'B$ have the same base $BB'$, and the opposing vertices $A$ and $M$ both lie on $AC$, which is parallel to the base $B'B$.  Hence the two triangles have the same altitude, namely, $a$, so they have the same area.
+
+By subtraction of $(\triangle B'BN)$ we obtain:
+\[ (\triangle AB'N) = (\triangle MNB) \]
+
+Triangle area is indicated by the parentheses.
+
+Now we find the area of $\triangle APB$ in two different ways.
+
+The first is $c^2/4$, since it is one-quarter of a square with sides $c$.
+
+The second way is as the sum of smaller triangles:
+\[ (\triangle APM) + (\triangle PMB) + (\triangle AMN) + (\triangle MNB) \]
+Since $(\triangle AB'N) = (\triangle MNB)$:
+\[ (\triangle APM) + (\triangle PMB) + (\triangle AMN) + (\triangle AB'N) \]
+And since $(\triangle AMN) + (\triangle AB'N) = (\triangle AMB')$:
+\[ (\triangle APM) + (\triangle PMB) + (\triangle AMB') \]
+
+\begin{center} \includegraphics [scale=0.35] {broken_chord16.png} \end{center}
+So then the areas are
+\[ (\triangle APM) = \frac{1}{2} \cdot AM \cdot MC = \frac{1}{2} \cdot \frac{b + a}{2} \cdot \frac{b - a}{2} \]
+\[ (\triangle PMB) = \frac{1}{2} \cdot PM \cdot MC = \frac{1}{2} \cdot \frac{(b - a)}{2} \cdot \frac{(b - a)}{2} \]
+\[ (\triangle AMB') = \frac{1}{2} \cdot AM \cdot MB' = \frac{1}{2} \cdot a \cdot \frac{b + a}{2} \]
+
+We compute $8$ times the sum, so as not to have to deal with fractions:
+\[ (b^2 - a^2) + (b^2 - 2ab + a^2) + (2ab + 2a^2) = 2b^2 + 2a^2 \]
+Previously, we calculated the area as $c^2/4$, and $8$ times that is $2c^2$.  The result follows immediately.
+
+\subsection*{last step}
+
+\label{sec:isosceles_vertical}
+
+However, the proof is not yet complete.  We must show that $\triangle PMC$ is isosceles.  Simplifying the figure:
+\begin{center} \includegraphics [scale=0.35] {broken_chord17.png} \end{center}
+
+Let $AB$ be a diameter of the circle and $\triangle AMB$ isosceles.  Let $C$ be any point on the perimeter, with $MP \perp AC$.  Then, we claim that $MP = PC$.
+
+It seems reasonable.  If $C \rightarrow B$, the $P$ becomes the origin and the statement is true, while if $C \rightarrow M$, both vanish.  I spent some time fooling around with similar triangles before insight came.
+
+\emph{Proof}.
+
+Connect the two vertices by drawing $MC$.
+
+\begin{center} \includegraphics [scale=0.35] {two_triangles.png} \end{center}
+
+Clearly $\angle MCA$ is one-half of a right angle since it intercepts the same arc as $\angle ABM$, by the inscribed angle theorem.  Since $\angle MPC$ is right, it follows that $\triangle PMC$ is isosceles (by complementary angles) and so $MP = PC$ (by the converse of the isosceles triangle theorem).
+
+$\square$
+
+Notice how we incorporate the information that $\triangle AMB$ is isosceles.
+
+
+\end{document}

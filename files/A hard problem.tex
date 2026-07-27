@@ -1,0 +1,64 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Proof}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Here's a challenging problem from Coxeter that can be solved by an ingenious construction.
+
+Let $ABCD$ be a parallelogram and let $P$ be found such that the angles labeled $\alpha$ are equal:  $\angle DPA = \angle BPC$.
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard1.png} \end{center}
+
+To prove:  the angles labeled $\theta$ and $\phi$ are also equal:  $\angle DPC = \angle BPC$.
+
+\emph{Proof}.
+
+Like many problems, the solution starts with an inspired construction.  
+
+Find $Q$ such that $PQ \parallel CB$. 
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard2.png} \end{center}
+
+As a result, we have two new parallelograms $BQPC$ and $AQPD$.
+
+It also gives us new angles equal to $\alpha$, $\theta$ and $\phi$
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard2a.png} \end{center}
+
+And that may suggest, to the prepared mind, that we need to find a circle with all four points $A,B,Q,P$ lying on it.
+
+Draw the circumcircle for $\triangle ABQ$.
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard4b.png} \end{center}
+
+$BQPC$ is a parallelogram.  The diagonal forms congruent triangles so $\angle BPQ$ is also equal to $\alpha$ and it is subtended by arc $BQ$ on the circle.
+
+$\angle BAQ$ is formed by two lines parallel to the lines forming $\angle PDC$, so it also has measure $\alpha$ and is subtended by $BQ$.
+
+By the converse of the cyclic quadrilateral theorem, it follows that $P$ is on the circle.
+
+Using diagonals of the parallelograms, we find $\angle PAQ = \phi$ and $\angle PBQ = \theta$.
+
+But both angles are subtended by the same arc of the circle $PQ$, so they are equal.
+
+$\square$.
+
+\end{document}

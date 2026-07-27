@@ -1,0 +1,311 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Ptolemy's theorem}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In a previous \hyperref[sec:Ptolemy]{\textbf{chapter}} we introduced Ptolemy's theorem.
+\begin{center} 
+\includegraphics [scale=0.14] {pt1b.png} 
+\includegraphics [scale=0.15] {pt1c.png} 
+\end{center}
+
+In the left panel, with labeled vertices
+\[ AB \cdot CD + BC \cdot AD = AC \cdot BD \]
+
+Somewhat more compactly in the right panel, with labeled sides:
+\[ ac + bd = ef \]
+
+We looked at this in the first book using  a graphic from wikipedia.  It relies on two sets of similar triangles and uses the corresponding ratios.
+
+\begin{center} \includegraphics [scale=0.4] {Ptolemy3.png} \end{center}
+
+\url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
+
+Here we provide two more proofs of this theorem, as examples of wonderful proofs, and then explore some more of its consequences.
+
+\subsection*{dissection proof}
+
+\emph{Proof}.
+
+We're going to do a famous dissection of a cyclic quadrilateral as a proof of Ptolemy's theorem, but as a twist on the usual approach we'll do it in reverse, starting with a a parallelogram.  I'm hoping this will make the whole thing clearer.
+
+\begin{center} \includegraphics [scale=0.2] {Ptol1.png} \end{center}
+
+We have a parallelogram, and we've picked a point along the bottom edge and drawn lines to the opposing vertices.  Let's label some angles.
+
+\begin{center} \includegraphics [scale=0.2] {Ptol2.png} \end{center}
+
+And then use the properties of parallels to get the rest of them labeled as well.
+\begin{center} \includegraphics [scale=0.2] {Ptol3.png} \end{center}
+
+As a parallelogram, we have opposing angles equal, and adjacent angles summing to 180 as they must for parallel lines.
+
+Now do the dissection.  Cut out the red triangle and the blue triangle and join them as shown.  In general, the scale will have to be adjusted so that they form a quadrilateral with that edge as the diagonal.  We'll return to this point in a minute.
+\begin{center} \includegraphics [scale=0.2] {Ptol4.png} \end{center}
+
+This is a cyclic quadrilateral, by the converse of the theorem on cyclic quadrilaterals, since opposing angles are supplementary.
+\begin{center} \includegraphics [scale=0.2] {Ptol5.png} \end{center}
+
+We can use the corollary of the inscribed angle theorem to draw the other diagonal and assign angles.
+\begin{center} \includegraphics [scale=0.2] {Ptol6.png} \end{center}
+
+We're going switch our attention to the lengths of the sides and diagonals, but before we do, notice a very special triangle (partly red and partly blue) with angles $\gamma, \delta,$ and $\alpha + \beta$.  
+
+That triangle has sides $a, d$ and $y$.
+\begin{center} \includegraphics [scale=0.2] {Ptol7.png} \end{center}
+
+Let's reverse the process, dissecting the cyclic quadrilateral by cutting along the $x$ diagonal, and arranging the pieces so that the bases are collinear as in the original parallelogram.
+
+\begin{center} \includegraphics [scale=0.2] {Ptol8.png} \end{center}
+
+In the general case, $a \ne d$.  But we can scale the two sides to be equal.  An easy way to do that is to cross multiply.
+
+\begin{center} \includegraphics [scale=0.2] {Ptol9.png} \end{center}
+
+We have a parallelogram again.  The angles are correct, and now the sides are equal.  So are the top and bottom equal.  We focus now on the white triangle.
+
+\begin{center} \includegraphics [scale=0.2] {Ptol10.png} \end{center}
+
+It has two sides with lengths $a$ and $d$, each scaled by a factor of $x$, and the two angles opposite those sides are $\delta$ and $\gamma$.
+
+Remember the special triangle?
+\begin{center} \includegraphics [scale=0.2] {Ptol12.png} \end{center}
+
+We can see it in the cyclic quadrilateral.  The sides are $a,d,y$.  In the parallelogram, that white triangle must be scaled by a factor of $x$, giving sides $xa, xd $ and $xy$.
+\begin{center} \includegraphics [scale=0.2] {Ptol13.png} \end{center}
+
+Since this is a parallelogram, the top and bottom are equal.  Namely, $ac + bd = xy$.
+
+This is Ptolemy's theorem.
+
+$\square$
+
+\subsection*{proof by switching sides}
+
+\label{sec:Ptolemy_switch_sides}
+
+Another neat proof of Ptolemy's theorem is by calculating the area of the quadrilateral in two different ways.  
+
+Again, we're talking about a cyclic quadrilateral with four sides $a,b,c,d$ and two diagonals $x,y$ and the theorem says that
+\[ ac + bd = xy \]
+
+\begin{center} \includegraphics [scale=0.4] {pt2g.png} \end{center}
+
+The idea of the proof is that we can pick one point and move it so that the resulting figure has the same area as the one we started with.  
+
+In the diagram above, the part of the quadrilateral below the horizontal line is a triangle that is equal, comparing left and right panels, by SSS.
+
+\emph{Proof}.
+
+Then, looking at the chords (next figure), we have $CD = AD'$ and $AD = CD'$.  The angles that on the left lie in one of the triangles formed by the crossed diagonals, are next to each other at the same vertex $C$ in the right panel, because the blue-dotted one has changed along with its chord, $CD = AD'$.
+
+\begin{center} \includegraphics [scale=0.4] {pt2e.png} \end{center}
+
+Remember how to calculate area in a triangle.  We can multiply two sides adjacent to a vertex by the sine of the angle at that vertex.
+\begin{center} \includegraphics [scale=0.4] {pt2f.png} \end{center}
+
+In the left panel, we have angles $\theta$ and $\theta'$, which are supplementary --- so they have the same sine, and $\theta$ is also equal to the sum of red and blue-dotted angles, by the external angle theorem..  Twice the area of the quadrilateral is
+\[ 2 \mathcal{A} = pr \sin \theta'  + qr \sin \theta  + ps \sin \theta'  + qs \sin \theta \]
+But that's just
+\[ 2 \mathcal{A} = (p+q)(r+s) \sin \theta \]
+\[ = xy \sin \theta \]
+
+\begin{center} \includegraphics [scale=0.4] {pt2f.png} \end{center}
+
+Looking at the panel on the right, we have two triangles formed by the nearly vertical diagonal and twice the area is (remembering again that $\sin \theta = \sin \theta'$):
+
+\[ 2 \mathcal{A} =  ac \sin \theta' + bd \sin \theta \]
+\[ 2 \mathcal{A} =  (ac + bd)  \sin \theta \]
+
+Equate with the previous version and cancel the sine term.
+
+\[ (ac + bd) = xy \]
+
+$\square$
+
+This is Ptolemy's theorem.
+
+(adapted from wikipedia).
+
+\url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
+
+\textbf{corollaries}
+
+Here are just a few of the results that follow from this remarkable theorem.
+
+\subsection*{equilateral triangle}
+
+\begin{center} \includegraphics [scale=0.2] {equi4.png} \end{center}
+
+Inscribe an equilateral triangle in a circle and pick any point on the circle.
+
+\[ ps = qs + rs \]
+\[ p = q + r \]
+
+Here's a different problem from basically the same diagram (Coxeter).
+
+\begin{center} \includegraphics [scale=0.18] {equi5b.png} \end{center}
+\[ \frac{1}{PA} + \frac{1}{PC} = \frac{1}{PQ} \]
+
+Let us re-label with $PA = t$, $PC = u$ and $PQ = w$.  We will prove that:
+\[  \frac{1}{t} + \frac{1}{u} = \frac{1}{w} \]
+
+\begin{center} \includegraphics [scale=0.18] {equi5c.png} \end{center}
+
+\emph{Proof}.
+
+We have similar triangles:  
+\[ \triangle AQB \sim \triangle PQC, \ \ \ \ \ \ \ \  \triangle AQP \sim \triangle BQC \]
+
+Which gives the ratios
+\[ \frac{v}{y} = \frac{s}{u} = \frac{x}{w}, \ \ \ \ \ \ \ \  \frac{w}{y} = \frac{t}{s} = \frac{x}{v} \]
+
+Thus:
+\[ \frac{s}{u} = \frac{x}{w}, \ \ \ \ \ \ \ \  \frac{s}{t} = \frac{y}{w} \]
+Adding
+\[ \frac{s}{u} + \frac{s}{t} = \frac{x + y}{w} = \frac{s}{w} \]
+\[ \frac{1}{t} + \frac{1}{u} = \frac{1}{w} \]
+
+$\square$
+
+\subsection*{Pythagorean theorem}
+
+Let the quadrilateral be a rectangle.  The the sum of squares of opposing sides is
+\[ a^2 + b^2 \]
+
+Triangles made by opposing diagonals are congruent, so the diagonals are equal in length.  The diagonal is the hypotenuse, hence
+\[ a^2 + b^2 = c^2 \]
+
+We saw this proof previously (\hyperref[sec:PProof_Ptolemy]{\textbf{here}}).
+
+\subsection*{Law of Cosines}
+
+\label{sec:LOC_by_Ptolemy}
+
+Draw $\triangle ABC$ (suppress the $B$ label) and then draw another triangle congruent with it, with a shared base, and all four points in a circle, forming a cyclic quadrilateral.  
+
+Relying on previous work with a rectangle in a circle (\hyperref[sec:rectangle_side_on_a_circle]{\textbf{here}}), we know this construction is possible.
+
+The points are $A, A', C, C'$.  $\beta$ marks the original $B$, but will not be used.
+
+\begin{center} \includegraphics [scale=0.15] {law_of_cosines3.png} \end{center}
+
+We need an expression for $x$.  We have that the base of the altitude from $C$ to side $c$ is a distance from $A$ equal to $(c-x)/2$.  It follows that
+\[ \frac{c-x}{2} \div b = \cos A \]
+\[ c - x = 2b \cos A \]
+\[ x = c - 2b \cos A \]
+
+Now, apply Ptolemy's Theorem.  We have:
+\[ a^2 = b^2 + cx \]
+\[ = b^2 + c(c - 2b \cos A) \]
+\[ = b^2 + c^2 - 2bc \cos A \]
+
+$\square$
+
+\subsection*{golden mean in the pentagon}
+
+\begin{center} \includegraphics [scale=0.3] {Ptolemy5.png} \end{center}
+
+Take four vertices of the regular pentagon and connect them.  From the theorem, we have
+\[ b \cdot b = a \cdot a + a \cdot b \]
+\[ \frac{b^2}{a^2} = 1 + \frac{b}{a} \]
+
+Rather than use the quadratic equation, rearrange and add $1/4$ to both sides to ``complete the square":
+\[ \frac{b^2}{a^2} - \frac{b}{a} + \frac{1}{2^2} = 1 + \frac{1}{2^2} \]
+
+So
+\[ (\frac{b}{a} - \frac{1}{2})^2  = \frac{5}{4} \]
+\[ \frac{b}{a} - \frac{1}{2}  = \pm \ \frac{\sqrt{5}}{2} \]
+\[ \frac{b}{a}  = \frac{1 \pm \sqrt{5}}{2} \]
+
+This ratio $b/a$ is known as $\phi$, the golden mean.
+
+\subsection*{diagonals}
+
+Let us look at something like what we used for the proof of Ptolemy's theorem in the beginning.
+
+\begin{center} \includegraphics [scale=0.5] {pt6.png} \end{center}
+\[ nm = ac + bd \]
+
+We move one of the points, exchanging sides $a$ and $d$.  Then, one of the diameters, $n$, changes length to $u$.
+\[ mu = ab + cd \]
+
+If, instead, we exchange sides $a$ and $b$, the old $m$ changes to $u$.  Why?
+
+\begin{center} \includegraphics [scale=0.5] {pt7.png} \end{center}
+
+Mark the peripheral angles with equal arcs ($abcd$:  red, blue, green, magenta).
+
+The triangle with sides $b$ and $d$ in the middle, and magenta plus red for the vertex angle, is congruent to one in the right panel.  So their long sides are equal, both have length $u$.
+
+Thus,
+\[ nu = ad + bc \]
+
+We get a formula for the square of the diagonal:
+\[ m^2 = \frac{(mu)(nm)}{nu} = \frac{(ab + cd)(ac + bd)}{(ad + bc)}  \]
+
+There is a similar formula for $n^2$.  These formulas are sometimes attributed to Brahmagupta.  This beautiful proof is due to Paramesvara (14th century).
+
+\url{https://www.cut-the-knot.org/proofs/PtolemyDiagonals.shtml}
+
+The ratio is
+\[ \frac{m}{n} = \frac{ab + cd}{ad + bc} \]
+
+which is referred to as Ptolemy's second theorem.
+
+\subsection*{Van Schooten's theorem}
+
+\begin{center} \includegraphics [scale=0.45] {Van_Schooten.png} \end{center}
+
+Given an equilateral $\triangle ABC$ draw its circumcircle.
+
+Draw an arbitrary line segment from vertex $A$ through side $BC$ to meet the circle at $M$.  Prove that $AM = BM + MC$.
+
+This is given as a problem by Surowski (1.3.6).  It is even more challenging without the full diagram, perhaps with a hint about extending $BM$ to be equal to $AM$.
+
+\emph{Proof}.
+
+Draw lines from $M$ to each vertex of $\triangle ABC$ and extend $MB$ to give $MD = AM$.  Join $AD$.
+
+By inscribed angles both angles at $M$ are equal to two-thirds of a right angle.
+
+Since $MD = AM$, $\triangle AMD$ is isosceles with the vertex equal to two-thirds of a right angle.
+
+Thus $\triangle AMD$ is equilateral.   This accounts for all of the red dots.  ($A$ is not marked, to keep the diagram simpler).
+
+Subtract the central $\angle MAB$ from two equal angles to yield $\angle CAM = \angle BAD$.
+
+\begin{center} \includegraphics [scale=0.45] {Van_Schooten.png} \end{center}
+
+$\triangle CAM \sim \triangle BAD$.
+
+But $AB = AC$ and also $AM = AD$, so $\triangle BAD \cong \triangle CAM$ by ASA or SAS.
+
+It follows that $BD = MC$.
+
+Thus $BD + MB = MC + MB$ and the former is equal to MD.
+
+$\square$
+
+This theorem is easy to prove using Ptolemy's theorem, as we showed above.  
+
+
+\end{document}
