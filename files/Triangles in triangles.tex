@@ -57,11 +57,11 @@ In other words, the incenter of the small triangle is the same point as the orth
 
 \emph{Proof}.
 
-The key to the proof is to recognize that we can use a part of an altitude as the diameter of a circle.  Draw the circle that has for its diameter the line segment connecting the orthocenter $H$ and vertex $B$ of the large blue triangle.
+The key to the proof is to recognize that we can use a part of an altitude as the diameter of a circle.  Draw the circle that has for its diameter the line segment connecting the orthocenter $H$ and vertex $B$ of the large red triangle.
 
-In this diagram we have changed the color of the inner triangle to be red, and also, the orthocenter of the blue triangle, where the altitudes cross, is not labeled because the figure is already too busy.  It is, however, marked with a red dot.
+In this diagram we have changed the color of the inner triangle to be blue.
 
-\begin{center} \includegraphics [scale=0.4] {ortho_incenter_crop.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {ortho_centerb.png} \end{center}
 
 Now consider the parts of the other two altitudes that terminate at $D$ and $F$   I claim that these two points lie on the same circle.  
 
@@ -75,13 +75,13 @@ $\angle ADF = \angle EBA$ for this reason, while $\angle ACF = \angle ADE$ as we
 
 But then we notice that $\triangle HEC$ and $\triangle HFB$ are right triangles that share vertical angles, so they are similar.  In particular $\angle ACF = \angle EBA$.
 
-Thus, all four angles marked with black dots are equal.  Therefore, the angle at vertex $D$ in $\triangle EDF$ is bisected by the altitude of the outer triangle $AD$.
+Therefore, the angle at vertex $D$ in $\triangle EDF$ is bisected by the altitude of the outer triangle $AD$.
 
 Exactly the same logic will show that the angles at the other two vertices of $\triangle DEF$ are also bisected by the altitudes of $\triangle ABC$.
 
-\begin{center} \includegraphics [scale=0.4] {ortho_incenter_crop.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {ortho_centerb.png} \end{center}
 
-We conclude that the orthocenter $H$ of the blue triangle is the incenter $I$ of the red triangle.
+We conclude that the orthocenter $H$ of the red triangle is the incenter $I$ of the blue triangle.
 
 $\square$
 
@@ -93,7 +93,7 @@ In $\triangle ABC$, connecting the feet of the altitudes forms three triangles t
 
 For example, draw $DE$ forming $\triangle CDE$.  We can show that $\triangle DEC \sim \triangle ABC$ with $A = \angle CDE$.
 
-\begin{center} \includegraphics [scale=0.4] {incenter4_lemma.png} \end{center}
+\begin{center} \includegraphics [scale=0.35] {incenter4_lemma.png} \end{center}
 
 In $\triangle ABC$ draw the altitudes $AD$ and $BE$.  Find $M$ as the midpoint of $AB$ and draw the circle on center $M$ which goes through $A$ and $B$.
 
@@ -111,6 +111,8 @@ $\angle CDE$ is supplementary to $\angle BDE$.  Thus $\angle CDE = A$, and the r
 
 $\square$
 
+[ Yet another way to show the same thing easily is to recall the secant-secant theorem and apply it to the circle shown above. We have that $CD \cdot CB = CE \cdot CA$, which leads to $\triangle CDE \sim \triangle CAB$.  ]
+
 Next, we proceed to the proof that the orthocenter of $\triangle ABC$ is the incenter of $\triangle DEF$.
 
 \begin{center} \includegraphics [scale=0.4] {incenter4.png} \end{center}
@@ -119,7 +121,9 @@ Consider the foot of the altitude $AD$ at $D$.  By the lemma, we have that $\tri
 
 (This is easy to see if we notice that $\angle CDE$ cannot be equal to $B$, because $DE$ is not parallel to the base $AB$).
 
-It follows that the internal $\angle ADE$ and $\angle ADF$ are both complementary to $A$, so they are equal.  Thus $AD$ bisects $\angle EDF$.
+It follows that the internal $\angle ADE$ and $\angle ADF$ are both complementary to $A$, so they are equal.  (The complementary angle to $A$ is designated $A'$ in the figure).
+
+Thus $AD$ bisects $\angle EDF$.
 
 This is true for each of the three altitudes, they are bisectors of the angles in $\triangle DEF$.
 
@@ -131,7 +135,7 @@ $\square$
 
 Label the point where $AD$ and $BE$ cross (the orthocenter) as $X$.  
 
-\begin{center} \includegraphics [scale=0.4] {incenter4_lemma_b.png} \end{center}
+\begin{center} \includegraphics [scale=0.35] {incenter4_lemma_b.png} \end{center}
 
 Because they are both right triangles with vertical angles
  
@@ -162,7 +166,7 @@ We've drawn the figure and marked some angles, but left the proof to the reader.
 
 The internal bisectors of $\triangle ABC$ are extended to meet the circumcircle at $L,M,N$.  Find the angles at $L,M$ and $N$ in terms of $A,B,C$.
 
-\begin{center} \includegraphics [scale=0.4] {Coxeter_2_4_2.png} \end{center}
+\begin{center} \includegraphics [scale=0.3] {Coxeter_2_4_2.png} \end{center}
 
 
 \end{document}

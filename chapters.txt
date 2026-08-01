@@ -11,6 +11,7 @@ More isosceles
 Steiner Lehmus
 Tangent secant theorem
 Power of a point
+Broken Chord revisited
 
 Trigonometry
 Basic trigonometry

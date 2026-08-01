@@ -33,14 +33,14 @@ This is the Steiner-Lehmus theorem.
 
 According to the internet, the Steiner-Lehmus theorem is famous for being somewhat difficult (certainly more difficult than Archimedes' theorem of the broken chord), for having many different proofs, and for some controversy over whether even one of the proofs is \emph{direct} or not.  By direct we mean, not using the technique of proof by contradiction or \emph{reductio ad absurdum}.
 
-I was lucky to find a (non-paywalled) review published on its centenary in 1942.
+I was lucky to find a (non-paywalled) review published just after its centenary, in 1943.
 
 \url{https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7B625B08567935CAE06A0AC9430477C0/S0950184300000021a.pdf}
 
 
 \subsection*{1.  parallelogram proof}
 
-Here is my favorite proof, an approach which I found on the web.
+Here is my favorite proof, an approach which I found on the web.  I have seen it ascribed to someone named Descube, but I haven't found out anything more about her or him.
 
 \url{https://www.algebra.com/algebra/homework/word/geometry/Angle-bisectors-in-an-isosceles-triangle.lesson}
 
@@ -62,7 +62,9 @@ If two triangles $\triangle ABC$ and $\triangle DEF$ have two pairs of sides equ
 \begin{center} \includegraphics [scale=0.16] {SAS_gt} \end{center}
 \emph{Proof}.
 
-Let $d$ be opposite $\phi$ and $c$ be opposite $\theta$.  Use the law of cosines:
+Let $d$ be opposite $\phi$ and $c$ be opposite $\theta$.  
+
+If you know some trigonometry (we'll get there soon), use the law of cosines:
 \[ c^2 = a^2 + b^2 - 2ab \cos \theta \]
 \[ d^2 = a^2 + b^2 - 2ab \cos \phi \]
 
@@ -79,8 +81,6 @@ So, $\phi > \theta \Rightarrow d^2 > c^2$, and then $d > c$ since we can take th
 $\square$
 
 This is known as the \hyperref[sec:hinge_theorem]{\textbf{hinge theorem}}.  We showed the classic proof elsewhere.  It is Euclid I.24.
-
-$\square$
 
 Back to our problem.  We claim that $\alpha = \gamma$ and the triangle is isosceles.
 We argue by contradiction.  
@@ -334,5 +334,56 @@ By I.6, $\triangle ABC$ is isosceles.
 $\square$
 
 We will come back and look at some trigonometric proofs of the theorem once we develop the necessary tools.
+
+\subsection*{5.  McBride (1943)}
+
+\url{https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7B625B08567935CAE06A0AC9430477C0/S0950184300000021a.pdf}
+
+\begin{center} \includegraphics [scale=0.35] {SL_McBride2.png} \end{center}
+
+In $\triangle ABC$, given angle bisectors $BY = CZ$ and opposing sides of lengths $a,b,c$.  Let $J$ be the intersection of the bisectors (the center of the incircle of $\triangle ABC$).
+
+Extend $CB$ left to $D$ so $\triangle ABD$ is isosceles.  Extend $BC$ right to $E$ so $\triangle ACE$ is isosceles.  The base angles in $\triangle ABD$ have measure $\beta$ and those in $\triangle ACE$ have measure $\gamma$.
+
+So $\triangle JBC$ is similar to $\triangle ADE$.
+
+\begin{center} \includegraphics [scale=0.35] {SL_McBride2.png} \end{center}
+
+Extend $BA$ to $F$ and $CA$ to $G$ by length equal to $a$.
+
+Let $M$ be the midpoint of $FG$.  Draw $MA$ and $AJ$.  $AM$ is the perpendicular bisector of $FG$ by construction.  Extended through $A$ it bisects $A$ so $MAJ$ collinear.
+
+Then
+
+$BF/CG = a+c/a+b$ by construction.  But $BF/CG = AD/AE$ with the same ratio.  
+
+We reason as follows.  $BJY \parallel AD$.  $BY/a = AD/a+c$.  $ZJC \parallel AE$.  $CZ/a = AE/a+b$.  So $AD/BY = a+c/a$ and $AE/CZ = a+b/a$.  But $BY = CZ$, so $AD/AE = a+c/a+b$.
+
+Also $AD/AE = JB/JC$ with the same ratio as well, since $\triangle JBC$ is similar to $\triangle ADE$.
+
+$JM$ is the perpendicular bisector of $FG$ so $JG = JF$.
+
+$\angle JGA = \angle JFA$, by subtraction.
+
+\begin{center} \includegraphics [scale=0.35] {SL_McBride2.png} \end{center}
+
+We have SSA similarity for $\triangle BJF$ and $\triangle CJG$.
+
+$\circ \ $ The angles at $G$ and $F$ are equal.
+
+$\circ \ $ $BF/CG = a+c/a+b = JB/JC$ (see above).
+
+$\circ \ $ $\angle BJF$ and $\angle CJG$ are both obtuse.  The first since $\angle BJM < \angle BJF$ and $\angle BJM$ is supplementary to $\beta + \alpha$ so greater than 90.  Similarly for $\angle MJC.$
+
+Therefore $\triangle BJF \sim \triangle CJG$.
+
+But also $JF = JG$ so $\triangle BJF \cong \triangle CJG$.
+
+We have $a + b = a + c$, so $b = c$.
+
+$\square$
+
+This last example does not (apparently) depend on finding a contradiction --- it seems to be a \emph{direct} proof.  However, we invoke the theory of similarity, which is established by contradiction.  Hence it is not direct.  
+
 
 \end{document}
