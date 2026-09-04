@@ -1,0 +1,129 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Introduction}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In this chapter we look at the Simson line of a given triangle:
+
+\url{https://en.wikipedia.org/wiki/Simson_line}
+
+Find an arbitrary point $P$ on the circumcircle of $\triangle ABC$.  $PCAB$ is a cyclic quadrilateral.
+
+\begin{center} \includegraphics [scale=0.3] {simson1.png} \end{center}
+
+Drop perpendiculars from $P$ to the sides of the triangle (or their extensions).  The points of intersection, $L,M,N$, are collinear.
+
+\[ \angle PBA + \angle ACP = 180 \]
+\[ \angle PBA = \angle PBN \]
+\[ \angle PBN + \angle ACP = 180 \]
+
+Because of the right angles, $PLAM$ and $PMNC$ are also cyclic.
+
+\begin{center} \includegraphics [scale=0.35] {simson3.png} \end{center}
+
+Here is the wikipedia proof.
+
+\emph{Proof}.
+
+From the circle with $PB$ as diameter (right panel):
+\[ \angle PBN + \angle NMP = 180 \]
+Combining with the first result above: $ \angle NMP = \angle ACP$.
+
+In the circle with $PC$ as diameter (left panel), $\angle PML$ and $\angle PCL$ lie on the same arc so
+\[ \angle PML = \angle PCL = 180 - \angle ACP \]
+
+Finally, 
+\[ \angle PML = 180 - \angle NMP \]
+so $L,M,N$ are collinear.
+
+$\square$
+
+Here is my shortest proof.
+
+\emph{Proof}.
+
+The supplementary angle to $\angle ACP$ is $\angle LCP$ (left panel).
+
+But another angle supplementary to $\angle ACP$ is $\angle ABP$ (original quadrilateral).
+
+\begin{center} \includegraphics [scale=0.35] {simson3.png} \end{center}
+
+$\angle LPC$ is complementary to the first, and $\angle BPN$ is complementary to the second, hence $\angle LPC = \angle BPN$.
+
+But $\angle LMC$ and $\angle LPC$ lie on equal arcs of the circle on $PC$, while $\angle BMN$ and $\angle BPN$ lie equal arcs of the circle on $PB$.
+
+It follows that $\angle BMN = \angle LMC$.
+
+Therefore, $L,M,N$ are collinear.
+
+$\square$
+
+It seems noteworthy that the angles at $P$, $\angle LPM = C$ and $\angle NPM = B$, but I haven't been able to use that to get further.
+
+Coxeter use the Simson line to develop a proof of Ptolemy's theorem.  It uses a preliminary result about \emph{pedal} triangles that we haven't seen before.
+
+\subsection*{pedal triangles}
+
+In the interior of $\triangle ABC$ find an arbitrary point $P$ and drop perpendiculars to the sides at $L,M,N$.
+
+The pedal triangle is $\triangle LMN$.
+
+\begin{center} \includegraphics [scale=0.35] {pedal.png} \end{center}
+
+$PC$ is the diameter of a circle on which $M$ and $N$ lie.  By the law of sines, $MN/\sin C = PC$.
+
+But in $\triangle ABC$, $c/\sin C = 2R$ for the same reason.
+
+\[ \frac{MN}{PC} = \frac{c}{2R} \]
+\[ MN = \frac{c \cdot PC}{2R} \]
+
+and similarly for the other sides.  
+
+\subsection*{Ptolemy's theorem}
+
+Where it gets weird is that Coxeter says that in "triangle" $L,M,N$ this still holds, even though the triangle is degenerate.
+
+\begin{center} \includegraphics [scale=0.3] {simson1.png} \end{center}
+
+Remember, we dropped perpendiculars from $P$ to two sides of $\triangle ABC$ and joined those points.  So $P$ to $L$ on side $AC$ and $P$ to $M$ on side $BC$.
+
+Then the length of the third side of $\triangle ABC$, $AB$, is related to the distance from $P$ across the pedal side to a vertex of the original triangle, opposite to the side in question.
+
+That would be $PC$.
+\[  LM = AB \cdot PC/2R \]
+
+The other two are 
+
+\[ LN = BC \cdot PA/2R \]
+\[ MN = AC \cdot PB/2R \]
+
+And since 
+\[ LM + MN = LN \]
+
+Finally
+\[ AB \cdot PC + AC \cdot PB = BC \cdot PA  \]
+which is Ptolemy's theorem.
+
+I'm not totally convinced, but I'm going to add
+
+$\square$
+
+\end{document}

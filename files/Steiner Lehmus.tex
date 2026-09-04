@@ -123,6 +123,36 @@ Since $\alpha$ is neither greater than nor less than $\gamma$, we conclude that 
 
 $\square$.
 
+\subsection*{Steiner}
+
+The review cited above gives Steiner's proof, but I couldn't understand it very well and it seemed inelegant.  However Ostermann and Wanner (in \emph{Geometry by its History}) make it seem straightforward.
+
+\begin{center} \includegraphics [scale=0.35] {SL_Steiner2.png} \end{center}
+
+\emph{Proof}.
+
+We draw a copy of $\triangle ABY$ reversed on its base, giving $\triangle BAZ$.
+
+We are given that $AX = BY = AZ$, so $\triangle AXZ$ is isosceles, with base angles $\phi$.
+
+Aiming for a contradiction, assume that $\alpha > \beta$.
+
+By the hinge theorem, I.24, $BX > BZ$.
+
+So then $\gamma < \delta$ by I.18.
+
+We have two triangles, adding up the angles:
+
+\[ \alpha + \phi + \gamma + 2 \beta = \beta + \phi + \delta + 2 \alpha \]
+\[ \gamma + \beta = \delta + \alpha \]
+
+We assumed $\beta < \alpha$ so we must have $\gamma > \delta$.
+
+This is a contradiction.
+
+So it cannot be that $\alpha > \beta$.
+
+$\square$
 
 \subsection*{2.  Coxeter}
 
@@ -180,7 +210,13 @@ See also III.15.  Coxeter says this:
 Two equal chords subtend equal angles at the center and equal angles (half as big) on the circumference.  Of two unequal chords, the shorter, being farther from the center, subtends a smaller angle there and consequently a smaller acute angle at the circumference.
 \end{quote}
 
-Another simple proof is to rely on the converse of the hinge theorem.  The central angle corresponding to the larger chord is larger.
+Another simple proof is to rely on the converse of the hinge theorem.  
+
+\begin{quote}
+If two triangles have two sides equal to two sides respectively, but have the base greater than the base, they will also have the one of the angles contained by the equal straight lines greater than the other.
+\end{quote}
+
+The central angle corresponding to the longer chord is larger.
 
 Let's look at a few more proofs.
 

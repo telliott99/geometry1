@@ -12,6 +12,7 @@ Steiner Lehmus
 Tangent secant theorem
 Power of a point
 Broken Chord revisited
+A challenging problem
 
 Trigonometry
 Basic trigonometry
@@ -40,6 +41,7 @@ Euler Line
 Special circles
 Triangles in triangles
 Nine point circle
+Simson Line
 
 Vectors without coordinates
 Simple vectors

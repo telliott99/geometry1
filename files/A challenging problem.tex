@@ -1,0 +1,62 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Dropbox/Github-Math/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Proof}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+Here's a problem from Coxeter that can be solved by an ingenious construction.
+
+Let $ABCD$ be a parallelogram and let $P$ be found such that the angles labeled $\alpha$ are equal:  $\angle PDC = \angle PBC$.
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard1.png} \end{center}
+
+To prove:  the angles labeled $\phi$ and $\theta$ are also equal:  $\angle DPA = \angle BPC$.
+
+\emph{Proof}.
+
+Like many problems, the solution starts with an inspired construction.  
+
+Draw $PQ \parallel CB$ and also equal to it.
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard2.png} \end{center}
+
+As a result, we have a new parallelogram $BQPC$ but also, since $PQ \parallel AD$ and equal as well, $AQPD$ is a parallelogram.
+
+$\angle QAB$ is formed by two lines parallel to the lines forming $\angle PDC$, so it also has measure $\alpha$ and is subtended by $BQ$.
+
+Finding $Q$ also gives us new angles equal to $\alpha$, $\theta$ and $\phi$ using the theorem that diagonals in a parallelogram produce congruent triangles.
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard2a.png} \end{center}
+
+And that may suggest, to the prepared mind, that we need to find a circle with all four points $A,B,Q,P$ lying on it.
+
+Draw the circumcircle for $\triangle ABQ$.
+
+\begin{center} \includegraphics [scale=0.35] {Coxeter_hard4b.png} \end{center}
+
+Since $\angle BPQ = \alpha = \angle QAB$ and it is subtended by the same arc of the circle, by the converse of the cyclic quadrilateral theorem, it follows that $P$ is on the circle.
+
+Using diagonals of the parallelograms again, we find $\angle PAQ = \phi$ and $\angle PBQ = \theta$.
+
+But both angles are subtended by arc $PQ$ on the same circle, so they are equal.
+
+$\square$
+
+\end{document}

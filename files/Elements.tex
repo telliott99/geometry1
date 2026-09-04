@@ -217,15 +217,20 @@ $\square$
 
 \url{https://proofwiki.org/wiki/Hinge_Theorem}
 
-Note that Euclid I.24 says that where the included angle is larger, then the side opposite is larger.  The converse is Euclid I.25.
+Euclid I.24 says that where the included angle is larger, then the side opposite is larger.  The converse is Euclid I.25.
 
-\emph{Proof}.  Aiming for a contradiction, given side $d$ is smaller than side $b$, suppose that $\angle ABC < \angle ZBC$.  The forward theorem gives $d > b$.  This is a contradiction. $\square$
+\emph{Proof}.
+
+Aiming for a contradiction, given side $d$ is smaller than side $b$, suppose that $\angle ABC < \angle ZBC$.  The forward theorem gives $d > b$.  This is a contradiction. 
+
+$\square$
 
 Another subtlety is that it cannot be that $b = d$, by Euclid I.7, and also then the two triangles would be congruent by SSS, but the angles differ, so this is a contradiction.
 
-One last point:  this proof suffers from the same issue that Euclid I.7 does, namely that a different drawing can be made that makes the proof non-sensical.  The solution is the same as well.
+This proof suffers from the same issue that Euclid I.7 does, namely that a different drawing can be made that makes the proof non-sensical.  The solution is the same as well.
 
 \emph{Proof}.
+
 \begin{center} \includegraphics [scale=0.16] {Euclid_I_24c.png} \end{center}
 Since $\triangle ABZ$ is isosceles, the base angles are also equal, namely $\angle AZE = \angle ZAF$.  So then 
 \[ \angle AZF < \angle AZE = \angle ZAF < \angle ZAC \]
@@ -233,7 +238,28 @@ It follows that since the greater side is opposite the greater angle in $\triang
 
 $\square$
 
-This is enough of the \emph{Elements} to give us a good taste of the basics of Greek geometry of lines and triangles, and methods of proof.
+\subsection*{Euclid I.26.  ASA for congruence}
+
+In $\triangle ABC$ and $\triangle DEF$, if $A = D$ and $B = E$ and $AB = DE$, then $\triangle ABC \cong \triangle DEF$.
+
+\emph{Proof}.
+
+Aiming for a contradiction, suppose $AC > DF$.  Then find $P$ such that $AP = DF$.  Draw $BP$.
+
+We have $\triangle ABP \cong \triangle DEF$ by SAS.
+
+So $\angle ABP = E$.
+
+But we are given $B = E$ and certainly $\angle ABP < B$.
+
+This is a contradiction.
+
+So $AC \ngtr DF$.
+
+A similar argument will show that $AC \nless DF$, so $AC = DF$ and then $\triangle ABC \cong \triangle DEF$ by SAS.
+
+$\square$
+
 
 \subsection*{problem}
 \begin{center} \includegraphics [scale=0.16] {isosceles13.png} \end{center}
