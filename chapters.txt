@@ -3,7 +3,6 @@ Introduction
 
 Practice with proofs
 Broken Chord
-Elements
 Equilateral triangles
 Angle bisectors
 Excircles and Heron
